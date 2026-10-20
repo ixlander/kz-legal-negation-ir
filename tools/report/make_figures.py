@@ -30,17 +30,20 @@ def d1_pool():
     fig, ax = plt.subplots(figsize=(7.4, 3.6))
     for i, k in enumerate(keys):
         a, b = ru[k]["negation_position"], kz[k]["negation_position"]
-        ax.plot([a, b], [i, i], color=GRID, lw=3, solid_capstyle="round", zorder=1)
-        for lang, v in (("ru", a), ("kz", b)):
-            ax.plot(v, i, "o", ms=9, color=COL[lang], mec=SURF, mew=2, zorder=2,
+        # Ru slightly above, Kz slightly below the row, so coinciding values stay visible
+        ax.plot([a, b], [i - 0.13, i + 0.13], color=GRID, lw=2, zorder=1)
+        for lang, v, dy in (("ru", a, -0.13), ("kz", b, 0.13)):
+            ax.plot(v, i + dy, "o", ms=8, color=COL[lang], mec=SURF, mew=1.5, zorder=2,
                     label={"ru": "Russian", "kz": "Kazakh (prelim)"}[lang] if i == 0 else None)
     ax.set_yticks(range(len(keys)))
     ax.set_yticklabels([NAMES[k] for k in keys], color=INK)
     ax.set_ylim(len(keys) - 0.5, -0.9)
     ax.axvline(0, color=INK2, lw=1, ls="--")
     ax.axvline(1, color=INK2, lw=1, ls=":")
-    ax.text(0.015, -0.6, "0 = moved like a synonym edit", fontsize=8, color=INK2, va="center")
-    ax.text(0.985, -0.6, "1 = moved like a rewording", fontsize=8, color=INK2, va="center", ha="right")
+    box = dict(boxstyle="square,pad=0.15", facecolor=SURF, edgecolor="none")
+    ax.text(0.03, -0.6, "0 = moved like a synonym edit", fontsize=8, color=INK2, va="center", bbox=box, zorder=3)
+    ax.text(0.97, -0.6, "1 = moved like a rewording", fontsize=8, color=INK2, va="center", ha="right", bbox=box,
+            zorder=3)
     ax.set_xlim(-0.1, 1.25)
     ax.set_xlabel("negation position (median over 30 norms)")
     ax.grid(axis="x", color=GRID, lw=0.8)
