@@ -1,0 +1,7344 @@
+{
+  "summary": {
+    "code": "family",
+    "pairs": 721,
+    "model": "intfloat/multilingual-e5-base",
+    "top": 3,
+    "markers_match": 0.9986130374479889,
+    "numbers_match": 0.9972260748959778,
+    "xling_rank1_both": 0.7877947295423023,
+    "xling_top3_both": 0.926490984743412,
+    "flagged_any": 54,
+    "sent_to_owner": 3,
+    "flag_reason_counts": {
+      "numbers differ": 2,
+      "length ratio": 2,
+      "xling rank": 53,
+      "markers differ": 1
+    }
+  },
+  "per_pair": [
+    {
+      "chunk_id": "family:1:1#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.9271,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:1:1#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.9312,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:1:1#3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.9279,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:1:1#4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.9373,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:1:1#5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.9349,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.192,
+      "cos": 0.9166,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:2:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.898,
+      "cos": 0.8598,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:2:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.9199,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:2:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.8708,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:2:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.8922,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.9006,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:4:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.9087,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:4:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.871,
+      "cos": 0.9027,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.9017,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.9191,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.213,
+      "cos": 0.8716,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.044,
+      "cos": 0.9259,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.918,
+      "cos": 0.9158,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5-1:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.923,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:5-1:5",
+      "markers_ok": true,
+      "numbers_ok": false,
+      "ratio": 0.224,
+      "cos": 0.8213,
+      "rank_ru2kz": 155,
+      "rank_kz2ru": 15,
+      "flag_reasons": [
+        "numbers differ: ru-only {'6': 1} kz-only {}",
+        "length ratio 0.22",
+        "xling rank ru->kz 155, kz->ru 15"
+      ]
+    },
+    {
+      "chunk_id": "family:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.9146,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:8:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.915,
+      "cos": 0.8648,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:8:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.056,
+      "cos": 0.9051,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:9:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8595,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:9:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.912,
+      "cos": 0.8925,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:10:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8504,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:10:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.951,
+      "cos": 0.8684,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:10:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.047,
+      "cos": 0.8641,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:10:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.134,
+      "cos": 0.8859,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:10:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8731,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:11",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.087,
+      "cos": 0.8664,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:12:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.162,
+      "cos": 0.8676,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:12:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8821,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:13:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.8737,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:13:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.8783,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:13:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.85,
+      "cos": 0.9205,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:13:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.026,
+      "cos": 0.8729,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:14",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.126,
+      "cos": 0.8674,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:15:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.162,
+      "cos": 0.8532,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:15:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.041,
+      "cos": 0.8643,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:15:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.8589,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:16:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.124,
+      "cos": 0.8423,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 8,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 8"
+      ]
+    },
+    {
+      "chunk_id": "family:16:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8479,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:17:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.984,
+      "cos": 0.8196,
+      "rank_ru2kz": 34,
+      "rank_kz2ru": 53,
+      "flag_reasons": [
+        "xling rank ru->kz 34, kz->ru 53"
+      ]
+    },
+    {
+      "chunk_id": "family:17:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8994,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:17:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.847,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:18",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8799,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:19:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.951,
+      "cos": 0.8347,
+      "rank_ru2kz": 6,
+      "rank_kz2ru": 12,
+      "flag_reasons": [
+        "xling rank ru->kz 6, kz->ru 12"
+      ]
+    },
+    {
+      "chunk_id": "family:19:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.038,
+      "cos": 0.8631,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:19:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.8645,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:19:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.886,
+      "cos": 0.913,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:20",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.129,
+      "cos": 0.8844,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:21:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.064,
+      "cos": 0.8526,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:21:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8689,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:22:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.124,
+      "cos": 0.8689,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:22:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.9044,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:22:2-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.082,
+      "cos": 0.882,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:22:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.8713,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:23:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.002,
+      "cos": 0.8789,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:23:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8572,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "family:25:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8784,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:25:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.8642,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:25:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8932,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:26:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8933,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:26:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.8689,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:27:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.853,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:27:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.8626,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:27:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8675,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:27:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.8594,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:28:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8635,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:28:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:28:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
+      "cos": 0.8822,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:28:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.906,
+      "cos": 0.8927,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:28:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8838,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:29",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.171,
+      "cos": 0.9035,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:30:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.108,
+      "cos": 0.8723,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:30:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.8843,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:30:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.21,
+      "cos": 0.8961,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:30:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.213,
+      "cos": 0.8899,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:31:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.087,
+      "cos": 0.8405,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "family:31:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.8652,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:31:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.159,
+      "cos": 0.8686,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:32:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.8429,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "family:32:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:33:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.17,
+      "cos": 0.8606,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:33:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.103,
+      "cos": 0.8947,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:33:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.8644,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:34:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.205,
+      "cos": 0.876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:34:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.096,
+      "cos": 0.8635,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:34:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.8638,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:35:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.184,
+      "cos": 0.8772,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:35:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8626,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:36",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.041,
+      "cos": 0.8593,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:37:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.186,
+      "cos": 0.8416,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:37:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.108,
+      "cos": 0.8699,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:37:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8783,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:37:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8781,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:37:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.103,
+      "cos": 0.8724,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:37:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.122,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:38:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.117,
+      "cos": 0.8395,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:38:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.224,
+      "cos": 0.8661,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:38:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.175,
+      "cos": 0.8844,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:39:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.083,
+      "cos": 0.8397,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 8,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 8"
+      ]
+    },
+    {
+      "chunk_id": "family:39:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8799,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:40:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8603,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "family:40:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.874,
+      "cos": 0.8739,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:41:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8933,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:41:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.872,
+      "cos": 0.8703,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:41:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.086,
+      "cos": 0.8934,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:42:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.8912,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:42:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.032,
+      "cos": 0.8942,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:42:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.8679,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:43:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.8479,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:43:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.002,
+      "cos": 0.8652,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:44:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.8663,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:44:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.117,
+      "cos": 0.8661,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:44:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.8703,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:45",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:46:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.8649,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:46:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.9058,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:46:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.156,
+      "cos": 0.9069,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.822,
+      "cos": 0.8905,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.915,
+      "cos": 0.8893,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.8752,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.8947,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8928,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:47:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.8669,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:48",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.92,
+      "cos": 0.8945,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:49",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.9162,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:50",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.9124,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:51:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.062,
+      "cos": 0.8534,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "family:51:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8963,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:51:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.967,
+      "cos": 0.8924,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:52",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.8768,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:53:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.915,
+      "cos": 0.8939,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:53:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.8821,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:53:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.159,
+      "cos": 0.9286,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:53:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.143,
+      "cos": 0.8872,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:54:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.951,
+      "cos": 0.8832,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:54:1-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.863,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:54:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.009,
+      "cos": 0.8596,
+      "rank_ru2kz": 7,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 7, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:54:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.891,
+      "cos": 0.8749,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:55",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.083,
+      "cos": 0.8965,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:56:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.885,
+      "cos": 0.8731,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:56:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.822,
+      "cos": 0.8586,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:56:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.8915,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:57:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9287,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:57:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8988,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:57:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.8986,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:57:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.893,
+      "cos": 0.9295,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:57:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.817,
+      "cos": 0.8696,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:57:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:58:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.911,
+      "cos": 0.8667,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:58:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.902,
+      "cos": 0.861,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:58:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.9067,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8932,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.891,
+      "cos": 0.8673,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8861,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.8704,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.243,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.918,
+      "cos": 0.8846,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:59:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.828,
+      "cos": 0.8904,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:60",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.103,
+      "cos": 0.9124,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:61:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.072,
+      "cos": 0.8978,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:61:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.892,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:62",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.9098,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:63:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.18,
+      "cos": 0.8618,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:63:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.108,
+      "cos": 0.8926,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:63:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.8736,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:63:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8971,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:63:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.8888,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:63:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.192,
+      "cos": 0.8744,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:64:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.8498,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:64:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.855,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:64:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.8914,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:64:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.839,
+      "rank_ru2kz": 13,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 13, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "family:64:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.741,
+      "cos": 0.8724,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:65:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.812,
+      "cos": 0.881,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:65:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8696,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:65:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.907,
+      "cos": 0.9016,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:66:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.078,
+      "cos": 0.8653,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:66:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8505,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:66:2-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.8837,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:66:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.9142,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:66:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.866,
+      "cos": 0.8983,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:66:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8856,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:67:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.926,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:67:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8843,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:67:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.202,
+      "cos": 0.8932,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:67-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.12,
+      "cos": 0.9179,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:67-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9296,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:67-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.178,
+      "cos": 0.9575,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:68:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8705,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:68:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.888,
+      "cos": 0.8682,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:69:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8518,
+      "rank_ru2kz": 9,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 9, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "family:69:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.046,
+      "cos": 0.8847,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:69:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8648,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:70:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.175,
+      "cos": 0.8826,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:70:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.8803,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:70:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.8839,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:70:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.124,
+      "cos": 0.8875,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:71:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.923,
+      "cos": 0.8771,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:71:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.096,
+      "cos": 0.8891,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:71-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.9157,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:72",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.9021,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.985,
+      "cos": 0.8717,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.156,
+      "cos": 0.9052,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.111,
+      "cos": 0.8979,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.9059,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.878,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.507,
+      "cos": 0.8805,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:73-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.186,
+      "cos": 0.8934,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:74:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.9065,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:74:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.8537,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:75:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.9127,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:75:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.088,
+      "cos": 0.8578,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:76:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8721,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "family:76:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.178,
+      "cos": 0.8908,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:76:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.9051,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:76:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8893,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:76:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.038,
+      "cos": 0.8663,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:77:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.084,
+      "cos": 0.854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:77:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.8769,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:77:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.926,
+      "cos": 0.9007,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:77:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.8643,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:77:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.153,
+      "cos": 0.8686,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:77:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.046,
+      "cos": 0.8582,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:77:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.036,
+      "cos": 0.8535,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:78:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.8495,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:78:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.079,
+      "cos": 0.8752,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:78:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.8819,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:79:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.8833,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:79:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.056,
+      "cos": 0.892,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:79:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.9014,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:79:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.8938,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:79:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.8981,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:80:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8874,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:80:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8931,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:80:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8624,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:80:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.153,
+      "cos": 0.8666,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:80:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8733,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:81:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8724,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:81:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.159,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:82:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.064,
+      "cos": 0.8988,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:82:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.123,
+      "cos": 0.8828,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:83:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.858,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:83:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.127,
+      "cos": 0.8832,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8596,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.138,
+      "cos": 0.8782,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.9228,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.009,
+      "cos": 0.92,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.106,
+      "cos": 0.8947,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.8909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.041,
+      "cos": 0.8813,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:84:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.9427,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:85:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.9245,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:85:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.123,
+      "cos": 0.8796,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:85:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.071,
+      "cos": 0.9226,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:86:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.125,
+      "cos": 0.8668,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:86:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.041,
+      "cos": 0.9175,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:86:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.8875,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:86:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9108,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:87:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.069,
+      "cos": 0.8989,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:87:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.893,
+      "cos": 0.8794,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:87:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8746,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:87:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.984,
+      "cos": 0.9087,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:88",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.085,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:89:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.9186,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:89:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8814,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:89:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8836,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:90:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.325,
+      "cos": 0.8757,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:90:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.232,
+      "cos": 0.8628,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:91:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.048,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:91:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.9253,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:91:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.967,
+      "cos": 0.9034,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:91:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.096,
+      "cos": 0.9152,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:92:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.8814,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:92:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8999,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.8829,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8868,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.111,
+      "cos": 0.8712,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8762,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.9122,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.8809,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:93:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.9106,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:94",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.069,
+      "cos": 0.9159,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:95",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.847,
+      "cos": 0.8745,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:96:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.124,
+      "cos": 0.8411,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "family:96:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.247,
+      "cos": 0.8622,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.8517,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.109,
+      "cos": 0.8932,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.158,
+      "cos": 0.8883,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.896,
+      "cos": 0.8767,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.119,
+      "cos": 0.9032,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.8832,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8896,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:97-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.129,
+      "cos": 0.9048,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:98:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.9148,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:98:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:98:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.9083,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:99:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.119,
+      "cos": 0.8826,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:99:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.933,
+      "cos": 0.9025,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:100:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.8612,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:100:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.8862,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:100:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.145,
+      "cos": 0.8673,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:100:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.8786,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:100:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.152,
+      "cos": 0.8807,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:100:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8937,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:101",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.085,
+      "cos": 0.8404,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:102:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.917,
+      "cos": 0.9099,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:102:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.14,
+      "cos": 0.9031,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:103:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.8821,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:103:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.892,
+      "cos": 0.9066,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:103:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.082,
+      "cos": 0.8681,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:104",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.2,
+      "cos": 0.8469,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "family:105:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.8796,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:105:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.153,
+      "cos": 0.8716,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:105:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.152,
+      "cos": 0.8909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:105:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8627,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:106:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.9076,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:106:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.19,
+      "cos": 0.8869,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:107:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.8985,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:107:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.193,
+      "cos": 0.8637,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:107:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8652,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "family:107-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8741,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:108",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.144,
+      "cos": 0.862,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:109:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.181,
+      "cos": 0.8585,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:109:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.132,
+      "cos": 0.8704,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "family:109:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.8818,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:109:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.131,
+      "cos": 0.9101,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:110",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.077,
+      "cos": 0.8462,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:111:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.911,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:111:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.931,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:111:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.079,
+      "cos": 0.9114,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:111:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.157,
+      "cos": 0.8977,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:111:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.9206,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.086,
+      "cos": 0.8832,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:2#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.9125,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:2#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.044,
+      "cos": 0.9163,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.9071,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.13,
+      "cos": 0.8853,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.9271,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.9005,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8717,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.9258,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.9019,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.092,
+      "cos": 0.8786,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.131,
+      "cos": 0.8866,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.163,
+      "cos": 0.8954,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.132,
+      "cos": 0.9027,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.107,
+      "cos": 0.9172,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.094,
+      "cos": 0.925,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:112-1:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.083,
+      "cos": 0.8919,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9319,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.888,
+      "cos": 0.8916,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.082,
+      "cos": 0.9296,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.9203,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.9122,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.9189,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:113:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9251,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.788,
+      "cos": 0.9014,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.062,
+      "cos": 0.9243,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.09,
+      "cos": 0.8995,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.891,
+      "cos": 0.8722,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.8973,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.141,
+      "cos": 0.9187,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.093,
+      "cos": 0.9127,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:114-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.9202,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:115:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.106,
+      "cos": 0.8774,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:115:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.136,
+      "cos": 0.8738,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:115:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.1,
+      "cos": 0.8996,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:116:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.188,
+      "cos": 0.8937,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:116:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.146,
+      "cos": 0.874,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:117:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.8469,
+      "rank_ru2kz": 7,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 7, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:117:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.143,
+      "cos": 0.8994,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:117:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.108,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:117:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.168,
+      "cos": 0.8837,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:117:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.208,
+      "cos": 0.9079,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.088,
+      "cos": 0.8687,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.169,
+      "cos": 0.8891,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.138,
+      "cos": 0.8989,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-2:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.9189,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-2:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.105,
+      "cos": 0.9138,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-2:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.102,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-3:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.104,
+      "cos": 0.8891,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-3:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.093,
+      "cos": 0.9151,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-4:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.027,
+      "cos": 0.8878,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-4:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.067,
+      "cos": 0.8895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:118-5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.071,
+      "cos": 0.9014,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:119:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.06,
+      "cos": 0.8331,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 15,
+      "flag_reasons": [
+        "xling rank ru->kz 3, kz->ru 15"
+      ]
+    },
+    {
+      "chunk_id": "family:119:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.137,
+      "cos": 0.8594,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:119:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.177,
+      "cos": 0.8758,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:120:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.172,
+      "cos": 0.8532,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:120:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.128,
+      "cos": 0.8991,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:120:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.026,
+      "cos": 0.8856,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:121:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.121,
+      "cos": 0.8429,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "family:121:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.071,
+      "cos": 0.8718,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:121:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.8592,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:121:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8849,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:122:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.044,
+      "cos": 0.9182,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:122:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.096,
+      "cos": 0.8575,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:122:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.13,
+      "cos": 0.8706,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:122:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.967,
+      "cos": 0.8635,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:122:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8716,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:122:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.8783,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:123",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.059,
+      "cos": 0.9167,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:124:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.061,
+      "cos": 0.9287,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:124:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.142,
+      "cos": 0.894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:125:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.248,
+      "cos": 0.8394,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:125:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.119,
+      "cos": 0.8818,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:125:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.222,
+      "cos": 0.8615,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:125:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8665,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:126:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.046,
+      "cos": 0.8783,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:126:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8623,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:126:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.042,
+      "cos": 0.8601,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:126:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.132,
+      "cos": 0.8622,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:126:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.9246,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:127:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.102,
+      "cos": 0.8529,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:127:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.8403,
+      "rank_ru2kz": 7,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 7, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:127:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.8369,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 8,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 8"
+      ]
+    },
+    {
+      "chunk_id": "family:127:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.891,
+      "cos": 0.8731,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:128:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.062,
+      "cos": 0.8778,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:128:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.146,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:128:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.187,
+      "cos": 0.8557,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:129:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.071,
+      "cos": 0.8865,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:129:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.105,
+      "cos": 0.8564,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:129:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.098,
+      "cos": 0.8684,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:130:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.197,
+      "cos": 0.8343,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 14,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 14"
+      ]
+    },
+    {
+      "chunk_id": "family:130:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.873,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:130:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.048,
+      "cos": 0.8754,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:131",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.19,
+      "cos": 0.8569,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.144,
+      "cos": 0.8907,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.181,
+      "cos": 0.8698,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "family:132-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.207,
+      "cos": 0.9093,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-2:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.063,
+      "cos": 0.8952,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-2:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.172,
+      "cos": 0.9172,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-2:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.101,
+      "cos": 0.8804,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-3:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-3:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.073,
+      "cos": 0.8633,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-3:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.056,
+      "cos": 0.8798,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-4:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.131,
+      "cos": 0.89,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-4:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.112,
+      "cos": 0.8664,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-4:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.209,
+      "cos": 0.876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-4:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.097,
+      "cos": 0.9136,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.136,
+      "cos": 0.9013,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-6:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.104,
+      "cos": 0.9202,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-6:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.083,
+      "cos": 0.9076,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-6:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.117,
+      "cos": 0.8697,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-6:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.142,
+      "cos": 0.9259,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-7:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.9249,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-7:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8822,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-8:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.9041,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-8:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.9071,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-8:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.106,
+      "cos": 0.925,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-8:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.189,
+      "cos": 0.9095,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-8:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.084,
+      "cos": 0.9192,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-9:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.056,
+      "cos": 0.9285,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-9:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.208,
+      "cos": 0.8668,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-9:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.9218,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-9:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.9309,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-9:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.089,
+      "cos": 0.9162,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:132-10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.9258,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:133:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8429,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 10,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 10"
+      ]
+    },
+    {
+      "chunk_id": "family:133:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8618,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 3, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:133:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.925,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:134:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.898,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:134:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.117,
+      "cos": 0.9202,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:134:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.047,
+      "cos": 0.8851,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:135:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.8928,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:135:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.9088,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:136:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.8917,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:136:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.883,
+      "cos": 0.8812,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:136:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.9277,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-1",
+      "markers_ok": false,
+      "numbers_ok": true,
+      "ratio": 1.098,
+      "cos": 0.9036,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "markers differ"
+      ]
+    },
+    {
+      "chunk_id": "family:137-2:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8851,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-2:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.121,
+      "cos": 0.9027,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-2:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.8678,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-3:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8817,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-3:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.9152,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-3:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.9079,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-4:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.13,
+      "cos": 0.8921,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:137-4:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:138:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.8701,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:138:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.969,
+      "cos": 0.8738,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:138:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.18,
+      "cos": 0.8808,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:139:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.117,
+      "cos": 0.8748,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:139:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.095,
+      "cos": 0.8887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:140",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.836,
+      "cos": 0.8557,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:141:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.925,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:141:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.8817,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:141:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8645,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:141:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.976,
+      "cos": 0.875,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:142",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.9061,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:143:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8582,
+      "rank_ru2kz": 9,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 9, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:143:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.886,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:144:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.8774,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:144:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.875,
+      "rank_ru2kz": 8,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 8, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:144:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.861,
+      "cos": 0.8746,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:145:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.16,
+      "cos": 0.852,
+      "rank_ru2kz": 6,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 6, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "family:145:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8974,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:145:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.086,
+      "cos": 0.8624,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:145:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.8906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:145:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8748,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:145:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.06,
+      "cos": 0.8922,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:146:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8616,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:146:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.081,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:146:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:147:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.236,
+      "cos": 0.8684,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:147:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.9009,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:148:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:148:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.088,
+      "cos": 0.8709,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:149",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.125,
+      "cos": 0.8881,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:150:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.9116,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:150:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.8824,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:151",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.8672,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:152",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.036,
+      "cos": 0.865,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:153",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.8619,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:154:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.085,
+      "cos": 0.8452,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "family:154:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.157,
+      "cos": 0.8562,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:154:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.867,
+      "cos": 0.9157,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:155:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
+      "cos": 0.8368,
+      "rank_ru2kz": 15,
+      "rank_kz2ru": 3,
+      "flag_reasons": [
+        "xling rank ru->kz 15, kz->ru 3"
+      ]
+    },
+    {
+      "chunk_id": "family:155:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.21,
+      "cos": 0.8476,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:156:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.893,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:156:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.8932,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:156:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.06,
+      "cos": 0.8843,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:157",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.8807,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:158",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.918,
+      "cos": 0.8881,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:159:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.8833,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:159:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.8844,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:159:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.9065,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:160",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8926,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:161:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.8714,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:161:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8664,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:162:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.8924,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:162:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.879,
+      "cos": 0.8901,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:163",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.9121,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:164:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.928,
+      "cos": 0.8552,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:164:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8669,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:165",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.922,
+      "cos": 0.9121,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:166",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.902,
+      "cos": 0.8763,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:167:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.002,
+      "cos": 0.8802,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:167:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8676,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:168:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.8874,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:168:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.8921,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:169:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.825,
+      "cos": 0.9028,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:169:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.885,
+      "cos": 0.882,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:169:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.9066,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:169:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.962,
+      "cos": 0.9007,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:169:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8838,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:170:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8741,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:170:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8715,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:171:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8601,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:171:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.8647,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:172:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.9031,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:172:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.858,
+      "cos": 0.8772,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:172:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.877,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:173",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8531,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:174:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.879,
+      "cos": 0.8946,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:174:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.8722,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:174:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.928,
+      "cos": 0.8965,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:175:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.9014,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:175:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.056,
+      "cos": 0.8492,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:176:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8512,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:176:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.908,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:177",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.917,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:178:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8965,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:178:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.106,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:178:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.09,
+      "cos": 0.8873,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:178:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.89,
+      "cos": 0.921,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:179:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8849,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:179:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.923,
+      "cos": 0.902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:179:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.8837,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:180:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.088,
+      "cos": 0.8641,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:180:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:181:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.8856,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:181:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.8939,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:181:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.9199,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:181:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.876,
+      "cos": 0.8827,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:182:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.067,
+      "cos": 0.8503,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "family:182:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.9235,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:183:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.8599,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:183:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.084,
+      "cos": 0.9112,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:183:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.985,
+      "cos": 0.8899,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:183:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.8789,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:184:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.884,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:184:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8815,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:184:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8972,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:184:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.862,
+      "cos": 0.9148,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:184:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.9119,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:184:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.896,
+      "cos": 0.9109,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:185:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.904,
+      "cos": 0.8246,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 31,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 31"
+      ]
+    },
+    {
+      "chunk_id": "family:185:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.8941,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:185:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.9086,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:186:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.822,
+      "cos": 0.8919,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:186:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.862,
+      "cos": 0.9131,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:186:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.8881,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:186:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8746,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:187:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.911,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:187:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.9141,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:187:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.829,
+      "cos": 0.8883,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:188:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8795,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:188:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8704,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:188:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.842,
+      "cos": 0.9222,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:188:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.9016,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:189",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.9248,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:190:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.9094,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:190:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.895,
+      "cos": 0.9324,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:191",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.048,
+      "cos": 0.8761,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:192:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.087,
+      "cos": 0.8803,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:192:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.898,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:192:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:192:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9065,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:192-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.062,
+      "cos": 0.8859,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:192-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.063,
+      "cos": 0.8694,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:193",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.884,
+      "cos": 0.9223,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:194:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8789,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:194:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.9256,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:194:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8746,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:194:4",
+      "markers_ok": true,
+      "numbers_ok": false,
+      "ratio": 0.262,
+      "cos": 0.7912,
+      "rank_ru2kz": 186,
+      "rank_kz2ru": 81,
+      "flag_reasons": [
+        "numbers differ: ru-only {'195': 1} kz-only {}",
+        "length ratio 0.26",
+        "xling rank ru->kz 186, kz->ru 81"
+      ]
+    },
+    {
+      "chunk_id": "family:196:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.8937,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:196:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.976,
+      "cos": 0.8971,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:196:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.8849,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:197:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.8586,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:197:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.874,
+      "cos": 0.8972,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:197:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.032,
+      "cos": 0.9099,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:197:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8818,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:198:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.888,
+      "cos": 0.8894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:198:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.866,
+      "cos": 0.8948,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:199",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.9083,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:200",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.853,
+      "cos": 0.8559,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:201",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.8938,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:202",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.873,
+      "cos": 0.8879,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:203",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8884,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:220",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.8681,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:221",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8718,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:222:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8707,
+      "rank_ru2kz": 7,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 7, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:222:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.969,
+      "cos": 0.903,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:222:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.9168,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:223:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.9119,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:223:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.9044,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:224:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8627,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:224:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.9077,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:225:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.996,
+      "cos": 0.8295,
+      "rank_ru2kz": 9,
+      "rank_kz2ru": 36,
+      "flag_reasons": [
+        "xling rank ru->kz 9, kz->ru 36"
+      ]
+    },
+    {
+      "chunk_id": "family:225:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8997,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:225:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8225,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 15,
+      "flag_reasons": [
+        "xling rank ru->kz 3, kz->ru 15"
+      ]
+    },
+    {
+      "chunk_id": "family:225:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.113,
+      "cos": 0.8914,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:226:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.8708,
+      "rank_ru2kz": 6,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 6, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "family:226:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:226:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.108,
+      "cos": 0.8911,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:226:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.078,
+      "cos": 0.8865,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:226:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.8796,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:226:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8974,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:227",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.956,
+      "cos": 0.8436,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:228:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8935,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:228:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.9023,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:228:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.8938,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:229:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.087,
+      "cos": 0.8741,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:229:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.88,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:230:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.057,
+      "cos": 0.8898,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:230:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8801,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:231",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.969,
+      "cos": 0.8742,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:232:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.8826,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:232:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.8934,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:232:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.094,
+      "cos": 0.8682,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:233:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.8622,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:233:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.908,
+      "cos": 0.8476,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "family:234:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.127,
+      "cos": 0.8881,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:234:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8942,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:235",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8982,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:236",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.8688,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:237",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.075,
+      "cos": 0.8942,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:238:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.8309,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 42,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 42"
+      ]
+    },
+    {
+      "chunk_id": "family:238:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8737,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "family:238:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8931,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:239",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.114,
+      "cos": 0.8836,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:240",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.9021,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:241:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8962,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:241:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.8859,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:241:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.046,
+      "cos": 0.8778,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:241:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.8599,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:242",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.9081,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:243",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.8513,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:244:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.06,
+      "cos": 0.8885,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:244:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9008,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:244:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8829,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:244:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.893,
+      "cos": 0.8976,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:245",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.057,
+      "cos": 0.9019,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:246",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.8944,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:247",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.059,
+      "cos": 0.8857,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:257",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8813,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:258",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.082,
+      "cos": 0.8988,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:259",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.067,
+      "cos": 0.8545,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:260",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.8808,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:262",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8517,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:264",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.8656,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:268",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:269",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8818,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:270",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.917,
+      "cos": 0.8994,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:271",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.9028,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:272",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.092,
+      "cos": 0.8915,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:273",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.9036,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:274",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.15,
+      "cos": 0.8944,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:275",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.9092,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:276:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.784,
+      "cos": 0.8433,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 19,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 19"
+      ]
+    },
+    {
+      "chunk_id": "family:276:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.8917,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:277",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.9098,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:278",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.933,
+      "cos": 0.8865,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:279:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8824,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "family:279:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.009,
+      "cos": 0.8978,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:280",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.9071,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:281",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.962,
+      "cos": 0.9089,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:282:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8851,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:282:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
+      "cos": 0.9076,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:282:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.9245,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:283:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.828,
+      "cos": 0.8713,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "family:283:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.118,
+      "cos": 0.917,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    }
+  ]
+}

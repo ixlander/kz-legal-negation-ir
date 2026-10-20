@@ -14,3 +14,4 @@ numpy
 matplotlib
 tqdm
 pyhfst  # only for src/diagnostics/d2_crosscheck.py (apertium-kaz lookup)
+# kazsearch-py: pip install ../nlp_tools/kazsearch-py (local clone of github.com/iDynbek/kazsearch-py, LGPL-3.0)

@@ -1,0 +1,7356 @@
+{
+  "summary": {
+    "code": "penal",
+    "pairs": 723,
+    "model": "intfloat/multilingual-e5-base",
+    "top": 3,
+    "markers_match": 0.9972337482710927,
+    "numbers_match": 0.9972337482710927,
+    "xling_rank1_both": 0.8201936376210235,
+    "xling_top3_both": 0.9336099585062241,
+    "flagged_any": 51,
+    "sent_to_owner": 3,
+    "flag_reason_counts": {
+      "markers differ": 2,
+      "numbers differ": 2,
+      "length ratio": 1,
+      "xling rank": 48
+    }
+  },
+  "per_pair": [
+    {
+      "chunk_id": "penal:1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8786,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.036,
+      "cos": 0.8756,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.877,
+      "cos": 0.8931,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:2:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8687,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:2:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.996,
+      "cos": 0.9041,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:3#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.9227,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:3#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.128,
+      "cos": 0.8777,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:4:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8705,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:4:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.065,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:4:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.8933,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.8747,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8415,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:7:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.878,
+      "cos": 0.8858,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:7:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8839,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:8:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.916,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:8:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8873,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:9:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.231,
+      "cos": 0.8764,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:9:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.237,
+      "cos": 0.9093,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:9:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.086,
+      "cos": 0.9046,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:9:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.153,
+      "cos": 0.8918,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:9:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8975,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:9:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.048,
+      "cos": 0.8783,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:10:1#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.9125,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:10:1#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.038,
+      "cos": 0.9067,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:10:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.9152,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:10:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8896,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:10:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.922,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:11:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.907,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:11:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.9025,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8774,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.8771,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.904,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.889,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8962,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8822,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8757,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.8838,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:12:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.917,
+      "cos": 0.8671,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:13:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.141,
+      "cos": 0.8989,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:13:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.842,
+      "cos": 0.8851,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:13:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.8955,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:13:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.9118,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:13:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8832,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:13:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.932,
+      "cos": 0.8954,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.8809,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8843,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.084,
+      "cos": 0.8819,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.264,
+      "cos": 0.9064,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.18,
+      "cos": 0.8756,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8709,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.122,
+      "cos": 0.8786,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8852,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:14:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.178,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:15:1",
+      "markers_ok": false,
+      "numbers_ok": false,
+      "ratio": 0.448,
+      "cos": 0.8407,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 3,
+      "flag_reasons": [
+        "markers differ",
+        "numbers differ: ru-only {'29.09.2014': 3, '239': 3, '01.01.2015': 3} kz-only {}",
+        "length ratio 0.45"
+      ]
+    },
+    {
+      "chunk_id": "penal:15:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.12,
+      "cos": 0.9097,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:16:1#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9121,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:16:1#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8923,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:16:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.9251,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:17:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.002,
+      "cos": 0.8896,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:17:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.8922,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:17:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.093,
+      "cos": 0.8788,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:17:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.8886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:17:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9278,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:18:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.9267,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:18:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:19:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.089,
+      "cos": 0.898,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:19:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.848,
+      "cos": 0.9024,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:20:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:20:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.106,
+      "cos": 0.882,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:20:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8821,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:21:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.9144,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:21:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.9149,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:22",
+      "markers_ok": false,
+      "numbers_ok": true,
+      "ratio": 0.984,
+      "cos": 0.9201,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "markers differ"
+      ]
+    },
+    {
+      "chunk_id": "penal:23",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.9172,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.09,
+      "cos": 0.8512,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 14,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 14"
+      ]
+    },
+    {
+      "chunk_id": "penal:24:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.92,
+      "cos": 0.8822,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.9062,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9169,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.8777,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.8967,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8598,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.074,
+      "cos": 0.8818,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:11",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.9018,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:12",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.87,
+      "cos": 0.8748,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:12-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.781,
+      "cos": 0.8704,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:13",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.061,
+      "cos": 0.8846,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:24:14",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.065,
+      "cos": 0.9095,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:25",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.9118,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:26:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.8901,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:26:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.8747,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:26:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8945,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:26:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.156,
+      "cos": 0.8875,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:26:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.8977,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:27:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8729,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:27:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.147,
+      "cos": 0.8948,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:27:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8867,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:28",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8913,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:29",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.916,
+      "cos": 0.8948,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:30",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:31:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.835,
+      "cos": 0.9234,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:31:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8976,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:31:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.101,
+      "cos": 0.9045,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:32:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.988,
+      "cos": 0.9135,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:32:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.9048,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:32:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.9038,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:32:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:32:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
+      "cos": 0.8789,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:32:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.828,
+      "cos": 0.9157,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:33:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.072,
+      "cos": 0.8632,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:33:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.843,
+      "cos": 0.9118,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.936,
+      "cos": 0.8616,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.763,
+      "cos": 0.8943,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.8571,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.865,
+      "cos": 0.896,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.862,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.898,
+      "cos": 0.8897,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:34:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8913,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:35:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.872,
+      "cos": 0.8777,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:35:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:35:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.9238,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:35:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.845,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:36:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.8998,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:36:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8976,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:36:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.871,
+      "cos": 0.895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:37:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8996,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:37:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.8927,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:38:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.057,
+      "cos": 0.8918,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:38:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.8615,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:38:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.8601,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:38:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:38:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.904,
+      "cos": 0.8965,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:38:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8878,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:39:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8477,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:39:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.878,
+      "cos": 0.9037,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:39:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.083,
+      "cos": 0.8795,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:39:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.882,
+      "cos": 0.906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:39:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.903,
+      "cos": 0.9056,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:40:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.8789,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:40:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:40:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.159,
+      "cos": 0.8668,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:41:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.047,
+      "cos": 0.9035,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:41:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.9166,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:42:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.8868,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:42:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.9266,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:43:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.8964,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:43:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.847,
+      "cos": 0.8995,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:43:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.839,
+      "cos": 0.9106,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:43:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:43:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.819,
+      "cos": 0.9288,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:44",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.8932,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:45:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.872,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:45:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:46:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.841,
+      "cos": 0.8647,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:46:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.8868,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:46:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.889,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:46:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.899,
+      "cos": 0.8655,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:47:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8975,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:47:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8922,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:47:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.9056,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:48",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8636,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:49:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.8759,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:49:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.9073,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:49:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.8834,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:50:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8657,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:50:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8967,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:51",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8945,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.861,
+      "cos": 0.8524,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.8688,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8779,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.8649,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8963,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.8934,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8798,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.8917,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.8808,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:52:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.11,
+      "cos": 0.8792,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:53:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.8774,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:53:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.8628,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:54:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.8803,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:54:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.976,
+      "cos": 0.8745,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:54:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.863,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:54:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8785,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:55",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.9013,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:56:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8946,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:56:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.872,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:57:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.8506,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:57:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.967,
+      "cos": 0.8893,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:57:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.92,
+      "cos": 0.913,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:57:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.8976,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:57:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.8832,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:58:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8585,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "penal:58:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.8933,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:58:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.967,
+      "cos": 0.8892,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:59",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.8892,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:60:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:60:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8934,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:60:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.904,
+      "cos": 0.908,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:60:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8785,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:61",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8955,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:62:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8967,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:62:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.941,
+      "cos": 0.904,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:63:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.038,
+      "cos": 0.8612,
+      "rank_ru2kz": 7,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 7, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:63:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.867,
+      "cos": 0.8749,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:63:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.9086,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:64",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8426,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 8,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 8"
+      ]
+    },
+    {
+      "chunk_id": "penal:65:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8833,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:65:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8879,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:66:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8994,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:66:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.89,
+      "cos": 0.8939,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:67:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8858,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:67:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.9119,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:67:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.885,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:68:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.8549,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "penal:68:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.074,
+      "cos": 0.8703,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:69:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9121,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:69:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.914,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:69:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.8829,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:69:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.956,
+      "cos": 0.8974,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:70:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.9069,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:70:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.075,
+      "cos": 0.8669,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8604,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.86,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8927,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.8856,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.9101,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8509,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:71-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.9089,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.934,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:71-1:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.9337,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:72:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.969,
+      "cos": 0.8456,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:72:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.8884,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:72:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.8937,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:72:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.042,
+      "cos": 0.8852,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:72:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.8851,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:72:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8694,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:72:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.9,
+      "cos": 0.8691,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:73:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.084,
+      "cos": 0.869,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:73:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8726,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:74:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.159,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:74:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:74:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.8833,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:75:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.05,
+      "cos": 0.855,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:75:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 16,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 16"
+      ]
+    },
+    {
+      "chunk_id": "penal:75:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.888,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:75:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.915,
+      "cos": 0.8798,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:76:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8432,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:76:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.8612,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "penal:76:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.869,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:77:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.8369,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 19,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 19"
+      ]
+    },
+    {
+      "chunk_id": "penal:77:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.797,
+      "cos": 0.885,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:78:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8716,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:78:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.898,
+      "cos": 0.8686,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:78:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.941,
+      "cos": 0.8774,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:78:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.8797,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:78:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.862,
+      "cos": 0.9004,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:78:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.932,
+      "cos": 0.8824,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:79:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.8316,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:79:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.8778,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:79:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.884,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:79:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8931,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:80:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.882,
+      "cos": 0.8732,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:80:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.83,
+      "cos": 0.8988,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:81:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.8462,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:81:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:82",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.917,
+      "cos": 0.8428,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:83:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.121,
+      "cos": 0.867,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 3, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:83:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.8918,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:84:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.88,
+      "cos": 0.8727,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:84:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.851,
+      "cos": 0.8769,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:85:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.9188,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:85:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.9065,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:85:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.027,
+      "cos": 0.8852,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:86:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.047,
+      "cos": 0.9097,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:86:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:87:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.8669,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:87:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8926,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:87:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.936,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:88:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.956,
+      "cos": 0.8593,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "penal:88:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.138,
+      "cos": 0.8777,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:88:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.927,
+      "cos": 0.8944,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:88:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8994,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:88:4-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.9153,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:88:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.882,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:88:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.8981,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.919,
+      "cos": 0.8878,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8766,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.9053,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.063,
+      "cos": 0.8856,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.8633,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.967,
+      "cos": 0.859,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:89:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.876,
+      "cos": 0.8834,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:90:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.9086,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:90:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.8762,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:90:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:90:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.8842,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8704,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.211,
+      "cos": 0.9041,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.17,
+      "cos": 0.8962,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.134,
+      "cos": 0.9302,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.976,
+      "cos": 0.8705,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
+      "cos": 0.894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:91:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.9097,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.8849,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.8779,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.984,
+      "cos": 0.892,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.833,
+      "cos": 0.8912,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.8693,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:5-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.85,
+      "cos": 0.9039,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.9033,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:92:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.9017,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:93:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.8811,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:93:1-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8593,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:93:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8519,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:93:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.877,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:94:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.956,
+      "cos": 0.8445,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "penal:94:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.065,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:94:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.8945,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:94:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.723,
+      "cos": 0.9067,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:94:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.936,
+      "cos": 0.8946,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:95:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.027,
+      "cos": 0.869,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:95:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.862,
+      "cos": 0.9184,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:95:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8699,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:95:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.9034,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.014,
+      "cos": 0.9101,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.9013,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.866,
+      "cos": 0.8532,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:3-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.9007,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:3-2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.8876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8899,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.885,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.927,
+      "cos": 0.882,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.821,
+      "cos": 0.8492,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:96:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.918,
+      "cos": 0.8779,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8698,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.9063,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.9255,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.8918,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.8821,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8975,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.911,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:97:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.8881,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.872,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.064,
+      "cos": 0.8668,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.976,
+      "cos": 0.8849,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:5",
+      "markers_ok": true,
+      "numbers_ok": false,
+      "ratio": 1.183,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "numbers differ: ru-only {} kz-only {'0': 2}"
+      ]
+    },
+    {
+      "chunk_id": "penal:98:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.915,
+      "cos": 0.8753,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9023,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:98:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.8997,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:99:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.026,
+      "cos": 0.8798,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:99:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.059,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:100:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.8891,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:100:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.852,
+      "cos": 0.8809,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:101:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.932,
+      "cos": 0.876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:101:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8918,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:101:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8961,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:101:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.9154,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:102:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.096,
+      "cos": 0.8748,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:102:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.9204,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:103:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.8553,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:103:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:103:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.969,
+      "cos": 0.9025,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:104:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.956,
+      "cos": 0.9131,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:104:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.9184,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:104:3#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.983,
+      "cos": 0.9137,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:104:3#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:104:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.9153,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:105:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9077,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:105:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.902,
+      "cos": 0.895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:105:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:105:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.9039,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:106:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.8921,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:106:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.8991,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:106:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.8858,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:106:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.839,
+      "cos": 0.8786,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:106:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.221,
+      "cos": 0.8868,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:106:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.868,
+      "cos": 0.8833,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:107:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8752,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:107:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.8894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:107:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.9004,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.855,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.83,
+      "cos": 0.9074,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.8912,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8957,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.8893,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.186,
+      "cos": 0.8956,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:108:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.8767,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:109:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.8968,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:109:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.9007,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:109:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.875,
+      "cos": 0.9073,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:110:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.8788,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:110:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.9076,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:110:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.918,
+      "cos": 0.8785,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:110:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.9195,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:111:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8684,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:111:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8942,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:111:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.086,
+      "cos": 0.8858,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:112:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8789,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:112:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.8903,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.8798,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8797,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.9067,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.056,
+      "cos": 0.8733,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8624,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.9033,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.111,
+      "cos": 0.8819,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.877,
+      "cos": 0.8773,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:113:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.915,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:114:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.896,
+      "cos": 0.9186,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:114:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.092,
+      "cos": 0.908,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:114:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.9181,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:114:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:115:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.874,
+      "cos": 0.8752,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:115:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.927,
+      "cos": 0.8924,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:115:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.8917,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:115:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.9059,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:115:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.189,
+      "cos": 0.891,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:115:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.8812,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:116:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.9105,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:116:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.8945,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:116:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.8868,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:116:3-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.868,
+      "cos": 0.8695,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:116:3-2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.909,
+      "cos": 0.8781,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:116:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.083,
+      "cos": 0.8778,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:117:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.9113,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:117:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.9115,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:117:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.897,
+      "cos": 0.9314,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:117:3-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.8574,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:117:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.916,
+      "cos": 0.9122,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:117:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.9206,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:118:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.89,
+      "cos": 0.86,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:118:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.014,
+      "cos": 0.8958,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.926,
+      "cos": 0.8732,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:1-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.9018,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:1-2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:1-3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.962,
+      "cos": 0.8757,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:1-4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.9022,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:1-5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.8392,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 25,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 25"
+      ]
+    },
+    {
+      "chunk_id": "penal:119:1-6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8927,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.8791,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.9043,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.8,
+      "cos": 0.924,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.854,
+      "cos": 0.9274,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.9192,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.8952,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.9159,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:119:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.911,
+      "cos": 0.8999,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:120:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.9283,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:120:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.971,
+      "cos": 0.9062,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:121:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8944,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:121:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.912,
+      "cos": 0.9015,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:121:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.8895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:122",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.8755,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:123:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8954,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:123:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8862,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:123:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.839,
+      "cos": 0.9164,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:124:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.8698,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:124:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8965,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:124:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.941,
+      "cos": 0.8775,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:124:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.129,
+      "cos": 0.9032,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:125:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.988,
+      "cos": 0.8678,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:125:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.059,
+      "cos": 0.9343,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:125:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.8943,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:125:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.014,
+      "cos": 0.8908,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:126:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8706,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:126:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.027,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:126:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:126:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.9061,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:127:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.844,
+      "cos": 0.8575,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:127:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8737,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:127:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.901,
+      "cos": 0.9202,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:127:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:127:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.079,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:128:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.8933,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:128:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8856,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:129:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.8733,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:129:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:129:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8625,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:129:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.857,
+      "cos": 0.9112,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:129:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.988,
+      "cos": 0.8773,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:130:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.9,
+      "cos": 0.8698,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:130:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.91,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:130:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.89,
+      "cos": 0.8877,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:130:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.831,
+      "cos": 0.9059,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:131:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8829,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:131:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.044,
+      "cos": 0.8652,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:131:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.9133,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.072,
+      "cos": 0.8626,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9047,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.8631,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.011,
+      "cos": 0.8807,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.9079,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.8923,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8834,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.9032,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.8648,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:132:11",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.8666,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:133:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.8515,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:133:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.8563,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:133:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8865,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:134:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.8773,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:134:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.8969,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:134:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.031,
+      "cos": 0.8956,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:134:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.8945,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:134:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8878,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:135:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.8476,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 13,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 13"
+      ]
+    },
+    {
+      "chunk_id": "penal:135:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.907,
+      "cos": 0.8797,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:135:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.8995,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:135:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.014,
+      "cos": 0.8784,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:135:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.909,
+      "cos": 0.8869,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:135:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.059,
+      "cos": 0.8862,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:135:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.899,
+      "cos": 0.87,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:136:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.998,
+      "cos": 0.903,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 11,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 11"
+      ]
+    },
+    {
+      "chunk_id": "penal:136:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8986,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "penal:136:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.8943,
+      "rank_ru2kz": 14,
+      "rank_kz2ru": 11,
+      "flag_reasons": [
+        "xling rank ru->kz 14, kz->ru 11"
+      ]
+    },
+    {
+      "chunk_id": "penal:136:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.9172,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:136-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.9052,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:136-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8984,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "penal:136-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8979,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:136-1:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.9043,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:137:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8375,
+      "rank_ru2kz": 10,
+      "rank_kz2ru": 19,
+      "flag_reasons": [
+        "xling rank ru->kz 10, kz->ru 19"
+      ]
+    },
+    {
+      "chunk_id": "penal:137:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.922,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:137:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.946,
+      "cos": 0.8962,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:137:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.8761,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:137:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.915,
+      "cos": 0.8855,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:137:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8861,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:137:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.8651,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:138:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.905,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:138:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.899,
+      "rank_ru2kz": 7,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 7, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:138:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.8968,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:138:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.917,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:138-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.9033,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "penal:138-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.998,
+      "cos": 0.9016,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:138-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.899,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:138-1:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.9042,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:139:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.095,
+      "cos": 0.883,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:139:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
+      "cos": 0.852,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:139:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.8722,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "penal:139:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8883,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:139:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.132,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:140:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.8784,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:140:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.985,
+      "cos": 0.9132,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:140:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.9161,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:140:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.972,
+      "cos": 0.9117,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.036,
+      "cos": 0.9034,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.076,
+      "cos": 0.8634,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8852,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.9029,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8753,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8777,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.8905,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.8665,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:142:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.021,
+      "cos": 0.8636,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8525,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.86,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.9213,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.925,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.8926,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.969,
+      "cos": 0.8852,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.895,
+      "cos": 0.8912,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:143:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.88,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:144:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8978,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:144:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.9052,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:144:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.036,
+      "cos": 0.8672,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:144:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8764,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:144:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.867,
+      "cos": 0.8712,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:144:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.877,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:145:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8969,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:145:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.933,
+      "cos": 0.9062,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:145:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.888,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:145:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.9021,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "penal:145:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8998,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:145:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.9036,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8673,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.8703,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.188,
+      "cos": 0.906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.8787,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.984,
+      "cos": 0.8866,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.878,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.079,
+      "cos": 0.8909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:146:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.8938,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:147:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9136,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:147:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.159,
+      "cos": 0.9248,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:147:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.9059,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:147:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.957,
+      "cos": 0.879,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:147:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.899,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:148:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.788,
+      "cos": 0.8808,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:148:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.784,
+      "cos": 0.9095,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:148:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.907,
+      "cos": 0.8884,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:148:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.841,
+      "cos": 0.909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:149:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.093,
+      "cos": 0.9021,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:149:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.038,
+      "cos": 0.9245,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:149:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.256,
+      "cos": 0.902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:149:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.9398,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:150:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.8553,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:150:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8678,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:150:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.916,
+      "cos": 0.881,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 1"
+      ]
+    },
+    {
+      "chunk_id": "penal:150:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8891,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:150:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.922,
+      "cos": 0.8933,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:150:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.007,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:150:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8688,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:150:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.923,
+      "cos": 0.887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:150:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8776,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:151:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.9044,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "penal:151:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.8907,
+      "rank_ru2kz": 17,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 17, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "penal:151:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.9073,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:151:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.9156,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:151:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8892,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:152",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8754,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:153:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.882,
+      "cos": 0.9123,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:153:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.9101,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:153:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.957,
+      "cos": 0.8992,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:154:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.952,
+      "cos": 0.8562,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "penal:154:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.8926,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:154:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.957,
+      "cos": 0.8816,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:154:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.941,
+      "cos": 0.8997,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:154:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.856,
+      "cos": 0.8919,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:154:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:154:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.8654,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:155:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.8541,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:155:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8843,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:155:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.796,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:156",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.905,
+      "cos": 0.8906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:157:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.874,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:157:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.8883,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:157:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.786,
+      "cos": 0.9202,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:157:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.048,
+      "cos": 0.9,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:161:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:161:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.8962,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:161:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8705,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:161:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.9153,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.057,
+      "cos": 0.8614,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "penal:162:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.973,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.067,
+      "cos": 0.8733,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.231,
+      "cos": 0.8826,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.899,
+      "cos": 0.88,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.932,
+      "cos": 0.8733,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.8638,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.8682,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8966,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.067,
+      "cos": 0.905,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.077,
+      "cos": 0.8513,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.874,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:162-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.8973,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.863,
+      "cos": 0.8435,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8813,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.8877,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.074,
+      "cos": 0.8703,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.027,
+      "cos": 0.8753,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.878,
+      "cos": 0.9122,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8815,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.026,
+      "cos": 0.8855,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:163:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.9004,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:164:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.8667,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:164:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.9009,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:164:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.994,
+      "cos": 0.8828,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.8723,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.9074,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.053,
+      "cos": 0.8827,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.042,
+      "cos": 0.8878,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.878,
+      "cos": 0.886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.887,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.9135,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.8903,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.962,
+      "cos": 0.8721,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:165:10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.858,
+      "cos": 0.896,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:166:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.045,
+      "cos": 0.8831,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:166:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.034,
+      "cos": 0.9059,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:166:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:167:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.057,
+      "cos": 0.8791,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:167:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.8857,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:167:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.027,
+      "cos": 0.8961,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:167:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:167:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.8634,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:168:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.073,
+      "cos": 0.8667,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:168:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8841,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.987,
+      "cos": 0.9115,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.8753,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.89,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.05,
+      "cos": 0.87,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.005,
+      "cos": 0.8722,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8924,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:169:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.05,
+      "cos": 0.8646,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "penal:170:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.808,
+      "cos": 0.8744,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:170:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.845,
+      "cos": 0.8795,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:170:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.843,
+      "cos": 0.8886,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:171",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.8777,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.852,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.902,
+      "cos": 0.8651,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.916,
+      "cos": 0.8609,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.922,
+      "cos": 0.8762,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.873,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.896,
+      "cos": 0.8876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:172:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.8796,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:173:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.8605,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:173:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.903,
+      "cos": 0.8829,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:173:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.8786,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:174:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.9032,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:174:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.962,
+      "cos": 0.8703,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:174:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.8766,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:174:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.8969,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:174:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8704,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:175:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.08,
+      "cos": 0.915,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:175:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8688,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "penal:175:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.988,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:176:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.999,
+      "cos": 0.8975,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:176:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.002,
+      "cos": 0.8879,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:176:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.8773,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:176:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.957,
+      "cos": 0.8815,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:177:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.88,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:177:2#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.9369,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:177:2#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.951,
+      "cos": 0.912,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "penal:177:2#3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.8965,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    }
+  ]
+}

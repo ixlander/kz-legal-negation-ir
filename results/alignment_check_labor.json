@@ -1,29 +1,119 @@
 {
   "summary": {
     "code": "labor",
-    "pairs": 448,
+    "pairs": 774,
     "model": "intfloat/multilingual-e5-base",
     "top": 3,
-    "markers_match": 0.9933035714285714,
-    "numbers_match": 0.9933035714285714,
-    "xling_rank1_both": 0.8950892857142857,
-    "xling_top3_both": 0.9598214285714286,
-    "flagged_any": 20,
-    "sent_to_owner": 5,
+    "markers_match": 0.9961240310077519,
+    "numbers_match": 0.9961240310077519,
+    "xling_rank1_both": 0.8165374677002584,
+    "xling_top3_both": 0.917312661498708,
+    "flagged_any": 67,
+    "sent_to_owner": 6,
     "flag_reason_counts": {
+      "xling rank": 64,
       "markers differ": 3,
       "numbers differ": 3,
-      "length ratio": 2,
-      "xling rank": 18
+      "length ratio": 3
     }
   },
   "per_pair": [
     {
-      "chunk_id": "labor:1:1",
+      "chunk_id": "labor:1:1#1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.98,
-      "cos": 0.9283,
+      "ratio": 1.018,
+      "cos": 0.9271,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.9392,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.9368,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.943,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.9459,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.941,
+      "cos": 0.9493,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.9304,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.9468,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.9481,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:1:1#10",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.928,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -39,21 +129,51 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:2",
+      "chunk_id": "labor:2:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.96,
-      "cos": 0.9331,
+      "ratio": 1.088,
+      "cos": 0.9082,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:2:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.05,
+      "cos": 0.9249,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:3",
+      "chunk_id": "labor:2:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.038,
-      "cos": 0.916,
+      "ratio": 0.851,
+      "cos": 0.8839,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:3:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.116,
+      "cos": 0.8812,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:3:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.9087,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -79,11 +199,41 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:6",
+      "chunk_id": "labor:6:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.988,
-      "cos": 0.9274,
+      "ratio": 1.028,
+      "cos": 0.8956,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:6:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8848,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:6:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.9123,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:6:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.9049,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -99,11 +249,41 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:8",
+      "chunk_id": "labor:8:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.996,
-      "cos": 0.9371,
+      "ratio": 1.145,
+      "cos": 0.912,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:8:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.936,
+      "cos": 0.919,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:8:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.9307,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:8:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.122,
+      "cos": 0.9321,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -119,11 +299,33 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:10",
+      "chunk_id": "labor:10:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.944,
-      "cos": 0.9309,
+      "ratio": 0.994,
+      "cos": 0.8629,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:10:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.9081,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:10:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.828,
+      "cos": 0.9136,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -139,21 +341,121 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:12",
+      "chunk_id": "labor:12:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.998,
-      "cos": 0.9016,
+      "ratio": 0.963,
+      "cos": 0.8878,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:13",
+      "chunk_id": "labor:12:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.93,
-      "cos": 0.9175,
+      "ratio": 1.031,
+      "cos": 0.8884,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:12:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8853,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:12:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8967,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:12:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8896,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:12:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8847,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:12:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8651,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:13:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:13:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.89,
+      "cos": 0.9189,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:13:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.863,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:13:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.8871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:13:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8807,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -179,11 +481,41 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:16",
+      "chunk_id": "labor:16#1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.02,
-      "cos": 0.926,
+      "ratio": 1.065,
+      "cos": 0.9235,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:16#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.9276,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:16#3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9273,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:16#4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.001,
+      "cos": 0.9208,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -219,42 +551,114 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:20",
+      "chunk_id": "labor:20:1",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 0.97,
-      "cos": 0.9116,
+      "cos": 0.9077,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:20-1",
+      "chunk_id": "labor:20:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.033,
-      "cos": 0.9234,
+      "ratio": 0.942,
+      "cos": 0.8832,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:21",
+      "chunk_id": "labor:20:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.925,
-      "cos": 0.9265,
+      "ratio": 0.99,
+      "cos": 0.8964,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:22:1",
+      "chunk_id": "labor:20-1:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.987,
-      "cos": 0.9244,
+      "ratio": 1.15,
+      "cos": 0.8657,
       "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:20-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.044,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:20-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.012,
+      "cos": 0.9215,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:21:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.912,
+      "cos": 0.8775,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:21:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.9159,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:21:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.862,
+      "cos": 0.9177,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:22:1#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.941,
+      "cos": 0.9224,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:22:1#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.9108,
+      "rank_ru2kz": 2,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
@@ -289,14 +693,36 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:23:2",
+      "chunk_id": "labor:23:2#1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.996,
-      "cos": 0.9332,
+      "ratio": 0.955,
+      "cos": 0.9347,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:23:2#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.9384,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:23:2#3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.02,
+      "cos": 0.8818,
+      "rank_ru2kz": 23,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "xling rank ru->kz 23, kz->ru 1"
+      ]
     },
     {
       "chunk_id": "labor:23:3",
@@ -319,13 +745,23 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:25",
+      "chunk_id": "labor:25:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.906,
-      "cos": 0.9036,
+      "ratio": 0.989,
+      "cos": 0.8841,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:25:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.887,
+      "cos": 0.8707,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
       "flag_reasons": []
     },
     {
@@ -334,13 +770,13 @@
       "numbers_ok": false,
       "ratio": 0.588,
       "cos": 0.8826,
-      "rank_ru2kz": 2,
-      "rank_kz2ru": 10,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 22,
       "flag_reasons": [
         "markers differ",
         "numbers differ: ru-only {'2': 1} kz-only {}",
         "length ratio 0.59",
-        "xling rank ru->kz 2, kz->ru 10"
+        "xling rank ru->kz 4, kz->ru 22"
       ]
     },
     {
@@ -360,11 +796,11 @@
       "ratio": 1.592,
       "cos": 0.8882,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 4,
+      "rank_kz2ru": 11,
       "flag_reasons": [
         "markers differ",
         "numbers differ: ru-only {} kz-only {'2': 1}",
-        "xling rank ru->kz 1, kz->ru 4"
+        "xling rank ru->kz 1, kz->ru 11"
       ]
     },
     {
@@ -374,29 +810,71 @@
       "ratio": 0.961,
       "cos": 0.8491,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 5,
+      "rank_kz2ru": 14,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 5"
+        "xling rank ru->kz 1, kz->ru 14"
       ]
     },
     {
-      "chunk_id": "labor:28",
+      "chunk_id": "labor:28:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.006,
-      "cos": 0.9221,
+      "ratio": 1.009,
+      "cos": 0.9168,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:29",
+      "chunk_id": "labor:28:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.005,
-      "cos": 0.8731,
+      "ratio": 0.961,
+      "cos": 0.8647,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:28:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.9188,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:29:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8545,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:29:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.8834,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:29:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8885,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
@@ -450,11 +928,31 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:31",
+      "chunk_id": "labor:31:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.877,
-      "cos": 0.9073,
+      "ratio": 0.735,
+      "cos": 0.8734,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:31:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.89,
+      "cos": 0.9155,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:31:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.905,
+      "cos": 0.8803,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -530,13 +1028,43 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:33",
+      "chunk_id": "labor:33:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.943,
-      "cos": 0.9088,
+      "ratio": 0.863,
+      "cos": 0.8648,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:33:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.9048,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:33:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.9017,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:33:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.013,
+      "cos": 0.8725,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -560,41 +1088,105 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:36",
+      "chunk_id": "labor:36:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.898,
-      "cos": 0.9003,
+      "ratio": 0.925,
+      "cos": 0.8766,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:37",
+      "chunk_id": "labor:36:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.914,
-      "cos": 0.8698,
+      "ratio": 0.931,
+      "cos": 0.8724,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:38",
+      "chunk_id": "labor:36:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.988,
-      "cos": 0.8921,
+      "ratio": 0.733,
+      "cos": 0.8955,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:37:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.825,
+      "cos": 0.8445,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 25,
+      "flag_reasons": [
+        "xling rank ru->kz 4, kz->ru 25"
+      ]
+    },
+    {
+      "chunk_id": "labor:37:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.064,
+      "cos": 0.8826,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:38:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8552,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:38:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:38:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.099,
+      "cos": 0.8913,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:39:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.889,
+      "cos": 0.8571,
       "rank_ru2kz": 1,
       "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:39",
+      "chunk_id": "labor:39:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.887,
-      "cos": 0.8962,
+      "ratio": 0.886,
+      "cos": 0.886,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -636,9 +1228,9 @@
       "ratio": 0.935,
       "cos": 0.8509,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 6,
+      "rank_kz2ru": 12,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 6"
+        "xling rank ru->kz 1, kz->ru 12"
       ]
     },
     {
@@ -668,8 +1260,10 @@
       "ratio": 0.886,
       "cos": 0.8642,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 3,
-      "flag_reasons": []
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
     },
     {
       "chunk_id": "labor:40:8",
@@ -692,21 +1286,41 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:42",
+      "chunk_id": "labor:42:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.175,
-      "cos": 0.8786,
+      "ratio": 1.186,
+      "cos": 0.8522,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 2,
+      "rank_kz2ru": 3,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:43",
+      "chunk_id": "labor:42:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.969,
-      "cos": 0.9093,
+      "ratio": 1.161,
+      "cos": 0.9037,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:43:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8884,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:43:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.935,
+      "cos": 0.8848,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -722,21 +1336,51 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:45",
+      "chunk_id": "labor:45:1",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 0.973,
-      "cos": 0.9203,
+      "cos": 0.8829,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:46",
+      "chunk_id": "labor:45:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.992,
-      "cos": 0.9121,
+      "ratio": 0.973,
+      "cos": 0.9062,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:46:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9082,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:46:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.958,
+      "cos": 0.8791,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:46:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.8935,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -822,31 +1466,97 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:50",
+      "chunk_id": "labor:50:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.951,
-      "cos": 0.8816,
+      "ratio": 0.937,
+      "cos": 0.8923,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:51",
+      "chunk_id": "labor:50:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.88,
-      "cos": 0.903,
+      "ratio": 0.954,
+      "cos": 0.8704,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "labor:51:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.869,
+      "cos": 0.8491,
+      "rank_ru2kz": 6,
+      "rank_kz2ru": 24,
+      "flag_reasons": [
+        "xling rank ru->kz 6, kz->ru 24"
+      ]
+    },
+    {
+      "chunk_id": "labor:51:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.903,
+      "cos": 0.8845,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:52:1",
+      "chunk_id": "labor:51:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.967,
-      "cos": 0.9182,
+      "ratio": 0.939,
+      "cos": 0.8828,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:51:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.81,
+      "cos": 0.8607,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "labor:52:1#1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.9185,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:52:1#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.9275,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:52:1#3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.9046,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -868,7 +1578,7 @@
       "ratio": 0.889,
       "cos": 0.8645,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 3,
       "flag_reasons": []
     },
     {
@@ -1012,51 +1722,159 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:54",
+      "chunk_id": "labor:54:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.968,
-      "cos": 0.8992,
+      "ratio": 1.004,
+      "cos": 0.8627,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:54:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.8985,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:55",
+      "chunk_id": "labor:55:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.904,
-      "cos": 0.8836,
+      "ratio": 0.886,
+      "cos": 0.8708,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:56",
+      "chunk_id": "labor:55:1-1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.96,
-      "cos": 0.8912,
+      "ratio": 0.914,
+      "cos": 0.8803,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:57",
+      "chunk_id": "labor:55:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.97,
-      "cos": 0.9158,
+      "ratio": 0.942,
+      "cos": 0.8565,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 18,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 18"
+      ]
+    },
+    {
+      "chunk_id": "labor:56:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.934,
+      "cos": 0.8526,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 23,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 23"
+      ]
+    },
+    {
+      "chunk_id": "labor:56:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.95,
+      "cos": 0.9067,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:58",
+      "chunk_id": "labor:56:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.008,
-      "cos": 0.9081,
+      "ratio": 1.034,
+      "cos": 0.8607,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "labor:56:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.883,
+      "cos": 0.895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:56:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.9023,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:57:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.961,
+      "cos": 0.9077,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:57:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.025,
+      "cos": 0.8582,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:58:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.009,
+      "cos": 0.903,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:58:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8742,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:58:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.909,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1082,43 +1900,105 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:61",
+      "chunk_id": "labor:61:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.006,
-      "cos": 0.8937,
-      "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
-      "flag_reasons": []
-    },
-    {
-      "chunk_id": "labor:62",
-      "markers_ok": true,
-      "numbers_ok": true,
-      "ratio": 0.981,
-      "cos": 0.9157,
-      "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
-      "flag_reasons": []
-    },
-    {
-      "chunk_id": "labor:63",
-      "markers_ok": true,
-      "numbers_ok": true,
-      "ratio": 1.038,
-      "cos": 0.8572,
-      "rank_ru2kz": 1,
-      "rank_kz2ru": 5,
+      "ratio": 0.972,
+      "cos": 0.833,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 53,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 5"
+        "xling rank ru->kz 4, kz->ru 53"
       ]
     },
     {
-      "chunk_id": "labor:64",
+      "chunk_id": "labor:61:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.936,
-      "cos": 0.9169,
+      "ratio": 0.808,
+      "cos": 0.905,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:61:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.16,
+      "cos": 0.8683,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:62:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.848,
+      "cos": 0.8798,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:62:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.046,
+      "cos": 0.8807,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:62:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.951,
+      "cos": 0.8479,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:63:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8819,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:63:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.05,
+      "cos": 0.8909,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:64:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:64:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.932,
+      "cos": 0.9199,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1130,7 +2010,7 @@
       "ratio": 0.921,
       "cos": 0.8784,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -1224,93 +2104,365 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:67",
+      "chunk_id": "labor:67:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.98,
-      "cos": 0.9222,
+      "ratio": 0.97,
+      "cos": 0.899,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:68",
+      "chunk_id": "labor:67:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.941,
-      "cos": 0.9224,
+      "ratio": 0.997,
+      "cos": 0.8732,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:68:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.805,
+      "cos": 0.88,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:68:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.824,
+      "cos": 0.8922,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:69",
+      "chunk_id": "labor:68:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.977,
-      "cos": 0.9243,
+      "ratio": 0.925,
+      "cos": 0.918,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:70",
+      "chunk_id": "labor:68:4",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.933,
-      "cos": 0.9126,
+      "ratio": 0.972,
+      "cos": 0.9108,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:71",
+      "chunk_id": "labor:69:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.956,
-      "cos": 0.9333,
+      "ratio": 0.917,
+      "cos": 0.9127,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:72",
+      "chunk_id": "labor:69:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.98,
-      "cos": 0.9013,
+      "ratio": 0.996,
+      "cos": 0.9181,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:73",
+      "chunk_id": "labor:69:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.957,
-      "cos": 0.8875,
+      "ratio": 1.0,
+      "cos": 0.8502,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:69:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.923,
+      "cos": 0.9298,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:73-1",
+      "chunk_id": "labor:70:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.985,
-      "cos": 0.893,
+      "ratio": 0.909,
+      "cos": 0.8931,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:74",
+      "chunk_id": "labor:70:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.94,
-      "cos": 0.8861,
+      "ratio": 0.972,
+      "cos": 0.8846,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 3,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:70:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.8691,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:71:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.979,
+      "cos": 0.8696,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:71:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.8838,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:71:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.8547,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 25,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 25"
+      ]
+    },
+    {
+      "chunk_id": "labor:71:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.902,
+      "cos": 0.9168,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:71:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8844,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:71:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.955,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:72:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.11,
+      "cos": 0.8727,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:72:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.904,
+      "cos": 0.9016,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:72:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.8692,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:73:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.857,
+      "cos": 0.852,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 11,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 11"
+      ]
+    },
+    {
+      "chunk_id": "labor:73:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.9075,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:73:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8466,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "labor:73:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.901,
+      "cos": 0.9086,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:73-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8594,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:73-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.943,
+      "cos": 0.8586,
+      "rank_ru2kz": 5,
+      "rank_kz2ru": 2,
+      "flag_reasons": [
+        "xling rank ru->kz 5, kz->ru 2"
+      ]
+    },
+    {
+      "chunk_id": "labor:73-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.8638,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:74:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.048,
+      "cos": 0.852,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:74:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.905,
+      "cos": 0.8491,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 17,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 17"
+      ]
+    },
+    {
+      "chunk_id": "labor:74:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.849,
+      "cos": 0.8787,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:74:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.846,
+      "cos": 0.8983,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:74:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.8696,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:74:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.889,
+      "cos": 0.864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -1320,7 +2472,7 @@
       "ratio": 0.938,
       "cos": 0.8539,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -1414,41 +2566,145 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:76",
+      "chunk_id": "labor:76:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.988,
-      "cos": 0.9152,
+      "ratio": 1.524,
+      "cos": 0.8745,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:77",
+      "chunk_id": "labor:76:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.988,
-      "cos": 0.8869,
+      "ratio": 0.851,
+      "cos": 0.8839,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:78",
+      "chunk_id": "labor:76:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.925,
-      "cos": 0.9006,
+      "ratio": 1.005,
+      "cos": 0.8769,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:79",
+      "chunk_id": "labor:76:4",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.04,
-      "cos": 0.9096,
+      "ratio": 0.976,
+      "cos": 0.8779,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:77:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.867,
+      "cos": 0.8639,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "labor:77:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8942,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:77:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.869,
+      "cos": 0.8617,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:78:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8792,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:78:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.916,
+      "cos": 0.8519,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:78:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.884,
+      "cos": 0.9326,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:79:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.068,
+      "cos": 0.8862,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:79:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.063,
+      "cos": 0.8701,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:79:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.195,
+      "cos": 0.9161,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:79:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8738,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1464,21 +2720,81 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:81",
+      "chunk_id": "labor:81:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.981,
-      "cos": 0.8969,
+      "ratio": 0.975,
+      "cos": 0.8677,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:81:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.877,
+      "cos": 0.8745,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:82",
+      "chunk_id": "labor:81:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.98,
-      "cos": 0.9114,
+      "ratio": 1.025,
+      "cos": 0.8763,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:82:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.995,
+      "cos": 0.8721,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:82:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8814,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:82:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.909,
+      "cos": 0.8932,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:82:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.058,
+      "cos": 0.8811,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:82:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8753,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1494,21 +2810,111 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:84",
+      "chunk_id": "labor:84:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.978,
-      "cos": 0.9129,
+      "ratio": 0.964,
+      "cos": 0.8929,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:85",
+      "chunk_id": "labor:84:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.998,
-      "cos": 0.919,
+      "ratio": 0.909,
+      "cos": 0.8745,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:84:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8706,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:84:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.9007,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:84:4-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.996,
+      "cos": 0.865,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:84:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.126,
+      "cos": 0.8728,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:84:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.831,
+      "cos": 0.8736,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:85:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8986,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:85:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.972,
+      "cos": 0.9053,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:85:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.9136,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:85:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.8982,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1524,11 +2930,61 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:87",
+      "chunk_id": "labor:87:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.965,
-      "cos": 0.9213,
+      "ratio": 1.074,
+      "cos": 0.8736,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:87:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8525,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:87:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.8724,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:87:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.898,
+      "cos": 0.8723,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:87:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.954,
+      "cos": 0.9182,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:87:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.9163,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1540,25 +2996,57 @@
       "ratio": 0.948,
       "cos": 0.861,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:89",
+      "chunk_id": "labor:89:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.041,
-      "cos": 0.9178,
+      "ratio": 1.078,
+      "cos": 0.9052,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:90",
+      "chunk_id": "labor:89:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.98,
-      "cos": 0.8969,
+      "ratio": 0.91,
+      "cos": 0.9159,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:89:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.938,
+      "cos": 0.8761,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:90:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.016,
+      "cos": 0.8435,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 7,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 7"
+      ]
+    },
+    {
+      "chunk_id": "labor:90:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.936,
+      "cos": 0.894,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1574,71 +3062,263 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:92",
+      "chunk_id": "labor:92:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.005,
-      "cos": 0.9049,
+      "ratio": 1.144,
+      "cos": 0.8567,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:92:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.8841,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:93",
+      "chunk_id": "labor:92:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.996,
-      "cos": 0.8954,
+      "ratio": 1.004,
+      "cos": 0.8648,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:92:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.036,
+      "cos": 0.8688,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:92:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.947,
+      "cos": 0.8588,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 10,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 10"
+      ]
+    },
+    {
+      "chunk_id": "labor:92:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.8661,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:94",
+      "chunk_id": "labor:93:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.042,
-      "cos": 0.896,
+      "ratio": 0.992,
+      "cos": 0.848,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:93:1-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8686,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:95",
+      "chunk_id": "labor:93:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.995,
-      "cos": 0.8994,
+      "ratio": 1.022,
+      "cos": 0.8806,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:96",
+      "chunk_id": "labor:94:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.931,
-      "cos": 0.9062,
+      "ratio": 1.228,
+      "cos": 0.8497,
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 3, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:94:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8644,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:97",
+      "chunk_id": "labor:94:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.98,
-      "cos": 0.8961,
+      "ratio": 0.955,
+      "cos": 0.8926,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:98",
+      "chunk_id": "labor:95:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.965,
-      "cos": 0.9069,
+      "ratio": 0.903,
+      "cos": 0.8413,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 11,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 11"
+      ]
+    },
+    {
+      "chunk_id": "labor:95:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.8692,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:95:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.069,
+      "cos": 0.8566,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "labor:95:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.986,
+      "cos": 0.8649,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:96:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.906,
+      "cos": 0.8654,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:96:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.949,
+      "cos": 0.8797,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:97:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.86,
+      "cos": 0.8648,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 8,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 8"
+      ]
+    },
+    {
+      "chunk_id": "labor:97:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.917,
+      "cos": 0.8804,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:97:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.8882,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:97:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.963,
+      "cos": 0.8742,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:98:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.8736,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:98:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.88,
+      "cos": 0.9161,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:98:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.8701,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1684,11 +3364,43 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:100",
+      "chunk_id": "labor:100:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.935,
-      "cos": 0.8998,
+      "ratio": 0.936,
+      "cos": 0.901,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:100:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.893,
+      "cos": 0.8651,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 5"
+      ]
+    },
+    {
+      "chunk_id": "labor:100:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.874,
+      "cos": 0.8957,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:100:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.054,
+      "cos": 0.8747,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1814,51 +3526,181 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:103",
+      "chunk_id": "labor:103:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.93,
-      "cos": 0.9102,
+      "ratio": 0.917,
+      "cos": 0.8666,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:103:1-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.953,
+      "cos": 0.8593,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:103:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.914,
+      "cos": 0.9015,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:104",
+      "chunk_id": "labor:104:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.929,
-      "cos": 0.9166,
+      "ratio": 0.856,
+      "cos": 0.8718,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:105",
+      "chunk_id": "labor:104:1-1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.09,
-      "cos": 0.9093,
+      "ratio": 1.12,
+      "cos": 0.849,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:106",
+      "chunk_id": "labor:104:1-2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.046,
-      "cos": 0.905,
+      "ratio": 0.797,
+      "cos": 0.881,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:107",
+      "chunk_id": "labor:104:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.016,
-      "cos": 0.918,
+      "ratio": 0.85,
+      "cos": 0.868,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:104:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.97,
+      "cos": 0.8806,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:105:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.075,
+      "cos": 0.8848,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:105:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.14,
+      "cos": 0.9139,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:105:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.084,
+      "cos": 0.8984,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:106:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.069,
+      "cos": 0.8823,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:106:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.022,
+      "cos": 0.8791,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:107:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.857,
+      "cos": 0.8906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:107:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.1,
+      "cos": 0.9136,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:107:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.049,
+      "cos": 0.88,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:107:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.018,
+      "cos": 0.8851,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:107:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.9186,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -1894,53 +3736,163 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:111",
+      "chunk_id": "labor:111:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.966,
-      "cos": 0.9095,
+      "ratio": 0.925,
+      "cos": 0.8687,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:112",
+      "chunk_id": "labor:111:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.077,
-      "cos": 0.8687,
+      "ratio": 0.885,
+      "cos": 0.9054,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 5,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:111:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.167,
+      "cos": 0.8526,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:111:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:112:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.132,
+      "cos": 0.8484,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 5"
+        "xling rank ru->kz 1, kz->ru 6"
       ]
     },
     {
-      "chunk_id": "labor:113",
+      "chunk_id": "labor:112:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.981,
-      "cos": 0.91,
+      "ratio": 0.975,
+      "cos": 0.8642,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:114",
+      "chunk_id": "labor:113:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.888,
-      "cos": 0.9043,
+      "ratio": 0.894,
+      "cos": 0.8841,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:115",
+      "chunk_id": "labor:113:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.931,
-      "cos": 0.8979,
+      "ratio": 0.992,
+      "cos": 0.8898,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:113:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.8958,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:113:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.9013,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:114:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.8639,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:114:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.837,
+      "cos": 0.8786,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:114:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.882,
+      "cos": 0.9111,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:115:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.8769,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:115:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.927,
+      "cos": 0.8611,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:115:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.8749,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2056,31 +4008,93 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:120",
+      "chunk_id": "labor:120:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.921,
-      "cos": 0.9052,
+      "ratio": 0.978,
+      "cos": 0.8731,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:120:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.894,
+      "cos": 0.9015,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:121",
+      "chunk_id": "labor:120:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.998,
-      "cos": 0.8892,
+      "ratio": 0.846,
+      "cos": 0.9105,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:122",
+      "chunk_id": "labor:120:4",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.969,
-      "cos": 0.9225,
+      "ratio": 0.869,
+      "cos": 0.9033,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:121:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.043,
+      "cos": 0.8542,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "labor:121:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.922,
+      "cos": 0.9025,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:122:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.8784,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:122:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.8748,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:122:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.966,
+      "cos": 0.9067,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2091,7 +4105,7 @@
       "numbers_ok": true,
       "ratio": 1.053,
       "cos": 0.8856,
-      "rank_ru2kz": 2,
+      "rank_ru2kz": 1,
       "rank_kz2ru": 2,
       "flag_reasons": []
     },
@@ -2166,11 +4180,31 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:124",
+      "chunk_id": "labor:124:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.974,
-      "cos": 0.9119,
+      "ratio": 0.948,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:124:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.959,
+      "cos": 0.8895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:124:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8834,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2236,11 +4270,63 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:127",
+      "chunk_id": "labor:127:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.003,
-      "cos": 0.9022,
+      "ratio": 0.854,
+      "cos": 0.8637,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:127:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.098,
+      "cos": 0.8795,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:127:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.968,
+      "cos": 0.8431,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 52,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 52"
+      ]
+    },
+    {
+      "chunk_id": "labor:127:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.993,
+      "cos": 0.8556,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:127:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.006,
+      "cos": 0.8427,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:127:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.8762,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2301,11 +4387,11 @@
       "numbers_ok": true,
       "ratio": 0.339,
       "cos": 0.848,
-      "rank_ru2kz": 33,
-      "rank_kz2ru": 3,
+      "rank_ru2kz": 27,
+      "rank_kz2ru": 11,
       "flag_reasons": [
         "length ratio 0.34",
-        "xling rank ru->kz 33, kz->ru 3"
+        "xling rank ru->kz 27, kz->ru 11"
       ]
     },
     {
@@ -2329,11 +4415,21 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:128",
+      "chunk_id": "labor:128:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.029,
-      "cos": 0.889,
+      "ratio": 1.099,
+      "cos": 0.8634,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:128:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.931,
+      "cos": 0.9029,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2349,31 +4445,91 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:130",
+      "chunk_id": "labor:130:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.006,
-      "cos": 0.9232,
+      "ratio": 0.978,
+      "cos": 0.8735,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:130:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.9115,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:131",
+      "chunk_id": "labor:130:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.962,
+      "ratio": 1.137,
+      "cos": 0.9037,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:131:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.8685,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:131:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.991,
+      "cos": 0.8726,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:131:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.981,
+      "cos": 0.8894,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:132:0",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.214,
+      "cos": 0.8883,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:132:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.996,
+      "cos": 0.8842,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:132:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.091,
       "cos": 0.8892,
-      "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
-      "flag_reasons": []
-    },
-    {
-      "chunk_id": "labor:132",
-      "markers_ok": true,
-      "numbers_ok": true,
-      "ratio": 1.052,
-      "cos": 0.8993,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2439,11 +4595,81 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:134",
+      "chunk_id": "labor:134:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.975,
-      "cos": 0.8947,
+      "ratio": 0.982,
+      "cos": 0.867,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.029,
+      "cos": 0.895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.019,
+      "cos": 0.9089,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.965,
+      "cos": 0.8833,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.075,
+      "cos": 0.8644,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.004,
+      "cos": 0.8953,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.8854,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:134:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.874,
+      "cos": 0.9059,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -2455,8 +4681,10 @@
       "ratio": 1.068,
       "cos": 0.8398,
       "rank_ru2kz": 2,
-      "rank_kz2ru": 2,
-      "flag_reasons": []
+      "rank_kz2ru": 5,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 5"
+      ]
     },
     {
       "chunk_id": "labor:135:2",
@@ -2519,23 +4747,75 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:136",
+      "chunk_id": "labor:136:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.032,
-      "cos": 0.9073,
+      "ratio": 1.071,
+      "cos": 0.8528,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:137",
+      "chunk_id": "labor:136:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.013,
-      "cos": 0.8909,
+      "ratio": 1.034,
+      "cos": 0.8815,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:136:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.985,
+      "cos": 0.8902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:136:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.9041,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:137:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.077,
+      "cos": 0.8345,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:137:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.854,
+      "cos": 0.8923,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:137:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.041,
+      "cos": 0.901,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
@@ -2895,7 +5175,7 @@
       "ratio": 1.013,
       "cos": 0.8582,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -2954,11 +5234,9 @@
       "numbers_ok": true,
       "ratio": 1.056,
       "cos": 0.8556,
-      "rank_ru2kz": 5,
-      "rank_kz2ru": 1,
-      "flag_reasons": [
-        "xling rank ru->kz 5, kz->ru 1"
-      ]
+      "rank_ru2kz": 3,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
     },
     {
       "chunk_id": "labor:143-2",
@@ -3011,11 +5289,41 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:146-1",
+      "chunk_id": "labor:146-1:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.97,
-      "cos": 0.9378,
+      "ratio": 0.967,
+      "cos": 0.8836,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:146-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.927,
+      "cos": 0.9019,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:146-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:146-1:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.9199,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3026,78 +5334,260 @@
       "numbers_ok": true,
       "ratio": 1.045,
       "cos": 0.8447,
-      "rank_ru2kz": 5,
-      "rank_kz2ru": 2,
+      "rank_ru2kz": 4,
+      "rank_kz2ru": 3,
       "flag_reasons": [
-        "xling rank ru->kz 5, kz->ru 2"
+        "xling rank ru->kz 4, kz->ru 3"
       ]
     },
     {
-      "chunk_id": "labor:146-3",
+      "chunk_id": "labor:146-3:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.929,
+      "cos": 0.9031,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:146-3:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.915,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:146-4:1",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 0.936,
-      "cos": 0.9125,
+      "cos": 0.9025,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:146-4",
+      "chunk_id": "labor:146-4:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.927,
-      "cos": 0.9353,
+      "ratio": 0.932,
+      "cos": 0.9219,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:146-5",
+      "chunk_id": "labor:146-4:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.966,
-      "cos": 0.9074,
+      "ratio": 0.956,
+      "cos": 0.9159,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:147",
+      "chunk_id": "labor:146-4:4",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.003,
-      "cos": 0.9202,
+      "ratio": 0.888,
+      "cos": 0.9136,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:148",
+      "chunk_id": "labor:146-5:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.961,
-      "cos": 0.9207,
+      "ratio": 0.991,
+      "cos": 0.8986,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:149",
+      "chunk_id": "labor:146-5:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.942,
-      "cos": 0.8887,
+      "ratio": 0.928,
+      "cos": 0.8977,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:150",
+      "chunk_id": "labor:147:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.8479,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 22,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 22"
+      ]
+    },
+    {
+      "chunk_id": "labor:147:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.977,
+      "cos": 0.9101,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:147:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.964,
+      "cos": 0.9162,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:147:4",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 1.009,
-      "cos": 0.9059,
+      "cos": 0.9225,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:147:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.064,
+      "cos": 0.9268,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:148:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.96,
+      "cos": 0.8721,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:148:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.873,
+      "cos": 0.9042,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:148:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.9095,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:149:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.032,
+      "cos": 0.8609,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:149:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.898,
+      "cos": 0.9021,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.003,
+      "cos": 0.9053,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.069,
+      "cos": 0.9025,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.097,
+      "cos": 0.8645,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.037,
+      "cos": 0.8921,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.93,
+      "cos": 0.8976,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9001,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:150:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.868,
+      "cos": 0.9043,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3113,11 +5603,31 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:152",
+      "chunk_id": "labor:152:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.831,
-      "cos": 0.9289,
+      "ratio": 0.837,
+      "cos": 0.8839,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:152:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.8,
+      "cos": 0.901,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:152:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.852,
+      "cos": 0.9062,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3193,11 +5703,73 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:154",
+      "chunk_id": "labor:154:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.924,
+      "cos": 0.8518,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 13,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 13"
+      ]
+    },
+    {
+      "chunk_id": "labor:154:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.88,
+      "cos": 0.8977,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:154:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.879,
+      "cos": 0.8924,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:154:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.8864,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:154:5",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 0.944,
-      "cos": 0.9052,
+      "cos": 0.9376,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:154:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.082,
+      "cos": 0.918,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:154:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.98,
+      "cos": 0.896,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3219,9 +5791,9 @@
       "ratio": 1.037,
       "cos": 0.8555,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 8,
+      "rank_kz2ru": 16,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 8"
+        "xling rank ru->kz 1, kz->ru 16"
       ]
     },
     {
@@ -3241,9 +5813,9 @@
       "ratio": 0.779,
       "cos": 0.8427,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 6,
+      "rank_kz2ru": 21,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 6"
+        "xling rank ru->kz 1, kz->ru 21"
       ]
     },
     {
@@ -3337,11 +5909,21 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:157:2",
+      "chunk_id": "labor:157:2#1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.049,
-      "cos": 0.92,
+      "ratio": 1.008,
+      "cos": 0.9207,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:157:2#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.37,
+      "cos": 0.8965,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3352,16 +5934,60 @@
       "numbers_ok": true,
       "ratio": 0.86,
       "cos": 0.8889,
-      "rank_ru2kz": 2,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:158:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.809,
+      "cos": 0.8691,
+      "rank_ru2kz": 1,
       "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:158",
+      "chunk_id": "labor:158:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.908,
-      "cos": 0.8945,
+      "ratio": 0.92,
+      "cos": 0.849,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:158:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.815,
+      "cos": 0.8591,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 14,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 14"
+      ]
+    },
+    {
+      "chunk_id": "labor:158:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8985,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:158:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.922,
+      "cos": 0.8909,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3383,7 +6009,7 @@
       "ratio": 0.868,
       "cos": 0.8649,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -3467,11 +6093,21 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:161",
+      "chunk_id": "labor:161:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.931,
-      "cos": 0.908,
+      "ratio": 0.974,
+      "cos": 0.8585,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:161:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.902,
+      "cos": 0.8791,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3487,31 +6123,157 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:163",
+      "chunk_id": "labor:163:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.044,
-      "cos": 0.8988,
+      "ratio": 1.011,
+      "cos": 0.8515,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 20,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 20"
+      ]
+    },
+    {
+      "chunk_id": "labor:163:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.8804,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:164",
+      "chunk_id": "labor:164:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.991,
-      "cos": 0.92,
+      "ratio": 0.895,
+      "cos": 0.8546,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 4,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 4"
+      ]
+    },
+    {
+      "chunk_id": "labor:164:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.028,
+      "cos": 0.9212,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:165",
+      "chunk_id": "labor:164:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.001,
-      "cos": 0.8802,
+      "ratio": 1.087,
+      "cos": 0.9045,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:164:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.8927,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:164:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.04,
+      "cos": 0.902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:164:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.972,
+      "cos": 0.9049,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:164:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.894,
+      "cos": 0.8417,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 6,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 6"
+      ]
+    },
+    {
+      "chunk_id": "labor:165:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.942,
+      "cos": 0.871,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:165:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.088,
+      "cos": 0.9077,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:165:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.073,
+      "cos": 0.8709,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:165:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.041,
+      "cos": 0.8801,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:165:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.989,
+      "cos": 0.8929,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:165:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.992,
+      "cos": 0.8951,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3523,9 +6285,9 @@
       "ratio": 0.933,
       "cos": 0.8302,
       "rank_ru2kz": 7,
-      "rank_kz2ru": 4,
+      "rank_kz2ru": 19,
       "flag_reasons": [
-        "xling rank ru->kz 7, kz->ru 4"
+        "xling rank ru->kz 7, kz->ru 19"
       ]
     },
     {
@@ -3605,7 +6367,7 @@
       "ratio": 0.833,
       "cos": 0.8782,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {
@@ -3619,21 +6381,45 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:167",
+      "chunk_id": "labor:167:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.93,
-      "cos": 0.8623,
+      "ratio": 0.843,
+      "cos": 0.8709,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 8,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 8"
+      ]
+    },
+    {
+      "chunk_id": "labor:167:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.951,
+      "cos": 0.8606,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:168",
+      "chunk_id": "labor:168:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.994,
-      "cos": 0.8718,
+      "ratio": 0.983,
+      "cos": 0.85,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 9,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 9"
+      ]
+    },
+    {
+      "chunk_id": "labor:168:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.024,
+      "cos": 0.8733,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3649,41 +6435,167 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:170",
+      "chunk_id": "labor:170:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.967,
-      "cos": 0.905,
+      "ratio": 1.0,
+      "cos": 0.8659,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:171",
+      "chunk_id": "labor:170:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.946,
-      "cos": 0.8974,
+      "ratio": 0.885,
+      "cos": 0.89,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:172",
+      "chunk_id": "labor:170:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.8865,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:170:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.066,
+      "cos": 0.9269,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:170:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.937,
+      "cos": 0.895,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:171:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.879,
+      "cos": 0.8375,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 10,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 10"
+      ]
+    },
+    {
+      "chunk_id": "labor:171:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.94,
+      "cos": 0.8784,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:171:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.919,
+      "cos": 0.8368,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 24,
+      "flag_reasons": [
+        "xling rank ru->kz 2, kz->ru 24"
+      ]
+    },
+    {
+      "chunk_id": "labor:171:4",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 1.041,
-      "cos": 0.8937,
+      "cos": 0.8551,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:173",
+      "chunk_id": "labor:171:5",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.995,
-      "cos": 0.8719,
+      "ratio": 1.109,
+      "cos": 0.8929,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:172:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.01,
+      "cos": 0.8771,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:172:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.051,
+      "cos": 0.876,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:173:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.86,
+      "cos": 0.8402,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 40,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 40"
+      ]
+    },
+    {
+      "chunk_id": "labor:173:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.052,
+      "cos": 0.8698,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:173:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.8572,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:173:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.91,
+      "cos": 0.8679,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3699,11 +6611,33 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:175",
+      "chunk_id": "labor:175:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.941,
-      "cos": 0.8947,
+      "ratio": 0.917,
+      "cos": 0.8556,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 10,
+      "flag_reasons": [
+        "xling rank ru->kz 1, kz->ru 10"
+      ]
+    },
+    {
+      "chunk_id": "labor:175:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.974,
+      "cos": 0.8628,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:175:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.908,
+      "cos": 0.9103,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3765,9 +6699,9 @@
       "ratio": 0.863,
       "cos": 0.8286,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 5,
+      "rank_kz2ru": 10,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 5"
+        "xling rank ru->kz 1, kz->ru 10"
       ]
     },
     {
@@ -3793,11 +6727,31 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:180",
+      "chunk_id": "labor:180:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.143,
-      "cos": 0.9164,
+      "ratio": 1.118,
+      "cos": 0.8977,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:180:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.07,
+      "cos": 0.9115,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:180:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.207,
+      "cos": 0.9078,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3823,13 +6777,23 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:181-1",
+      "chunk_id": "labor:181-1:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.063,
-      "cos": 0.9097,
+      "ratio": 1.04,
+      "cos": 0.8982,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:181-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.089,
+      "cos": 0.91,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
@@ -3843,51 +6807,221 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:182:2",
+      "chunk_id": "labor:182:2#1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.998,
-      "cos": 0.9305,
+      "ratio": 1.004,
+      "cos": 0.9324,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:182-1",
+      "chunk_id": "labor:182:2#2",
       "markers_ok": true,
       "numbers_ok": true,
       "ratio": 0.987,
-      "cos": 0.9416,
+      "cos": 0.9243,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:183",
+      "chunk_id": "labor:182-1:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.02,
-      "cos": 0.9086,
+      "ratio": 1.007,
+      "cos": 0.9047,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:184",
+      "chunk_id": "labor:182-1:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.966,
-      "cos": 0.9291,
+      "ratio": 0.982,
+      "cos": 0.9316,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:185",
+      "chunk_id": "labor:183:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.026,
-      "cos": 0.923,
+      "ratio": 0.978,
+      "cos": 0.9275,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.015,
+      "cos": 0.914,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.945,
+      "cos": 0.9207,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.065,
+      "cos": 0.902,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.997,
+      "cos": 0.9048,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.8939,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:7",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.008,
+      "cos": 0.9243,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:8",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.055,
+      "cos": 0.9385,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:183:9",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.948,
+      "cos": 0.9228,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.8793,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.8893,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:2-1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.921,
+      "cos": 0.9116,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.92,
+      "cos": 0.8929,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.978,
+      "cos": 0.8817,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.88,
+      "cos": 0.9042,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:184:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.99,
+      "cos": 0.9074,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:185:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.035,
+      "cos": 0.8937,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:185:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.017,
+      "cos": 0.8802,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -3908,7 +7042,7 @@
       "numbers_ok": true,
       "ratio": 1.023,
       "cos": 0.8949,
-      "rank_ru2kz": 1,
+      "rank_ru2kz": 2,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
@@ -3989,9 +7123,9 @@
       "ratio": 0.918,
       "cos": 0.8534,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 4,
+      "rank_kz2ru": 5,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 4"
+        "xling rank ru->kz 1, kz->ru 5"
       ]
     },
     {
@@ -4093,9 +7227,9 @@
       "ratio": 0.884,
       "cos": 0.8484,
       "rank_ru2kz": 2,
-      "rank_kz2ru": 8,
+      "rank_kz2ru": 9,
       "flag_reasons": [
-        "xling rank ru->kz 2, kz->ru 8"
+        "xling rank ru->kz 2, kz->ru 9"
       ]
     },
     {
@@ -4325,9 +7459,9 @@
       "ratio": 0.939,
       "cos": 0.847,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 4,
+      "rank_kz2ru": 6,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 4"
+        "xling rank ru->kz 1, kz->ru 6"
       ]
     },
     {
@@ -4391,14 +7525,56 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:191",
+      "chunk_id": "labor:191:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.291,
-      "cos": 0.9187,
+      "ratio": 0.927,
+      "cos": 0.9418,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:191:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.944,
+      "cos": 0.9176,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:191:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.079,
+      "cos": 0.9206,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:191:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.928,
+      "cos": 0.9313,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:191:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 2.344,
+      "cos": 0.9143,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": [
+        "length ratio 2.34"
+      ]
     },
     {
       "chunk_id": "labor:192",
@@ -4411,16 +7587,26 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:193",
+      "chunk_id": "labor:193#1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.028,
-      "cos": 0.9031,
+      "ratio": 1.027,
+      "cos": 0.8932,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 5,
+      "rank_kz2ru": 19,
       "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 5"
+        "xling rank ru->kz 1, kz->ru 19"
       ]
+    },
+    {
+      "chunk_id": "labor:193#2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.03,
+      "cos": 0.9241,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
     },
     {
       "chunk_id": "labor:194",
@@ -4433,31 +7619,91 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:195",
+      "chunk_id": "labor:195:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.998,
-      "cos": 0.9148,
+      "ratio": 0.992,
+      "cos": 0.9246,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:196",
+      "chunk_id": "labor:195:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.962,
-      "cos": 0.9239,
+      "ratio": 1.036,
+      "cos": 0.8846,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:195:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.0,
+      "cos": 0.9179,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:198",
+      "chunk_id": "labor:195:4",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.975,
-      "cos": 0.9057,
+      "ratio": 0.955,
+      "cos": 0.9336,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:196:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.982,
+      "cos": 0.8906,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:196:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.939,
+      "cos": 0.9348,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:198:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.033,
+      "cos": 0.8951,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:198:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.111,
+      "cos": 0.8857,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:198:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.913,
+      "cos": 0.8987,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
@@ -4473,45 +7719,153 @@
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:201",
+      "chunk_id": "labor:201:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.085,
-      "cos": 0.9114,
+      "ratio": 1.069,
+      "cos": 0.8664,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:201:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.111,
+      "cos": 0.9037,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:202",
+      "chunk_id": "labor:202:1",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 0.998,
-      "cos": 0.8982,
+      "ratio": 0.925,
+      "cos": 0.8751,
       "rank_ru2kz": 1,
-      "rank_kz2ru": 5,
-      "flag_reasons": [
-        "xling rank ru->kz 1, kz->ru 5"
-      ]
+      "rank_kz2ru": 2,
+      "flag_reasons": []
     },
     {
-      "chunk_id": "labor:203",
+      "chunk_id": "labor:202:2",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.12,
-      "cos": 0.9088,
+      "ratio": 0.993,
+      "cos": 0.9031,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": []
     },
     {
-      "chunk_id": "labor:203-1",
+      "chunk_id": "labor:202:3",
       "markers_ok": true,
       "numbers_ok": true,
-      "ratio": 1.123,
-      "cos": 0.9122,
+      "ratio": 0.966,
+      "cos": 0.8673,
+      "rank_ru2kz": 2,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:202:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.023,
+      "cos": 0.9102,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:202:5",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.039,
+      "cos": 0.9056,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:202:6",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 0.975,
+      "cos": 0.9235,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.132,
+      "cos": 0.9002,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.107,
+      "cos": 0.9118,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.061,
+      "cos": 0.8765,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 3,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203:4",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.168,
+      "cos": 0.9174,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203-1:1",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.168,
+      "cos": 0.9067,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203-1:2",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.107,
+      "cos": 0.9273,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 1,
+      "flag_reasons": []
+    },
+    {
+      "chunk_id": "labor:203-1:3",
+      "markers_ok": true,
+      "numbers_ok": true,
+      "ratio": 1.147,
+      "cos": 0.8885,
+      "rank_ru2kz": 1,
+      "rank_kz2ru": 2,
       "flag_reasons": []
     },
     {

@@ -33,7 +33,11 @@ def markers(t):
 
 
 def numbers(t):
-    return Counter(NUM_RE.findall(MARKER_RE.sub("\n", t)))
+    t = MARKER_RE.sub("\n", t)
+    # thousands separators and spacing differ between the versions: «1000» vs «1 000», «121, 122» vs «121,122»
+    t = re.sub(r"(?<=\d)[  ](?=\d)", "", t)
+    t = re.sub(r"(?<=\d),\s*(?=\d{3}\b)", " ", t)
+    return Counter(NUM_RE.findall(t))
 
 
 def main():
