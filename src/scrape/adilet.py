@@ -34,6 +34,7 @@ HEAD_RE = {
 EXCLUDED_RE = re.compile(r"(исключен|алынып таста)", re.I)
 # Footnotes that are not wrapped in span.note: a whole paragraph or a tail of one.
 NOTE_RE = re.compile(r"(?:^|\s)(?:Сноска|Ескерту)\.\s.*$", re.S)
+HEADING_RE = re.compile(r"^(?:Глава|РАЗДЕЛ|Параграф)\s+\d|^\d+-(?:тарау|БӨЛІМ|бөлім|параграф)\b")
 POINT_RE = re.compile(r"^(\d+(?:-\d+)?)\.\s")
 
 
@@ -86,7 +87,7 @@ def parse_articles(html, lang):
         if cur is None:
             continue
         text = NOTE_RE.sub("", text).strip()
-        if not text:
+        if not text or HEADING_RE.match(text):  # a chapter heading in a <p> (seen once: «Глава 18.»)
             continue
         pm = POINT_RE.match(text)
         if pm:

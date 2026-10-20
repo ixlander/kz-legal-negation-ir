@@ -51,9 +51,12 @@ def boundaries(tok, word):
 
 
 def load_forms(path, include_unchecked):
-    rows = list(csv.DictReader(open(path, encoding="utf-8"), delimiter="\t"))
+    # strip: editors may pad TSV columns with spaces when aligning them
+    rows = [{k.strip(): (v or "").strip() for k, v in r.items()}
+            for r in csv.DictReader(open(path, encoding="utf-8"), delimiter="\t")]
     if not include_unchecked:
-        rows = [r for r in rows if r["status"] == "ok"]
+        # ok = owner, ok_auto = confirmed by kaznlp + apertium (src/diagnostics/d2_crosscheck.py)
+        rows = [r for r in rows if r["status"] in ("ok", "ok_auto")]
     return rows
 
 

@@ -32,7 +32,9 @@ def main():
 
     old = {}
     if OUT.exists():
-        old = {r["form"]: r for r in csv.DictReader(open(OUT, encoding="utf-8"), delimiter="\t")}
+        rows_old = [{k.strip(): (v or "").strip() for k, v in r.items()}
+                    for r in csv.DictReader(open(OUT, encoding="utf-8"), delimiter="\t")]
+        old = {r["form"]: r for r in rows_old}
 
     rows = []
     for w, c in cnt.most_common():

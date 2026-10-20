@@ -1,0 +1,3221 @@
+{
+  "tools": {
+    "kaznlp": "AnalyzerDD, github.com/nlacslab/kaznlp (HEAD, Oct 2026)",
+    "apertium": "apertium-kaz 0.1.0+g2602~95c6dd0d nightly, kaz.automorf.hfst via pyhfst 1.4.0"
+  },
+  "forms_file": "data\\diagnostics\\d2_kz_neg_forms.tsv",
+  "n": 171,
+  "final": {
+    "owner": 17,
+    "auto_ok": 154
+  },
+  "final_freq_weighted": {
+    "owner": 93,
+    "auto_ok": 488
+  },
+  "kaznlp": {
+    "agree_neg": 88,
+    "not_covered": 77,
+    "not_neg": 5,
+    "ambiguous": 1
+  },
+  "apertium": {
+    "neg": 124,
+    "neg_lex": 38,
+    "not_covered": 9
+  },
+  "per_form": [
+    {
+      "form": "қоспағанда",
+      "regex_split": "қос+па+ғанда",
+      "freq": 52,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "қос_R_ET па_ET_ETB ған_ETB_ESM да_C5"
+      ],
+      "apertium_analyses": [
+        "қос<v><tv><neg><gpr_past><subst><loc>",
+        "қос<v><tv><neg><ger_past><loc>"
+      ]
+    },
+    {
+      "form": "болмаған",
+      "regex_split": "бол+ма+ған",
+      "freq": 38,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ETK ма_ETK_ETB ған_ETB_ESM",
+        "бол_R_ET ма_ET_ETB ған_ETB_ESM",
+        "бол_R_ET ма_ET_ETB ған_T3",
+        "бо_R_ET л_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><past><p3><pl>",
+        "бол<v><iv><neg><past><p3><sg>",
+        "бол<v><iv><neg><gpr_past><subst><nom>",
+        "бол<v><iv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "аспайтын",
+      "regex_split": "ас+па+йтын",
+      "freq": 20,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ас_R_ET па_ET_ETB йтын_ETB_ESM",
+        "ас_R_ET па_ET_ETB йтын_T3"
+      ],
+      "apertium_analyses": [
+        "ас<v><tv><neg><pih><p3><pl>",
+        "ас<v><tv><neg><pih><p3><sg>",
+        "ас<v><tv><neg><gpr_impf><subst><nom>",
+        "ас<v><tv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "берілмейді",
+      "regex_split": "беріл+ме+йді",
+      "freq": 20,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бер_R_ET іл_V2 ме_ET_ETB й_T1 ді_P3",
+        "бер_R_ETK іл_V2 ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><pass><neg><aor><p3><pl>",
+        "бер<v><tv><pass><neg><aor><p3><sg>",
+        "беріл<v><tv><neg><aor><p3><pl>",
+        "беріл<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "сақталмайтын",
+      "regex_split": "сақтал+ма+йтын",
+      "freq": 17,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сақталмайтын_R_X"
+      ],
+      "apertium_analyses": [
+        "сақта<v><tv><pass><neg><pih><p3><pl>",
+        "сақта<v><tv><pass><neg><pih><p3><sg>",
+        "сақта<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "сақта<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "көзделмесе",
+      "regex_split": "көздел+ме+се",
+      "freq": 16,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "көзделмесе_R_X"
+      ],
+      "apertium_analyses": [
+        "көзде<v><tv><pass><neg><prc_cond><p3><pl>",
+        "көзде<v><tv><pass><neg><prc_cond><p3><sg>",
+        "көзде<v><tv><pass><neg><gna_cond><p3><pl>",
+        "көзде<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "толмаған",
+      "regex_split": "тол+ма+ған",
+      "freq": 15,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "тол_R_ET ма_ET_ETB ған_ETB_ESM",
+        "тол_R_ET ма_ET_ETB ған_T3",
+        "то_R_ET л_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "тол<v><iv><neg><past><p3><pl>",
+        "тол<v><iv><neg><past><p3><sg>",
+        "тол<v><iv><neg><gpr_past><subst><nom>",
+        "тол<v><iv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "кешіктірмей",
+      "regex_split": "кешіктір+ме+й",
+      "freq": 15,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кешіктірмей_R_X"
+      ],
+      "apertium_analyses": [
+        "кешіктір<v><tv><neg><prc_impf>",
+        "кешіктір<v><tv><neg><gna_impf>",
+        "кешіктір<v><tv><neg><prc_perf>",
+        "кешіктір<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "кешіктірілмей",
+      "regex_split": "кешіктіріл+ме+й",
+      "freq": 15,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кешіктірілмей_R_X"
+      ],
+      "apertium_analyses": [
+        "кешіктір<v><tv><pass><neg><prc_impf>",
+        "кешіктір<v><tv><pass><neg><gna_impf>",
+        "кешіктір<v><tv><pass><neg><prc_perf>",
+        "кешіктір<v><tv><pass><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "болғызбау",
+      "regex_split": "болғыз+ба+у",
+      "freq": 14,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "болғызбау_R_X"
+      ],
+      "apertium_analyses": [
+        "болғызбау<n><nom>+е<cop><aor><p3><pl>",
+        "болғызбау<n><nom>+е<cop><aor><p3><sg>",
+        "болғызбау<n><nom>",
+        "болғызбау<n><attr>"
+      ]
+    },
+    {
+      "form": "болмайтын",
+      "regex_split": "бол+ма+йтын",
+      "freq": 13,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ETK ма_ETK_ETB йтын_ETB_ESM",
+        "бол_R_ET ма_ET_ETB йтын_ETB_ESM",
+        "бол_R_ETK ма_ETK_ETB йтын_T3",
+        "бол_R_ET ма_ET_ETB йтын_T3"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><pih><p3><pl>",
+        "бол<v><iv><neg><pih><p3><sg>",
+        "бол<v><iv><neg><gpr_impf><subst><nom>",
+        "бол<v><iv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "аспауға",
+      "regex_split": "ас+па+уға",
+      "freq": 13,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "аспауға_R_X"
+      ],
+      "apertium_analyses": [
+        "ас<v><tv><neg><ger><dat>",
+        "ас<v><iv><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "келіспеушіліктер",
+      "regex_split": "келіс+пе+ушіліктер",
+      "freq": 9,
+      "kaznlp": "not_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "келіспеушілік_R_ZE тер_N1"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><ger_abs><pl><nom>",
+        "келіс<v><iv><neg><ger_abs><pl><nom>",
+        "келіспе<v><iv><ger_abs><pl><nom>",
+        "келіспеушілік<n><pl><nom>+е<cop><aor><p3><pl>"
+      ]
+    },
+    {
+      "form": "ұсынбаған",
+      "regex_split": "ұсын+ба+ған",
+      "freq": 9,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ұсын_R_ET ба_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "ұсын<v><tv><neg><past><p3><pl>",
+        "ұсын<v><tv><neg><past><p3><sg>",
+        "ұсын<v><tv><neg><gpr_past><subst><nom>",
+        "ұсын<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "қолданылмайды",
+      "regex_split": "қолданыл+ма+йды",
+      "freq": 9,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қолдан_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "қолдан<v><tv><pass><neg><aor><p3><pl>",
+        "қолдан<v><tv><pass><neg><aor><p3><sg>",
+        "қолданыл<v><iv><neg><aor><p3><pl>",
+        "қолданыл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "болғызбайтын",
+      "regex_split": "болғыз+ба+йтын",
+      "freq": 7,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "болғызбайтын_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "орындамауы",
+      "regex_split": "орында+ма+уы",
+      "freq": 7,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "орында_R_ET ма_ET_ETB у_ETB_ETU ы_S3"
+      ],
+      "apertium_analyses": [
+        "орында<v><tv><neg><ger><px3sp><nom>",
+        "орында<v><iv><neg><ger><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "пайдаланылмаған",
+      "regex_split": "пайдаланыл+ма+ған",
+      "freq": 7,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "пайдалан_R_ET ыл_V2 ма_ET_ETB ған_ETB_ESM",
+        "пайдалан_R_ET ыл_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "пайдалан<v><tv><pass><neg><past><p3><pl>",
+        "пайдалан<v><tv><pass><neg><past><p3><sg>",
+        "пайдалан<v><tv><pass><neg><gpr_past><subst><nom>",
+        "пайдалан<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "орындамаған",
+      "regex_split": "орында+ма+ған",
+      "freq": 6,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "орында_R_ET ма_ET_ETB ған_ETB_ESM",
+        "орында_R_ET ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "орында<v><tv><neg><past><p3><pl>",
+        "орында<v><tv><neg><past><p3><sg>",
+        "орында<v><tv><neg><gpr_past><subst><nom>",
+        "орында<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "болмайды",
+      "regex_split": "бол+ма+йды",
+      "freq": 5,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ETK ма_ETK_ETB й_T1 ды_P3",
+        "бол_R_ET ма_ET_ETB й_T1 ды_P3",
+        "бол_R_ETK ма_ETK_ETB й_T1 ды_P7",
+        "бол_R_ET ма_ET_ETB й_T1 ды_P7"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><aor><p3><pl>",
+        "бол<v><iv><neg><aor><p3><sg>",
+        "бол<vaux><neg><aor><p3><pl>",
+        "бол<vaux><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "жеткізілмеген",
+      "regex_split": "жеткізіл+ме+ген",
+      "freq": 5,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жет_R_ET кіз_V4 іл_V2 ме_ET_ETB ген_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "жеткіз<v><tv><pass><neg><past><p3><pl>",
+        "жеткіз<v><tv><pass><neg><past><p3><sg>",
+        "жеткіз<v><tv><pass><neg><gpr_past><subst><nom>",
+        "жеткіз<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "жатпайды",
+      "regex_split": "жат+па+йды",
+      "freq": 5,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жат_R_ET па_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "жат<v><iv><neg><aor><p3><pl>",
+        "жат<v><iv><neg><aor><p3><sg>",
+        "жат<vaux><neg><aor><p3><pl>",
+        "жат<vaux><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "сиретпей",
+      "regex_split": "сирет+пе+й",
+      "freq": 5,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "сиретпей_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "болмауға",
+      "regex_split": "бол+ма+уға",
+      "freq": 5,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ET ма_ET_ETB у_ETB_ETU ға_C3"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><ger><dat>",
+        "бол<vaux><neg><ger><dat>",
+        "болма<v><iv><ger><dat>"
+      ]
+    },
+    {
+      "form": "бермеуге",
+      "regex_split": "бер+ме+уге",
+      "freq": 5,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бер_R_ET ме_ET_ETB у_ETB_ETU ге_C3"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><neg><ger><dat>",
+        "бер<v><iv><neg><ger><dat>",
+        "бер<vaux><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "келіспеген",
+      "regex_split": "келіс+пе+ген",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келіс_R_ET пе_ET_ETB ген_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><past><p3><pl>",
+        "кел<v><iv><coop><neg><past><p3><sg>",
+        "кел<v><iv><coop><neg><gpr_past><subst><nom>",
+        "кел<v><iv><coop><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "келмейтін",
+      "regex_split": "кел+ме+йтін",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кел_R_ETK ме_ETK_ETB йтін_ETB_ESM",
+        "кел_R_ET ме_ET_ETB йтін_ETB_ESM",
+        "кел_R_ET ме_ET_ETB йтін_T3"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><pih><p3><pl>",
+        "кел<v><iv><neg><pih><p3><sg>",
+        "кел<v><iv><neg><gpr_impf><subst><nom>",
+        "кел<v><iv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "етпеу",
+      "regex_split": "ет+пе+у",
+      "freq": 4,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "етпеу_R_X"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><ger><nom>",
+        "ет<vaux><neg><ger><nom>"
+      ]
+    },
+    {
+      "form": "сақтамай",
+      "regex_split": "сақта+ма+й",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сақта_R_ET ма_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "сақта<v><tv><neg><prc_impf>",
+        "сақта<v><tv><neg><gna_impf>",
+        "сақта<v><tv><neg><prc_perf>",
+        "сақта<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "белгіленбесе",
+      "regex_split": "белгілен+бе+се",
+      "freq": 4,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "белгіленбесе_R_X"
+      ],
+      "apertium_analyses": [
+        "белгіле<v><tv><pass><neg><prc_cond><p3><pl>",
+        "белгіле<v><tv><pass><neg><prc_cond><p3><sg>",
+        "белгіле<v><tv><pass><neg><gna_cond><p3><pl>",
+        "белгіле<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "пайдаланбаған",
+      "regex_split": "пайдалан+ба+ған",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "пайдалан_R_ET ба_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "пайдалан<v><tv><neg><past><p3><pl>",
+        "пайдалан<v><tv><neg><past><p3><sg>",
+        "пайдалан<v><tv><neg><gpr_past><subst><nom>",
+        "пайдалан<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "келмеген",
+      "regex_split": "кел+ме+ген",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кел_R_ET ме_ET_ETB ген_ETB_ESM",
+        "кел_R_ET ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><past><p3><pl>",
+        "кел<v><iv><neg><past><p3><sg>",
+        "кел<v><iv><neg><gpr_past><subst><nom>",
+        "кел<v><iv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "аспайды",
+      "regex_split": "ас+па+йды",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ас_R_ET па_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "ас<v><tv><neg><aor><p3><pl>",
+        "ас<v><tv><neg><aor><p3><sg>",
+        "ас<v><iv><neg><aor><p3><pl>",
+        "ас<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "салынбаған",
+      "regex_split": "салын+ба+ған",
+      "freq": 4,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "салынбаған_R_X"
+      ],
+      "apertium_analyses": [
+        "сал<v><tv><pass><neg><past><p3><pl>",
+        "сал<v><tv><pass><neg><past><p3><sg>",
+        "сал<v><tv><pass><neg><gpr_past><subst><nom>",
+        "сал<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "істемеген",
+      "regex_split": "істе+ме+ген",
+      "freq": 4,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "істе_R_ET ме_ET_ETB ген_ETB_ESM",
+        "істе_R_ET ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "істе<v><tv><neg><past><p3><pl>",
+        "істе<v><tv><neg><past><p3><sg>",
+        "істе<v><tv><neg><gpr_past><subst><nom>",
+        "істе<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "реттелмеген",
+      "regex_split": "реттел+ме+ген",
+      "freq": 4,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "реттелмеген_R_X"
+      ],
+      "apertium_analyses": [
+        "ретте<v><tv><pass><neg><past><p3><pl>",
+        "ретте<v><tv><pass><neg><past><p3><sg>",
+        "ретте<v><tv><pass><neg><gpr_past><subst><nom>",
+        "ретте<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "табылмайды",
+      "regex_split": "табыл+ма+йды",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "таб_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "табыл<v><iv><neg><aor><p3><pl>",
+        "табыл<v><iv><neg><aor><p3><sg>",
+        "тап<v><tv><pass><neg><aor><p3><pl>",
+        "тап<v><tv><pass><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "қолданылмауға",
+      "regex_split": "қолданыл+ма+уға",
+      "freq": 3,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қолданылмауға_R_X"
+      ],
+      "apertium_analyses": [
+        "қолдан<v><tv><pass><neg><ger><dat>",
+        "қолданыл<v><iv><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "асырмай",
+      "regex_split": "асыр+ма+й",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "асыр_R_ET ма_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "асыр<v><tv><neg><prc_impf>",
+        "асыр<v><tv><neg><gna_impf>",
+        "асыр<v><tv><neg><prc_perf>",
+        "асыр<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "табылмайтын",
+      "regex_split": "табыл+ма+йтын",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "таб_R_ET ыл_V2 ма_ET_ETB йтын_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "табыл<v><iv><neg><pih><p3><pl>",
+        "табыл<v><iv><neg><pih><p3><sg>",
+        "табыл<v><iv><neg><gpr_impf><subst><nom>",
+        "табыл<v><iv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "белгіленбеген",
+      "regex_split": "белгілен+бе+ген",
+      "freq": 3,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "белгіленбеген_R_X"
+      ],
+      "apertium_analyses": [
+        "белгіле<v><tv><pass><neg><past><p3><pl>",
+        "белгіле<v><tv><pass><neg><past><p3><sg>",
+        "белгіле<v><tv><pass><neg><gpr_past><subst><nom>",
+        "белгіле<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "етпесе",
+      "regex_split": "ет+пе+се",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ет_R_ET пе_ET_ETB се_M4"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><prc_cond><p3><pl>",
+        "ет<v><tv><neg><prc_cond><p3><sg>",
+        "ет<v><tv><neg><gna_cond><p3><pl>",
+        "ет<v><tv><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "соқпайды",
+      "regex_split": "соқ+па+йды",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "соқ_R_ET па_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "соқ<v><tv><neg><aor><p3><pl>",
+        "соқ<v><tv><neg><aor><p3><sg>",
+        "соқ<v><iv><neg><aor><p3><pl>",
+        "соқ<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "етілмейді",
+      "regex_split": "етіл+ме+йді",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ет_R_ET іл_V2 ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><pass><neg><aor><p3><pl>",
+        "ет<v><tv><pass><neg><aor><p3><sg>",
+        "етіл<v><iv><neg><aor><p3><pl>",
+        "етіл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "өтпеген",
+      "regex_split": "өт+пе+ген",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "өт_R_ET пе_ET_ETB ген_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "өт<v><tv><neg><past><p3><pl>",
+        "өт<v><tv><neg><past><p3><sg>",
+        "өт<v><tv><neg><gpr_past><subst><nom>",
+        "өт<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "істелмеген",
+      "regex_split": "істел+ме+ген",
+      "freq": 3,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "істелмеген_R_X"
+      ],
+      "apertium_analyses": [
+        "істе<v><tv><pass><neg><past><p3><pl>",
+        "істе<v><tv><pass><neg><past><p3><sg>",
+        "істе<v><tv><pass><neg><gpr_past><subst><nom>",
+        "істе<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "алмай",
+      "regex_split": "ал+ма+й",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ал_R_ETK ма_ETK_ETB й_ETB_KSE",
+        "ал_R_ET ма_ET_ETB й_ETB_KSE",
+        "а_R_ET л_V2 ма_ET_ETB й_ETB_KSE",
+        "а_R_ETK л_V2 ма_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "ал<v><tv><neg><prc_impf>",
+        "ал<v><tv><neg><gna_impf>",
+        "ал<v><tv><neg><prc_perf>",
+        "ал<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "бермеуі",
+      "regex_split": "бер+ме+уі",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бер_R_ET ме_ET_ETB у_ETB_ETU і_S3"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><neg><ger><px3sp><nom>",
+        "бер<v><iv><neg><ger><px3sp><nom>",
+        "бер<vaux><neg><ger><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "алмайды",
+      "regex_split": "ал+ма+йды",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ал_R_ETK ма_ETK_ETB й_T1 ды_P3",
+        "ал_R_ET ма_ET_ETB й_T1 ды_P3",
+        "ал_R_ETK ма_ETK_ETB й_T1 ды_P7",
+        "ал_R_ET ма_ET_ETB й_T1 ды_P7"
+      ],
+      "apertium_analyses": [
+        "ал<v><tv><neg><aor><p3><pl>",
+        "ал<v><tv><neg><aor><p3><sg>",
+        "ал<vaux><neg><aor><p3><pl>",
+        "ал<vaux><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "алмайтын",
+      "regex_split": "ал+ма+йтын",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ал_R_ETK ма_ETK_ETB йтын_ETB_ESM",
+        "ал_R_ET ма_ET_ETB йтын_ETB_ESM",
+        "ал_R_ETK ма_ETK_ETB йтын_T3",
+        "ал_R_ET ма_ET_ETB йтын_T3"
+      ],
+      "apertium_analyses": [
+        "ал<v><tv><neg><pih><p3><pl>",
+        "ал<v><tv><neg><pih><p3><sg>",
+        "ал<v><tv><neg><gpr_impf><subst><nom>",
+        "ал<v><tv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "жатпайтын",
+      "regex_split": "жат+па+йтын",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жат_R_ET па_ET_ETB йтын_ETB_ESM",
+        "жат_R_ET па_ET_ETB йтын_T3"
+      ],
+      "apertium_analyses": [
+        "жат<v><iv><neg><pih><p3><pl>",
+        "жат<v><iv><neg><pih><p3><sg>",
+        "жат<v><iv><neg><gpr_impf><subst><nom>",
+        "жат<v><iv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "жіберілмейді",
+      "regex_split": "жіберіл+ме+йді",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жібер_R_ET іл_V2 ме_ET_ETB й_T1 ді_P3",
+        "жібер_R_ETK іл_V2 ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "жібер<v><tv><pass><neg><aor><p3><pl>",
+        "жібер<v><tv><pass><neg><aor><p3><sg>",
+        "жіберіл<v><tv><neg><aor><p3><pl>",
+        "жіберіл<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "болмаса",
+      "regex_split": "бол+ма+са",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ET ма_ET_ETB са_M4"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><prc_cond><p3><pl>",
+        "бол<v><iv><neg><prc_cond><p3><sg>",
+        "бол<v><iv><neg><gna_cond><p3><pl>",
+        "бол<v><iv><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "келіспеушіліктерді",
+      "regex_split": "келіс+пе+ушіліктерді",
+      "freq": 3,
+      "kaznlp": "not_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "келіспеушілік_R_ZE тер_N1 ді_C4"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><ger_abs><pl><acc>",
+        "келіс<v><iv><neg><ger_abs><pl><acc>",
+        "келіспе<v><iv><ger_abs><pl><acc>",
+        "келіспеушілік<n><pl><acc>"
+      ]
+    },
+    {
+      "form": "орындалмаған",
+      "regex_split": "орындал+ма+ған",
+      "freq": 3,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "орында_R_ET л_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "орында<v><tv><pass><neg><past><p3><pl>",
+        "орында<v><tv><pass><neg><past><p3><sg>",
+        "орында<v><tv><pass><neg><gpr_past><subst><nom>",
+        "орында<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "тұрмайтын",
+      "regex_split": "тұр+ма+йтын",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "тұрмайтын_R_X"
+      ],
+      "apertium_analyses": [
+        "тұр<v><iv><neg><pih><p3><pl>",
+        "тұр<v><iv><neg><pih><p3><sg>",
+        "тұр<v><iv><neg><gpr_impf><subst><nom>",
+        "тұр<v><iv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "етпеуге",
+      "regex_split": "ет+пе+уге",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "етпеуге_R_X"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><ger><dat>",
+        "ет<vaux><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "етпегені",
+      "regex_split": "ет+пе+гені",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "етпегені_R_X"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><gpr_past><subst><px3sp><nom>",
+        "ет<v><tv><neg><ger_past><px3sp><nom>",
+        "ет<vaux><neg><gpr_past><subst><px3sp><nom>",
+        "ет<vaux><neg><ger_past><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "болмағанда",
+      "regex_split": "бол+ма+ғанда",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ET ма_ET_ETB ған_ETB_ESM да_C5"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><gpr_past><subst><loc>",
+        "бол<v><iv><neg><ger_past><loc>",
+        "бол<vaux><neg><gpr_past><subst><loc>",
+        "бол<vaux><neg><ger_past><loc>"
+      ]
+    },
+    {
+      "form": "толмағандардың",
+      "regex_split": "тол+ма+ғандардың",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "толмағандардың_R_X"
+      ],
+      "apertium_analyses": [
+        "тол<v><iv><neg><gpr_past><subst><pl><gen>",
+        "тол<v><iv><neg><ger_past><pl><gen>",
+        "толмаған<adj><subst><pl><gen>"
+      ]
+    },
+    {
+      "form": "қолсұғылмаушылыққа",
+      "regex_split": "қолсұғыл+ма+ушылыққа",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "қолсұғылмаушылыққа_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "келтірмейтін",
+      "regex_split": "келтір+ме+йтін",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келтірмейтін_R_X"
+      ],
+      "apertium_analyses": [
+        "келтір<v><tv><neg><pih><p3><pl>",
+        "келтір<v><tv><neg><pih><p3><sg>",
+        "келтір<v><tv><neg><gpr_impf><subst><nom>",
+        "келтір<v><tv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "бұзбайтын",
+      "regex_split": "бұз+ба+йтын",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бұз_R_ET ба_ET_ETB йтын_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "бұз<v><tv><neg><pih><p3><pl>",
+        "бұз<v><tv><neg><pih><p3><sg>",
+        "бұз<v><tv><neg><gpr_impf><subst><nom>",
+        "бұз<v><tv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "көзделмеген",
+      "regex_split": "көздел+ме+ген",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "көзделмеген_R_X"
+      ],
+      "apertium_analyses": [
+        "көзде<v><tv><pass><neg><past><p3><pl>",
+        "көзде<v><tv><pass><neg><past><p3><sg>",
+        "көзде<v><tv><pass><neg><gpr_past><subst><nom>",
+        "көзде<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "ресімделмеген",
+      "regex_split": "ресімдел+ме+ген",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "ресімделмеген_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "сақталмай",
+      "regex_split": "сақтал+ма+й",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сақта_R_ET л_V2 ма_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "сақта<v><tv><pass><neg><prc_impf>",
+        "сақта<v><tv><pass><neg><gna_impf>",
+        "сақта<v><tv><pass><neg><prc_perf>",
+        "сақта<v><tv><pass><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "соқпайтын",
+      "regex_split": "соқ+па+йтын",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "соқ_R_ET па_ET_ETB йтын_ETB_ESM",
+        "соқ_R_ET па_ET_ETB йтын_T3"
+      ],
+      "apertium_analyses": [
+        "соқ<v><tv><neg><pih><p3><pl>",
+        "соқ<v><tv><neg><pih><p3><sg>",
+        "соқ<v><tv><neg><gpr_impf><subst><nom>",
+        "соқ<v><tv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "етпеген",
+      "regex_split": "ет+пе+ген",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ет_R_ET пе_ET_ETB ген_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><past><p3><pl>",
+        "ет<v><tv><neg><past><p3><sg>",
+        "ет<v><tv><neg><gpr_past><subst><nom>",
+        "ет<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "сақталмайды",
+      "regex_split": "сақтал+ма+йды",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сақталмайды_R_X"
+      ],
+      "apertium_analyses": [
+        "сақта<v><tv><pass><neg><aor><p3><pl>",
+        "сақта<v><tv><pass><neg><aor><p3><sg>",
+        "сақтал<v><iv><neg><aor><p3><pl>",
+        "сақтал<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "төленбейді",
+      "regex_split": "төлен+бе+йді",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "төленбейді_R_X"
+      ],
+      "apertium_analyses": [
+        "төле<v><tv><pass><neg><aor><p3><pl>",
+        "төле<v><tv><pass><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "шықпаған",
+      "regex_split": "шық+па+ған",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "шық_R_ET па_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "шық<v><iv><neg><past><p3><pl>",
+        "шық<v><iv><neg><past><p3><sg>",
+        "шық<v><iv><neg><gpr_past><subst><nom>",
+        "шық<v><iv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "болмау",
+      "regex_split": "бол+ма+у",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ET ма_ET_ETB у_ETB_ETU"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><ger><nom>",
+        "бол<vaux><neg><ger><nom>",
+        "болма<v><iv><ger><nom>"
+      ]
+    },
+    {
+      "form": "аяқталмаған",
+      "regex_split": "аяқтал+ма+ған",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "аяқта_R_ET л_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "аяқта<v><tv><pass><neg><past><p3><pl>",
+        "аяқта<v><tv><pass><neg><past><p3><sg>",
+        "аяқта<v><tv><pass><neg><gpr_past><subst><nom>",
+        "аяқта<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "өткізбеген",
+      "regex_split": "өткіз+бе+ген",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "өткізбеген_R_X"
+      ],
+      "apertium_analyses": [
+        "өткіз<v><tv><neg><past><p3><pl>",
+        "өткіз<v><tv><neg><past><p3><sg>",
+        "өткіз<v><tv><neg><gpr_past><subst><nom>",
+        "өткіз<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "белгіленбейді",
+      "regex_split": "белгілен+бе+йді",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "белгіленбейді_R_X"
+      ],
+      "apertium_analyses": [
+        "белгіле<v><tv><pass><neg><aor><p3><pl>",
+        "белгіле<v><tv><pass><neg><aor><p3><sg>",
+        "белгілен<v><iv><neg><aor><p3><pl>",
+        "белгілен<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "болдырмау",
+      "regex_split": "болдыр+ма+у",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "болдырмау_R_X"
+      ],
+      "apertium_analyses": [
+        "болдыр<v><tv><neg><ger><nom>",
+        "болдыр<v><iv><neg><ger><nom>",
+        "болдырма<v><tv><ger><nom>",
+        "болдырмау<n><nom>+е<cop><aor><p3><pl>"
+      ]
+    },
+    {
+      "form": "келмей",
+      "regex_split": "кел+ме+й",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кел_R_ET ме_ET_ETB й_ETB_KSE",
+        "ке_R_ET л_V2 ме_ET_ETB й_ETB_KSE",
+        "кел_R_ET ме_ET_ETB й_T1"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><prc_impf>",
+        "кел<v><iv><neg><gna_impf>",
+        "кел<v><iv><neg><prc_perf>",
+        "кел<v><iv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "күттірмейтін",
+      "regex_split": "күттір+ме+йтін",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "күттірмейтін_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "қосылмайды",
+      "regex_split": "қосыл+ма+йды",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қос_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "қос<v><tv><pass><neg><aor><p3><pl>",
+        "қос<v><tv><pass><neg><aor><p3><sg>",
+        "қосыл<v><tv><neg><aor><p3><pl>",
+        "қосыл<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "етілмеген",
+      "regex_split": "етіл+ме+ген",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ет_R_ET іл_V2 ме_ET_ETB ген_ETB_ESM",
+        "ет_R_ET іл_V2 ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><pass><neg><past><p3><pl>",
+        "ет<v><tv><pass><neg><past><p3><sg>",
+        "ет<v><tv><pass><neg><gpr_past><subst><nom>",
+        "ет<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "алмаса",
+      "regex_split": "ал+ма+са",
+      "freq": 2,
+      "kaznlp": "ambiguous",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "алмас_R_ET а_ET_KSE",
+        "ал_R_ET ма_ET_ETB са_M4",
+        "алмас_R_ET а_T1"
+      ],
+      "apertium_analyses": [
+        "ал<v><tv><neg><prc_cond><p3><pl>",
+        "ал<v><tv><neg><prc_cond><p3><sg>",
+        "ал<v><tv><neg><gna_cond><p3><pl>",
+        "ал<v><tv><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "етпеуі",
+      "regex_split": "ет+пе+уі",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "етпеуі_R_X"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><ger><px3sp><nom>",
+        "ет<vaux><neg><ger><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "кірмейтін",
+      "regex_split": "кір+ме+йтін",
+      "freq": 2,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кір_R_ET ме_ET_ETB йтін_ETB_ESM",
+        "кір_R_ET ме_ET_ETB йтін_T3"
+      ],
+      "apertium_analyses": [
+        "кір<v><iv><neg><pih><p3><pl>",
+        "кір<v><iv><neg><pih><p3><sg>",
+        "кір<v><iv><neg><gpr_impf><subst><nom>",
+        "кір<v><iv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "төленбеуіне",
+      "regex_split": "төлен+бе+уіне",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "төленбеуіне_R_X"
+      ],
+      "apertium_analyses": [
+        "төле<v><tv><pass><neg><ger><px3sp><dat>"
+      ]
+    },
+    {
+      "form": "төндірмесе",
+      "regex_split": "төндір+ме+се",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "төндірмесе_R_X"
+      ],
+      "apertium_analyses": [
+        "төндір<v><tv><neg><prc_cond><p3><pl>",
+        "төндір<v><tv><neg><prc_cond><p3><sg>",
+        "төндір<v><tv><neg><gna_cond><p3><pl>",
+        "төндір<v><tv><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "енгізілмейді",
+      "regex_split": "енгізіл+ме+йді",
+      "freq": 2,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "енгізілмейді_R_X"
+      ],
+      "apertium_analyses": [
+        "енгіз<v><tv><pass><neg><aor><p3><pl>",
+        "енгіз<v><tv><pass><neg><aor><p3><sg>",
+        "енгізіл<v><iv><neg><aor><p3><pl>",
+        "енгізіл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "келіспеушілік",
+      "regex_split": "келіс+пе+ушілік",
+      "freq": 2,
+      "kaznlp": "not_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "келіспеушілік_R_ZE"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><ger_abs><nom>",
+        "келіс<v><iv><neg><ger_abs><nom>",
+        "келіспе<v><iv><ger_abs><nom>",
+        "келіспеушілік<n><nom>+е<cop><aor><p3><pl>"
+      ]
+    },
+    {
+      "form": "етпейтін",
+      "regex_split": "ет+пе+йтін",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ет_R_ET пе_ET_ETB йтін_ETB_ESM",
+        "ет_R_ET пе_ET_ETB йтін_T3"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><neg><pih><p3><pl>",
+        "ет<v><tv><neg><pih><p3><sg>",
+        "ет<v><tv><neg><gpr_impf><subst><nom>",
+        "ет<v><tv><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "сақталмаған",
+      "regex_split": "сақтал+ма+ған",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сақта_R_ET л_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "сақта<v><tv><pass><neg><past><p3><pl>",
+        "сақта<v><tv><pass><neg><past><p3><sg>",
+        "сақта<v><tv><pass><neg><gpr_past><subst><nom>",
+        "сақта<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "бермеу",
+      "regex_split": "бер+ме+у",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бермеу_R_X"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><neg><ger><nom>",
+        "бер<v><iv><neg><ger><nom>",
+        "бер<vaux><neg><ger><nom>"
+      ]
+    },
+    {
+      "form": "қойылмайды",
+      "regex_split": "қойыл+ма+йды",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қой_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3",
+        "қой_R_ETK ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "қой<v><tv><pass><neg><aor><p3><pl>",
+        "қой<v><tv><pass><neg><aor><p3><sg>",
+        "қойыл<v><iv><neg><aor><p3><pl>",
+        "қойыл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "берілмейтін",
+      "regex_split": "беріл+ме+йтін",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "берілмейтін_R_X"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><pass><neg><pih><p3><pl>",
+        "бер<v><tv><pass><neg><pih><p3><sg>",
+        "бер<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "бер<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "тапсырылмайтын",
+      "regex_split": "тапсырыл+ма+йтын",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "тапсыр_R_ET ыл_V2 ма_ET_ETB йтын_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "тапсыр<v><tv><pass><neg><pih><p3><pl>",
+        "тапсыр<v><tv><pass><neg><pih><p3><sg>",
+        "тапсыр<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "тапсыр<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "төмендетпеуге",
+      "regex_split": "төмендет+пе+уге",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "төмендетпеуге_R_X"
+      ],
+      "apertium_analyses": [
+        "төмендет<v><iv><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "өзгертілмейді",
+      "regex_split": "өзгертіл+ме+йді",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "өзгертілмейді_R_X"
+      ],
+      "apertium_analyses": [
+        "өзгерт<v><tv><pass><neg><aor><p3><pl>",
+        "өзгерт<v><tv><pass><neg><aor><p3><sg>",
+        "өзгертіл<v><tv><neg><aor><p3><pl>",
+        "өзгертіл<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "келіспейтіні",
+      "regex_split": "келіс+пе+йтіні",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келіспейтіні_R_X"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><gpr_impf><subst><px3sp><nom>",
+        "кел<v><iv><coop><neg><ger_impf><px3sp><nom>",
+        "келіс<v><iv><neg><gpr_impf><subst><px3sp><nom>",
+        "келіс<v><iv><neg><ger_impf><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "қатыспаған",
+      "regex_split": "қатыс+па+ған",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қатыс_R_ET па_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "қат<v><iv><coop><neg><past><p3><pl>",
+        "қат<v><iv><coop><neg><past><p3><sg>",
+        "қат<v><iv><coop><neg><gpr_past><subst><nom>",
+        "қат<v><iv><coop><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "сұғылмауына",
+      "regex_split": "сұғыл+ма+уына",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "сұғылмауына_R_X"
+      ],
+      "apertium_analyses": [
+        "сұқ<v><tv><pass><neg><ger><px3sp><dat>"
+      ]
+    },
+    {
+      "form": "толмағандық",
+      "regex_split": "тол+ма+ғандық",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "толмағандық_R_X"
+      ],
+      "apertium_analyses": [
+        "тол<v><iv><neg><ger_perf><nom>"
+      ]
+    },
+    {
+      "form": "шектемейді",
+      "regex_split": "шекте+ме+йді",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "шекте_R_ET ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "шекте<v><tv><neg><aor><p3><pl>",
+        "шекте<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "етілмейтін",
+      "regex_split": "етіл+ме+йтін",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "етілмейтін_R_X"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><pass><neg><pih><p3><pl>",
+        "ет<v><tv><pass><neg><pih><p3><sg>",
+        "ет<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "ет<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "көрсетілмейді",
+      "regex_split": "көрсетіл+ме+йді",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "көрсет_R_ET іл_V2 ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "көрсет<v><tv><pass><neg><aor><p3><pl>",
+        "көрсет<v><tv><pass><neg><aor><p3><sg>",
+        "көрсетіл<v><iv><neg><aor><p3><pl>",
+        "көрсетіл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "асырмау",
+      "regex_split": "асыр+ма+у",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "асыр_R_ET ма_ET_ETB у_ETB_ETU"
+      ],
+      "apertium_analyses": [
+        "асыр<v><tv><neg><ger><nom>"
+      ]
+    },
+    {
+      "form": "келтірмей",
+      "regex_split": "келтір+ме+й",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келтірмей_R_X"
+      ],
+      "apertium_analyses": [
+        "келтір<v><tv><neg><prc_impf>",
+        "келтір<v><tv><neg><gna_impf>",
+        "келтір<v><tv><neg><prc_perf>",
+        "келтір<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "келісілмеген",
+      "regex_split": "келісіл+ме+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келіс_R_ET іл_V2 ме_ET_ETB ген_ETB_ESM",
+        "келіс_R_ET іл_V2 ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "келісілмеген<adj><subst><nom>+е<cop><aor><p3><pl>",
+        "келісілмеген<adj><subst><nom>+е<cop><aor><p3><sg>",
+        "келісілмеген<adj><subst><nom>",
+        "келісілмеген<adj>+е<cop><aor><p3><pl>"
+      ]
+    },
+    {
+      "form": "тапсырмаған",
+      "regex_split": "тапсыр+ма+ған",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "тапсыр_R_ET ма_ET_ETB ған_ETB_ESM",
+        "тапсыр_R_ET ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "тапсыр<v><tv><neg><past><p3><pl>",
+        "тапсыр<v><tv><neg><past><p3><sg>",
+        "тапсыр<v><tv><neg><gpr_past><subst><nom>",
+        "тапсыр<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "сыйыспайтын",
+      "regex_split": "сыйыс+па+йтын",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сыйыспайтын_R_X"
+      ],
+      "apertium_analyses": [
+        "сый<v><iv><coop><neg><pih><p3><pl>",
+        "сый<v><iv><coop><neg><pih><p3><sg>",
+        "сый<v><iv><coop><neg><gpr_impf><subst><nom>",
+        "сый<v><iv><coop><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "болмауы",
+      "regex_split": "бол+ма+уы",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ET ма_ET_ETB у_ETB_ETU ы_S3"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><ger><px3sp><nom>",
+        "бол<vaux><neg><ger><px3sp><nom>",
+        "болма<v><iv><ger><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "келмеуі",
+      "regex_split": "кел+ме+уі",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кел_R_ET ме_ET_ETB у_ETB_ETU і_S3"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><ger><px3sp><nom>",
+        "кел<vaux><neg><ger><px3sp><nom>",
+        "келме<v><iv><ger><px3sp><nom>",
+        "келмеу<n><px3sp><nom>+е<cop><aor><p3><pl>"
+      ]
+    },
+    {
+      "form": "болмағаны",
+      "regex_split": "бол+ма+ғаны",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ET ма_ET_ETB ған_ETB_ESM ы_S3"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><gpr_past><subst><px3sp><nom>",
+        "бол<v><iv><neg><ger_past><px3sp><nom>",
+        "бол<vaux><neg><gpr_past><subst><px3sp><nom>",
+        "бол<vaux><neg><ger_past><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "орындамағаны",
+      "regex_split": "орында+ма+ғаны",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "орында_R_ET ма_ET_ETB ған_ETB_ESM ы_S3"
+      ],
+      "apertium_analyses": [
+        "орында<v><tv><neg><gpr_past><subst><px3sp><nom>",
+        "орында<v><tv><neg><ger_past><px3sp><nom>",
+        "орында<v><iv><neg><gpr_past><subst><px3sp><nom>",
+        "орында<v><iv><neg><ger_past><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "болғызбаса",
+      "regex_split": "болғыз+ба+са",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "болғызбаса_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "бермесе",
+      "regex_split": "бер+ме+се",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бермесе_R_X"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><neg><prc_cond><p3><pl>",
+        "бер<v><tv><neg><prc_cond><p3><sg>",
+        "бер<v><tv><neg><gna_cond><p3><pl>",
+        "бер<v><tv><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "шығарылмайды",
+      "regex_split": "шығарыл+ма+йды",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "шығар_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "шығар<v><tv><pass><neg><aor><p3><pl>",
+        "шығар<v><tv><pass><neg><aor><p3><sg>",
+        "шығарыл<v><iv><neg><aor><p3><pl>",
+        "шығарыл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "келмейді",
+      "regex_split": "кел+ме+йді",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кел_R_ETK ме_ETK_ETB й_T1 ді_P3",
+        "кел_R_ET ме_ET_ETB й_T1 ді_P3",
+        "ке_R_ET л_V2 ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><aor><p3><pl>",
+        "кел<v><iv><neg><aor><p3><sg>",
+        "кел<vaux><neg><aor><p3><pl>",
+        "кел<vaux><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "соқтырмайды",
+      "regex_split": "соқтыр+ма+йды",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "соқтырмайды_R_X"
+      ],
+      "apertium_analyses": [
+        "соқтыр<v><tv><neg><aor><p3><pl>",
+        "соқтыр<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "толмағандар",
+      "regex_split": "тол+ма+ғандар",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "толмағандар_R_X"
+      ],
+      "apertium_analyses": [
+        "тол<v><iv><neg><gpr_past><subst><pl><nom>",
+        "тол<v><iv><neg><ger_past><pl><nom>",
+        "толмаған<adj><subst><pl><nom>+е<cop><aor><p3><pl>",
+        "толмаған<adj><subst><pl><nom>+е<cop><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "жылытылмайтын",
+      "regex_split": "жылытыл+ма+йтын",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жылытылмайтын_R_X"
+      ],
+      "apertium_analyses": [
+        "жылыт<v><tv><pass><neg><pih><p3><pl>",
+        "жылыт<v><tv><pass><neg><pih><p3><sg>",
+        "жылыт<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "жылыт<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "күтпеген",
+      "regex_split": "күт+пе+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "күт_R_ET пе_ET_ETB ген_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "күт<v><tv><neg><past><p3><pl>",
+        "күт<v><tv><neg><past><p3><sg>",
+        "күт<v><tv><neg><gpr_past><subst><nom>",
+        "күт<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "үзбей",
+      "regex_split": "үз+бе+й",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "үз_R_ET бе_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "үз<v><tv><neg><prc_impf>",
+        "үз<v><tv><neg><gna_impf>",
+        "үз<v><tv><neg><prc_perf>",
+        "үз<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "алынбай",
+      "regex_split": "алын+ба+й",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "алынбай_R_X"
+      ],
+      "apertium_analyses": [
+        "ал<v><tv><pass><neg><prc_impf>",
+        "ал<v><tv><pass><neg><gna_impf>",
+        "ал<v><tv><pass><neg><prc_perf>",
+        "ал<v><tv><pass><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "шектелмейді",
+      "regex_split": "шектел+ме+йді",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "шекте_R_ET л_V2 ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "шекте<v><tv><pass><neg><aor><p3><pl>",
+        "шекте<v><tv><pass><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "қамтымауға",
+      "regex_split": "қамты+ма+уға",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қамты_R_ET ма_ET_ETB у_ETB_ETU ға_C3"
+      ],
+      "apertium_analyses": [
+        "қамты<v><tv><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "жүргізбеген",
+      "regex_split": "жүргіз+бе+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жүр_R_ETP гіз_V4 бе_ETP_ETB ген_ETB_ESM",
+        "жүр_R_ETPK гіз_V4 бе_ETP_ETB ген_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "жүргіз<v><tv><neg><past><p3><pl>",
+        "жүргіз<v><tv><neg><past><p3><sg>",
+        "жүргіз<v><tv><neg><gpr_past><subst><nom>",
+        "жүргіз<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "алмағанда",
+      "regex_split": "ал+ма+ғанда",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ал_R_ET ма_ET_ETB ған_ETB_ESM да_C5"
+      ],
+      "apertium_analyses": [
+        "ал<v><tv><neg><gpr_past><subst><loc>",
+        "ал<v><tv><neg><ger_past><loc>",
+        "ал<vaux><neg><gpr_past><subst><loc>",
+        "ал<vaux><neg><ger_past><loc>"
+      ]
+    },
+    {
+      "form": "босатылмай",
+      "regex_split": "босатыл+ма+й",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "босатылмай_R_X"
+      ],
+      "apertium_analyses": [
+        "босат<v><tv><pass><neg><prc_impf>",
+        "босат<v><tv><pass><neg><gna_impf>",
+        "босат<v><tv><pass><neg><prc_perf>",
+        "босат<v><tv><pass><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "төленбеуге",
+      "regex_split": "төлен+бе+уге",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "төленбеуге_R_X"
+      ],
+      "apertium_analyses": [
+        "төле<v><tv><pass><neg><ger><dat>"
+      ]
+    },
+    {
+      "form": "төлемеген",
+      "regex_split": "төле+ме+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "төле_R_ET ме_ET_ETB ген_ETB_ESM",
+        "төле_R_ET ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "төле<v><tv><neg><past><p3><pl>",
+        "төле<v><tv><neg><past><p3><sg>",
+        "төле<v><tv><neg><gpr_past><subst><nom>",
+        "төле<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "нашарлатпайтын",
+      "regex_split": "нашарлат+па+йтын",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "нашарлатпайтын_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "бермеген",
+      "regex_split": "бер+ме+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бер_R_ET ме_ET_ETB ген_ETB_ESM",
+        "бер_R_ET ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "бер<v><tv><neg><past><p3><pl>",
+        "бер<v><tv><neg><past><p3><sg>",
+        "бер<v><tv><neg><gpr_past><subst><nom>",
+        "бер<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "жұмсалмаған",
+      "regex_split": "жұмсал+ма+ған",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жұмса_R_ET л_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "жұмса<v><tv><pass><neg><past><p3><pl>",
+        "жұмса<v><tv><pass><neg><past><p3><sg>",
+        "жұмса<v><tv><pass><neg><gpr_past><subst><nom>",
+        "жұмса<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "қайтарылмаған",
+      "regex_split": "қайтарыл+ма+ған",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қайтар_R_ET ыл_V2 ма_ET_ETB ған_ETB_ESM",
+        "қайтар_R_ET ыл_V2 ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "қайтар<v><tv><pass><neg><past><p3><pl>",
+        "қайтар<v><tv><pass><neg><past><p3><sg>",
+        "қайтар<v><tv><pass><neg><gpr_past><subst><nom>",
+        "қайтар<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "өтелмеген",
+      "regex_split": "өтел+ме+ген",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "өтелмеген_R_X"
+      ],
+      "apertium_analyses": [
+        "өте<v><tv><pass><neg><past><p3><pl>",
+        "өте<v><tv><pass><neg><past><p3><sg>",
+        "өте<v><tv><pass><neg><gpr_past><subst><nom>",
+        "өте<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "босатпайды",
+      "regex_split": "босат+па+йды",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "босатпайды_R_X"
+      ],
+      "apertium_analyses": [
+        "босат<v><tv><neg><aor><p3><pl>",
+        "босат<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "жіберілмеген",
+      "regex_split": "жіберіл+ме+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жібер_R_ET іл_V2 ме_ET_ETB ген_ETB_ESM",
+        "жібер_R_ETK іл_V2 ме_ET_ETB ген_ETB_ESM",
+        "жібер_R_ET іл_V2 ме_ET_ETB ген_T3",
+        "жібер_R_ETK іл_V2 ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "жібер<v><tv><pass><neg><past><p3><pl>",
+        "жібер<v><tv><pass><neg><past><p3><sg>",
+        "жібер<v><tv><pass><neg><gpr_past><subst><nom>",
+        "жібер<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "еңсерілмейтін",
+      "regex_split": "еңсеріл+ме+йтін",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "еңсерілмейтін_R_X"
+      ],
+      "apertium_analyses": [
+        "еңсер<v><tv><pass><neg><pih><p3><pl>",
+        "еңсер<v><tv><pass><neg><pih><p3><sg>",
+        "еңсер<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "еңсер<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "болмай",
+      "regex_split": "бол+ма+й",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бол_R_ETK ма_ETK_ETB й_ETB_KSE",
+        "бол_R_ET ма_ET_ETB й_ETB_KSE",
+        "бо_R_ET л_V2 ма_ET_ETB й_ETB_KSE",
+        "бол_R_ETK ма_ETK_ETB й_T1"
+      ],
+      "apertium_analyses": [
+        "бол<v><iv><neg><prc_impf>",
+        "бол<v><iv><neg><gna_impf>",
+        "бол<v><iv><neg><prc_perf>",
+        "бол<v><iv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "орындалмаса",
+      "regex_split": "орындал+ма+са",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "орындалмаса_R_X"
+      ],
+      "apertium_analyses": [
+        "орында<v><tv><pass><neg><prc_cond><p3><pl>",
+        "орында<v><tv><pass><neg><prc_cond><p3><sg>",
+        "орында<v><tv><pass><neg><gna_cond><p3><pl>",
+        "орында<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "көрсетілмесе",
+      "regex_split": "көрсетіл+ме+се",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "көрсетілмесе_R_X"
+      ],
+      "apertium_analyses": [
+        "көрсет<v><tv><pass><neg><prc_cond><p3><pl>",
+        "көрсет<v><tv><pass><neg><prc_cond><p3><sg>",
+        "көрсет<v><tv><pass><neg><gna_cond><p3><pl>",
+        "көрсет<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "жүргізбейді",
+      "regex_split": "жүргіз+бе+йді",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жүргізбейді_R_X"
+      ],
+      "apertium_analyses": [
+        "жүргіз<v><tv><neg><aor><p3><pl>",
+        "жүргіз<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "сақтандырылмаған",
+      "regex_split": "сақтандырыл+ма+ған",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "сақтандырылмаған_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "жасаспай",
+      "regex_split": "жасас+па+й",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жасаспай_R_X"
+      ],
+      "apertium_analyses": [
+        "жаса<v><tv><coop><neg><prc_impf>",
+        "жаса<v><tv><coop><neg><gna_impf>",
+        "жаса<v><tv><coop><neg><prc_perf>",
+        "жаса<v><tv><coop><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "жасалмайды",
+      "regex_split": "жасал+ма+йды",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жасалмайды_R_X"
+      ],
+      "apertium_analyses": [
+        "жаса<v><tv><pass><neg><aor><p3><pl>",
+        "жаса<v><tv><pass><neg><aor><p3><sg>",
+        "жасал<v><iv><neg><aor><p3><pl>",
+        "жасал<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "нашарлатпауға",
+      "regex_split": "нашарлат+па+уға",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "not_covered",
+      "apertium_stem_ok": false,
+      "lexicalized_flag": false,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "нашарлатпауға_R_X"
+      ],
+      "apertium_analyses": []
+    },
+    {
+      "form": "шектемей",
+      "regex_split": "шекте+ме+й",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "шекте_R_ET ме_ET_ETB й_ETB_KSE",
+        "шекте_R_ET ме_ET_ETB й_T1"
+      ],
+      "apertium_analyses": [
+        "шекте<v><tv><neg><prc_impf>",
+        "шекте<v><tv><neg><gna_impf>",
+        "шекте<v><tv><neg><prc_perf>",
+        "шекте<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "орындалмауы",
+      "regex_split": "орындал+ма+уы",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "орындалмауы_R_X"
+      ],
+      "apertium_analyses": [
+        "орында<v><tv><pass><neg><ger><px3sp><nom>",
+        "орындал<v><iv><neg><ger><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "жүгінбеу",
+      "regex_split": "жүгін+бе+у",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жүгінбеу_R_X"
+      ],
+      "apertium_analyses": [
+        "жүгін<v><iv><neg><ger><nom>"
+      ]
+    },
+    {
+      "form": "жатпайтындығын",
+      "regex_split": "жат+па+йтындығын",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жатпайтындығын_R_X"
+      ],
+      "apertium_analyses": [
+        "жат<v><iv><neg><ger_impf><abs><px3sp><acc>",
+        "жат<vaux><neg><ger_impf><abs><px3sp><acc>"
+      ]
+    },
+    {
+      "form": "жүгінбей",
+      "regex_split": "жүгін+бе+й",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жүгін_R_ET бе_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "жүгін<v><iv><neg><prc_impf>",
+        "жүгін<v><iv><neg><gna_impf>",
+        "жүгін<v><iv><neg><prc_perf>",
+        "жүгін<v><iv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "реттемеген",
+      "regex_split": "ретте+ме+ген",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ретте_R_ET ме_ET_ETB ген_ETB_ESM",
+        "ретте_R_ET ме_ET_ETB ген_T3"
+      ],
+      "apertium_analyses": [
+        "ретте<v><tv><neg><past><p3><pl>",
+        "ретте<v><tv><neg><past><p3><sg>",
+        "ретте<v><tv><neg><gpr_past><subst><nom>",
+        "ретте<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "хабарламаған",
+      "regex_split": "хабарла+ма+ған",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "хабарла_R_ET ма_ET_ETB ған_ETB_ESM",
+        "хабарла_R_ET ма_ET_ETB ған_T3"
+      ],
+      "apertium_analyses": [
+        "хабарла<v><tv><neg><past><p3><pl>",
+        "хабарла<v><tv><neg><past><p3><sg>",
+        "хабарла<v><tv><neg><gpr_past><subst><nom>",
+        "хабарла<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "кешіктірілмейтін",
+      "regex_split": "кешіктіріл+ме+йтін",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "кешіктірілмейтін_R_X"
+      ],
+      "apertium_analyses": [
+        "кешіктір<v><tv><pass><neg><pih><p3><pl>",
+        "кешіктір<v><tv><pass><neg><pih><p3><sg>",
+        "кешіктір<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "кешіктір<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "жеткізбеген",
+      "regex_split": "жеткіз+бе+ген",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жеткізбеген_R_X"
+      ],
+      "apertium_analyses": [
+        "жеткіз<v><tv><neg><past><p3><pl>",
+        "жеткіз<v><tv><neg><past><p3><sg>",
+        "жеткіз<v><tv><neg><gpr_past><subst><nom>",
+        "жеткіз<v><tv><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "тартылмайды",
+      "regex_split": "тартыл+ма+йды",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "тарт_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "тарт<v><tv><pass><neg><aor><p3><pl>",
+        "тарт<v><tv><pass><neg><aor><p3><sg>",
+        "тартыл<v><iv><neg><aor><p3><pl>",
+        "тартыл<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "ауыстырылмайды",
+      "regex_split": "ауыстырыл+ма+йды",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "ауыстырылмайды_R_X"
+      ],
+      "apertium_analyses": [
+        "ауыстыр<v><tv><pass><neg><aor><p3><pl>",
+        "ауыстыр<v><tv><pass><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "бұзылмайды",
+      "regex_split": "бұзыл+ма+йды",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "бұз_R_ET ыл_V2 ма_ET_ETB й_T1 ды_P3"
+      ],
+      "apertium_analyses": [
+        "бұз<v><tv><pass><neg><aor><p3><pl>",
+        "бұз<v><tv><pass><neg><aor><p3><sg>",
+        "бұзыл<v><tv><neg><aor><p3><pl>",
+        "бұзыл<v><tv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "келіспеушіліктерін",
+      "regex_split": "келіс+пе+ушіліктерін",
+      "freq": 1,
+      "kaznlp": "not_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "келіспеушілік_R_ZE тер_N1 і_S3 н_C4"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><ger_abs><pl><px3sp><acc>",
+        "келіс<v><iv><neg><ger_abs><pl><px3sp><acc>",
+        "келіспе<v><iv><ger_abs><pl><px3sp><acc>",
+        "келіспеушілік<n><pl><px3sp><acc>"
+      ]
+    },
+    {
+      "form": "жеткізілмесе",
+      "regex_split": "жеткізіл+ме+се",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жеткізілмесе_R_X"
+      ],
+      "apertium_analyses": [
+        "жеткіз<v><tv><pass><neg><prc_cond><p3><pl>",
+        "жеткіз<v><tv><pass><neg><prc_cond><p3><sg>",
+        "жеткіз<v><tv><pass><neg><gna_cond><p3><pl>",
+        "жеткіз<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "келіспеушіліктерінің",
+      "regex_split": "келіс+пе+ушіліктерінің",
+      "freq": 1,
+      "kaznlp": "not_neg",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": true,
+      "final": "owner",
+      "kaznlp_analyses": [
+        "келіспеушілік_R_ZE тер_N1 і_S3 нің_C2"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><coop><neg><ger_abs><pl><px3sp><gen>",
+        "келіс<v><iv><neg><ger_abs><pl><px3sp><gen>",
+        "келіспе<v><iv><ger_abs><pl><px3sp><gen>",
+        "келіспеушілік<n><pl><px3sp><gen>"
+      ]
+    },
+    {
+      "form": "қаралмайды",
+      "regex_split": "қарал+ма+йды",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "қаралмайды_R_X"
+      ],
+      "apertium_analyses": [
+        "қара<v><tv><pass><neg><aor><p3><pl>",
+        "қара<v><tv><pass><neg><aor><p3><sg>",
+        "қарал<v><iv><neg><aor><p3><pl>",
+        "қарал<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "сақталмаса",
+      "regex_split": "сақтал+ма+са",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "сақталмаса_R_X"
+      ],
+      "apertium_analyses": [
+        "сақта<v><tv><pass><neg><prc_cond><p3><pl>",
+        "сақта<v><tv><pass><neg><prc_cond><p3><sg>",
+        "сақта<v><tv><pass><neg><gna_cond><p3><pl>",
+        "сақта<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "етілмесе",
+      "regex_split": "етіл+ме+се",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "етілмесе_R_X"
+      ],
+      "apertium_analyses": [
+        "ет<v><tv><pass><neg><prc_cond><p3><pl>",
+        "ет<v><tv><pass><neg><prc_cond><p3><sg>",
+        "ет<v><tv><pass><neg><gna_cond><p3><pl>",
+        "ет<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "жойылмайтын",
+      "regex_split": "жойыл+ма+йтын",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жой_R_ET ыл_V2 ма_ET_ETB йтын_ETB_ESM"
+      ],
+      "apertium_analyses": [
+        "жой<v><tv><pass><neg><pih><p3><pl>",
+        "жой<v><tv><pass><neg><pih><p3><sg>",
+        "жой<v><tv><pass><neg><gpr_impf><subst><nom>",
+        "жой<v><tv><pass><neg><gpr_impf>"
+      ]
+    },
+    {
+      "form": "көтермейді",
+      "regex_split": "көтер+ме+йді",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "көтер_R_ET ме_ET_ETB й_T1 ді_P3"
+      ],
+      "apertium_analyses": [
+        "көтер<v><tv><neg><aor><p3><pl>",
+        "көтер<v><tv><neg><aor><p3><sg>",
+        "көтер<v><iv><neg><aor><p3><pl>",
+        "көтер<v><iv><neg><aor><p3><sg>"
+      ]
+    },
+    {
+      "form": "келмеуіне",
+      "regex_split": "кел+ме+уіне",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келмеуіне_R_X"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><ger><px3sp><dat>",
+        "кел<vaux><neg><ger><px3sp><dat>",
+        "келме<v><iv><ger><px3sp><dat>",
+        "келмеу<n><px3sp><dat>"
+      ]
+    },
+    {
+      "form": "жүргізбеу",
+      "regex_split": "жүргіз+бе+у",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жүргізбеу_R_X"
+      ],
+      "apertium_analyses": [
+        "жүргіз<v><tv><neg><ger><nom>"
+      ]
+    },
+    {
+      "form": "жасамағаны",
+      "regex_split": "жаса+ма+ғаны",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жаса_R_ET ма_ET_ETB ған_ETB_ESM ы_S3"
+      ],
+      "apertium_analyses": [
+        "жаса<v><tv><neg><gpr_past><subst><px3sp><nom>",
+        "жаса<v><tv><neg><ger_past><px3sp><nom>"
+      ]
+    },
+    {
+      "form": "келмесе",
+      "regex_split": "кел+ме+се",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg_lex",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "келмесе_R_X"
+      ],
+      "apertium_analyses": [
+        "кел<v><iv><neg><prc_cond><p3><pl>",
+        "кел<v><iv><neg><prc_cond><p3><sg>",
+        "кел<v><iv><neg><gna_cond><p3><pl>",
+        "кел<v><iv><neg><gna_cond><p3><sg>"
+      ]
+    },
+    {
+      "form": "хабарланбаған",
+      "regex_split": "хабарлан+ба+ған",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "хабарланбаған_R_X"
+      ],
+      "apertium_analyses": [
+        "хабарла<v><tv><pass><neg><past><p3><pl>",
+        "хабарла<v><tv><pass><neg><past><p3><sg>",
+        "хабарла<v><tv><pass><neg><gpr_past><subst><nom>",
+        "хабарла<v><tv><pass><neg><gpr_past>"
+      ]
+    },
+    {
+      "form": "хабарламай",
+      "regex_split": "хабарла+ма+й",
+      "freq": 1,
+      "kaznlp": "agree_neg",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "хабарла_R_ET ма_ET_ETB й_ETB_KSE"
+      ],
+      "apertium_analyses": [
+        "хабарла<v><tv><neg><prc_impf>",
+        "хабарла<v><tv><neg><gna_impf>",
+        "хабарла<v><tv><neg><prc_perf>",
+        "хабарла<v><tv><neg><gna_perf>"
+      ]
+    },
+    {
+      "form": "жасалмаса",
+      "regex_split": "жасал+ма+са",
+      "freq": 1,
+      "kaznlp": "not_covered",
+      "apertium": "neg",
+      "apertium_stem_ok": true,
+      "lexicalized_flag": false,
+      "final": "auto_ok",
+      "kaznlp_analyses": [
+        "жасалмаса_R_X"
+      ],
+      "apertium_analyses": [
+        "жаса<v><tv><pass><neg><prc_cond><p3><pl>",
+        "жаса<v><tv><pass><neg><prc_cond><p3><sg>",
+        "жаса<v><tv><pass><neg><gna_cond><p3><pl>",
+        "жаса<v><tv><pass><neg><gna_cond><p3><sg>"
+      ]
+    }
+  ]
+}
