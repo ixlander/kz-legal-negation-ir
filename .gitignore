@@ -14,3 +14,6 @@ llama2 notebook.ipynb
 checkpoints/
 *.pt
 *.safetensors
+
+# third-party datasets (gated / licensed), downloaded by src/data/fetch_external.py
+data/external/

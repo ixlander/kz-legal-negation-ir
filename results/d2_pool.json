@@ -1,0 +1,1875 @@
+{
+  "diagnostic": "D2_affix_isolation_pool",
+  "n_forms": 154,
+  "date": "2026-10-21",
+  "tokenizers": {
+    "xlm-r (e5, bge-m3, gte, arctic, jina-v3)": {
+      "repo": "FacebookAI/xlm-roberta-base",
+      "vocab_size": 250002,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.2077922077922078,
+        "any_boundary_rate": 0.961038961038961,
+        "boundary_before_rate": 0.8311688311688312,
+        "boundary_after_rate": 0.33766233766233766,
+        "affix_single_token_rate": 0.2077922077922078,
+        "patterns": {
+          "isolated": 0.2077922077922078,
+          "starts_token": 0.6233766233766234,
+          "ends_token": 0.12987012987012986,
+          "buried": 0.03896103896103896
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.17827868852459017,
+        "patterns_freq_weighted": {
+          "isolated": 0.17827868852459017,
+          "starts_token": 0.6516393442622951,
+          "ends_token": 0.1290983606557377,
+          "buried": 0.040983606557377046
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 1.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.5,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "▁бол",
+            "маған"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "▁а",
+            "спа",
+            "йтын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "▁бері",
+            "л",
+            "мейді"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "майтын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "▁көз",
+            "дел",
+            "месе"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "▁тол",
+            "маған"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "▁кеші",
+            "к",
+            "тір",
+            "мей"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "▁кеші",
+            "кті",
+            "ріл",
+            "мей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "▁бол",
+            "ғыз",
+            "ба",
+            "у"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "▁бол",
+            "майтын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "▁а",
+            "спа",
+            "уға"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "▁ұ",
+            "сын",
+            "ба",
+            "ған"
+          ]
+        }
+      ]
+    },
+    "labse": {
+      "repo": "sentence-transformers/LaBSE",
+      "vocab_size": 501153,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.06493506493506493,
+        "any_boundary_rate": 0.6493506493506493,
+        "boundary_before_rate": 0.525974025974026,
+        "boundary_after_rate": 0.18831168831168832,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.06493506493506493,
+          "starts_token": 0.461038961038961,
+          "ends_token": 0.12337662337662338,
+          "buried": 0.35064935064935066
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.11065573770491803,
+        "patterns_freq_weighted": {
+          "isolated": 0.11065573770491803,
+          "starts_token": 0.3729508196721312,
+          "ends_token": 0.08401639344262295,
+          "buried": 0.4323770491803279
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.8333333333333334,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "болмаған"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "ас",
+            "##пайтын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "бері",
+            "##лмейді"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "са",
+            "##қта",
+            "##лмай",
+            "##тын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "көз",
+            "##дел",
+            "##месе"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "толмаған"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "кеш",
+            "##ікті",
+            "##рме",
+            "##й"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "кеш",
+            "##ікті",
+            "##рі",
+            "##лм",
+            "##ей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "бол",
+            "##ғыз",
+            "##ба",
+            "##у"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "болмай",
+            "##тын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "ас",
+            "##па",
+            "##уға"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ұ",
+            "##сын",
+            "##ба",
+            "##ған"
+          ]
+        }
+      ]
+    },
+    "qwen3 byte-BPE": {
+      "repo": "Qwen/Qwen3-Embedding-0.6B",
+      "vocab_size": 151669,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.2532467532467532,
+        "any_boundary_rate": 0.922077922077922,
+        "boundary_before_rate": 0.8571428571428571,
+        "boundary_after_rate": 0.3181818181818182,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.2532467532467532,
+          "starts_token": 0.6038961038961039,
+          "ends_token": 0.06493506493506493,
+          "buried": 0.07792207792207792
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.30327868852459017,
+        "patterns_freq_weighted": {
+          "isolated": 0.30327868852459017,
+          "starts_token": 0.5389344262295082,
+          "ends_token": 0.06967213114754098,
+          "buried": 0.08811475409836066
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.4,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "Ð¼Ð°",
+            "Òĵ",
+            "Ð°Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "ĠÐ°",
+            "ÑģÐ¿",
+            "Ð°Ð¹",
+            "ÑĤÑĭ",
+            "Ð½"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "ĠÐ±ÐµÑĢ",
+            "Ñĸ",
+            "Ð»",
+            "Ð¼",
+            "ÐµÐ¹",
+            "Ð´",
+            "Ñĸ"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "ĠÑģ",
+            "Ð°",
+            "ÒĽ",
+            "ÑĤÐ°Ð»",
+            "Ð¼",
+            "Ð°Ð¹",
+            "ÑĤÑĭ",
+            "Ð½"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "ĠÐº",
+            "Ó©",
+            "Ð·",
+            "Ð´ÐµÐ»",
+            "Ð¼ÐµÑģ",
+            "Ðµ"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "ĠÑĤ",
+            "Ð¾Ð»",
+            "Ð¼Ð°",
+            "Òĵ",
+            "Ð°Ð½"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "ĠÐº",
+            "ÐµÑĪ",
+            "Ñĸ",
+            "ÐºÑĤ",
+            "Ñĸ",
+            "ÑĢ",
+            "Ð¼",
+            "ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "ĠÐº",
+            "ÐµÑĪ",
+            "Ñĸ",
+            "ÐºÑĤ",
+            "Ñĸ",
+            "ÑĢ",
+            "Ñĸ",
+            "Ð»",
+            "Ð¼",
+            "ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "Òĵ",
+            "Ñĭ",
+            "Ð·",
+            "Ð±Ð°",
+            "Ñĥ"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "Ð¼",
+            "Ð°Ð¹",
+            "ÑĤÑĭ",
+            "Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "ĠÐ°",
+            "ÑģÐ¿",
+            "Ð°",
+            "Ñĥ",
+            "Òĵ",
+            "Ð°"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "Ġ",
+            "Ò±",
+            "ÑģÑĭ",
+            "Ð½",
+            "Ð±Ð°",
+            "Òĵ",
+            "Ð°Ð½"
+          ]
+        }
+      ]
+    },
+    "gemma BPE": {
+      "repo": "google/embeddinggemma-2",
+      "vocab_size": 262144,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.44805194805194803,
+        "any_boundary_rate": 1.0,
+        "boundary_before_rate": 0.7987012987012987,
+        "boundary_after_rate": 0.6493506493506493,
+        "affix_single_token_rate": 0.44805194805194803,
+        "patterns": {
+          "isolated": 0.44805194805194803,
+          "starts_token": 0.35064935064935066,
+          "ends_token": 0.2012987012987013,
+          "buried": 0.0
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.47950819672131145,
+        "patterns_freq_weighted": {
+          "isolated": 0.47950819672131145,
+          "starts_token": 0.35040983606557374,
+          "ends_token": 0.17008196721311475,
+          "buried": 0.0
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.43333333333333335,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "ған"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "▁а",
+            "спа",
+            "й",
+            "тын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "▁бер",
+            "іл",
+            "мей",
+            "ді"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "▁са",
+            "қ",
+            "тал",
+            "май",
+            "тын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "▁кө",
+            "з",
+            "дел",
+            "ме",
+            "се"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "▁тол",
+            "ма",
+            "ған"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "▁ке",
+            "ші",
+            "кті",
+            "р",
+            "мей"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "▁ке",
+            "ші",
+            "кті",
+            "рі",
+            "л",
+            "мей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "▁бол",
+            "ғы",
+            "з",
+            "ба",
+            "у"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "▁бол",
+            "май",
+            "тын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "▁а",
+            "спа",
+            "у",
+            "ға"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "▁ұ",
+            "сын",
+            "ба",
+            "ған"
+          ]
+        }
+      ]
+    },
+    "mbert": {
+      "repo": "google-bert/bert-base-multilingual-cased",
+      "vocab_size": 119547,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.474025974025974,
+        "any_boundary_rate": 0.9545454545454546,
+        "boundary_before_rate": 0.8896103896103896,
+        "boundary_after_rate": 0.538961038961039,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.474025974025974,
+          "starts_token": 0.4155844155844156,
+          "ends_token": 0.06493506493506493,
+          "buried": 0.045454545454545456
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.44672131147540983,
+        "patterns_freq_weighted": {
+          "isolated": 0.44672131147540983,
+          "starts_token": 0.46311475409836067,
+          "ends_token": 0.028688524590163935,
+          "buried": 0.06147540983606557
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.9333333333333333,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "бол",
+            "##маған"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "а",
+            "##с",
+            "##па",
+            "##йт",
+            "##ын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "бер",
+            "##іл",
+            "##мей",
+            "##ді"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "са",
+            "##қ",
+            "##тал",
+            "##май",
+            "##тын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "көз",
+            "##дел",
+            "##ме",
+            "##се"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "то",
+            "##л",
+            "##маған"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "к",
+            "##еш",
+            "##ікті",
+            "##рм",
+            "##ей"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "к",
+            "##еш",
+            "##ікті",
+            "##рі",
+            "##л",
+            "##мей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "бол",
+            "##ғыз",
+            "##ба",
+            "##у"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "бол",
+            "##май",
+            "##тын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "а",
+            "##с",
+            "##па",
+            "##уға"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ұ",
+            "##сын",
+            "##ба",
+            "##ған"
+          ]
+        }
+      ]
+    },
+    "mdeberta-v3": {
+      "repo": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+      "vocab_size": 250102,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.1038961038961039,
+        "any_boundary_rate": 0.7597402597402597,
+        "boundary_before_rate": 0.5909090909090909,
+        "boundary_after_rate": 0.2727272727272727,
+        "affix_single_token_rate": 0.1038961038961039,
+        "patterns": {
+          "isolated": 0.1038961038961039,
+          "starts_token": 0.487012987012987,
+          "ends_token": 0.16883116883116883,
+          "buried": 0.24025974025974026
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.10040983606557377,
+        "patterns_freq_weighted": {
+          "isolated": 0.10040983606557377,
+          "starts_token": 0.5163934426229508,
+          "ends_token": 0.18237704918032788,
+          "buried": 0.20081967213114754
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 1.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.6,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "▁бол",
+            "маған"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "▁аспа",
+            "йтын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "▁беріл",
+            "мейді"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "▁сақта",
+            "лмайтын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "▁көз",
+            "дел",
+            "месе"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "▁то",
+            "лмаған"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "▁кеш",
+            "ікті",
+            "р",
+            "мей"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "▁кеш",
+            "ікті",
+            "ріл",
+            "мей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "▁бол",
+            "ғыз",
+            "ба",
+            "у"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "▁бол",
+            "майтын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "▁аспа",
+            "уға"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "▁ұсын",
+            "ба",
+            "ған"
+          ]
+        }
+      ]
+    },
+    "rubert": {
+      "repo": "DeepPavlov/rubert-base-cased",
+      "vocab_size": 119547,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.34415584415584416,
+        "any_boundary_rate": 0.8441558441558441,
+        "boundary_before_rate": 0.7727272727272727,
+        "boundary_after_rate": 0.4155844155844156,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.34415584415584416,
+          "starts_token": 0.42857142857142855,
+          "ends_token": 0.07142857142857142,
+          "buried": 0.15584415584415584
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.3360655737704918,
+        "patterns_freq_weighted": {
+          "isolated": 0.3360655737704918,
+          "starts_token": 0.430327868852459,
+          "ends_token": 0.05737704918032787,
+          "buried": 0.1762295081967213
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.0,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "бол",
+            "##ма",
+            "##ғ",
+            "##ан"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "асп",
+            "##айт",
+            "##ын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "бер",
+            "##іл",
+            "##мей",
+            "##д",
+            "##і"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "са",
+            "##қ",
+            "##тал",
+            "##май",
+            "##ты",
+            "##н"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "к",
+            "##ө",
+            "##зд",
+            "##ел",
+            "##мес",
+            "##е"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "тол",
+            "##ма",
+            "##ғ",
+            "##ан"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "к",
+            "##еш",
+            "##ік",
+            "##т",
+            "##ір",
+            "##мей"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "к",
+            "##еш",
+            "##ік",
+            "##т",
+            "##ір",
+            "##іл",
+            "##мей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "бол",
+            "##ғы",
+            "##з",
+            "##бау"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "бол",
+            "##май",
+            "##ты",
+            "##н"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "асп",
+            "##ау",
+            "##ғ",
+            "##а"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ұ",
+            "##сы",
+            "##н",
+            "##ба",
+            "##ғ",
+            "##ан"
+          ]
+        }
+      ]
+    },
+    "user-bge-m3 (ru-pruned)": {
+      "repo": "deepvk/USER-bge-m3",
+      "vocab_size": 46166,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.3116883116883117,
+        "any_boundary_rate": 1.0,
+        "boundary_before_rate": 0.8636363636363636,
+        "boundary_after_rate": 0.44805194805194803,
+        "affix_single_token_rate": 0.3116883116883117,
+        "patterns": {
+          "isolated": 0.3116883116883117,
+          "starts_token": 0.551948051948052,
+          "ends_token": 0.13636363636363635,
+          "buried": 0.0
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.3319672131147541,
+        "patterns_freq_weighted": {
+          "isolated": 0.3319672131147541,
+          "starts_token": 0.5450819672131147,
+          "ends_token": 0.12295081967213115,
+          "buried": 0.0
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 1.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.5,
+        "fused_n": 30
+      },
+      "forms_with_unk": 49,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "ғ",
+            "ан"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "▁ас",
+            "пай",
+            "тын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "▁бер",
+            "і",
+            "л",
+            "мей",
+            "д",
+            "і"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "▁са",
+            "<unk>",
+            "тал",
+            "май",
+            "тын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "▁к",
+            "<unk>",
+            "з",
+            "дел",
+            "месе"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "▁тол",
+            "ма",
+            "ғ",
+            "ан"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "▁кеш",
+            "і",
+            "кт",
+            "і",
+            "р",
+            "мей"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "▁кеш",
+            "і",
+            "кт",
+            "і",
+            "р",
+            "і",
+            "л",
+            "мей"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "▁бол",
+            "ғ",
+            "ы",
+            "зба",
+            "у"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "▁бол",
+            "май",
+            "тын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "▁а",
+            "спа",
+            "у",
+            "ғ",
+            "а"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "▁",
+            "<unk>",
+            "сын",
+            "ба",
+            "ғ",
+            "ан"
+          ]
+        }
+      ]
+    },
+    "kaz-roberta": {
+      "repo": "kz-transformers/kaz-roberta-conversational",
+      "vocab_size": 52000,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.0,
+        "any_boundary_rate": 0.3051948051948052,
+        "boundary_before_rate": 0.3051948051948052,
+        "boundary_after_rate": 0.0,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.0,
+          "starts_token": 0.3051948051948052,
+          "ends_token": 0.0,
+          "buried": 0.6948051948051948
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.0,
+        "patterns_freq_weighted": {
+          "isolated": 0.0,
+          "starts_token": 0.24795081967213115,
+          "ends_token": 0.0,
+          "buried": 0.7520491803278688
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.2,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "ĠÐ±ÐµÑĢÑĸÐ»Ð¼ÐµÐ¹Ð´Ñĸ"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "ĠÑģÐ°ÒĽÑĤÐ°Ð»",
+            "Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "ĠÐºÓ©Ð·Ð´ÐµÐ»Ð¼ÐµÑģÐµ"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "ĠÑĤÐ¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪÑĸÐºÑĤÑĸÑĢÐ¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪÑĸÐºÑĤÑĸÑĢÑĸÐ»Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "ÒĵÑĭÐ·",
+            "Ð±Ð°Ñĥ"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿Ð°ÑĥÒĵÐ°"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ĠÒ±ÑģÑĭÐ½",
+            "Ð±Ð°ÒĵÐ°Ð½"
+          ]
+        }
+      ]
+    },
+    "kazbert": {
+      "repo": "Eraly-ml/KazBERT",
+      "vocab_size": 32000,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.01948051948051948,
+        "any_boundary_rate": 0.5974025974025974,
+        "boundary_before_rate": 0.5714285714285714,
+        "boundary_after_rate": 0.045454545454545456,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.01948051948051948,
+          "starts_token": 0.551948051948052,
+          "ends_token": 0.025974025974025976,
+          "buried": 0.4025974025974026
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.018442622950819672,
+        "patterns_freq_weighted": {
+          "isolated": 0.018442622950819672,
+          "starts_token": 0.5020491803278688,
+          "ends_token": 0.014344262295081968,
+          "buried": 0.4651639344262295
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.16666666666666666,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "болмаған"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "аспаитын"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "беріл",
+            "##меиді"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "сақтал",
+            "##маитын"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "көздел",
+            "##месе"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "толмаған"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "кеш",
+            "##іктір",
+            "##меи"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "кеш",
+            "##іктір",
+            "##іл",
+            "##меи"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "бол",
+            "##ғыз",
+            "##бау"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "болмаитын"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "асп",
+            "##ауға"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ұсын",
+            "##баған"
+          ]
+        }
+      ]
+    },
+    "hplt-kk": {
+      "repo": "HPLT/hplt_bert_base_kk",
+      "vocab_size": 32770,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.0,
+        "any_boundary_rate": 0.43506493506493504,
+        "boundary_before_rate": 0.4025974025974026,
+        "boundary_after_rate": 0.032467532467532464,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.0,
+          "starts_token": 0.4025974025974026,
+          "ends_token": 0.032467532467532464,
+          "buried": 0.564935064935065
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.0,
+        "patterns_freq_weighted": {
+          "isolated": 0.0,
+          "starts_token": 0.27049180327868855,
+          "ends_token": 0.010245901639344262,
+          "buried": 0.7192622950819673
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.3333333333333333,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "âĸģÐ±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "âĸģÐ°ÑģÐ¿Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "âĸģÐ±ÐµÑĢÑĸÐ»Ð¼ÐµÐ¹Ð´Ñĸ"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "âĸģÑģÐ°ÒĽÑĤÐ°Ð»",
+            "Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "âĸģÐºÓ©Ð·Ð´ÐµÐ»Ð¼ÐµÑģÐµ"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "âĸģÑĤÐ¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "âĸģÐºÐµÑĪÑĸÐºÑĤÑĸÑĢÐ¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "âĸģÐºÐµÑĪÑĸÐºÑĤÑĸÑĢ",
+            "ÑĸÐ»Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "âĸģÐ±Ð¾Ð»",
+            "ÒĵÑĭÐ·",
+            "Ð±Ð°Ñĥ"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "âĸģÐ±Ð¾Ð»Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "âĸģÐ°ÑģÐ¿",
+            "Ð°ÑĥÒĵÐ°"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "âĸģÒ±ÑģÑĭÐ½",
+            "Ð±Ð°ÒĵÐ°Ð½"
+          ]
+        }
+      ]
+    },
+    "kk-small bpe": {
+      "repo": "Abzalbek89/kk-bert-small-bpe",
+      "vocab_size": 32000,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.0,
+        "any_boundary_rate": 0.4155844155844156,
+        "boundary_before_rate": 0.4155844155844156,
+        "boundary_after_rate": 0.0,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.0,
+          "starts_token": 0.4155844155844156,
+          "ends_token": 0.0,
+          "buried": 0.5844155844155844
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.0,
+        "patterns_freq_weighted": {
+          "isolated": 0.0,
+          "starts_token": 0.36885245901639346,
+          "ends_token": 0.0,
+          "buried": 0.6311475409836066
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.43333333333333335,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "ĠÐ±ÐµÑĢÑĸÐ»Ð¼ÐµÐ¹Ð´Ñĸ"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "ĠÑģÐ°ÒĽÑĤÐ°Ð»",
+            "Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "ĠÐºÓ©Ð·Ð´ÐµÐ»",
+            "Ð¼ÐµÑģÐµ"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "ĠÑĤÐ¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪÑĸÐºÑĤÑĸÑĢ",
+            "Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪÑĸÐºÑĤÑĸÑĢ",
+            "ÑĸÐ»Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "ÒĵÑĭÐ·",
+            "Ð±Ð°Ñĥ"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿",
+            "Ð°ÑĥÒĵÐ°"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ĠÒ±ÑģÑĭÐ½",
+            "Ð±Ð°ÒĵÐ°Ð½"
+          ]
+        }
+      ]
+    },
+    "kk-small morph-bpe": {
+      "repo": "Abzalbek89/kk-bert-small-morph-bpe",
+      "vocab_size": 32000,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.0,
+        "any_boundary_rate": 0.461038961038961,
+        "boundary_before_rate": 0.44805194805194803,
+        "boundary_after_rate": 0.012987012987012988,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.0,
+          "starts_token": 0.44805194805194803,
+          "ends_token": 0.012987012987012988,
+          "buried": 0.538961038961039
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.0,
+        "patterns_freq_weighted": {
+          "isolated": 0.0,
+          "starts_token": 0.39549180327868855,
+          "ends_token": 0.004098360655737705,
+          "buried": 0.6004098360655737
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.5333333333333333,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "ĠÐ±ÐµÑĢÑĸÐ»Ð¼ÐµÐ¹Ð´Ñĸ"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "ĠÑģÐ°ÒĽÑĤÐ°Ð»",
+            "Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "ĠÐºÓ©Ð·Ð´ÐµÐ»",
+            "Ð¼ÐµÑģÐµ"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "ĠÑĤÐ¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪÑĸÐºÑĤÑĸÑĢ",
+            "Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪÑĸÐºÑĤÑĸÑĢ",
+            "ÑĸÐ»Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "ÒĵÑĭÐ·",
+            "Ð±Ð°Ñĥ"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿",
+            "Ð°ÑĥÒĵÐ°"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ĠÒ±ÑģÑĭÐ½",
+            "Ð±Ð°ÒĵÐ°Ð½"
+          ]
+        }
+      ]
+    },
+    "kk-small unigram": {
+      "repo": "Abzalbek89/kk-bert-small-unigram",
+      "vocab_size": 32000,
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.0,
+        "any_boundary_rate": 0.5454545454545454,
+        "boundary_before_rate": 0.37012987012987014,
+        "boundary_after_rate": 0.17532467532467533,
+        "affix_single_token_rate": 0.0,
+        "patterns": {
+          "isolated": 0.0,
+          "starts_token": 0.37012987012987014,
+          "ends_token": 0.17532467532467533,
+          "buried": 0.45454545454545453
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.0,
+        "patterns_freq_weighted": {
+          "isolated": 0.0,
+          "starts_token": 0.32172131147540983,
+          "ends_token": 0.16393442622950818,
+          "buried": 0.514344262295082
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 0.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.7666666666666667,
+        "fused_n": 30
+      },
+      "forms_with_unk": 0,
+      "kz_letters_known": "9/9",
+      "examples": [
+        {
+          "split": "бол+ма+ған",
+          "tokens": [
+            "Ġ",
+            "Ð±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "ас+па+йтын",
+          "tokens": [
+            "Ġ",
+            "Ð°ÑģÐ¿Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "ĠÐ±ÐµÑĢÑĸÐ»",
+            "Ð¼ÐµÐ¹Ð´Ñĸ"
+          ]
+        },
+        {
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "ĠÑģÐ°ÒĽÑĤÐ°Ð»",
+            "Ð¼Ð°Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "көздел+ме+се",
+          "tokens": [
+            "ĠÐºÓ©Ð·Ð´ÐµÐ»",
+            "Ð¼ÐµÑģÐµ"
+          ]
+        },
+        {
+          "split": "тол+ма+ған",
+          "tokens": [
+            "Ġ",
+            "ÑĤÐ¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
+          ]
+        },
+        {
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "ĠÐºÐµÑĪ",
+            "ÑĸÐºÑĤÑĸÑĢÐ¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "Ġ",
+            "ÐºÐµÑĪÑĸÐºÑĤÑĸÑĢ",
+            "ÑĸÐ»Ð¼ÐµÐ¹"
+          ]
+        },
+        {
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»",
+            "ÒĵÑĭÐ·",
+            "Ð±Ð°Ñĥ"
+          ]
+        },
+        {
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "ĠÐ±Ð¾Ð»Ð¼Ð°",
+            "Ð¹ÑĤÑĭÐ½"
+          ]
+        },
+        {
+          "split": "ас+па+уға",
+          "tokens": [
+            "ĠÐ°ÑģÐ¿Ð°",
+            "ÑĥÒĵÐ°"
+          ]
+        },
+        {
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "ĠÒ±ÑģÑĭÐ½Ð±Ð°",
+            "ÒĵÐ°Ð½"
+          ]
+        }
+      ]
+    }
+  }
+}

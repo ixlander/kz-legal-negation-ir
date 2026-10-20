@@ -3,9 +3,13 @@
   "articles_kz": 227,
   "aligned": 227,
   "excluded": 3,
-  "split": 39,
+  "by_point": 159,
+  "whole_article": 65,
+  "subpoint_groups": 28,
+  "over_max_words": 3,
   "only_ru": [],
   "only_kz": [],
+  "ngr": "K1500000414",
   "edition": {
     "ru": {
       "updated_at": "2026-09-15T08:28:33.876Z",
@@ -18,6 +22,6 @@
       "is_actual": true
     }
   },
-  "chunks_ru": 448,
-  "chunks_kz": 448
+  "chunks_ru": 774,
+  "chunks_kz": 774
 }

@@ -1,0 +1,27 @@
+{
+  "articles_ru": 106,
+  "articles_kz": 106,
+  "aligned": 106,
+  "excluded": 0,
+  "by_point": 77,
+  "whole_article": 29,
+  "subpoint_groups": 4,
+  "over_max_words": 0,
+  "only_ru": [],
+  "only_kz": [],
+  "ngr": "K2600000255",
+  "edition": {
+    "ru": {
+      "updated_at": "2026-09-15T08:28:33.876Z",
+      "end_date": "2026-07-22T18:00:00.000Z",
+      "is_actual": true
+    },
+    "kz": {
+      "updated_at": "2026-10-07T21:09:45.006Z",
+      "end_date": "2026-07-22T18:00:00.000Z",
+      "is_actual": true
+    }
+  },
+  "chunks_ru": 350,
+  "chunks_kz": 350
+}
