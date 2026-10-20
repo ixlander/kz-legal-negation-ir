@@ -1,0 +1,119 @@
+# PROGRESS — Negation-Aware Retrieval for Russian and Kazakh Legal Texts
+
+Log of what is done, with numbers. Every number comes from a script run; the file is named next to it.
+Model for D1: `intfloat/multilingual-e5-base`; tokenizer for D2: `xlm-roberta-base` (= e5, identical vocabulary).
+Seed 42, bootstrap 1000 resamples, 95% CI. Notebook with all tables and figures: `notebooks/diagnostics_d1_d2.ipynb`.
+
+> **Status markers.** *final* = all inputs verified. *prelim* = contains Kazakh drafts written by the agent
+> (`NEEDS_KZ_CHECK`), to be recomputed after the owner's check. Russian D1 is final pending the owner's read-through.
+
+---
+
+## 2026-10-21 (night 20→21) — first own numbers: D1, D2, corpus
+
+### Corpus (MUST, Labor Code done)
+* adilet.zan.kz serves each act through a public JSON endpoint (`/api/documents/by-ngr/<NGR>?language=rus|kaz`)
+  with the full HTML, so no browser scraping is needed. Script: `src/scrape/adilet.py`.
+* **Labor Code K1500000414, edition updated 15.09.2026, identical for Ru and Kz.**
+  227 / 227 articles aligned by number, 3 repealed articles dropped, 39 long articles split by points →
+  **448 aligned chunks per language** (`data/corpus/labor_{ru,kz}.jsonl`, stats in `labor_stats.json`).
+  Median chunk 62 words (Ru) / 61 (Kz); median Kz/Ru length ratio 0.97.
+* Cleaning: footnotes («Сноска»/«Ескерту») and tables removed; **189 Kazakh words contained a Latin `i`
+  instead of Kazakh `і`** (e.g. `белгiленбесе`) — normalized, since it changes both BM25 terms and tokenization.
+* Known issues: art. 1 (definitions, 2 751 words) and art. 16 (list without points) are single long chunks — to be
+  split by sub-points in week 1; one chunk (`labor:127-3:4`) has an extra Ru paragraph absent in Kz.
+* **Tax Code:** the current one is **K2500000214 (No. 214-VIII of 18.07.2025)**; the 2017 code ended 31.12.2025.
+  Warning: its Kz text is ~0.67 MB vs ~6.1 MB Ru and the update dates differ (07.10 vs 15.09.2026) — the Kz
+  version may be incomplete or a different edition. To check before parsing (week 1).
+
+### D1 — Negation Margin (`margin = cos(s, paraphrase) − cos(s, negation)`)
+30 modal norms of the Labor Code («вправе / обязан / допускается / запрещается / не может превышать»),
+**the same 30 norms in Ru and Kz** (verbatim from the current edition). For each: a natural paraphrase, a negation
+(15 remove the negation, 11 insert it, 4 antonym/modality flips), and — as a control — a *minimal paraphrase*:
+a one-span synonym edit at the same place as the negation edit («вправе» → «имеет право»).
+
+| lang | margin mean [95% CI] | share margin < 0 | control: min-paraphrase margin [95% CI] | share < 0 | status |
+|---|---|---|---|---|---|
+| ru | **−0.018** [−0.024, −0.013] | **90%** (27/30) | +0.018 [+0.013, +0.022] | 7% | final* |
+| kz | **−0.013** [−0.020, −0.006] | **77%** (23/30) | +0.025 [+0.020, +0.030] | 0% | prelim |
+
+Files: `results/d1_margin_pilot_ru.json`, `results/d1_margin_prelim_kz.json`, `results/d1_compare_ru_kz.json`,
+figures `results/d1_distance_ladder.png`, `results/d1_margin_hist_ru_kz.png`. Triples: `data/diagnostics/d1_triples.jsonl`.
+
+Mean distance `1 − cos` from the original sentence:
+
+| edit | ru | kz |
+|---|---|---|
+| one-word synonym edit | 0.005 | 0.005 |
+| **negation** | **0.023** | **0.029** |
+| natural paraphrase | 0.041 | 0.043 |
+
+**Reading.** D1 is supported in both languages (mean margin < 0, CI excludes 0, > 20% negative).
+e5 is *not blind* to negation — it moves the vector 4–6× more than a synonym edit — but **less than an ordinary
+rewording**. A user query is a rewording of the article, so the article with the same words and the opposite
+polarity can end up closer than the correct one. This is the retrieval failure we will measure with Twin-above-Gold.
+
+* Ru vs Kz on the same norms, paired: Δmargin (kz − ru) = +0.005 [−0.002, +0.011] → **no difference detected**.
+  So at the sentence level the Kazakh problem is not worse than the Russian one.
+* Kz by negation mechanism (prelim; small n, CIs overlap): affix (`берілмейді`, n=14) −0.016; particle
+  `емес` (n=12) −0.009; lexical (`тыйым салынады`, n=4) −0.017.
+* Observation, not a claim (small n): removing a negation hurts more than inserting one —
+  Ru −0.025 vs −0.009, Kz −0.020 vs −0.003.
+
+Examples (Ru, most negative margin):
+
+| | text | cos to original |
+|---|---|---|
+| original (art. 10) | Условия … трудовых договоров **не могут** быть изменены в одностороннем порядке, за исключением случаев, предусмотренных настоящим Кодексом. | |
+| negation | Условия … трудовых договоров **могут** быть изменены в одностороннем порядке, … | **0.984** |
+| paraphrase | Одна сторона не может сама поменять условия трудового или коллективного договора либо соглашения, кроме случаев, указанных в Кодексе. | 0.938 |
+| original (art. 175) | **Не допускается** замена работников, участвующих в забастовке … | |
+| negation | **Допускается** замена работников, участвующих в забастовке … | **0.945** |
+| paraphrase | Работников, которые бастуют в законном порядке, нельзя заменять другими. | 0.903 |
+
+Example (Kz, prelim): art. 83 «… тынығуының ұзақтығы он екі сағаттан кем **болмайды**» → negation
+«… кем **болуы мүмкін**» cos 0.987, paraphrase «… кемінде он екі сағат демалуы керек» cos 0.936.
+
+### D2 — Affix Isolation Rate (prelim)
+171 distinct Kazakh negative verb forms (581 occurrences) found in the Kz Labor Code by the regex splitter
+`src/retrieval/morph_kz.py` (stem + -ма/-ме/-ба/-бе/-па/-пе + ending). Isolation = a token boundary
+**both** before and after the affix.
+
+| measure | value |
+|---|---|
+| **Kz: affix isolated** (distinct forms, n=171) | **21.1%** |
+| Kz: affix isolated, weighted by corpus frequency (n=581) | 24.6% |
+| Kz: at least one boundary at the affix | 95.9% |
+| Ru control: separate «не» is its own token (n=12 phrases) | 100% |
+| Ru control: fused prefix «не-» split off (неуплата, n=30) | 50% |
+
+Where the affix ends up (distinct forms): isolated 21% (`▁бол ма уға`) · starts a token glued to the ending 60%
+(`▁бол маған`, `▁бері л мейді`) · ends a token glued to the stem 15% (`▁а спа йтын`) · buried inside one token 4%
+(`▁болмайды`, `▁алмайды`). Files: `results/d2_affix_isolation_prelim.json`, `results/d2_patterns.png`,
+forms `data/diagnostics/d2_kz_neg_forms.tsv`.
+
+**Reading.** D2 is supported (isolation 21% ≪ 70% threshold). The tokenizer rarely gives the negation its own piece:
+it is usually fused with the tense ending into units like `маған` / `мейді` — and `маған` is also the ordinary word
+"to me". A morphology-aware BM25 that emits an explicit `NEG` token is therefore a meaningful intervention for Kazakh.
+Russian is not trivially clean either: a fused «не-» is split off in only half of the words.
+
+Splitter precision: on the corpus, the first version had false positives `немесе` ("or", 592 occurrences!),
+`орынбасары` ("deputy"), `қамауда` ("in custody") — fixed with a stop-list and a stricter conditional ending.
+Lexicalized negative forms (`қоспағанда` "except", `келіспеушілік` "disagreement") are kept and flagged for the owner.
+
+### Environment
+`.venv` (Python 3.12, torch 2.11+cu128, RTX 4050 6 GB), `requirements.txt`. All scripts run with `python -m src....`.
+
+### For the owner to check (morning)
+1. `data/diagnostics/review_d1_kz.tsv` — 30 Kz triples: set `status` to `ok` / `fixed` (after editing cells) / `drop`,
+   then `python -m src.diagnostics.kz_review apply` and rerun D1 kz without `--include-unchecked`.
+2. `data/diagnostics/d2_kz_neg_forms.tsv` — 171 forms: `status` = `ok` / `wrong_split` / `not_neg`
+   (decide on lexicalized `қоспағанда`, `келіспеушілік`), then `python -m src.diagnostics.d2_affix`.
+3. `data/corpus/labor_alignment_check.tsv` — 10 random Ru/Kz chunks: `aligned_ok` = yes/no.
+4. Russian triples in `data/diagnostics/d1_triples.jsonl` — quick read of paraphrases/negations.
+5. Tax Code: confirm K2500000214 and look at the Kz/Ru size mismatch.
+
+### Next (week 1, per plan)
+* Tax Code Ru+Kz with the same scraper; split long no-point articles.
+* D1 on 100 triples (extend from 30 per language).
+* Draft 50 Ru evaluation questions with gold (owner finalizes gold/twin).
