@@ -5,15 +5,15 @@
     "model": "intfloat/multilingual-e5-base",
     "top": 3,
     "markers_match": 0.9996987951807229,
-    "numbers_match": 0.9903614457831326,
+    "numbers_match": 0.9963855421686747,
     "xling_rank1_both": 0.8009036144578313,
     "xling_top3_both": 0.9123493975903615,
-    "flagged_any": 323,
-    "sent_to_owner": 32,
+    "flagged_any": 303,
+    "sent_to_owner": 12,
     "flag_reason_counts": {
       "xling rank": 291,
-      "numbers differ": 32,
-      "markers differ": 1
+      "markers differ": 1,
+      "numbers differ": 12
     }
   },
   "per_pair": [
@@ -1982,14 +1982,12 @@
     {
       "chunk_id": "tax:56:1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.967,
       "cos": 0.9183,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1} kz-only {'1': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:56:2",
@@ -13045,14 +13043,12 @@
     {
       "chunk_id": "tax:286#2",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 1.005,
       "cos": 0.9222,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1} kz-only {'1': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:288:1",
@@ -16905,14 +16901,12 @@
     {
       "chunk_id": "tax:390:1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.93,
       "cos": 0.9176,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'2000': 1} kz-only {'2': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:390:2",
@@ -17289,7 +17283,7 @@
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": [
-        "numbers differ: ru-only {'5000': 1, '1': 1} kz-only {'5': 1, '000': 1}"
+        "numbers differ: ru-only {'1': 1} kz-only {}"
       ]
     },
     {
@@ -17431,14 +17425,12 @@
     {
       "chunk_id": "tax:411:1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.937,
       "cos": 0.8777,
       "rank_ru2kz": 1,
       "rank_kz2ru": 3,
-      "flag_reasons": [
-        "numbers differ: ru-only {'8500': 1} kz-only {'8': 1, '500': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:411:2",
@@ -17637,26 +17629,22 @@
     {
       "chunk_id": "tax:417:1#1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.962,
       "cos": 0.9247,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1} kz-only {'1': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:417:1#2",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.929,
       "cos": 0.9231,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'8500': 1} kz-only {'8': 1, '500': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:417:2",
@@ -17861,14 +17849,12 @@
     {
       "chunk_id": "tax:422:2",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.986,
       "cos": 0.9286,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1} kz-only {'1': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:422:3",
@@ -17913,14 +17899,12 @@
     {
       "chunk_id": "tax:423:1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.942,
       "cos": 0.9305,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1, '10000': 1} kz-only {'1': 1, '000': 2, '10': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:423:2",
@@ -17935,14 +17919,12 @@
     {
       "chunk_id": "tax:423:3",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.923,
       "cos": 0.9142,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1} kz-only {'1': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:423:4",
@@ -21875,14 +21857,12 @@
     {
       "chunk_id": "tax:526:2",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.984,
       "cos": 0.9178,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'121': 1, '122': 1} kz-only {'121,122': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:526:3",
@@ -22401,14 +22381,12 @@
     {
       "chunk_id": "tax:536",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.929,
       "cos": 0.9246,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'3000': 3} kz-only {'3': 3, '000': 3}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:537:1",
@@ -23355,14 +23333,12 @@
     {
       "chunk_id": "tax:563:3#1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.925,
       "cos": 0.9193,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 2, '3000': 1} kz-only {'1': 2, '000': 3, '3': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:563:3#2",
@@ -24719,26 +24695,22 @@
     {
       "chunk_id": "tax:597:2#1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 1.006,
       "cos": 0.9324,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1, '1500': 1} kz-only {'1': 2, '000': 1, '500': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:597:2#2",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.952,
       "cos": 0.9118,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 1} kz-only {'1': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:597:3",
@@ -24965,14 +24937,12 @@
     {
       "chunk_id": "tax:602:3",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.974,
       "cos": 0.9038,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1000': 3, '5000': 3} kz-only {'1': 3, '000': 6, '5': 3}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:602:4",
@@ -25443,14 +25413,12 @@
     {
       "chunk_id": "tax:616:7",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 1.017,
       "cos": 0.8602,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'7000': 1} kz-only {'7': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:617:1",
@@ -30207,14 +30175,12 @@
     {
       "chunk_id": "tax:728:2",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 0.902,
       "cos": 0.918,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'1500': 1} kz-only {'500': 1, '1': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:728:3",
@@ -30913,14 +30879,12 @@
     {
       "chunk_id": "tax:746",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 1.015,
       "cos": 0.8792,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'2709': 1, '00': 1} kz-only {'270900': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:747",
@@ -31035,14 +30999,12 @@
     {
       "chunk_id": "tax:753:5",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 1.171,
       "cos": 0.8941,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'5000': 1} kz-only {'5': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:754:1",
@@ -31297,7 +31259,7 @@
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
       "flag_reasons": [
-        "numbers differ: ru-only {} kz-only {'1': 3, '0,857': 2}"
+        "numbers differ: ru-only {} kz-only {'1': 3, '0': 2, '857': 2}"
       ]
     },
     {
@@ -32717,14 +32679,12 @@
     {
       "chunk_id": "tax:812:1",
       "markers_ok": true,
-      "numbers_ok": false,
+      "numbers_ok": true,
       "ratio": 1.119,
       "cos": 0.8956,
       "rank_ru2kz": 1,
       "rank_kz2ru": 1,
-      "flag_reasons": [
-        "numbers differ: ru-only {'5000': 1} kz-only {'5': 1, '000': 1}"
-      ]
+      "flag_reasons": []
     },
     {
       "chunk_id": "tax:812:2",

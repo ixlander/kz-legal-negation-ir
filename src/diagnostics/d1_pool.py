@@ -27,11 +27,14 @@ def main():
     args = ap.parse_args()
 
     triples = load_triples(ROOT / "data/diagnostics/d1_triples.jsonl", args.lang, args.include_unchecked)
+    tag = "" if not args.include_unchecked else "_prelim"
+    path = ROOT / f"results/d1_pool_{args.lang}{tag}.json"
+    previous = json.loads(path.read_text(encoding="utf-8"))["models"] if path.exists() else {}
     out = {"diagnostic": "D1_negation_margin_pool",
            "config": {"lang": args.lang, "n": len(triples), "include_unchecked": args.include_unchecked,
                       "encoding": "documents (model-specific prefix/prompt, src/models.py)", "seed": SEED,
                       "bootstrap_resamples": 1000, "date": date.today().isoformat()},
-           "models": {}}
+           "models": {k: v for k, v in previous.items() if k not in args.models}}  # keep models not re-run
     for key in args.models:
         try:
             m = load(key, device="cuda" if torch.cuda.is_available() else "cpu")
@@ -60,9 +63,7 @@ def main():
         del m
         gc.collect()
         torch.cuda.empty_cache()
-    tag = "" if not args.include_unchecked else "_prelim"
-    (ROOT / f"results/d1_pool_{args.lang}{tag}.json").write_text(json.dumps(out, ensure_ascii=False, indent=2),
-                                                               encoding="utf-8")
+    path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":
