@@ -20,11 +20,18 @@ VOICELESS = set("кқпстфхцчшщ")
 ENDINGS = [
     "йтын", "йтін", "йынша", "йінше", "ймын", "ймін", "йсың", "йсің", "йсыз", "йсіз",
     "ймыз", "йміз", "йды", "йді", "й",
-    "ған", "ген", "ды", "ді", "са", "се", "ңыз", "ңіз", "у",
+    "ған", "ген", "ды", "ді", "ңыз", "ңіз", "у",
 ]
 _END_RE = "|".join(ENDINGS)
-# stem (>=2 letters) + affix + ending + optional further suffixes (case, possessive, plural ...)
-_RE = re.compile(rf"^(?P<stem>[а-яәіңғүұқөһё]{{2,}}?)(?P<affix>[мбп][ае])(?P<end>(?:{_END_RE})[а-яәіңғүұқөһё]*)$")
+_L = "[а-яәіңғүұқөһё]"
+# stem (>=2 letters) + affix + ending + optional further suffixes (case, possessive, plural ...);
+# the conditional -са/-се only word-final (+ person), otherwise «орынбасары» would match.
+_RE = re.compile(rf"^(?P<stem>{_L}{{2,}}?)(?P<affix>[мбп][ае])"
+                 rf"(?P<end>(?:{_END_RE}){_L}*|(?:са|се)(?:м|ң|қ|к|ңыз|ңіз)?)$")
+
+# Words that match the pattern but are not negative forms.
+STOP_WORDS = {"немесе"}          # 'or'
+STOP_STEMS = {"қа"}              # қамау 'arrest', қамауда ...
 
 
 def _last_vowel(s):
@@ -48,7 +55,11 @@ def _expected_onset(stem):
 def split_neg(word):
     """Return (stem, affix, ending) if `word` looks like a negative verb form, else None."""
     w = word.lower()
+    if w in STOP_WORDS:
+        return None
     for m in _RE.finditer(w):
+        if m.group("stem") in STOP_STEMS:
+            continue
         stem, affix, end = m.group("stem"), m.group("affix"), m.group("end")
         v = _last_vowel(stem)
         if v is None:

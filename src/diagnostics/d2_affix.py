@@ -74,6 +74,17 @@ def analyse_kz(tok, rows):
         per.append({"form": form, "split": f"{r['stem']}+{r['affix']}+{r['ending']}", "tokens": pieces,
                     "boundary_before": before, "boundary_after": after})
     n = len(rows)
+    # Pattern of the affix inside the tokenization; "buried" = no boundary on either side.
+    cats = {"isolated": 0, "starts_token": 0, "ends_token": 0, "buried": 0}
+    cats_w = dict.fromkeys(cats, 0)
+    freq = [int(r.get("freq") or 1) for r in rows]
+    for p, f in zip(per, freq):
+        b, a = p["boundary_before"], p["boundary_after"]
+        k = "isolated" if b and a else "starts_token" if b else "ends_token" if a else "buried"
+        p["pattern"] = k
+        cats[k] += 1
+        cats_w[k] += f
+    total_f = sum(freq)
     return {
         "n": n,
         "isolation_rate": n_both / n,
@@ -81,6 +92,10 @@ def analyse_kz(tok, rows):
         "boundary_before_rate": n_before / n,
         "boundary_after_rate": n_after / n,
         "affix_single_token_rate": n_single / n,
+        "patterns": {k: v / n for k, v in cats.items()},
+        "corpus_tokens": total_f,
+        "isolation_rate_freq_weighted": cats_w["isolated"] / total_f,
+        "patterns_freq_weighted": {k: v / total_f for k, v in cats_w.items()},
     }, per
 
 

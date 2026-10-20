@@ -1,0 +1,23 @@
+{
+  "articles_ru": 227,
+  "articles_kz": 227,
+  "aligned": 227,
+  "excluded": 3,
+  "split": 39,
+  "only_ru": [],
+  "only_kz": [],
+  "edition": {
+    "ru": {
+      "updated_at": "2026-09-15T08:28:33.876Z",
+      "end_date": "2026-09-05T18:00:00.000Z",
+      "is_actual": true
+    },
+    "kz": {
+      "updated_at": "2026-09-15T08:28:33.876Z",
+      "end_date": "2026-09-05T18:00:00.000Z",
+      "is_actual": true
+    }
+  },
+  "chunks_ru": 448,
+  "chunks_kz": 448
+}
