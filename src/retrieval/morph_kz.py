@@ -81,3 +81,58 @@ def tokenize(text):
         else:
             out.append(w)
     return out
+
+
+# --- BM25 analyzer (B2): kazsearch-py stems + explicit NEG -------------------------------
+# kazsearch (github.com/iDynbek/kazsearch-py, LGPL-3.0) is installed from a local clone; its
+# lexicon lives in the clone's data/ folder (KAZSEARCH_DATA, default ../nlp_tools/kazsearch-py/data).
+# Out of the box it strips the negation (төлемейді -> төле) and is not consistent on negative
+# forms (аспауға -> аспа, асады -> аса), so for a negative form we stem the verb stem found by
+# split_neg and add NEG; other words go through kazsearch unchanged.
+import os
+from functools import lru_cache
+from pathlib import Path
+
+KZ_NEG_PARTICLES = {"емес", "жоқ"}
+_KS = {}
+
+
+def _kazsearch():
+    if not _KS:
+        from kazsearch import Lexicon, StemConfig, stem
+        data = Path(os.environ.get("KAZSEARCH_DATA",
+                                   Path(__file__).resolve().parents[3] / "nlp_tools/kazsearch-py/data"))
+        _KS["cfg"] = StemConfig(lexicon=Lexicon.load(str(data / "kaz_stems.dict")))
+        _KS["stem"] = stem
+        _KS["stop"] = set((data / "kaz_stopwords.stop").read_text(encoding="utf-8").split()) - KZ_NEG_PARTICLES
+    return _KS
+
+
+@lru_cache(maxsize=300_000)
+def _bm25_word(w):
+    ks = _kazsearch()
+    if w in KZ_NEG_PARTICLES:
+        return (w,)
+    if w in ks["stop"]:
+        return ()
+    s = split_neg(w)
+    if s:
+        # stem the positive 3sg present form, so «берілмейді» and «беріледі» share the stem
+        return (ks["stem"](positive_form(s[0]), ks["cfg"]), "NEG")
+    return (ks["stem"](w, ks["cfg"]),)
+
+
+def positive_form(stem):
+    """Verb stem -> positive 3sg present: ас -> асады, беріл -> беріледі, төле -> төлейді."""
+    v = _last_vowel(stem)
+    back = v in BACK or v is None
+    if stem[-1] in VOWELS:
+        return stem + ("йды" if back else "йді")
+    return stem + ("ады" if back else "еді")
+
+
+def tokenize_bm25(text):
+    out = []
+    for w in re.findall(r"[а-яәіңғүұқөһёa-z0-9]+", text.lower()):
+        out.extend(_bm25_word(w))
+    return out
