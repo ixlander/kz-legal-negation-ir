@@ -40,10 +40,15 @@ RU_FUSED = [
 
 
 def boundaries(tok, word):
-    """Character offsets inside `word` where a token starts or ends."""
-    enc = tok(word, add_special_tokens=False, return_offsets_mapping=True)
+    """Character offsets inside `word` where a token starts or ends.
+
+    The word is tokenized with a leading space, as in running text: byte-level BPE
+    vocabularies (Qwen, Gemma) split a word differently at the start of a string.
+    """
+    enc = tok(" " + word, add_special_tokens=False, return_offsets_mapping=True)
     b = set()
     for s, e in enc["offset_mapping"]:
+        s, e = max(s - 1, 0), e - 1
         if e > s:
             b.add(s)
             b.add(e)
