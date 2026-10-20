@@ -113,6 +113,14 @@ Lexicalized negative forms (`қоспағанда` "except", `келіспеуш
 4. Russian triples in `data/diagnostics/d1_triples.jsonl` — quick read of paraphrases/negations.
 5. Tax Code: confirm K2500000214 and look at the Kz/Ru size mismatch.
 
+### Evaluation set — started (drafts only)
+`data/eval/queries_draft_ru.{jsonl,tsv}` (generator `data/eval/make_draft_ru.py`): **22 Ru draft questions on the
+Labor Code** — 11 negation-sensitive (6 with a twin candidate in a different chunk), 11 general — with candidate
+`gold_ids` / `twin_ids` found by corpus search. Owner finalizes gold/twin by reading the code (CLAUDE.md 5.2).
+Finding for the metric design: allowed and forbidden often sit **in the same chunk** (art. 76 night work,
+77 overtime, 95 recall from leave, 112 downtime), so Twin-above-Gold is undefined there; ~half of the negation
+questions may end up without a twin unless such articles are split by sentence. To decide with the owner.
+
 ### Next (week 1, per plan)
 * Tax Code Ru+Kz with the same scraper; split long no-point articles.
 * D1 on 100 triples (extend from 30 per language).
