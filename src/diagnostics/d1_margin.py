@@ -21,9 +21,12 @@ SEED = 42
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def load_triples(path, lang):
+def load_triples(path, lang, include_unchecked=False):
     rows = [json.loads(l) for l in open(path, encoding="utf-8") if l.strip()]
-    return [r for r in rows if r["lang"] == lang]
+    rows = [r for r in rows if r["lang"] == lang]
+    if not include_unchecked:
+        rows = [r for r in rows if r.get("status") != "NEEDS_KZ_CHECK"]
+    return rows
 
 
 def bootstrap_ci(x, n=1000, seed=SEED):
@@ -49,9 +52,13 @@ def main():
     ap.add_argument("--lang", default="ru")
     ap.add_argument("--tag", default="pilot")
     ap.add_argument("--model", default=MODEL)
+    ap.add_argument("--include-unchecked", action="store_true",
+                    help="use Kazakh drafts not yet verified by the owner (preliminary numbers only)")
     args = ap.parse_args()
 
-    triples = load_triples(args.triples, args.lang)
+    triples = load_triples(args.triples, args.lang, args.include_unchecked)
+    if not triples:
+        raise SystemExit(f"no verified triples for lang={args.lang}; see --include-unchecked")
     model = SentenceTransformer(args.model)
 
     def enc(texts):
@@ -75,12 +82,16 @@ def main():
 
     per = []
     by_type = defaultdict(list)
+    by_mech = defaultdict(list)
     for i, (t, cp, cn, m) in enumerate(zip(triples, cos_p, cos_n, margin)):
         row = {"tid": t["tid"], "neg_type": t["neg_type"], "cos_paraphrase": float(cp),
                "cos_negation": float(cn), "margin": float(m)}
         if has_min:
             row["cos_min_paraphrase"] = float(cos_m[i])
             row["margin_min"] = float(margin_min[i])
+        if "neg_mechanism" in t:
+            row["neg_mechanism"] = t["neg_mechanism"]
+            by_mech[t["neg_mechanism"]].append((m, margin_min[i] if has_min else None))
         per.append(row)
         by_type[t["neg_type"]].append(m)
 
@@ -88,13 +99,19 @@ def main():
         "diagnostic": "D1_negation_margin",
         "config": {"model": args.model, "prefix": "passage: ", "normalized": True, "lang": args.lang,
                    "triples_file": str(Path(args.triples).relative_to(ROOT)), "seed": SEED,
-                   "bootstrap_resamples": 1000, "date": date.today().isoformat()},
+                   "bootstrap_resamples": 1000, "include_unchecked": args.include_unchecked,
+                   "date": date.today().isoformat()},
         "summary": summarize(margin),
         "cos_paraphrase_mean": float(cos_p.mean()),
         "cos_negation_mean": float(cos_n.mean()),
         "by_neg_type": {k: summarize(v) for k, v in sorted(by_type.items())},
         "per_triple": per,
     }
+    if by_mech:
+        out["by_neg_mechanism"] = {
+            k: {"margin": summarize([a for a, _ in v]),
+                **({"margin_min": summarize([b for _, b in v])} if has_min else {})}
+            for k, v in sorted(by_mech.items())}
     if has_min:
         out["control_min_paraphrase"] = {
             "definition": "cos(s, min_paraphrase) - cos(s, negation); min_paraphrase = one-span synonym edit",
@@ -126,7 +143,7 @@ def main():
     fig.tight_layout()
     fig.savefig(res / f"{stem}.png", dpi=150)
 
-    keys = ("summary", "cos_paraphrase_mean", "cos_negation_mean", "by_neg_type", "control_min_paraphrase")
+    keys = ("summary", "cos_paraphrase_mean", "cos_negation_mean", "control_min_paraphrase", "by_neg_mechanism")
     print(json.dumps({k: out[k] for k in keys if k in out}, ensure_ascii=False, indent=2))
 
 

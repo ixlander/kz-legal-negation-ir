@@ -1,0 +1,26 @@
+{
+  "n_pairs": 30,
+  "ru_file": "results/d1_margin_pilot_ru.json",
+  "kz_file": "results/d1_margin_prelim_kz.json",
+  "definition": "delta = kz - ru, paired",
+  "margin": {
+    "mean_delta": 0.004733852545420329,
+    "ci95": [
+      -0.0019363036255041757,
+      0.01093953857819239
+    ],
+    "frac_kz_lower": 0.4,
+    "ru_mean": -0.018095368146896364,
+    "kz_mean": -0.013361515601476033
+  },
+  "margin_min": {
+    "mean_delta": 0.006695119539896647,
+    "ci95": [
+      0.0041042280693848925,
+      0.009476009209950766
+    ],
+    "frac_kz_lower": 0.1,
+    "ru_mean": 0.017897810538609824,
+    "kz_mean": 0.02459293007850647
+  }
+}
