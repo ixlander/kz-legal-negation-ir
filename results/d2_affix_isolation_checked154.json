@@ -1,0 +1,4635 @@
+{
+  "diagnostic": "D2_affix_isolation",
+  "config": {
+    "models": [
+      "xlm-roberta-base",
+      "intfloat/multilingual-e5-base"
+    ],
+    "forms_file": "data\\diagnostics\\d2_kz_neg_forms.tsv",
+    "include_unchecked": false,
+    "date": "2026-10-21"
+  },
+  "tokenizers_identical_vocab": true,
+  "by_model": {
+    "xlm-roberta-base": {
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.2077922077922078,
+        "any_boundary_rate": 0.961038961038961,
+        "boundary_before_rate": 0.8311688311688312,
+        "boundary_after_rate": 0.33766233766233766,
+        "affix_single_token_rate": 0.2077922077922078,
+        "patterns": {
+          "isolated": 0.2077922077922078,
+          "starts_token": 0.6233766233766234,
+          "ends_token": 0.12987012987012986,
+          "buried": 0.03896103896103896
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.17827868852459017,
+        "patterns_freq_weighted": {
+          "isolated": 0.17827868852459017,
+          "starts_token": 0.6516393442622951,
+          "ends_token": 0.1290983606557377,
+          "buried": 0.040983606557377046
+        }
+      },
+      "kz_by_source": {
+        "corpus_labor": {
+          "n": 154,
+          "isolation_rate": 0.2077922077922078,
+          "any_boundary_rate": 0.961038961038961,
+          "boundary_before_rate": 0.8311688311688312,
+          "boundary_after_rate": 0.33766233766233766,
+          "affix_single_token_rate": 0.2077922077922078,
+          "patterns": {
+            "isolated": 0.2077922077922078,
+            "starts_token": 0.6233766233766234,
+            "ends_token": 0.12987012987012986,
+            "buried": 0.03896103896103896
+          },
+          "corpus_tokens": 488,
+          "isolation_rate_freq_weighted": 0.17827868852459017,
+          "patterns_freq_weighted": {
+            "isolated": 0.17827868852459017,
+            "starts_token": 0.6516393442622951,
+            "ends_token": 0.1290983606557377,
+            "buried": 0.040983606557377046
+          }
+        }
+      },
+      "kz_by_affix": {
+        "ба": {
+          "n": 7,
+          "isolation_rate": 0.7142857142857143
+        },
+        "бе": {
+          "n": 14,
+          "isolation_rate": 0.2857142857142857
+        },
+        "ма": {
+          "n": 61,
+          "isolation_rate": 0.14754098360655737
+        },
+        "ме": {
+          "n": 47,
+          "isolation_rate": 0.06382978723404255
+        },
+        "па": {
+          "n": 13,
+          "isolation_rate": 0.23076923076923078
+        },
+        "пе": {
+          "n": 12,
+          "isolation_rate": 0.6666666666666666
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 1.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.5,
+        "fused_n": 30
+      },
+      "kz_forms": [
+        {
+          "form": "болмаған",
+          "split": "бол+ма+ған",
+          "tokens": [
+            "▁бол",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "аспайтын",
+          "split": "ас+па+йтын",
+          "tokens": [
+            "▁а",
+            "спа",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "берілмейді",
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "▁бері",
+            "л",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "сақталмайтын",
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "көзделмесе",
+          "split": "көздел+ме+се",
+          "tokens": [
+            "▁көз",
+            "дел",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "толмаған",
+          "split": "тол+ма+ған",
+          "tokens": [
+            "▁тол",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "кешіктірмей",
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "▁кеші",
+            "к",
+            "тір",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "кешіктірілмей",
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "▁кеші",
+            "кті",
+            "ріл",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болғызбау",
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "▁бол",
+            "ғыз",
+            "ба",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "болмайтын",
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "▁бол",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "аспауға",
+          "split": "ас+па+уға",
+          "tokens": [
+            "▁а",
+            "спа",
+            "уға"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "ұсынбаған",
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "▁ұ",
+            "сын",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "қолданылмайды",
+          "split": "қолданыл+ма+йды",
+          "tokens": [
+            "▁қолдан",
+            "ыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындамауы",
+          "split": "орында+ма+уы",
+          "tokens": [
+            "▁орында",
+            "ма",
+            "уы"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "пайдаланылмаған",
+          "split": "пайдаланыл+ма+ған",
+          "tokens": [
+            "▁пайдалан",
+            "ыл",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындамаған",
+          "split": "орында+ма+ған",
+          "tokens": [
+            "▁орында",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмайды",
+          "split": "бол+ма+йды",
+          "tokens": [
+            "▁болмайды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "жеткізілмеген",
+          "split": "жеткізіл+ме+ген",
+          "tokens": [
+            "▁жеткіз",
+            "іл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жатпайды",
+          "split": "жат+па+йды",
+          "tokens": [
+            "▁жа",
+            "тпай",
+            "ды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "болмауға",
+          "split": "бол+ма+уға",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "уға"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "бермеуге",
+          "split": "бер+ме+уге",
+          "tokens": [
+            "▁бер",
+            "ме",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "келіспеген",
+          "split": "келіс+пе+ген",
+          "tokens": [
+            "▁келі",
+            "спе",
+            "ген"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "келмейтін",
+          "split": "кел+ме+йтін",
+          "tokens": [
+            "▁кел",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпеу",
+          "split": "ет+пе+у",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "сақтамай",
+          "split": "сақта+ма+й",
+          "tokens": [
+            "▁сақта",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "белгіленбесе",
+          "split": "белгілен+бе+се",
+          "tokens": [
+            "▁белгіле",
+            "н",
+            "бесе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "пайдаланбаған",
+          "split": "пайдалан+ба+ған",
+          "tokens": [
+            "▁пайдалан",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "келмеген",
+          "split": "кел+ме+ген",
+          "tokens": [
+            "▁кел",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "аспайды",
+          "split": "ас+па+йды",
+          "tokens": [
+            "▁а",
+            "спа",
+            "йды"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "салынбаған",
+          "split": "салын+ба+ған",
+          "tokens": [
+            "▁са",
+            "лын",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "істемеген",
+          "split": "істе+ме+ген",
+          "tokens": [
+            "▁іс",
+            "те",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "реттелмеген",
+          "split": "реттел+ме+ген",
+          "tokens": [
+            "▁ретте",
+            "л",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "табылмайды",
+          "split": "табыл+ма+йды",
+          "tokens": [
+            "▁табыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қолданылмауға",
+          "split": "қолданыл+ма+уға",
+          "tokens": [
+            "▁қолдан",
+            "ыл",
+            "ма",
+            "уға"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "асырмай",
+          "split": "асыр+ма+й",
+          "tokens": [
+            "▁а",
+            "сыр",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "табылмайтын",
+          "split": "табыл+ма+йтын",
+          "tokens": [
+            "▁табыл",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "белгіленбеген",
+          "split": "белгілен+бе+ген",
+          "tokens": [
+            "▁белгіле",
+            "н",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпесе",
+          "split": "ет+пе+се",
+          "tokens": [
+            "▁ет",
+            "пес",
+            "е"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "соқпайды",
+          "split": "соқ+па+йды",
+          "tokens": [
+            "▁со",
+            "қпа",
+            "йды"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "етілмейді",
+          "split": "етіл+ме+йді",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "өтпеген",
+          "split": "өт+пе+ген",
+          "tokens": [
+            "▁өт",
+            "пе",
+            "ген"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "істелмеген",
+          "split": "істел+ме+ген",
+          "tokens": [
+            "▁іс",
+            "тел",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алмай",
+          "split": "ал+ма+й",
+          "tokens": [
+            "▁алмай"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "бермеуі",
+          "split": "бер+ме+уі",
+          "tokens": [
+            "▁бер",
+            "м",
+            "еуі"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алмайды",
+          "split": "ал+ма+йды",
+          "tokens": [
+            "▁алмайды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "алмайтын",
+          "split": "ал+ма+йтын",
+          "tokens": [
+            "▁ал",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жатпайтын",
+          "split": "жат+па+йтын",
+          "tokens": [
+            "▁жат",
+            "па",
+            "йтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жіберілмейді",
+          "split": "жіберіл+ме+йді",
+          "tokens": [
+            "▁жібер",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмаса",
+          "split": "бол+ма+са",
+          "tokens": [
+            "▁болмаса"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "орындалмаған",
+          "split": "орындал+ма+ған",
+          "tokens": [
+            "▁орында",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тұрмайтын",
+          "split": "тұр+ма+йтын",
+          "tokens": [
+            "▁тұр",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпеуге",
+          "split": "ет+пе+уге",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "етпегені",
+          "split": "ет+пе+гені",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "ге",
+            "ні"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "болмағанда",
+          "split": "бол+ма+ғанда",
+          "tokens": [
+            "▁бол",
+            "маған",
+            "да"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "толмағандардың",
+          "split": "тол+ма+ғандардың",
+          "tokens": [
+            "▁тол",
+            "маған",
+            "дардың"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келтірмейтін",
+          "split": "келтір+ме+йтін",
+          "tokens": [
+            "▁келтір",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бұзбайтын",
+          "split": "бұз+ба+йтын",
+          "tokens": [
+            "▁бұ",
+            "зба",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "көзделмеген",
+          "split": "көздел+ме+ген",
+          "tokens": [
+            "▁көз",
+            "дел",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "сақталмай",
+          "split": "сақтал+ма+й",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "соқпайтын",
+          "split": "соқ+па+йтын",
+          "tokens": [
+            "▁со",
+            "қпа",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "етпеген",
+          "split": "ет+пе+ген",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "ген"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "сақталмайды",
+          "split": "сақтал+ма+йды",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төленбейді",
+          "split": "төлен+бе+йді",
+          "tokens": [
+            "▁төл",
+            "ен",
+            "бей",
+            "ді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шықпаған",
+          "split": "шық+па+ған",
+          "tokens": [
+            "▁шы",
+            "қпа",
+            "ған"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "болмау",
+          "split": "бол+ма+у",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "аяқталмаған",
+          "split": "аяқтал+ма+ған",
+          "tokens": [
+            "▁аяқта",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "өткізбеген",
+          "split": "өткіз+бе+ген",
+          "tokens": [
+            "▁өткіз",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "белгіленбейді",
+          "split": "белгілен+бе+йді",
+          "tokens": [
+            "▁белгіле",
+            "н",
+            "бей",
+            "ді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болдырмау",
+          "split": "болдыр+ма+у",
+          "tokens": [
+            "▁болды",
+            "рма",
+            "у"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "келмей",
+          "split": "кел+ме+й",
+          "tokens": [
+            "▁кел",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қосылмайды",
+          "split": "қосыл+ма+йды",
+          "tokens": [
+            "▁қосыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етілмеген",
+          "split": "етіл+ме+ген",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпеуі",
+          "split": "ет+пе+уі",
+          "tokens": [
+            "▁ет",
+            "п",
+            "еуі"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "кірмейтін",
+          "split": "кір+ме+йтін",
+          "tokens": [
+            "▁кір",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төленбеуіне",
+          "split": "төлен+бе+уіне",
+          "tokens": [
+            "▁төл",
+            "ен",
+            "бе",
+            "у",
+            "іне"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "төндірмесе",
+          "split": "төндір+ме+се",
+          "tokens": [
+            "▁",
+            "төн",
+            "дір",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "енгізілмейді",
+          "split": "енгізіл+ме+йді",
+          "tokens": [
+            "▁енгіз",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпейтін",
+          "split": "ет+пе+йтін",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "йтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "сақталмаған",
+          "split": "сақтал+ма+ған",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бермеу",
+          "split": "бер+ме+у",
+          "tokens": [
+            "▁бер",
+            "ме",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "қойылмайды",
+          "split": "қойыл+ма+йды",
+          "tokens": [
+            "▁қой",
+            "ыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "берілмейтін",
+          "split": "беріл+ме+йтін",
+          "tokens": [
+            "▁бері",
+            "л",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тапсырылмайтын",
+          "split": "тапсырыл+ма+йтын",
+          "tokens": [
+            "▁тап",
+            "сы",
+            "рыл",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төмендетпеуге",
+          "split": "төмендет+пе+уге",
+          "tokens": [
+            "▁төменде",
+            "т",
+            "пе",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "өзгертілмейді",
+          "split": "өзгертіл+ме+йді",
+          "tokens": [
+            "▁өзгер",
+            "ті",
+            "л",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келіспейтіні",
+          "split": "келіс+пе+йтіні",
+          "tokens": [
+            "▁келі",
+            "спе",
+            "йтін",
+            "і"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "қатыспаған",
+          "split": "қатыс+па+ған",
+          "tokens": [
+            "▁қатыс",
+            "па",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "толмағандық",
+          "split": "тол+ма+ғандық",
+          "tokens": [
+            "▁тол",
+            "маған",
+            "дық"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шектемейді",
+          "split": "шекте+ме+йді",
+          "tokens": [
+            "▁шек",
+            "те",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етілмейтін",
+          "split": "етіл+ме+йтін",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "көрсетілмейді",
+          "split": "көрсетіл+ме+йді",
+          "tokens": [
+            "▁көрсет",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "асырмау",
+          "split": "асыр+ма+у",
+          "tokens": [
+            "▁",
+            "асы",
+            "рма",
+            "у"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "келтірмей",
+          "split": "келтір+ме+й",
+          "tokens": [
+            "▁келтір",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келісілмеген",
+          "split": "келісіл+ме+ген",
+          "tokens": [
+            "▁келі",
+            "сіл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тапсырмаған",
+          "split": "тапсыр+ма+ған",
+          "tokens": [
+            "▁тапсырма",
+            "ған"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "сыйыспайтын",
+          "split": "сыйыс+па+йтын",
+          "tokens": [
+            "▁сый",
+            "ы",
+            "спа",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "болмауы",
+          "split": "бол+ма+уы",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "уы"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "келмеуі",
+          "split": "кел+ме+уі",
+          "tokens": [
+            "▁кел",
+            "м",
+            "еуі"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмағаны",
+          "split": "бол+ма+ғаны",
+          "tokens": [
+            "▁бол",
+            "маған",
+            "ы"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындамағаны",
+          "split": "орында+ма+ғаны",
+          "tokens": [
+            "▁орында",
+            "маған",
+            "ы"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бермесе",
+          "split": "бер+ме+се",
+          "tokens": [
+            "▁бер",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шығарылмайды",
+          "split": "шығарыл+ма+йды",
+          "tokens": [
+            "▁шығар",
+            "ыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келмейді",
+          "split": "кел+ме+йді",
+          "tokens": [
+            "▁кел",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "соқтырмайды",
+          "split": "соқтыр+ма+йды",
+          "tokens": [
+            "▁со",
+            "қты",
+            "р",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "толмағандар",
+          "split": "тол+ма+ғандар",
+          "tokens": [
+            "▁тол",
+            "маған",
+            "дар"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жылытылмайтын",
+          "split": "жылытыл+ма+йтын",
+          "tokens": [
+            "▁жылы",
+            "ты",
+            "л",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "күтпеген",
+          "split": "күт+пе+ген",
+          "tokens": [
+            "▁күт",
+            "пе",
+            "ген"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "үзбей",
+          "split": "үз+бе+й",
+          "tokens": [
+            "▁үз",
+            "бей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алынбай",
+          "split": "алын+ба+й",
+          "tokens": [
+            "▁ал",
+            "ын",
+            "бай"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шектелмейді",
+          "split": "шектел+ме+йді",
+          "tokens": [
+            "▁шек",
+            "тел",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қамтымауға",
+          "split": "қамты+ма+уға",
+          "tokens": [
+            "▁қамты",
+            "ма",
+            "уға"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүргізбеген",
+          "split": "жүргіз+бе+ген",
+          "tokens": [
+            "▁жүргіз",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алмағанда",
+          "split": "ал+ма+ғанда",
+          "tokens": [
+            "▁алма",
+            "ғанда"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "босатылмай",
+          "split": "босатыл+ма+й",
+          "tokens": [
+            "▁боса",
+            "ты",
+            "л",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төленбеуге",
+          "split": "төлен+бе+уге",
+          "tokens": [
+            "▁төл",
+            "ен",
+            "бе",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "төлемеген",
+          "split": "төле+ме+ген",
+          "tokens": [
+            "▁төлем",
+            "е",
+            "ген"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "бермеген",
+          "split": "бер+ме+ген",
+          "tokens": [
+            "▁бер",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жұмсалмаған",
+          "split": "жұмсал+ма+ған",
+          "tokens": [
+            "▁жұмса",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қайтарылмаған",
+          "split": "қайтарыл+ма+ған",
+          "tokens": [
+            "▁қайта",
+            "рыл",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "өтелмеген",
+          "split": "өтел+ме+ген",
+          "tokens": [
+            "▁өте",
+            "л",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "босатпайды",
+          "split": "босат+па+йды",
+          "tokens": [
+            "▁боса",
+            "тпай",
+            "ды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "жіберілмеген",
+          "split": "жіберіл+ме+ген",
+          "tokens": [
+            "▁жібер",
+            "іл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "еңсерілмейтін",
+          "split": "еңсеріл+ме+йтін",
+          "tokens": [
+            "▁ең",
+            "сер",
+            "іл",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмай",
+          "split": "бол+ма+й",
+          "tokens": [
+            "▁бол",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындалмаса",
+          "split": "орындал+ма+са",
+          "tokens": [
+            "▁орында",
+            "л",
+            "ма",
+            "са"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "көрсетілмесе",
+          "split": "көрсетіл+ме+се",
+          "tokens": [
+            "▁көрсет",
+            "іл",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жүргізбейді",
+          "split": "жүргіз+бе+йді",
+          "tokens": [
+            "▁жүргіз",
+            "бей",
+            "ді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жасаспай",
+          "split": "жасас+па+й",
+          "tokens": [
+            "▁жаса",
+            "спа",
+            "й"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "жасалмайды",
+          "split": "жасал+ма+йды",
+          "tokens": [
+            "▁жасалма",
+            "йды"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "шектемей",
+          "split": "шекте+ме+й",
+          "tokens": [
+            "▁шек",
+            "те",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындалмауы",
+          "split": "орындал+ма+уы",
+          "tokens": [
+            "▁орында",
+            "л",
+            "ма",
+            "уы"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүгінбеу",
+          "split": "жүгін+бе+у",
+          "tokens": [
+            "▁жүгі",
+            "н",
+            "бе",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жатпайтындығын",
+          "split": "жат+па+йтындығын",
+          "tokens": [
+            "▁жат",
+            "па",
+            "йтын",
+            "дығын"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүгінбей",
+          "split": "жүгін+бе+й",
+          "tokens": [
+            "▁жүгі",
+            "н",
+            "бей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "реттемеген",
+          "split": "ретте+ме+ген",
+          "tokens": [
+            "▁ретте",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "хабарламаған",
+          "split": "хабарла+ма+ған",
+          "tokens": [
+            "▁хабарлама",
+            "ған"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "кешіктірілмейтін",
+          "split": "кешіктіріл+ме+йтін",
+          "tokens": [
+            "▁кеші",
+            "кті",
+            "ріл",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жеткізбеген",
+          "split": "жеткіз+бе+ген",
+          "tokens": [
+            "▁жеткіз",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тартылмайды",
+          "split": "тартыл+ма+йды",
+          "tokens": [
+            "▁тартыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "ауыстырылмайды",
+          "split": "ауыстырыл+ма+йды",
+          "tokens": [
+            "▁ауысты",
+            "рыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бұзылмайды",
+          "split": "бұзыл+ма+йды",
+          "tokens": [
+            "▁бұ",
+            "зы",
+            "л",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жеткізілмесе",
+          "split": "жеткізіл+ме+се",
+          "tokens": [
+            "▁жеткіз",
+            "іл",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қаралмайды",
+          "split": "қарал+ма+йды",
+          "tokens": [
+            "▁қара",
+            "л",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "сақталмаса",
+          "split": "сақтал+ма+са",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "ма",
+            "са"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "етілмесе",
+          "split": "етіл+ме+се",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жойылмайтын",
+          "split": "жойыл+ма+йтын",
+          "tokens": [
+            "▁ж",
+            "ой",
+            "ыл",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "көтермейді",
+          "split": "көтер+ме+йді",
+          "tokens": [
+            "▁көтер",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келмеуіне",
+          "split": "кел+ме+уіне",
+          "tokens": [
+            "▁кел",
+            "ме",
+            "у",
+            "іне"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүргізбеу",
+          "split": "жүргіз+бе+у",
+          "tokens": [
+            "▁жүргіз",
+            "бе",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жасамағаны",
+          "split": "жаса+ма+ғаны",
+          "tokens": [
+            "▁жаса",
+            "маған",
+            "ы"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келмесе",
+          "split": "кел+ме+се",
+          "tokens": [
+            "▁кел",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "хабарланбаған",
+          "split": "хабарлан+ба+ған",
+          "tokens": [
+            "▁хабар",
+            "лан",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "хабарламай",
+          "split": "хабарла+ма+й",
+          "tokens": [
+            "▁хабарлама",
+            "й"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "жасалмаса",
+          "split": "жасал+ма+са",
+          "tokens": [
+            "▁жасалма",
+            "са"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        }
+      ],
+      "ru_particle": [
+        {
+          "phrase": "не вправе",
+          "tokens": [
+            "▁не",
+            "▁вправе"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не допускается",
+          "tokens": [
+            "▁не",
+            "▁допускается"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не может",
+          "tokens": [
+            "▁не",
+            "▁может"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не подлежит",
+          "tokens": [
+            "▁не",
+            "▁под",
+            "ле",
+            "жит"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не облагается",
+          "tokens": [
+            "▁не",
+            "▁об",
+            "лага",
+            "ется"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не обязан",
+          "tokens": [
+            "▁не",
+            "▁обязан"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не признается",
+          "tokens": [
+            "▁не",
+            "▁призна",
+            "ется"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не менее",
+          "tokens": [
+            "▁не",
+            "▁менее"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не позднее",
+          "tokens": [
+            "▁не",
+            "▁позднее"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не более",
+          "tokens": [
+            "▁не",
+            "▁более"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не вправе требовать",
+          "tokens": [
+            "▁не",
+            "▁вправе",
+            "▁требовать"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не включается",
+          "tokens": [
+            "▁не",
+            "▁включает",
+            "ся"
+          ],
+          "ne_own_token": true
+        }
+      ],
+      "ru_fused": [
+        {
+          "word": "неисполнение",
+          "tokens": [
+            "▁не",
+            "ис",
+            "полнение"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "ненадлежащее",
+          "tokens": [
+            "▁не",
+            "над",
+            "лежа",
+            "щее"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "непредоставление",
+          "tokens": [
+            "▁непре",
+            "до",
+            "ставление"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неуплата",
+          "tokens": [
+            "▁не",
+            "у",
+            "плата"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "невыплата",
+          "tokens": [
+            "▁невы",
+            "плата"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "нетрудоспособности",
+          "tokens": [
+            "▁не",
+            "труд",
+            "оспособност",
+            "и"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "несоблюдение",
+          "tokens": [
+            "▁не",
+            "соб",
+            "лю",
+            "дение"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неявка",
+          "tokens": [
+            "▁нея",
+            "вка"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "невозможно",
+          "tokens": [
+            "▁невозможно"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "недопустимо",
+          "tokens": [
+            "▁не",
+            "допустим",
+            "о"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неполный",
+          "tokens": [
+            "▁не",
+            "пол",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неправомерный",
+          "tokens": [
+            "▁неправомерн",
+            "ый"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "незаконный",
+          "tokens": [
+            "▁не",
+            "закон",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "несовершеннолетний",
+          "tokens": [
+            "▁нес",
+            "овер",
+            "шен",
+            "но",
+            "летний"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неоплачиваемый",
+          "tokens": [
+            "▁нео",
+            "пла",
+            "чив",
+            "а",
+            "емый"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "невыполнение",
+          "tokens": [
+            "▁невы",
+            "полнение"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неприменение",
+          "tokens": [
+            "▁непри",
+            "мен",
+            "ение"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "необоснованный",
+          "tokens": [
+            "▁необ",
+            "основан",
+            "ный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неразглашение",
+          "tokens": [
+            "▁нераз",
+            "гла",
+            "шение"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неконкуренции",
+          "tokens": [
+            "▁неко",
+            "нку",
+            "рен",
+            "ции"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "несогласие",
+          "tokens": [
+            "▁не",
+            "со",
+            "гласи",
+            "е"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неосуществление",
+          "tokens": [
+            "▁не",
+            "осу",
+            "ще",
+            "ств",
+            "ление"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "непрерывный",
+          "tokens": [
+            "▁непре",
+            "рыв",
+            "ный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неработающий",
+          "tokens": [
+            "▁не",
+            "работа",
+            "ющий"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "непригодный",
+          "tokens": [
+            "▁непри",
+            "год",
+            "ный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неисправный",
+          "tokens": [
+            "▁не",
+            "ис",
+            "прав",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неудовлетворительный",
+          "tokens": [
+            "▁не",
+            "у",
+            "дов",
+            "ле",
+            "твор",
+            "ительный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "недееспособный",
+          "tokens": [
+            "▁не",
+            "де",
+            "е",
+            "способ",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "несвоевременный",
+          "tokens": [
+            "▁нес",
+            "вое",
+            "време",
+            "нный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неблагоприятных",
+          "tokens": [
+            "▁не",
+            "благоприят",
+            "ных"
+          ],
+          "boundary_after_ne": true
+        }
+      ]
+    },
+    "intfloat/multilingual-e5-base": {
+      "kz": {
+        "n": 154,
+        "isolation_rate": 0.2077922077922078,
+        "any_boundary_rate": 0.961038961038961,
+        "boundary_before_rate": 0.8311688311688312,
+        "boundary_after_rate": 0.33766233766233766,
+        "affix_single_token_rate": 0.2077922077922078,
+        "patterns": {
+          "isolated": 0.2077922077922078,
+          "starts_token": 0.6233766233766234,
+          "ends_token": 0.12987012987012986,
+          "buried": 0.03896103896103896
+        },
+        "corpus_tokens": 488,
+        "isolation_rate_freq_weighted": 0.17827868852459017,
+        "patterns_freq_weighted": {
+          "isolated": 0.17827868852459017,
+          "starts_token": 0.6516393442622951,
+          "ends_token": 0.1290983606557377,
+          "buried": 0.040983606557377046
+        }
+      },
+      "kz_by_source": {
+        "corpus_labor": {
+          "n": 154,
+          "isolation_rate": 0.2077922077922078,
+          "any_boundary_rate": 0.961038961038961,
+          "boundary_before_rate": 0.8311688311688312,
+          "boundary_after_rate": 0.33766233766233766,
+          "affix_single_token_rate": 0.2077922077922078,
+          "patterns": {
+            "isolated": 0.2077922077922078,
+            "starts_token": 0.6233766233766234,
+            "ends_token": 0.12987012987012986,
+            "buried": 0.03896103896103896
+          },
+          "corpus_tokens": 488,
+          "isolation_rate_freq_weighted": 0.17827868852459017,
+          "patterns_freq_weighted": {
+            "isolated": 0.17827868852459017,
+            "starts_token": 0.6516393442622951,
+            "ends_token": 0.1290983606557377,
+            "buried": 0.040983606557377046
+          }
+        }
+      },
+      "kz_by_affix": {
+        "ба": {
+          "n": 7,
+          "isolation_rate": 0.7142857142857143
+        },
+        "бе": {
+          "n": 14,
+          "isolation_rate": 0.2857142857142857
+        },
+        "ма": {
+          "n": 61,
+          "isolation_rate": 0.14754098360655737
+        },
+        "ме": {
+          "n": 47,
+          "isolation_rate": 0.06382978723404255
+        },
+        "па": {
+          "n": 13,
+          "isolation_rate": 0.23076923076923078
+        },
+        "пе": {
+          "n": 12,
+          "isolation_rate": 0.6666666666666666
+        }
+      },
+      "ru_control": {
+        "particle_ne_own_token_rate": 1.0,
+        "particle_n": 12,
+        "fused_prefix_boundary_rate": 0.5,
+        "fused_n": 30
+      },
+      "kz_forms": [
+        {
+          "form": "болмаған",
+          "split": "бол+ма+ған",
+          "tokens": [
+            "▁бол",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "аспайтын",
+          "split": "ас+па+йтын",
+          "tokens": [
+            "▁а",
+            "спа",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "берілмейді",
+          "split": "беріл+ме+йді",
+          "tokens": [
+            "▁бері",
+            "л",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "сақталмайтын",
+          "split": "сақтал+ма+йтын",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "көзделмесе",
+          "split": "көздел+ме+се",
+          "tokens": [
+            "▁көз",
+            "дел",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "толмаған",
+          "split": "тол+ма+ған",
+          "tokens": [
+            "▁тол",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "кешіктірмей",
+          "split": "кешіктір+ме+й",
+          "tokens": [
+            "▁кеші",
+            "к",
+            "тір",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "кешіктірілмей",
+          "split": "кешіктіріл+ме+й",
+          "tokens": [
+            "▁кеші",
+            "кті",
+            "ріл",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болғызбау",
+          "split": "болғыз+ба+у",
+          "tokens": [
+            "▁бол",
+            "ғыз",
+            "ба",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "болмайтын",
+          "split": "бол+ма+йтын",
+          "tokens": [
+            "▁бол",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "аспауға",
+          "split": "ас+па+уға",
+          "tokens": [
+            "▁а",
+            "спа",
+            "уға"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "ұсынбаған",
+          "split": "ұсын+ба+ған",
+          "tokens": [
+            "▁ұ",
+            "сын",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "қолданылмайды",
+          "split": "қолданыл+ма+йды",
+          "tokens": [
+            "▁қолдан",
+            "ыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындамауы",
+          "split": "орында+ма+уы",
+          "tokens": [
+            "▁орында",
+            "ма",
+            "уы"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "пайдаланылмаған",
+          "split": "пайдаланыл+ма+ған",
+          "tokens": [
+            "▁пайдалан",
+            "ыл",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындамаған",
+          "split": "орында+ма+ған",
+          "tokens": [
+            "▁орында",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмайды",
+          "split": "бол+ма+йды",
+          "tokens": [
+            "▁болмайды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "жеткізілмеген",
+          "split": "жеткізіл+ме+ген",
+          "tokens": [
+            "▁жеткіз",
+            "іл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жатпайды",
+          "split": "жат+па+йды",
+          "tokens": [
+            "▁жа",
+            "тпай",
+            "ды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "болмауға",
+          "split": "бол+ма+уға",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "уға"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "бермеуге",
+          "split": "бер+ме+уге",
+          "tokens": [
+            "▁бер",
+            "ме",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "келіспеген",
+          "split": "келіс+пе+ген",
+          "tokens": [
+            "▁келі",
+            "спе",
+            "ген"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "келмейтін",
+          "split": "кел+ме+йтін",
+          "tokens": [
+            "▁кел",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпеу",
+          "split": "ет+пе+у",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "сақтамай",
+          "split": "сақта+ма+й",
+          "tokens": [
+            "▁сақта",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "белгіленбесе",
+          "split": "белгілен+бе+се",
+          "tokens": [
+            "▁белгіле",
+            "н",
+            "бесе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "пайдаланбаған",
+          "split": "пайдалан+ба+ған",
+          "tokens": [
+            "▁пайдалан",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "келмеген",
+          "split": "кел+ме+ген",
+          "tokens": [
+            "▁кел",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "аспайды",
+          "split": "ас+па+йды",
+          "tokens": [
+            "▁а",
+            "спа",
+            "йды"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "салынбаған",
+          "split": "салын+ба+ған",
+          "tokens": [
+            "▁са",
+            "лын",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "істемеген",
+          "split": "істе+ме+ген",
+          "tokens": [
+            "▁іс",
+            "те",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "реттелмеген",
+          "split": "реттел+ме+ген",
+          "tokens": [
+            "▁ретте",
+            "л",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "табылмайды",
+          "split": "табыл+ма+йды",
+          "tokens": [
+            "▁табыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қолданылмауға",
+          "split": "қолданыл+ма+уға",
+          "tokens": [
+            "▁қолдан",
+            "ыл",
+            "ма",
+            "уға"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "асырмай",
+          "split": "асыр+ма+й",
+          "tokens": [
+            "▁а",
+            "сыр",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "табылмайтын",
+          "split": "табыл+ма+йтын",
+          "tokens": [
+            "▁табыл",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "белгіленбеген",
+          "split": "белгілен+бе+ген",
+          "tokens": [
+            "▁белгіле",
+            "н",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпесе",
+          "split": "ет+пе+се",
+          "tokens": [
+            "▁ет",
+            "пес",
+            "е"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "соқпайды",
+          "split": "соқ+па+йды",
+          "tokens": [
+            "▁со",
+            "қпа",
+            "йды"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "етілмейді",
+          "split": "етіл+ме+йді",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "өтпеген",
+          "split": "өт+пе+ген",
+          "tokens": [
+            "▁өт",
+            "пе",
+            "ген"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "істелмеген",
+          "split": "істел+ме+ген",
+          "tokens": [
+            "▁іс",
+            "тел",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алмай",
+          "split": "ал+ма+й",
+          "tokens": [
+            "▁алмай"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "бермеуі",
+          "split": "бер+ме+уі",
+          "tokens": [
+            "▁бер",
+            "м",
+            "еуі"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алмайды",
+          "split": "ал+ма+йды",
+          "tokens": [
+            "▁алмайды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "алмайтын",
+          "split": "ал+ма+йтын",
+          "tokens": [
+            "▁ал",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жатпайтын",
+          "split": "жат+па+йтын",
+          "tokens": [
+            "▁жат",
+            "па",
+            "йтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жіберілмейді",
+          "split": "жіберіл+ме+йді",
+          "tokens": [
+            "▁жібер",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмаса",
+          "split": "бол+ма+са",
+          "tokens": [
+            "▁болмаса"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "орындалмаған",
+          "split": "орындал+ма+ған",
+          "tokens": [
+            "▁орында",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тұрмайтын",
+          "split": "тұр+ма+йтын",
+          "tokens": [
+            "▁тұр",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпеуге",
+          "split": "ет+пе+уге",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "етпегені",
+          "split": "ет+пе+гені",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "ге",
+            "ні"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "болмағанда",
+          "split": "бол+ма+ғанда",
+          "tokens": [
+            "▁бол",
+            "маған",
+            "да"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "толмағандардың",
+          "split": "тол+ма+ғандардың",
+          "tokens": [
+            "▁тол",
+            "маған",
+            "дардың"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келтірмейтін",
+          "split": "келтір+ме+йтін",
+          "tokens": [
+            "▁келтір",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бұзбайтын",
+          "split": "бұз+ба+йтын",
+          "tokens": [
+            "▁бұ",
+            "зба",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "көзделмеген",
+          "split": "көздел+ме+ген",
+          "tokens": [
+            "▁көз",
+            "дел",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "сақталмай",
+          "split": "сақтал+ма+й",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "соқпайтын",
+          "split": "соқ+па+йтын",
+          "tokens": [
+            "▁со",
+            "қпа",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "етпеген",
+          "split": "ет+пе+ген",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "ген"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "сақталмайды",
+          "split": "сақтал+ма+йды",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төленбейді",
+          "split": "төлен+бе+йді",
+          "tokens": [
+            "▁төл",
+            "ен",
+            "бей",
+            "ді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шықпаған",
+          "split": "шық+па+ған",
+          "tokens": [
+            "▁шы",
+            "қпа",
+            "ған"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "болмау",
+          "split": "бол+ма+у",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "аяқталмаған",
+          "split": "аяқтал+ма+ған",
+          "tokens": [
+            "▁аяқта",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "өткізбеген",
+          "split": "өткіз+бе+ген",
+          "tokens": [
+            "▁өткіз",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "белгіленбейді",
+          "split": "белгілен+бе+йді",
+          "tokens": [
+            "▁белгіле",
+            "н",
+            "бей",
+            "ді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болдырмау",
+          "split": "болдыр+ма+у",
+          "tokens": [
+            "▁болды",
+            "рма",
+            "у"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "келмей",
+          "split": "кел+ме+й",
+          "tokens": [
+            "▁кел",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қосылмайды",
+          "split": "қосыл+ма+йды",
+          "tokens": [
+            "▁қосыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етілмеген",
+          "split": "етіл+ме+ген",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпеуі",
+          "split": "ет+пе+уі",
+          "tokens": [
+            "▁ет",
+            "п",
+            "еуі"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "кірмейтін",
+          "split": "кір+ме+йтін",
+          "tokens": [
+            "▁кір",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төленбеуіне",
+          "split": "төлен+бе+уіне",
+          "tokens": [
+            "▁төл",
+            "ен",
+            "бе",
+            "у",
+            "іне"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "төндірмесе",
+          "split": "төндір+ме+се",
+          "tokens": [
+            "▁",
+            "төн",
+            "дір",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "енгізілмейді",
+          "split": "енгізіл+ме+йді",
+          "tokens": [
+            "▁енгіз",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етпейтін",
+          "split": "ет+пе+йтін",
+          "tokens": [
+            "▁ет",
+            "пе",
+            "йтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "сақталмаған",
+          "split": "сақтал+ма+ған",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бермеу",
+          "split": "бер+ме+у",
+          "tokens": [
+            "▁бер",
+            "ме",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "қойылмайды",
+          "split": "қойыл+ма+йды",
+          "tokens": [
+            "▁қой",
+            "ыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "берілмейтін",
+          "split": "беріл+ме+йтін",
+          "tokens": [
+            "▁бері",
+            "л",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тапсырылмайтын",
+          "split": "тапсырыл+ма+йтын",
+          "tokens": [
+            "▁тап",
+            "сы",
+            "рыл",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төмендетпеуге",
+          "split": "төмендет+пе+уге",
+          "tokens": [
+            "▁төменде",
+            "т",
+            "пе",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "өзгертілмейді",
+          "split": "өзгертіл+ме+йді",
+          "tokens": [
+            "▁өзгер",
+            "ті",
+            "л",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келіспейтіні",
+          "split": "келіс+пе+йтіні",
+          "tokens": [
+            "▁келі",
+            "спе",
+            "йтін",
+            "і"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "қатыспаған",
+          "split": "қатыс+па+ған",
+          "tokens": [
+            "▁қатыс",
+            "па",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "толмағандық",
+          "split": "тол+ма+ғандық",
+          "tokens": [
+            "▁тол",
+            "маған",
+            "дық"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шектемейді",
+          "split": "шекте+ме+йді",
+          "tokens": [
+            "▁шек",
+            "те",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "етілмейтін",
+          "split": "етіл+ме+йтін",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "көрсетілмейді",
+          "split": "көрсетіл+ме+йді",
+          "tokens": [
+            "▁көрсет",
+            "іл",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "асырмау",
+          "split": "асыр+ма+у",
+          "tokens": [
+            "▁",
+            "асы",
+            "рма",
+            "у"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "келтірмей",
+          "split": "келтір+ме+й",
+          "tokens": [
+            "▁келтір",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келісілмеген",
+          "split": "келісіл+ме+ген",
+          "tokens": [
+            "▁келі",
+            "сіл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тапсырмаған",
+          "split": "тапсыр+ма+ған",
+          "tokens": [
+            "▁тапсырма",
+            "ған"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "сыйыспайтын",
+          "split": "сыйыс+па+йтын",
+          "tokens": [
+            "▁сый",
+            "ы",
+            "спа",
+            "йтын"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "болмауы",
+          "split": "бол+ма+уы",
+          "tokens": [
+            "▁бол",
+            "ма",
+            "уы"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "келмеуі",
+          "split": "кел+ме+уі",
+          "tokens": [
+            "▁кел",
+            "м",
+            "еуі"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмағаны",
+          "split": "бол+ма+ғаны",
+          "tokens": [
+            "▁бол",
+            "маған",
+            "ы"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындамағаны",
+          "split": "орында+ма+ғаны",
+          "tokens": [
+            "▁орында",
+            "маған",
+            "ы"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бермесе",
+          "split": "бер+ме+се",
+          "tokens": [
+            "▁бер",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шығарылмайды",
+          "split": "шығарыл+ма+йды",
+          "tokens": [
+            "▁шығар",
+            "ыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келмейді",
+          "split": "кел+ме+йді",
+          "tokens": [
+            "▁кел",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "соқтырмайды",
+          "split": "соқтыр+ма+йды",
+          "tokens": [
+            "▁со",
+            "қты",
+            "р",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "толмағандар",
+          "split": "тол+ма+ғандар",
+          "tokens": [
+            "▁тол",
+            "маған",
+            "дар"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жылытылмайтын",
+          "split": "жылытыл+ма+йтын",
+          "tokens": [
+            "▁жылы",
+            "ты",
+            "л",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "күтпеген",
+          "split": "күт+пе+ген",
+          "tokens": [
+            "▁күт",
+            "пе",
+            "ген"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "үзбей",
+          "split": "үз+бе+й",
+          "tokens": [
+            "▁үз",
+            "бей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алынбай",
+          "split": "алын+ба+й",
+          "tokens": [
+            "▁ал",
+            "ын",
+            "бай"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "шектелмейді",
+          "split": "шектел+ме+йді",
+          "tokens": [
+            "▁шек",
+            "тел",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қамтымауға",
+          "split": "қамты+ма+уға",
+          "tokens": [
+            "▁қамты",
+            "ма",
+            "уға"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүргізбеген",
+          "split": "жүргіз+бе+ген",
+          "tokens": [
+            "▁жүргіз",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "алмағанда",
+          "split": "ал+ма+ғанда",
+          "tokens": [
+            "▁алма",
+            "ғанда"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "босатылмай",
+          "split": "босатыл+ма+й",
+          "tokens": [
+            "▁боса",
+            "ты",
+            "л",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "төленбеуге",
+          "split": "төлен+бе+уге",
+          "tokens": [
+            "▁төл",
+            "ен",
+            "бе",
+            "уге"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "төлемеген",
+          "split": "төле+ме+ген",
+          "tokens": [
+            "▁төлем",
+            "е",
+            "ген"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "бермеген",
+          "split": "бер+ме+ген",
+          "tokens": [
+            "▁бер",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жұмсалмаған",
+          "split": "жұмсал+ма+ған",
+          "tokens": [
+            "▁жұмса",
+            "л",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қайтарылмаған",
+          "split": "қайтарыл+ма+ған",
+          "tokens": [
+            "▁қайта",
+            "рыл",
+            "маған"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "өтелмеген",
+          "split": "өтел+ме+ген",
+          "tokens": [
+            "▁өте",
+            "л",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "босатпайды",
+          "split": "босат+па+йды",
+          "tokens": [
+            "▁боса",
+            "тпай",
+            "ды"
+          ],
+          "boundary_before": false,
+          "boundary_after": false,
+          "pattern": "buried"
+        },
+        {
+          "form": "жіберілмеген",
+          "split": "жіберіл+ме+ген",
+          "tokens": [
+            "▁жібер",
+            "іл",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "еңсерілмейтін",
+          "split": "еңсеріл+ме+йтін",
+          "tokens": [
+            "▁ең",
+            "сер",
+            "іл",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "болмай",
+          "split": "бол+ма+й",
+          "tokens": [
+            "▁бол",
+            "май"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындалмаса",
+          "split": "орындал+ма+са",
+          "tokens": [
+            "▁орында",
+            "л",
+            "ма",
+            "са"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "көрсетілмесе",
+          "split": "көрсетіл+ме+се",
+          "tokens": [
+            "▁көрсет",
+            "іл",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жүргізбейді",
+          "split": "жүргіз+бе+йді",
+          "tokens": [
+            "▁жүргіз",
+            "бей",
+            "ді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жасаспай",
+          "split": "жасас+па+й",
+          "tokens": [
+            "▁жаса",
+            "спа",
+            "й"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "жасалмайды",
+          "split": "жасал+ма+йды",
+          "tokens": [
+            "▁жасалма",
+            "йды"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "шектемей",
+          "split": "шекте+ме+й",
+          "tokens": [
+            "▁шек",
+            "те",
+            "мей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "орындалмауы",
+          "split": "орындал+ма+уы",
+          "tokens": [
+            "▁орында",
+            "л",
+            "ма",
+            "уы"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүгінбеу",
+          "split": "жүгін+бе+у",
+          "tokens": [
+            "▁жүгі",
+            "н",
+            "бе",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жатпайтындығын",
+          "split": "жат+па+йтындығын",
+          "tokens": [
+            "▁жат",
+            "па",
+            "йтын",
+            "дығын"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүгінбей",
+          "split": "жүгін+бе+й",
+          "tokens": [
+            "▁жүгі",
+            "н",
+            "бей"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "реттемеген",
+          "split": "ретте+ме+ген",
+          "tokens": [
+            "▁ретте",
+            "меген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "хабарламаған",
+          "split": "хабарла+ма+ған",
+          "tokens": [
+            "▁хабарлама",
+            "ған"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "кешіктірілмейтін",
+          "split": "кешіктіріл+ме+йтін",
+          "tokens": [
+            "▁кеші",
+            "кті",
+            "ріл",
+            "мейтін"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жеткізбеген",
+          "split": "жеткіз+бе+ген",
+          "tokens": [
+            "▁жеткіз",
+            "беген"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "тартылмайды",
+          "split": "тартыл+ма+йды",
+          "tokens": [
+            "▁тартыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "ауыстырылмайды",
+          "split": "ауыстырыл+ма+йды",
+          "tokens": [
+            "▁ауысты",
+            "рыл",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "бұзылмайды",
+          "split": "бұзыл+ма+йды",
+          "tokens": [
+            "▁бұ",
+            "зы",
+            "л",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жеткізілмесе",
+          "split": "жеткізіл+ме+се",
+          "tokens": [
+            "▁жеткіз",
+            "іл",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "қаралмайды",
+          "split": "қарал+ма+йды",
+          "tokens": [
+            "▁қара",
+            "л",
+            "майды"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "сақталмаса",
+          "split": "сақтал+ма+са",
+          "tokens": [
+            "▁сақта",
+            "л",
+            "ма",
+            "са"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "етілмесе",
+          "split": "етіл+ме+се",
+          "tokens": [
+            "▁ет",
+            "іл",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "жойылмайтын",
+          "split": "жойыл+ма+йтын",
+          "tokens": [
+            "▁ж",
+            "ой",
+            "ыл",
+            "майтын"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "көтермейді",
+          "split": "көтер+ме+йді",
+          "tokens": [
+            "▁көтер",
+            "мейді"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келмеуіне",
+          "split": "кел+ме+уіне",
+          "tokens": [
+            "▁кел",
+            "ме",
+            "у",
+            "іне"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жүргізбеу",
+          "split": "жүргіз+бе+у",
+          "tokens": [
+            "▁жүргіз",
+            "бе",
+            "у"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "жасамағаны",
+          "split": "жаса+ма+ғаны",
+          "tokens": [
+            "▁жаса",
+            "маған",
+            "ы"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "келмесе",
+          "split": "кел+ме+се",
+          "tokens": [
+            "▁кел",
+            "месе"
+          ],
+          "boundary_before": true,
+          "boundary_after": false,
+          "pattern": "starts_token"
+        },
+        {
+          "form": "хабарланбаған",
+          "split": "хабарлан+ба+ған",
+          "tokens": [
+            "▁хабар",
+            "лан",
+            "ба",
+            "ған"
+          ],
+          "boundary_before": true,
+          "boundary_after": true,
+          "pattern": "isolated"
+        },
+        {
+          "form": "хабарламай",
+          "split": "хабарла+ма+й",
+          "tokens": [
+            "▁хабарлама",
+            "й"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        },
+        {
+          "form": "жасалмаса",
+          "split": "жасал+ма+са",
+          "tokens": [
+            "▁жасалма",
+            "са"
+          ],
+          "boundary_before": false,
+          "boundary_after": true,
+          "pattern": "ends_token"
+        }
+      ],
+      "ru_particle": [
+        {
+          "phrase": "не вправе",
+          "tokens": [
+            "▁не",
+            "▁вправе"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не допускается",
+          "tokens": [
+            "▁не",
+            "▁допускается"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не может",
+          "tokens": [
+            "▁не",
+            "▁может"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не подлежит",
+          "tokens": [
+            "▁не",
+            "▁под",
+            "ле",
+            "жит"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не облагается",
+          "tokens": [
+            "▁не",
+            "▁об",
+            "лага",
+            "ется"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не обязан",
+          "tokens": [
+            "▁не",
+            "▁обязан"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не признается",
+          "tokens": [
+            "▁не",
+            "▁призна",
+            "ется"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не менее",
+          "tokens": [
+            "▁не",
+            "▁менее"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не позднее",
+          "tokens": [
+            "▁не",
+            "▁позднее"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не более",
+          "tokens": [
+            "▁не",
+            "▁более"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не вправе требовать",
+          "tokens": [
+            "▁не",
+            "▁вправе",
+            "▁требовать"
+          ],
+          "ne_own_token": true
+        },
+        {
+          "phrase": "не включается",
+          "tokens": [
+            "▁не",
+            "▁включает",
+            "ся"
+          ],
+          "ne_own_token": true
+        }
+      ],
+      "ru_fused": [
+        {
+          "word": "неисполнение",
+          "tokens": [
+            "▁не",
+            "ис",
+            "полнение"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "ненадлежащее",
+          "tokens": [
+            "▁не",
+            "над",
+            "лежа",
+            "щее"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "непредоставление",
+          "tokens": [
+            "▁непре",
+            "до",
+            "ставление"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неуплата",
+          "tokens": [
+            "▁не",
+            "у",
+            "плата"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "невыплата",
+          "tokens": [
+            "▁невы",
+            "плата"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "нетрудоспособности",
+          "tokens": [
+            "▁не",
+            "труд",
+            "оспособност",
+            "и"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "несоблюдение",
+          "tokens": [
+            "▁не",
+            "соб",
+            "лю",
+            "дение"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неявка",
+          "tokens": [
+            "▁нея",
+            "вка"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "невозможно",
+          "tokens": [
+            "▁невозможно"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "недопустимо",
+          "tokens": [
+            "▁не",
+            "допустим",
+            "о"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неполный",
+          "tokens": [
+            "▁не",
+            "пол",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неправомерный",
+          "tokens": [
+            "▁неправомерн",
+            "ый"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "незаконный",
+          "tokens": [
+            "▁не",
+            "закон",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "несовершеннолетний",
+          "tokens": [
+            "▁нес",
+            "овер",
+            "шен",
+            "но",
+            "летний"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неоплачиваемый",
+          "tokens": [
+            "▁нео",
+            "пла",
+            "чив",
+            "а",
+            "емый"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "невыполнение",
+          "tokens": [
+            "▁невы",
+            "полнение"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неприменение",
+          "tokens": [
+            "▁непри",
+            "мен",
+            "ение"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "необоснованный",
+          "tokens": [
+            "▁необ",
+            "основан",
+            "ный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неразглашение",
+          "tokens": [
+            "▁нераз",
+            "гла",
+            "шение"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неконкуренции",
+          "tokens": [
+            "▁неко",
+            "нку",
+            "рен",
+            "ции"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "несогласие",
+          "tokens": [
+            "▁не",
+            "со",
+            "гласи",
+            "е"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неосуществление",
+          "tokens": [
+            "▁не",
+            "осу",
+            "ще",
+            "ств",
+            "ление"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "непрерывный",
+          "tokens": [
+            "▁непре",
+            "рыв",
+            "ный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неработающий",
+          "tokens": [
+            "▁не",
+            "работа",
+            "ющий"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "непригодный",
+          "tokens": [
+            "▁непри",
+            "год",
+            "ный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неисправный",
+          "tokens": [
+            "▁не",
+            "ис",
+            "прав",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "неудовлетворительный",
+          "tokens": [
+            "▁не",
+            "у",
+            "дов",
+            "ле",
+            "твор",
+            "ительный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "недееспособный",
+          "tokens": [
+            "▁не",
+            "де",
+            "е",
+            "способ",
+            "ный"
+          ],
+          "boundary_after_ne": true
+        },
+        {
+          "word": "несвоевременный",
+          "tokens": [
+            "▁нес",
+            "вое",
+            "време",
+            "нный"
+          ],
+          "boundary_after_ne": false
+        },
+        {
+          "word": "неблагоприятных",
+          "tokens": [
+            "▁не",
+            "благоприят",
+            "ных"
+          ],
+          "boundary_after_ne": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+form	regex_split	freq	why	kaznlp_says	apertium_says	decision	comment
+қоспағанда	қос+па+ғанда	52	lexicalized?	қос_R_ET па_ET_ETB ған_ETB_ESM да_C5	қос<v><tv><neg><gpr_past><subst><loc> | қос<v><tv><neg><ger_past><loc>		
+келіспеушіліктер	келіс+пе+ушіліктер	9	lexicalized?	келіспеушілік_R_ZE тер_N1	кел<v><iv><coop><neg><ger_abs><pl><nom> | келіс<v><iv><neg><ger_abs><pl><nom>		
+болғызбайтын	болғыз+ба+йтын	7	kaznlp=not_covered, apertium=not_covered	болғызбайтын_R_X			
+сиретпей	сирет+пе+й	5	kaznlp=not_covered, apertium=not_covered	сиретпей_R_X			
+келіспеушіліктерді	келіс+пе+ушіліктерді	3	lexicalized?	келіспеушілік_R_ZE тер_N1 ді_C4	кел<v><iv><coop><neg><ger_abs><pl><acc> | келіс<v><iv><neg><ger_abs><pl><acc>		
+қолсұғылмаушылыққа	қолсұғыл+ма+ушылыққа	2	lexicalized?	қолсұғылмаушылыққа_R_X			
+ресімделмеген	ресімдел+ме+ген	2	kaznlp=not_covered, apertium=not_covered	ресімделмеген_R_X			
+күттірмейтін	күттір+ме+йтін	2	kaznlp=not_covered, apertium=not_covered	күттірмейтін_R_X			
+алмаса	ал+ма+са	2	kaznlp=ambiguous, apertium=neg_lex	алмас_R_ET а_ET_KSE | ал_R_ET ма_ET_ETB са_M4	ал<v><tv><neg><prc_cond><p3><pl> | ал<v><tv><neg><prc_cond><p3><sg>		
+келіспеушілік	келіс+пе+ушілік	2	lexicalized?	келіспеушілік_R_ZE	кел<v><iv><coop><neg><ger_abs><nom> | келіс<v><iv><neg><ger_abs><nom>		
+сұғылмауына	сұғыл+ма+уына	1	lexicalized?	сұғылмауына_R_X	сұқ<v><tv><pass><neg><ger><px3sp><dat>		
+болғызбаса	болғыз+ба+са	1	kaznlp=not_covered, apertium=not_covered	болғызбаса_R_X			
+нашарлатпайтын	нашарлат+па+йтын	1	kaznlp=not_covered, apertium=not_covered	нашарлатпайтын_R_X			
+сақтандырылмаған	сақтандырыл+ма+ған	1	kaznlp=not_covered, apertium=not_covered	сақтандырылмаған_R_X			
+нашарлатпауға	нашарлат+па+уға	1	kaznlp=not_covered, apertium=not_covered	нашарлатпауға_R_X			
+келіспеушіліктерін	келіс+пе+ушіліктерін	1	lexicalized?	келіспеушілік_R_ZE тер_N1 і_S3 н_C4	кел<v><iv><coop><neg><ger_abs><pl><px3sp><acc> | келіс<v><iv><neg><ger_abs><pl><px3sp><acc>		
+келіспеушіліктерінің	келіс+пе+ушіліктерінің	1	lexicalized?	келіспеушілік_R_ZE тер_N1 і_S3 нің_C2	кел<v><iv><coop><neg><ger_abs><pl><px3sp><gen> | келіс<v><iv><neg><ger_abs><pl><px3sp><gen>		

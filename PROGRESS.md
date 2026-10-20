@@ -23,8 +23,10 @@ Seed 42, bootstrap 1000 resamples, 95% CI. Notebook with all tables and figures:
 * Known issues: art. 1 (definitions, 2 751 words) and art. 16 (list without points) are single long chunks — to be
   split by sub-points in week 1; one chunk (`labor:127-3:4`) has an extra Ru paragraph absent in Kz.
 * **Tax Code:** the current one is **K2500000214 (No. 214-VIII of 18.07.2025)**; the 2017 code ended 31.12.2025.
-  Warning: its Kz text is ~0.67 MB vs ~6.1 MB Ru and the update dates differ (07.10 vs 15.09.2026) — the Kz
-  version may be incomplete or a different edition. To check before parsing (week 1).
+  ~~Kz text ~10× smaller~~ — **corrected 21.10:** that came from the `content_size` metadata field; the actual
+  HTML is 3.19 M (Kz) vs 3.34 M (Ru) characters. The Kz version marks article headings with `<h3>` instead of
+  `<p><b>`, which the parser must handle. Ru: 848 articles, ~279 k words. Update dates differ (07.10 vs 15.09.2026):
+  check that the editions match.
 
 ### D1 — Negation Margin (`margin = cos(s, paraphrase) − cos(s, negation)`)
 30 modal norms of the Labor Code («вправе / обязан / допускается / запрещается / не может превышать»),
@@ -104,14 +106,47 @@ Lexicalized negative forms (`қоспағанда` "except", `келіспеуш
 ### Environment
 `.venv` (Python 3.12, torch 2.11+cu128, RTX 4050 6 GB), `requirements.txt`. All scripts run with `python -m src....`.
 
-### For the owner to check (morning)
-1. `data/diagnostics/review_d1_kz.tsv` — 30 Kz triples: set `status` to `ok` / `fixed` (after editing cells) / `drop`,
-   then `python -m src.diagnostics.kz_review apply` and rerun D1 kz without `--include-unchecked`.
-2. `data/diagnostics/d2_kz_neg_forms.tsv` — 171 forms: `status` = `ok` / `wrong_split` / `not_neg`
-   (decide on lexicalized `қоспағанда`, `келіспеушілік`), then `python -m src.diagnostics.d2_affix`.
-3. `data/corpus/labor_alignment_check.tsv` — 10 random Ru/Kz chunks: `aligned_ok` = yes/no.
+---
+
+## 2026-10-21 (day) — independent checks instead of manual ones (decision log, CLAUDE.md 12)
+
+### D2 forms cross-checked by two independent Kazakh analyzers
+`src/diagnostics/d2_crosscheck.py` → `results/d2_crosscheck.json`. kaznlp (segmentation, negation tag `ETB` with
+the exact affix span) and apertium-kaz nightly (`kaz.automorf.hfst` via pyhfst, tag `<neg>`); tools live outside
+the repo in `../nlp_tools`.
+* kaznlp knows 94 of 171 forms; where it does, **the affix position matches the regex splitter in 88 of 88**
+  negative cases. apertium knows 162 of 171.
+* **154 / 171 forms (488 / 581 occurrences) confirmed by the tools → status `ok_auto`.** 17 go to the owner:
+  7 lexicalized (`қоспағанда`, `келіспеушілік*`), 9 unknown to both tools, `алмаса` (ambiguous), `сұғылмауына`.
+* Rule stated up front: an apertium analysis whose lemma already contains stem+affix (`реттелмеген<adj>`) counts as
+  negative — the affix is in the word, which is what D2 measures.
+* **D2 on the 154 confirmed forms: isolation 20.8%** (freq-weighted 17.8%; the drop vs 24.6% is `қоспағанда`,
+  52 occurrences, now pending). `results/d2_affix_isolation_checked154.json`. Conclusion unchanged.
+
+### Ru/Kz alignment checked automatically on all 448 pairs
+`src/scrape/check_alignment.py` → `results/alignment_check_labor.json`.
+Point/sub-point numbering identical in 99.3% of pairs, all numbers identical in 99.3%, true partner in the
+cross-lingual top-3 (e5) both ways in 96%. 20 pairs flagged; 15 of them only by rank (numbering and numbers
+identical — a near-duplicate neighbour article), **5 structural ones go to the owner**:
+* `labor:178` — **the official texts disagree:** Ru refers to «подпункт 22) пункта 1 статьи **52**», Kz to
+  «**51**-бабы». Art. 52 is the one with the grounds for termination by the employer, so the Kz text looks wrong.
+* `labor:26:1/26:2` — sub-point «2-1)» sits in point 1 in Ru but in point 2 in Kz; `labor:187-1` — Kz has «1.» that
+  Ru lacks; `labor:127-3:4` — an extra Ru paragraph.
+* Parser fix found by the check: a chapter heading («Глава 18.») inside a `<p>` leaked into `labor:180`.
+
+### Kazakh D1 drafts self-reviewed
+9 of 30 Kz triples carry an `agent_doubt` note in the review sheet (4 are modality-based negations by design).
+One real error fixed: kz028 paraphrase used «зорлауға» (ambiguous, primarily "to rape") → «күштеуге». Kz D1 after
+the fix: −0.0135 [−0.020, −0.006] (was −0.0134).
+
+### For the owner to check (≈30 min total)
+1. `data/diagnostics/d2_owner_check.tsv` — **17 forms**: `decision` = `ok` / `not_neg` / `wrong_split`, then
+   `python -m src.diagnostics.kz_review apply-d2` and `python -m src.diagnostics.d2_affix`.
+2. `data/diagnostics/review_d1_kz.tsv` — 30 Kz triples, start with the 9 that have `agent_doubt`: `status` =
+   `ok` / `fixed` (after editing cells) / `drop`, then `python -m src.diagnostics.kz_review apply`.
+3. `data/corpus/labor_alignment_flagged.tsv` — **5 pairs**: `aligned_ok` = yes/no (they are the same place in the
+   code; differences come from the official texts).
 4. Russian triples in `data/diagnostics/d1_triples.jsonl` — quick read of paraphrases/negations.
-5. Tax Code: confirm K2500000214 and look at the Kz/Ru size mismatch.
 
 ### Evaluation set — started (drafts only)
 `data/eval/queries_draft_ru.{jsonl,tsv}` (generator `data/eval/make_draft_ru.py`): **22 Ru draft questions on the

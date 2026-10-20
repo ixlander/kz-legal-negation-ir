@@ -13,3 +13,4 @@ pandas
 numpy
 matplotlib
 tqdm
+pyhfst  # only for src/diagnostics/d2_crosscheck.py (apertium-kaz lookup)
