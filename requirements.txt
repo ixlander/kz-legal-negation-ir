@@ -1,0 +1,15 @@
+# torch: install separately with CUDA wheels, e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+transformers
+sentence-transformers
+sentencepiece
+pymorphy3
+pymorphy3-dicts-ru
+rank_bm25
+playwright
+beautifulsoup4
+lxml
+pandas
+numpy
+matplotlib
+tqdm
