@@ -1,0 +1,266 @@
+<title>Разметка Ru/Kz норм</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=PT+Sans:wght@400;700&family=PT+Mono&display=swap">
+<style>
+/* Layout: sticky bar with section tabs + progress + submit; one column of review cards (~880px). */
+:root {
+  --bg: #f4f6f8; --card: #ffffff; --ink: #14181d; --ink-2: #56606b; --rule: #dde2e8;
+  --accent: #2a5db0; --accent-soft: #e6eefb;
+  --ok: #17803d; --ok-soft: #e3f4e8; --warn: #9a6300; --warn-soft: #fbf0d9;
+  --bad: #b3261e; --bad-soft: #fbe5e3; --mark-bg: #ffe2c7; --mark-ink: #8a3400;
+  --f-display: "PT Serif", Georgia, serif; --f-body: "PT Sans", "Segoe UI", Arial, sans-serif;
+  --f-mono: "PT Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121519; --card: #1b2026; --ink: #e9edf1; --ink-2: #a3adb8; --rule: #2d343c;
+  --accent: #7aa7ee; --accent-soft: #1d2a40; --ok: #5cc584; --ok-soft: #173023; --warn: #e7b65a;
+  --warn-soft: #33290f; --bad: #f08a83; --bad-soft: #3a1c1a; --mark-bg: #4a2d14; --mark-ink: #ffc58f; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #121519; --card: #1b2026; --ink: #e9edf1; --ink-2: #a3adb8; --rule: #2d343c;
+  --accent: #7aa7ee; --accent-soft: #1d2a40; --ok: #5cc584; --ok-soft: #173023; --warn: #e7b65a;
+  --warn-soft: #33290f; --bad: #f08a83; --bad-soft: #3a1c1a; --mark-bg: #4a2d14; --mark-ink: #ffc58f; color-scheme: dark; }
+body { background: var(--bg); color: var(--ink); font: 16px/1.5 var(--f-body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--card); }
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--card); border-bottom: 1px solid var(--rule); }
+.bar-in, main { max-width: 900px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.bar-in { padding-block: 10px; display: grid; gap: 10px; }
+.top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; justify-content: space-between; }
+h1 { font: 700 22px/1.2 var(--f-display); margin: 0; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+.tab { flex: none; border: 1px solid var(--rule); background: var(--card); color: var(--ink); border-radius: 999px; padding: 6px 12px; font: 700 14px var(--f-body); cursor: pointer; display: flex; gap: 8px; align-items: center; }
+.tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--card); }
+.tab .n { font-weight: 400; font-variant-numeric: tabular-nums; opacity: .85; }
+.btn { border: 1px solid var(--rule); background: var(--card); color: var(--ink); border-radius: 8px; padding: 7px 12px; font: 700 14px var(--f-body); cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--card); }
+.btn:focus-visible, .tab:focus-visible, .choice:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.status { font-size: 13px; color: var(--ink-2); }
+main { padding-block: 18px 60px; display: grid; gap: 16px; }
+.intro { background: var(--accent-soft); border-radius: 8px; padding: 12px 14px; display: grid; gap: 6px; font-size: 15px; }
+.intro b { font-weight: 700; }
+.banner { background: var(--warn-soft); color: var(--warn); border-radius: 8px; padding: 10px 14px; font-size: 14px; }
+.filter { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 14px; color: var(--ink-2); }
+.card { background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 12px; }
+.card[data-state="ok"] { border-left-color: var(--ok); }
+.card[data-state="fix"] { border-left-color: var(--warn); }
+.card[data-state="bad"] { border-left-color: var(--bad); }
+.head { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; }
+.id { font: 13px var(--f-mono); color: var(--ink-2); }
+.big { font: 700 21px var(--f-body); }
+.chip { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--bg); color: var(--ink-2); }
+.chip.doubt { background: var(--warn-soft); color: var(--warn); }
+.rows { display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 10px; align-items: start; }
+.lab { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-2); padding-top: 3px; }
+.mono { font: 14px/1.45 var(--f-mono); overflow-wrap: anywhere; }
+.txt { overflow-wrap: anywhere; }
+.ru { color: var(--ink-2); }
+mark { background: var(--mark-bg); color: var(--mark-ink); border-radius: 3px; padding: 0 2px; }
+textarea { width: 100%; box-sizing: border-box; font: 15px/1.45 var(--f-body); color: var(--ink); background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 7px 9px; resize: vertical; min-height: 2.6em; }
+.choices { display: flex; flex-wrap: wrap; gap: 6px; }
+.choice { border: 1px solid var(--rule); background: var(--card); color: var(--ink); border-radius: 6px; padding: 7px 11px; font: 14px var(--f-body); cursor: pointer; }
+.choice[aria-pressed="true"][data-tone="ok"] { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); font-weight: 700; }
+.choice[aria-pressed="true"][data-tone="fix"] { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); font-weight: 700; }
+.choice[aria-pressed="true"][data-tone="bad"] { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); font-weight: 700; }
+details { border-top: 1px solid var(--rule); padding-top: 8px; }
+summary { cursor: pointer; font-size: 14px; color: var(--accent); }
+.law { display: grid; gap: 4px; padding: 8px 10px; background: var(--bg); border-radius: 6px; font-size: 14px; white-space: pre-line; }
+.law .t { font-weight: 700; white-space: normal; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cols > div { min-width: 0; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--card); padding: 10px 16px; border-radius: 8px; font-size: 14px; z-index: 20; max-width: calc(100% - 32px); }
+@media (max-width: 620px) {
+  .row { grid-template-columns: 1fr; gap: 2px; }
+  .cols { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) { .card { transition: border-color .15s; } }
+</style>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="top">
+      <h1>Разметка Ru/Kz норм</h1>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <span class="status" id="saveStatus">Подключаю хранилище…</span>
+        <button class="btn primary" id="submitBtn" type="button">Отправить Claude</button>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs" role="tablist"></nav>
+  </div>
+</header>
+<main id="main"></main>
+<div class="toast" id="toast" hidden></div>
+
+<script type="application/json" id="data">__DATA__</script>
+<script>
+const DATA = JSON.parse(document.getElementById("data").textContent);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+
+// Highlight what changed between two sentences (common prefix/suffix, widened to word edges).
+function diff(a, b) {
+  let i = 0; while (i < a.length && i < b.length && a[i] === b[i]) i++;
+  let j = 0; while (j < a.length - i && j < b.length - i && a[a.length - 1 - j] === b[b.length - 1 - j]) j++;
+  while (i > 0 && /\S/.test(b[i - 1])) i--;
+  while (j > 0 && /\S/.test(b[b.length - j])) j--;
+  const mid = b.slice(i, b.length - j);
+  return mid ? esc(b.slice(0, i)) + "<mark>" + esc(mid) + "</mark>" + esc(b.slice(b.length - j)) : esc(b);
+}
+const law = c => `<div class="law"><span class="t">${esc(c.id)} · ${esc(c.title)}</span>${esc(c.text)}</div>`;
+const row = (lab, html, cls = "txt") => `<div class="row"><span class="lab">${lab}</span><div class="${cls}">${html}</div></div>`;
+const area = (key, field, value, rows = 2) =>
+  `<textarea id="${esc(key + "__" + field)}" data-key="${esc(key)}" data-field="${field}" rows="${rows}">${esc(value)}</textarea>`;
+
+const SECTIONS = [
+  { id: "d2", tab: "Формы D2", items: DATA.d2,
+    intro: "Казахские глагольные формы, где мой стеммер нашёл отрицательный аффикс, а два анализатора (kaznlp, apertium) не смогли подтвердить или считают слово лексикализованным. Для каждой: это отрицание и аффикс выделен верно?",
+    choices: [["ok", "Отрицание, разбор верный", "ok"], ["wrong_split", "Отрицание, граница не та", "fix"], ["not_neg", "Не отрицание", "bad"]],
+    body: x => `<div class="head"><span class="big">${esc(x.form)}</span><span class="id">${esc(x.key)} · в корпусе ${x.freq}×</span></div>
+      <div class="rows">${row("Разбор", esc(x.split.replace(/\+/g, " + ")), "mono")}
+      ${row("Почему здесь", esc(x.why))}
+      ${x.context ? row("В тексте", esc(x.context.text).replace(new RegExp(x.form, "i"), m => "<mark>" + m + "</mark>") + ` <span class="id">${esc(x.context.chunk_id)}</span>`) : ""}
+      ${row("kaznlp", esc(x.kaznlp || "не знает слова"), "mono")}${row("apertium", esc(x.apertium || "не знает слова"), "mono")}
+      ${row("Правильный разбор", area(x.key, "correct_split", "", 1) + '<span class="status">Только если «граница не та», например: ас + па + уға</span>')}</div>` },
+  { id: "d1kz", tab: "Тройки D1 (kz)", items: DATA.d1kz,
+    intro: "Казахская норма из кодекса и мои три варианта. <b>Перефраз</b> — тот же смысл другими словами. <b>Отрицание</b> — та же норма с обратным смыслом. <b>Синоним</b> — замена одного слова без смены смысла. Исправьте текст прямо в поле, если нужно; карточка сама станет «исправлено».",
+    choices: [["ok", "Всё верно", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть пример", "bad"]],
+    body: x => `<div class="head"><span class="id">${esc(x.key)} · механизм: ${esc(x.mechanism)}</span>${x.doubt ? `<span class="chip doubt">Сомневаюсь: ${esc(x.doubt)}</span>` : ""}</div>
+      <div class="rows">${row("Ru оригинал", esc(x.ru_sentence), "txt ru")}${row("Ru отрицание", diff(x.ru_sentence, x.ru_negation), "txt ru")}
+      ${row("Kz норма", esc(x.kz_sentence))}
+      ${row("Перефраз", area(x.key, "paraphrase", x.paraphrase, 3))}
+      ${row("Отрицание", `<div class="txt">${diff(x.kz_sentence, x.negation)}</div>` + area(x.key, "negation", x.negation, 3))}
+      ${row("Синоним", `<div class="txt">${diff(x.kz_sentence, x.min_paraphrase)}</div>` + area(x.key, "min_paraphrase", x.min_paraphrase, 3))}</div>` },
+  { id: "align", tab: "Выравнивание", items: DATA.align,
+    intro: "Пары «один и тот же пункт кодекса на русском и казахском», где автоматическая проверка нашла расхождение (номера, числа, длина). Нужно только сказать: это действительно одно и то же место кодекса? Расхождение в самих официальных текстах (например, ссылка на другую статью) — тоже «да», опишите его в комментарии.",
+    choices: [["yes", "Да, одно и то же место", "ok"], ["no", "Нет, тексты не совпадают", "bad"]],
+    body: x => `<div class="head"><span class="big mono" style="font-size:17px">${esc(x.chunk_id)}</span></div>
+      <div class="rows">${row("Что нашёл скрипт", esc(x.why), "mono")}</div>
+      <div class="cols"><div>${row("Ru", "")}<div class="law">${esc(x.ru.replace(/ \/ /g, "\n"))}</div></div>
+      <div>${row("Kz", "")}<div class="law">${esc(x.kz.replace(/ \/ /g, "\n"))}</div></div></div>` },
+  { id: "questions", tab: "Вопросы", items: DATA.questions,
+    intro: "Черновики вопросов по Трудовому кодексу. <b>Gold</b> — пункт, который отвечает на вопрос. <b>Twin</b> — пункт на ту же тему с обратной полярностью (только у negation-вопросов). Поправьте вопрос и id пунктов прямо в полях (через пробел), тексты пунктов раскрываются ниже.",
+    choices: [["ok", "Годится", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть", "bad"]],
+    body: x => `<div class="head"><span class="id">${esc(x.qid)}</span><span class="chip">${x.slice === "negation" ? "negation" : "general"}</span></div>
+      <div class="rows">${row("Вопрос", area(x.key, "question", x.question, 2))}
+      ${row("Gold", area(x.key, "gold", x.gold.map(c => c.id).join(" "), 1))}
+      ${row("Twin", area(x.key, "twin", x.twin.map(c => c.id).join(" "), 1))}
+      ${x.notes ? row("Моя заметка", esc(x.notes)) : ""}</div>
+      <details><summary>Тексты пунктов</summary><div class="rows" style="margin-top:8px">${x.gold.map(c => row("Gold", law(c))).join("")}${x.twin.map(c => row("Twin", law(c))).join("")}</div></details>` },
+  { id: "d1ru", tab: "Тройки D1 (ru)", items: DATA.d1ru,
+    intro: "Необязательно. Русские тройки для D1: норма из Трудового кодекса, перефраз, отрицание и замена синонимом. Если всё нормально, достаточно «Всё верно».",
+    choices: [["ok", "Всё верно", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть пример", "bad"]],
+    body: x => `<div class="head"><span class="id">${esc(x.key)} · ${esc(x.chunk_id)} · ${esc(x.neg_type)}</span></div>
+      <div class="rows">${row("Норма", esc(x.sentence))}
+      ${row("Перефраз", area(x.key, "paraphrase", x.paraphrase, 2))}
+      ${row("Отрицание", `<div class="txt">${diff(x.sentence, x.negation)}</div>` + area(x.key, "negation", x.negation, 2))}
+      ${row("Синоним", `<div class="txt">${diff(x.sentence, x.min_paraphrase)}</div>` + area(x.key, "min_paraphrase", x.min_paraphrase, 2))}</div>` },
+];
+const TONE = {}; SECTIONS.forEach(s => s.choices.forEach(([v, , t]) => TONE[s.id + ":" + v] = t));
+const ORIGINAL = {}; SECTIONS.forEach(s => s.items.forEach(x => ORIGINAL[x.key] = s.id));
+
+let answers = {};            // key -> {decision, edits:{}, comment}
+let current = SECTIONS[0].id;
+let showOpen = false;
+let db = null;
+const KEY = "review-local-v1";
+try { answers = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+
+function toast(msg) {
+  const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false;
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 3500);
+}
+function done(s) { return s.items.filter(x => answers[x.key]?.decision).length; }
+
+function renderTabs() {
+  document.getElementById("tabs").innerHTML = SECTIONS.map(s =>
+    `<button class="tab" role="tab" type="button" id="tab-${s.id}" aria-selected="${s.id === current}" data-sec="${s.id}">${s.tab}<span class="n">${done(s)}/${s.items.length}</span></button>`).join("");
+}
+function cardState(sec, key) {
+  const d = answers[key]?.decision; return d ? TONE[sec + ":" + d] : "";
+}
+function renderMain() {
+  const s = SECTIONS.find(s => s.id === current);
+  const items = showOpen ? s.items.filter(x => !answers[x.key]?.decision) : s.items;
+  document.getElementById("main").innerHTML =
+    (db ? "" : `<div class="banner" id="nodb">Общее хранилище недоступно в этом окне: ответы сохраняются только в этом браузере. Откройте страницу на claude.ai, чтобы они дошли до Claude.</div>`) +
+    `<div class="intro">${s.intro}</div>
+     <div class="filter"><label><input type="checkbox" id="onlyOpen" ${showOpen ? "checked" : ""}> показывать только неразмеченные</label>
+     <span>${done(s)} из ${s.items.length} размечено</span></div>` +
+    items.map(x => `<article class="card" id="card-${esc(x.key)}" data-state="${cardState(s.id, x.key)}">${s.body(x)}
+      <div class="choices">${s.choices.map(([v, label, tone]) =>
+        `<button class="choice" type="button" data-key="${esc(x.key)}" data-val="${v}" data-tone="${tone}" aria-pressed="${answers[x.key]?.decision === v}">${label}</button>`).join("")}</div>
+      ${area(x.key, "comment", answers[x.key]?.comment || "", 1).replace("<textarea", '<textarea placeholder="Комментарий (необязательно)"')}
+    </article>`).join("");
+  // restore edited fields
+  document.querySelectorAll("textarea[data-field]").forEach(ta => {
+    const a = answers[ta.dataset.key]; const f = ta.dataset.field;
+    if (f !== "comment" && a?.edits && f in a.edits) ta.value = a.edits[f];
+  });
+}
+function render() { renderTabs(); renderMain(); }
+
+const queues = {};
+function save(key) {
+  const body = { ...answers[key], section: ORIGINAL[key], updated: new Date().toISOString() };
+  try { localStorage.setItem(KEY, JSON.stringify(answers)); } catch (e) {}
+  if (!db) return;
+  queues[key] = (queues[key] || Promise.resolve()).then(() => db.collection("reviews").doc(key).set(body))
+    .then(() => setStatus("Сохранено"))
+    .catch(e => setStatus(e?.code === "invalid_argument" ? "Нет прав на запись" : "Ошибка сохранения, попробуйте ещё раз"));
+}
+function setStatus(t) { document.getElementById("saveStatus").textContent = t; }
+
+document.addEventListener("click", e => {
+  const tab = e.target.closest(".tab");
+  if (tab) { current = tab.dataset.sec; render(); window.scrollTo(0, 0); return; }
+  const ch = e.target.closest(".choice");
+  if (ch) {
+    const key = ch.dataset.key; answers[key] = answers[key] || {};
+    answers[key].decision = answers[key].decision === ch.dataset.val ? null : ch.dataset.val;
+    save(key);
+    const sec = ORIGINAL[key];
+    document.querySelectorAll(`.choice[data-key="${CSS.escape(key)}"]`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.val === answers[key].decision)));
+    document.getElementById("card-" + key).dataset.state = cardState(sec, key);
+    renderTabs(); document.querySelector(".filter span").textContent = `${done(SECTIONS.find(s => s.id === sec))} из ${SECTIONS.find(s => s.id === sec).items.length} размечено`;
+  }
+});
+document.addEventListener("change", e => {
+  if (e.target.id === "onlyOpen") { showOpen = e.target.checked; renderMain(); return; }
+  const ta = e.target.closest("textarea[data-field]"); if (!ta) return;
+  const key = ta.dataset.key, f = ta.dataset.field; answers[key] = answers[key] || {};
+  if (f === "comment") answers[key].comment = ta.value;
+  else {
+    answers[key].edits = { ...(answers[key].edits || {}), [f]: ta.value };
+    const sec = ORIGINAL[key];
+    if (["d1kz", "questions", "d1ru"].includes(sec) && answers[key].decision !== "drop") {
+      answers[key].decision = "fixed";
+      document.querySelectorAll(`.choice[data-key="${CSS.escape(key)}"]`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset.val === "fixed")));
+      document.getElementById("card-" + key).dataset.state = "fix"; renderTabs();
+    }
+  }
+  save(key);
+});
+document.getElementById("submitBtn").addEventListener("click", async () => {
+  const counts = Object.fromEntries(SECTIONS.map(s => [s.id, `${done(s)}/${s.items.length}`]));
+  if (!db) { toast("Хранилище недоступно: откройте страницу на claude.ai и нажмите ещё раз"); return; }
+  try {
+    await db.doc("meta/submission").set({ submitted: new Date().toISOString(), counts });
+    toast("Отправлено. Напишите Claude в чате «готово» — он заберёт ответы.");
+    setStatus("Отправлено");
+  } catch (e) { toast("Не получилось отправить: " + (e?.code || "ошибка")); }
+});
+
+render();
+(async () => {
+  try { db = await window.claude?.use?.("db"); } catch (e) { db = null; }
+  if (!db) { setStatus("Только локально"); renderMain(); return; }
+  setStatus("Подключено");
+  let first = true;
+  db.collection("reviews").onSnapshot(snap => {
+    if (first) { answers = {}; first = false; }   // the shared store is the record, not this browser's cache
+    snap.docs.forEach(d => { const v = d.data(); if (v) answers[d.id] = { decision: v.decision ?? null, edits: v.edits, comment: v.comment }; });
+    const focused = document.activeElement?.tagName === "TEXTAREA";
+    if (!focused) render(); else renderTabs();
+  }, () => setStatus("Связь с хранилищем потеряна"));
+})();
+</script>
