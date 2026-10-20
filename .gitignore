@@ -1,0 +1,16 @@
+# env
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# raw data: large / third-party, not versioned
+data/raw/
+# teacher folder contained a notebook with a live HF token — never commit it
+app.py
+llama2 notebook.ipynb
+
+# model checkpoints
+checkpoints/
+*.pt
+*.safetensors

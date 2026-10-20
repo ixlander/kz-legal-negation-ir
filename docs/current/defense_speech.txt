@@ -1,0 +1,23 @@
+Hello. My research project is called "Negation-Aware Retrieval for Russian and Kazakh Legal Texts". In short, I want to check whether legal search systems can tell what the law allows from what it forbids, and how to make them better at it.
+
+Many legal assistants today are RAG systems. A retriever finds articles of law, and a language model writes an answer from them. If the retriever brings the wrong article, the language model usually cannot fix it. So my thesis is simple: fix the evidence before generation, not the size of the generator.
+
+The most dangerous mistake here is negation. "The employer has the right to terminate the contract" and "The employer does not have the right" differ by one word, "не", but mean the opposite. For embedding models, they look almost identical. The NevIR study, reproduced at SIGIR in 2025, shows that most dense retrievers score 6 to 23 percent on negation pairs, below random guessing at 25 percent. But only in English.
+
+For Kazakh, the problem is harder. Negation is often an affix inside the word: "төлейді" means "pays", "төлемейді" means "does not pay". A subword tokenizer may not separate this affix at all. And Kazakh has no legal retrieval benchmark and, as far as I could find, no established NLI dataset. This matters for lawyers, for citizens who look up their rights, and for legal tech in Kazakhstan.
+
+So my research question is: do a morphology-aware BM25 and an NLI reranker retrieve the article with the right polarity, and do they help Kazakh more than Russian?
+
+The corpus is the Labor Code and the Tax Code from adilet.zan.kz. An important detail: the codes are published in both Russian and Kazakh. So I can compare the two languages on the same legal norms, and any difference comes from the language, not from the content.
+
+The pipeline is on the slide. Dense retrieval with multilingual-e5 is combined with BM25 that keeps negation as a separate token: "не" in Russian, "-ма" and "-ме" in Kazakh. Then an XLM-RoBERTa reranker, fine-tuned for natural language inference, checks whether each article supports or contradicts the query. I add one component at a time and compare the reranker with two controls: a strong ordinary reranker and a simple polarity rule.
+
+To go beyond NevIR, I use four metrics of my own. Negation Margin: is a sentence closer to its negation than to its paraphrase? Affix Isolation: how often does the tokenizer separate the Kazakh negative affix? Twin-above-Gold: how often is the article with the opposite meaning ranked above the correct one, in the full corpus? And Negation Gap: how much does each system drop on negation queries?
+
+My main hypotheses: morphology-aware BM25 reduces the negation gap, the NLI reranker beats both controls, and the gain is larger for Kazakh than for Russian.
+
+About the contribution: hybrid search and reranking already exist, so this is not a new architecture. What is new is, to my knowledge, the first Russian and Kazakh legal retrieval benchmark with negation queries, my own diagnostics, and an ablation of each component. Even a refuted hypothesis, measured correctly, is a result.
+
+The project is feasible: two codes, base-size models on a single GPU. The main risk is manual labeling of the test questions, so I start it early, and if needed I reduce it to about ninety questions rather than drop it.
+
+To summarize: retrieval models struggle with negation, legal text is full of it, and for Kazakh, as far as I know, it has not been measured. My project measures it and tests simple fixes. Thank you, I am ready for your questions.
