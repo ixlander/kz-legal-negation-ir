@@ -160,3 +160,54 @@ questions may end up without a twin unless such articles are split by sentence. 
 * Tax Code Ru+Kz with the same scraper; split long no-point articles.
 * D1 on 100 triples (extend from 30 per language).
 * Draft 50 Ru evaluation questions with gold (owner finalizes gold/twin).
+
+---
+
+## 2026-10-21 (evening) — research, wider pool, full corpus, analyzers
+
+Decisions logged in CLAUDE.md §12 (21.10.2026). Research notes: `docs/research/2026-10-21_tools_models_data.md`.
+
+### Corpus: 22 codes in force, point-level chunks
+`python -m src.scrape.adilet --all`. Chunk = point when Ru/Kz point numbering matches, long chunks split by
+sub-point groups (≤300 words). **~30.8k aligned chunks per language** (labor 774, tax 3,320); inventory
+`data/corpus/codes_inventory.md` (Entrepreneurial Code left out: Ru/Kz editions differ). Alignment check on all
+30,766 pairs: 0.86% structural mismatches before number normalization; labor 6 + tax 12 for the owner
+(real discrepancies of the official texts, e.g. tax:370 cites art. 399 in Ru vs 339 in Kz); 227 suspect
+distractor chunks in `data/corpus/alignment_suspect_distractors.json`.
+D1 triples and the Ru eval drafts were remapped to point-level ids; drafts now 24 (13 negation, **10 with a twin**).
+
+### D1 on six embedders (`results/d1_pool_*.json`, table `results/d1_pool_table.md`; kz = prelim)
+| model | margin ru | <0 ru | neg. position ru | margin kz* | <0 kz* | neg. position kz* |
+|---|---|---|---|---|---|---|
+| e5-base | −0.018 | 90% | 0.56 | −0.014 | 77% | 0.57 |
+| e5-large-instruct | −0.004 (CI ∋ 0) | 57% | 0.96 | −0.019 | 90% | 0.45 |
+| bge-m3 | −0.008 (CI ∋ 0) | 57% | 0.81 | −0.013 (CI ∋ 0) | 60% | 0.87 |
+| LaBSE | −0.073 | 97% | 0.30 | −0.074 | 93% | 0.33 |
+| Qwen3-Embedding-0.6B | −0.122 | 100% | 0.12 | −0.171 | 100% | 0.09 |
+| embeddinggemma-2 | −0.065 | 100% | 0.07 | −0.087 | 100% | −0.02 |
+*Negation position* = (d_neg − d_syn) / (d_para − d_syn), scale-free across models: 0 = the negation moves the
+vector no more than a one-word synonym edit, 1 = as much as a full rewording.
+* **No model has a positive margin**: D1 is not refuted for any of them. For bge-m3 and e5-large-instruct (ru) the
+  margin is ≈ 0 (no difference detected) — negation and rewording are equally far, still a retrieval risk.
+* Newer general-purpose embedders (Qwen3, embeddinggemma) are the most negation-blind; LaBSE (bitext-trained) too.
+* e5-large-instruct improves on Russian (57% negative) but not on Kazakh (90%) — the first sign of a Ru/Kz gap.
+
+### D2 on 14 tokenizers (`results/d2_pool.json`, 154 verified forms)
+Isolation: mBERT 47%, Gemma 45%, ruBERT 34%, Qwen3 25%, **XLM-R 21%**, mDeBERTa 10%, LaBSE 7%, Kazakh
+monolingual tokenizers 0–2% (frequent negative forms are single tokens: «болмаған», «берілмейді»).
+Caveat: the "morph-BPE" Kazakh tokenizer likely expects morphologically pre-segmented input, which its HF
+tokenizer does not do — its 0% is not evidence against morphological tokenization.
+
+### BM25 analyzers (B2)
+`src/retrieval/morph_ru.py`: pymorphy3 lemmas, fused «не-» split when the rest is a known word of the same POS
+group (exception list checked on the Labor Code), negation whitelist instead of a stop list.
+`src/retrieval/morph_kz.tokenize_bm25`: kazsearch stems + `NEG`; a negative form gets the stem of its positive form,
+so «жол берілмейді» / «жол беріледі» → `жол бері NEG` / `жол бері`.
+
+### External data (`python -m src.data.fetch_external`, not versioned)
+KazQAD retrieval, RuLawRetrieval, NevIR, RCB/LiDiRus/TERRa, snli-kazakh, XNLI ru/tr, Kardeş-NLU.
+
+### For the owner (updated)
+1. `data/diagnostics/d2_owner_check.tsv` — 17 forms. 2. `data/diagnostics/review_d1_kz.tsv` — 30 Kz triples
+(9 with `agent_doubt`). 3. `data/corpus/labor_alignment_flagged.tsv` (6) and `tax_alignment_flagged.tsv` (12).
+4. `data/eval/queries_draft_ru.tsv` — 24 Ru draft questions, gold/twin candidates.
