@@ -39,10 +39,11 @@ POINT_RE = re.compile(r"^(\d+(?:-\d+)?)\.\s")
 
 
 def fetch(code, lang):
+    """`code` is a short name from CODES or an adilet NGR (e.g. K1500000414)."""
     RAW.mkdir(parents=True, exist_ok=True)
     path = RAW / f"{code}_{LANGS[lang]}.json"
     if not path.exists():
-        req = urllib.request.Request(API.format(ngr=CODES[code], lang=LANGS[lang]),
+        req = urllib.request.Request(API.format(ngr=CODES.get(code, code), lang=LANGS[lang]),
                                      headers={"User-Agent": "Mozilla/5.0"})
         path.write_bytes(urllib.request.urlopen(req, timeout=120).read())
     return json.loads(path.read_text(encoding="utf-8"))["document"]
@@ -67,18 +68,23 @@ def parse_articles(html, lang):
         el.decompose()
     arts, cur = [], None
     for p in soup.find_all(["p", "h3"]):
-        if p.name == "h3":
-            continue
         text = _clean(p.get_text(" "))
         if lang == "kz":
             text = normalize_kz(text)
         if not text:
             continue
-        b = p.find("b")
-        btext = _clean(b.get_text(" ")) if b else ""
-        if lang == "kz":
-            btext = normalize_kz(btext)
-        m = HEAD_RE[lang].match(text) if b and btext == text else None
+        if p.name == "h3":
+            # chapters/sections; in some acts (Kz Tax Code) also the article headings
+            m = HEAD_RE[lang].match(text)
+            if not m:
+                continue
+        else:
+            # the heading may be split over several <b> (APPK: «<b>35-бап. </b><b>Аудармашы</b>»)
+            bs = p.find_all("b")
+            btext = _clean(" ".join(b.get_text(" ") for b in bs))
+            if lang == "kz":
+                btext = normalize_kz(btext)
+            m = HEAD_RE[lang].match(text) if bs and btext == text else None
         if m:
             cur = {"article_no": m.group(1), "title": m.group(2), "points": [],
                    "excluded": bool(EXCLUDED_RE.search(m.group(2)))}
