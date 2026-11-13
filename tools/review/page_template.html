@@ -111,20 +111,34 @@ const row = (lab, html, cls = "txt") => `<div class="row"><span class="lab">${la
 const area = (key, field, value, rows = 2) =>
   `<textarea id="${esc(key + "__" + field)}" data-key="${esc(key)}" data-field="${field}" rows="${rows}">${esc(value)}</textarea>`;
 
+// Script notes -> plain Russian for the reviewer.
+const WHY_D2 = w => w === "lexicalized?"
+  ? "Застывшая форма (обычно существительное): аффикс есть, но слово может уже не ощущаться как отрицание. Если аффикс на месте — «Отрицание, разбор верный», а в комментарии можно написать «застывшее слово»."
+  : w.includes("not_covered") ? "Анализаторы не знают это слово, проверить некому, кроме вас."
+  : "Анализаторы разошлись во мнениях.";
+const MECH = { affix: "аффикс -ма/-ме…", particle: "частица емес/жоқ", lexical: "смена слова (рұқсат етіледі → тыйым салынады и т. п.)" };
+const WHY_AL = w => w.split("; ").map(p => p
+  .replace("markers differ", "разная нумерация подпунктов")
+  .replace(/numbers differ: ru-only (\{.*?\}) kz-only (\{.*?\})/, (m, a, b) => {
+    const nums = s => s.replace(/[{}']/g, "").replace(/: \d+/g, "") || "—";
+    return `разные числа: только в Ru ${nums(a)}, только в Kz ${nums(b)}`; })
+  .replace(/length ratio ([\d.]+)/, "длина Kz/Ru = $1 (норма 0.6–1.6)")
+  .replace(/xling rank .*/, "модель не уверена, что тексты — перевод друг друга")).join("; ");
+
 const SECTIONS = [
   { id: "d2", tab: "Формы D2", items: DATA.d2,
-    intro: "Казахские глагольные формы, где мой стеммер нашёл отрицательный аффикс, а два анализатора (kaznlp, apertium) не смогли подтвердить или считают слово лексикализованным. Для каждой: это отрицание и аффикс выделен верно?",
+    intro: "Казахские слова из кодексов, в которых скрипт нашёл отрицательный аффикс (-ма/-ме/-ба/-бе/-па/-пе), а два автоматических анализатора (kaznlp, apertium) не смогли это подтвердить. Для каждого слова: есть ли в нём отрицательный аффикс и правильно ли скрипт его выделил? Строки kaznlp/apertium — подсказка, их можно не читать.",
     choices: [["ok", "Отрицание, разбор верный", "ok"], ["wrong_split", "Отрицание, граница не та", "fix"], ["not_neg", "Не отрицание", "bad"]],
     body: x => `<div class="head"><span class="big">${esc(x.form)}</span><span class="id">${esc(x.key)} · в корпусе ${x.freq}×</span></div>
       <div class="rows">${row("Разбор", esc(x.split.replace(/\+/g, " + ")), "mono")}
-      ${row("Почему здесь", esc(x.why))}
+      ${row("Почему здесь", esc(WHY_D2(x.why)))}
       ${x.context ? row("В тексте", esc(x.context.text).replace(new RegExp(x.form, "i"), m => "<mark>" + m + "</mark>") + ` <span class="id">${esc(x.context.chunk_id)}</span>`) : ""}
       ${row("kaznlp", esc(x.kaznlp || "не знает слова"), "mono")}${row("apertium", esc(x.apertium || "не знает слова"), "mono")}
       ${row("Правильный разбор", area(x.key, "correct_split", "", 1) + '<span class="status">Только если «граница не та», например: ас + па + уға</span>')}</div>` },
   { id: "d1kz", tab: "Тройки D1 (kz)", items: DATA.d1kz,
-    intro: "Казахская норма из кодекса и мои три варианта. <b>Перефраз</b> — тот же смысл другими словами. <b>Отрицание</b> — та же норма с обратным смыслом. <b>Синоним</b> — замена одного слова без смены смысла. Исправьте текст прямо в поле, если нужно; карточка сама станет «исправлено».",
+    intro: "Казахская норма из кодекса (её не трогаем) и три варианта, которые написал Claude — в них могут быть ошибки. <b>Перефраз</b> — тот же смысл другими словами. <b>Отрицание</b> — та же фраза с обратным смыслом, меняется минимум слов. <b>Синоним</b> — заменено ровно одно слово, смысл тот же. Жёлтым подсвечено, что изменено относительно нормы. Исправьте текст прямо в поле, если нужно; карточка сама станет «Исправил(а)».",
     choices: [["ok", "Всё верно", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть пример", "bad"]],
-    body: x => `<div class="head"><span class="id">${esc(x.key)} · механизм: ${esc(x.mechanism)}</span>${x.doubt ? `<span class="chip doubt">Сомневаюсь: ${esc(x.doubt)}</span>` : ""}</div>
+    body: x => `<div class="head"><span class="id">${esc(x.key)} · отрицание через: ${esc(MECH[x.mechanism] || x.mechanism)}</span>${x.doubt ? `<span class="chip doubt">Claude сомневается:${esc(x.doubt)}</span>` : ""}</div>
       <div class="rows">${row("Ru оригинал", esc(x.ru_sentence), "txt ru")}${row("Ru отрицание", diff(x.ru_sentence, x.ru_negation), "txt ru")}
       ${row("Kz норма", esc(x.kz_sentence))}
       ${row("Перефраз", area(x.key, "paraphrase", x.paraphrase, 3))}
@@ -134,17 +148,17 @@ const SECTIONS = [
     intro: "Пары «один и тот же пункт кодекса на русском и казахском», где автоматическая проверка нашла расхождение (номера, числа, длина). Нужно только сказать: это действительно одно и то же место кодекса? Расхождение в самих официальных текстах (например, ссылка на другую статью) — тоже «да», опишите его в комментарии.",
     choices: [["yes", "Да, одно и то же место", "ok"], ["no", "Нет, тексты не совпадают", "bad"]],
     body: x => `<div class="head"><span class="big mono" style="font-size:17px">${esc(x.chunk_id)}</span></div>
-      <div class="rows">${row("Что нашёл скрипт", esc(x.why), "mono")}</div>
+      <div class="rows">${row("Что нашёл скрипт", esc(WHY_AL(x.why)))}</div>
       <div class="cols"><div>${row("Ru", "")}<div class="law">${esc(x.ru.replace(/ \/ /g, "\n"))}</div></div>
       <div>${row("Kz", "")}<div class="law">${esc(x.kz.replace(/ \/ /g, "\n"))}</div></div></div>` },
   { id: "questions", tab: "Вопросы", items: DATA.questions,
-    intro: "Черновики вопросов по Трудовому кодексу. <b>Gold</b> — пункт, который отвечает на вопрос. <b>Twin</b> — пункт на ту же тему с обратной полярностью (только у negation-вопросов). Поправьте вопрос и id пунктов прямо в полях (через пробел), тексты пунктов раскрываются ниже.",
+    intro: "Черновики вопросов по Трудовому кодексу (написал Claude). <b>Gold</b> — пункт, который отвечает на вопрос. <b>Twin</b> — пункт на ту же тему, но с обратным смыслом («вправе» ↔ «не вправе»), который поиск легко перепутает с gold; бывает только у negation-вопросов, у general пусто. Id пункта: <code>labor:54:2</code> = Трудовой кодекс, статья 54, пункт 2 (<code>#1</code> — часть длинного пункта). Тексты пунктов — под «Тексты пунктов». Поправьте вопрос и id прямо в полях (несколько id — через пробел).",
     choices: [["ok", "Годится", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть", "bad"]],
     body: x => `<div class="head"><span class="id">${esc(x.qid)}</span><span class="chip">${x.slice === "negation" ? "negation" : "general"}</span></div>
       <div class="rows">${row("Вопрос", area(x.key, "question", x.question, 2))}
       ${row("Gold", area(x.key, "gold", x.gold.map(c => c.id).join(" "), 1))}
       ${row("Twin", area(x.key, "twin", x.twin.map(c => c.id).join(" "), 1))}
-      ${x.notes ? row("Моя заметка", esc(x.notes)) : ""}</div>
+      ${x.notes ? row("Заметка Claude",esc(x.notes)) : ""}</div>
       <details><summary>Тексты пунктов</summary><div class="rows" style="margin-top:8px">${x.gold.map(c => row("Gold", law(c))).join("")}${x.twin.map(c => row("Twin", law(c))).join("")}</div></details>` },
   { id: "d1ru", tab: "Тройки D1 (ru)", items: DATA.d1ru,
     intro: "Необязательно. Русские тройки для D1: норма из Трудового кодекса, перефраз, отрицание и замена синонимом. Если всё нормально, достаточно «Всё верно».",
@@ -182,7 +196,7 @@ function renderMain() {
   const s = SECTIONS.find(s => s.id === current);
   const items = showOpen ? s.items.filter(x => !answers[x.key]?.decision) : s.items;
   document.getElementById("main").innerHTML =
-    (db ? "" : `<div class="banner" id="nodb">Общее хранилище недоступно в этом окне: ответы сохраняются только в этом браузере. Откройте страницу на claude.ai, чтобы они дошли до Claude.</div>`) +
+    (db ? "" : `<div class="banner" id="nodb">Общее хранилище недоступно в этом окне: ответы сохраняются только в этом браузере. Откройте страницу по ссылке на claude.ai, войдя в свой аккаунт, иначе ответы никуда не дойдут.</div>`) +
     `<div class="intro">${s.intro}</div>
      <div class="filter"><label><input type="checkbox" id="onlyOpen" ${showOpen ? "checked" : ""}> показывать только неразмеченные</label>
      <span>${done(s)} из ${s.items.length} размечено</span></div>` +
@@ -245,7 +259,7 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
   if (!db) { toast("Хранилище недоступно: откройте страницу на claude.ai и нажмите ещё раз"); return; }
   try {
     await db.doc("meta/submission").set({ submitted: new Date().toISOString(), counts });
-    toast("Отправлено. Напишите Claude в чате «готово» — он заберёт ответы.");
+    toast("Отправлено. Напишите Максу, что готово.");
     setStatus("Отправлено");
   } catch (e) { toast("Не получилось отправить: " + (e?.code || "ошибка")); }
 });
