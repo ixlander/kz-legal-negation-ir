@@ -1,0 +1,137 @@
+{
+ "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "date": "2026-11-15",
+ "sets": {
+  "kardes-kk": {
+   "n": 2000,
+   "accuracy": 0.791,
+   "macro_f1": 0.7926590733219582,
+   "contradiction_recall": 0.7784522003034902
+  },
+  "rcb-ru": {
+   "n": 220,
+   "accuracy": 0.55,
+   "macro_f1": 0.45721948136827395,
+   "contradiction_recall": 0.13333333333333333,
+   "by_kind": {
+    "negation": {
+     "n": 22,
+     "accuracy": 0.6818181818181818
+    },
+    "no_negation": {
+     "n": 198,
+     "accuracy": 0.5353535353535354
+    }
+   }
+  },
+  "rcb-ru-negated": {
+   "n": 22,
+   "accuracy": 0.6818181818181818,
+   "macro_f1": 0.5284780578898226,
+   "contradiction_recall": 0.0,
+   "by_kind": {
+    "negation": {
+     "n": 22,
+     "accuracy": 0.6818181818181818
+    }
+   }
+  },
+  "lidirus-neg": {
+   "n": 108,
+   "accuracy": 0.8425925925925926,
+   "macro_f1": 0.8017920760012955,
+   "contradiction_recall": 0.8974358974358975
+  },
+  "synthetic-ru": {
+   "n": 3933,
+   "accuracy": 0.9021103483346046,
+   "macro_f1": 0.896411294424817,
+   "contradiction_recall": 0.95625,
+   "by_kind": {
+    "flip": {
+     "n": 1444,
+     "accuracy": 0.9667590027700831
+    },
+    "modality": {
+     "n": 93,
+     "accuracy": 0.9354838709677419
+    },
+    "range": {
+     "n": 970,
+     "accuracy": 0.9525773195876288
+    },
+    "same_article": {
+     "n": 1200,
+     "accuracy": 0.7691666666666667
+    },
+    "synonym_neg": {
+     "n": 226,
+     "accuracy": 0.9646017699115044
+    }
+   },
+   "range_negation_error": 0.0011025358324145535
+  },
+  "synthetic-kz": {
+   "n": 3107,
+   "accuracy": 0.8513035082072739,
+   "macro_f1": 0.819400119303601,
+   "contradiction_recall": 0.931875,
+   "by_kind": {
+    "flip": {
+     "n": 1554,
+     "accuracy": 0.9311454311454311
+    },
+    "modality": {
+     "n": 19,
+     "accuracy": 0.9473684210526315
+    },
+    "range": {
+     "n": 27,
+     "accuracy": 0.9629629629629629
+    },
+    "same_article": {
+     "n": 1200,
+     "accuracy": 0.7208333333333333
+    },
+    "synonym_neg": {
+     "n": 307,
+     "accuracy": 0.9413680781758957
+    }
+   }
+  },
+  "manual-draft-ru": {
+   "n": 50,
+   "accuracy": 0.66,
+   "macro_f1": 0.6582193030468892,
+   "contradiction_recall": 0.47368421052631576,
+   "by_kind": {
+    "other": {
+     "n": 29,
+     "accuracy": 0.6896551724137931
+    },
+    "range": {
+     "n": 21,
+     "accuracy": 0.6190476190476191
+    }
+   },
+   "range_negation_error": 0.0
+  },
+  "manual-draft-kz": {
+   "n": 50,
+   "accuracy": 0.62,
+   "macro_f1": 0.6188725490196078,
+   "contradiction_recall": 0.5789473684210527,
+   "by_kind": {
+    "other": {
+     "n": 29,
+     "accuracy": 0.6896551724137931
+    },
+    "range": {
+     "n": 21,
+     "accuracy": 0.5238095238095238
+    }
+   },
+   "range_negation_error": 0.375
+  }
+ }
+}
