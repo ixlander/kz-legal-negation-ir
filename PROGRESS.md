@@ -211,3 +211,73 @@ KazQAD retrieval, RuLawRetrieval, NevIR, RCB/LiDiRus/TERRa, snli-kazakh, XNLI ru
 1. `data/diagnostics/d2_owner_check.tsv` — 17 forms. 2. `data/diagnostics/review_d1_kz.tsv` — 30 Kz triples
 (9 with `agent_doubt`). 3. `data/corpus/labor_alignment_flagged.tsv` (6) and `tax_alignment_flagged.tsv` (12).
 4. `data/eval/queries_draft_ru.tsv` — 24 Ru draft questions, gold/twin candidates.
+
+## 2026-11-14/15 — full evaluation set drafts, retrieval ladder B0→B3′, NLI data
+
+All retrieval numbers below are on the **agent's draft questions** (gold/twin not yet finalized by a human):
+they show that the pipeline works, they are **not** results for the report. Bootstrap: paired, 1000 resamples,
+seed 42, 95% CI; "*" = CI excludes 0.
+
+### Evaluation set: 50 question pairs (Ru + Kz), awaiting review
+`data/eval/queries_draft_{ru,kz}.jsonl`: 25 Labor + 25 Tax, 25 negation + 25 general, 20 negation questions with
+a twin. Kz versions `NEEDS_KZ_CHECK`. All gold/twin ids verified to exist in both corpora. Review page updated
+(same URL), brief for the annotator in `docs/annotation/TZ_razmetka.md`.
+Retrieval already caught one wrong draft: for «sale of a flat / car owned > 2 y / 1 y» the answering point is
+tax:382:5 («доход не образуется…»), not 383:1 / 384:1 — those became the twins.
+
+### Corpus fix
+88 chunk ids were duplicated in 5 distractor codes (point numbering restarts inside an article); repeated
+numbers now get a `~2` suffix. Labor and Tax unchanged.
+
+### Retrieval ladder on drafts (`results/ablation_draft_bge-m3+e5-base_ru+kz_2026-11-15.json`)
+Corpus: all 22 codes per language (30 766 chunks). Recall@5 general / negation, Twin-above-Gold (20 twins):
+
+| run | Ru gen | Ru neg | Ru TaG | Kz gen | Kz neg | Kz TaG |
+|---|---|---|---|---|---|---|
+| BM25 morph only | 0.70 | 0.52 | 0.30 | 0.84 | 0.72 | 0.10 |
+| bge-m3 B0 | 0.96 | 0.72 | 0.20 | 0.96 | 0.94 | 0.05 |
+| bge-m3 B2 | 0.88 | 0.76 | 0.20 | 0.92 | 0.84 | 0.10 |
+| bge-m3 B3′ bge-reranker | 1.00 | 0.84 | 0.10 | 0.96 | 0.90 | 0.05 |
+| bge-m3 B3-rule (α=0.01) | 0.72 | 0.36 | 0.50 | 0.72 | 0.28 | 0.40 |
+| e5-base B0 | 0.94 | 0.68 | 0.25 | 0.74 | 0.48 | 0.40 |
+| e5-base B2 | 0.86 | 0.64 | 0.20 | 0.92 | 0.64 | 0.15 |
+| e5-base B3′ bge-reranker | 1.00 | 0.88 | 0.05 | 0.96 | 0.88 | 0.10 |
+
+* bge-m3 is far stronger than e5-base on Kazakh (negation R@5 0.94 vs 0.48 at B0).
+* For bge-m3, B2 vs B0: no difference detected. For e5-base on Kz, B2 lowers Twin-above-Gold 0.40 → 0.15.
+* Cross-encoders (B3′) help most on the weaker retriever; e5-base + bge-reranker Ru neg +0.24*, Kz neg +0.24*.
+* B3-rule hurts badly (Ru neg −0.40*, Kz −0.56* for bge-m3): most negation questions are phrased positively
+  («Можно ли…?») while the answer says «не допускается», so a polarity *match* rule pushes the gold down.
+  α is to be tuned on dev (α → 0 would switch it off); this is the behaviour the "deliberately dumb" control
+  was meant to expose.
+
+### External sanity checks (`results/external_*.json`)
+RuLawRetrieval tk_hard (716 q., chunk protocol, nDCG@10): bge-m3 **0.839**, e5-base **0.762**, BM25 morph
+**0.501**, BM25 plain 0.386. Dataset card on the same split: FRIDA 0.854, e5-large 0.820, e5-small 0.710,
+BM25 0.480 → our pipeline lands where expected.
+KazQAD test (1929 q., subsampled corpus of 52 660 passages, not comparable to published numbers): bge-m3 0.606,
+e5-base 0.493, BM25 morph 0.465, BM25 plain 0.348 → the Kazakh analyzer (kazsearch + NEG) helps on general
+Kazakh text too, not only on our corpus.
+
+### Rerankers
+`jinaai/jina-reranker-v2-base-multilingual` needs `einops` and a helper that transformers 5 removed; a
+3-line shim restores it. `BAAI/bge-reranker-v2-m3` loads as is.
+
+### NLI data (`data/nli/`, third-party subsets not versioned)
+XNLI ru / tr and SNLI-kk: 50k stratified each; Kardeş-NLU kk dev 1000 / test 2000 (validation only).
+Synthetic from the 20 distractor codes (never Labor/Tax): Ru 3 933, Kz 3 107 pairs; contradiction by polarity
+flip and modality swap, entailment with a kept negation («не менее → не меньше», «запрещается → не допускается»).
+Rules that change word order were dropped (they broke Kazakh grammar); Kz entailment is therefore thin (307
+pairs, one pattern). Kz synthetic is `NEEDS_KZ_CHECK`.
+Manual validation drafts: `data/nli/val_manual.jsonl`, 50 Ru + 50 Kz pairs from Labor/Tax norms, 19 E / 12 N /
+19 C, 21 with range negation; hypotheses avoid the generator's rewrite rules. Status draft / NEEDS_KZ_CHECK.
+
+### Zero-shot NLI baseline: mDeBERTa-v3-base-xnli (`results/nli_eval_mdeberta-xnli-zeroshot_2026-11-15.json`)
+Kardeş kk test acc 0.791 · RCB ru acc 0.550 · LiDiRus negation acc 0.843 · synthetic ru 0.902 / kz 0.851.
+On the (unchecked) manual drafts: ru 0.66, kz 0.62, Kz range-negation error 0.38 vs 0.00 on Ru — the synthetic
+set is too easy; the hand-written set is the discriminative one.
+
+### Next
+1. Owner/annotator review (questions, D1 kz, D2 forms, alignment) → final `queries.jsonl` with dev/test split.
+2. NLI fine-tuning, variants a–d (training of `a` started), then B3 with S1/S2, scoring chosen on dev.
+3. Second annotation batch: manual NLI validation (Kz text + all labels).
