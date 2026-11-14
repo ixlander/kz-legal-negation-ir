@@ -1,0 +1,29 @@
+{
+ "dataset": "rulaw",
+ "n_passages": 13809,
+ "n_queries": 716,
+ "date": "2026-11-14",
+ "note": "rulaw   RuLawRetrieval, split tk_hard (716 queries, Russian Labor Code of the RF), chunk\n            protocol of the dataset card: an article gets the max score of its chunks,\n            nDCG@10 at article level. The card reports on this split: e5-large 0.820,\n            e5-small 0.710, BM25 0.480 -> our numbers should land in that range.\n    kazqad  KazQAD test (1929 Kazakh questions). The full corpus has 825k passages, too many to\n            embed here, so the corpus is subsampled: all positive and negative passages of the\n            test queries + 50k random passages (seed 42). Recall@10 / MRR@10 on that subsample\n            are NOT comparable to published numbers; they only compare our runs to each other.",
+ "results": {
+  "bm25-plain": {
+   "ndcg@10": 0.3858147541482859,
+   "recall@10": 0.5195530726256983,
+   "mrr@10": 0.34395229227631463
+  },
+  "bm25-morph": {
+   "ndcg@10": 0.5009947639678558,
+   "recall@10": 0.6480446927374302,
+   "mrr@10": 0.4540308814400993
+  },
+  "bge-m3": {
+   "ndcg@10": 0.8387975391292255,
+   "recall@10": 0.952513966480447,
+   "mrr@10": 0.8015994945464218
+  },
+  "e5-base": {
+   "ndcg@10": 0.7615048171530754,
+   "recall@10": 0.8994413407821229,
+   "mrr@10": 0.7171987230646448
+  }
+ }
+}
