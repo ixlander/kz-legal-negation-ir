@@ -1,0 +1,29 @@
+{
+ "variant": "a",
+ "base": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+ "n_train": 105986,
+ "epochs": 2,
+ "lr": 1e-05,
+ "batch_size": 32,
+ "max_len": 128,
+ "seed": 42,
+ "precision": "bf16",
+ "dev": "kardes_kk_test, even-indexed half",
+ "history": [
+  {
+   "epoch": 0,
+   "dev_macro_f1": 0.803090713193855
+  },
+  {
+   "epoch": 1,
+   "dev_macro_f1": 0.8194733757378662,
+   "seconds": 2986
+  },
+  {
+   "epoch": 2,
+   "dev_macro_f1": 0.8134815830605858,
+   "seconds": 4078
+  }
+ ],
+ "best_dev_macro_f1": 0.8194733757378662
+}
