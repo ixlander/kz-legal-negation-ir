@@ -13,6 +13,7 @@ Usage:
     python -m src.rerank.nli_train --variant b --epochs 2
 """
 import argparse
+import gc
 import json
 import random
 import time
@@ -21,7 +22,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from sklearn.metrics import f1_score
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Sampler
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, get_linear_schedule_with_warmup
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -54,13 +55,51 @@ def set_seed(seed):
     torch.cuda.manual_seed_all(seed)
 
 
+class LengthGroupedBatches(Sampler):
+    """Batches of similar-length pairs (less padding), in random order; the rows inside a pool of 50
+    batches are sorted by length, so the order still changes every epoch."""
+
+    def __init__(self, lengths, batch_size, seed=SEED, pool=50):
+        self.lengths, self.batch_size, self.pool, self.epoch, self.seed = lengths, batch_size, pool, 0, seed
+
+    def __iter__(self):
+        rng = random.Random(self.seed + self.epoch)
+        self.epoch += 1
+        idx = list(range(len(self.lengths)))
+        rng.shuffle(idx)
+        size = self.batch_size * self.pool
+        out = []
+        for i in range(0, len(idx), size):
+            chunk = sorted(idx[i:i + size], key=self.lengths.__getitem__)
+            out += [chunk[j:j + self.batch_size] for j in range(0, len(chunk), self.batch_size)]
+        rng.shuffle(out)
+        return iter(out)
+
+    def __len__(self):
+        return (len(self.lengths) + self.batch_size - 1) // self.batch_size
+
+
 def batches(rows, tok, batch_size, shuffle):
     def collate(b):
         enc = tok([r["premise"] for r in b], [r["hypothesis"] for r in b], truncation=True, max_length=MAX_LEN,
                   padding=True, return_tensors="pt")
         enc["labels"] = torch.tensor([r["label"] for r in b])
         return enc
-    return DataLoader(rows, batch_size=batch_size, shuffle=shuffle, collate_fn=collate)
+    if shuffle:
+        lengths = [len(r["premise"]) + len(r["hypothesis"]) for r in rows]
+        return DataLoader(rows, batch_sampler=LengthGroupedBatches(lengths, batch_size), collate_fn=collate)
+    return DataLoader(rows, batch_size=batch_size, collate_fn=collate)
+
+
+def save_fp16(model, tok, out):
+    """fp16 weights halve both the file and the peak RAM of the copy to CPU; inference runs in fp16 anyway."""
+    gc.collect()
+    torch.cuda.empty_cache()
+    state = {k: v.detach().to("cpu", dtype=torch.float16) for k, v in model.state_dict().items()}
+    model.save_pretrained(out, state_dict=state)
+    tok.save_pretrained(out)
+    del state
+    gc.collect()
 
 
 @torch.no_grad()
@@ -125,8 +164,7 @@ def main():
         print(f"epoch {epoch}: kardes kk dev macro F1 {f1:.4f}")
         if f1 > best:
             best = f1
-            model.save_pretrained(out)
-            tok.save_pretrained(out)
+            save_fp16(model, tok, out)
     log["best_dev_macro_f1"] = best
     (out / "train_log.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
     (ROOT / f"results/nli_train_{a.variant}.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
