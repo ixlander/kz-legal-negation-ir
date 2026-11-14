@@ -5,7 +5,7 @@
     B2       dense + BM25 morph (negation kept), RRF k=60
     B3'      B2 top-30 reordered by an off-the-shelf cross-encoder (one run per reranker)
     B3-rule  B2 top-30 reordered by the polarity rule (score ± alpha)
-    B3       B2 top-30 reordered by a fine-tuned NLI model, scorings S1 and S2
+    B3       B2 top-30 reordered by an NLI model: scorings S1/S2, alone or fused with the B2 order
 Below the top-30 every reranked run keeps the B2 order, so full-ranking metrics stay defined.
 BM25-only runs are reported for context. Each step is compared with paired bootstrap.
 
@@ -116,12 +116,14 @@ def run_lang(lang, which, model_keys, reranker_keys, alpha, nli_checkpoints=()):
     for ckpt in nli_checkpoints:
         clf = nli_rerank.load(ckpt)
         for key in model_keys:
-            for scoring in nli_rerank.SCORINGS:
-                runs = []
-                for q, s in zip(qtext, b2[key]):
-                    top = top_k(s)
-                    runs.append(reorder_top(s, top, nli_rerank.scores(clf, q, [texts[i] for i in top], scoring)))
-                out[f"{key}/B3-{Path(ckpt).name}-{scoring}"] = evaluate(runs, queries, pos, ids)
+            runs = {name: [] for name in nli_rerank.run_names()}
+            for q, s in zip(qtext, b2[key]):
+                top = top_k(s)
+                for scoring, nli in nli_rerank.nli_scores(clf, q, [texts[i] for i in top]).items():
+                    for fusion, new in nli_rerank.fusions(s[top], nli).items():
+                        runs[f"{scoring}-{fusion}"].append(reorder_top(s, top, new))
+            for name, r in runs.items():
+                out[f"{key}/B3-{Path(ckpt).name}-{name}"] = evaluate(r, queries, pos, ids)
         del clf
         free_gpu()
         print(f"[{lang}] NLI reranker {ckpt} done")
@@ -131,7 +133,7 @@ def run_lang(lang, which, model_keys, reranker_keys, alpha, nli_checkpoints=()):
 def comparisons(runs, model_keys, reranker_keys, nli_names=()):
     pairs = [("B0", "B1"), ("B0", "B2"), ("B1", "B2"), ("B2", "B3-rule")]
     pairs += [("B2", f"B3'-{rk}") for rk in reranker_keys]
-    pairs += [("B2", f"B3-{n}-{s}") for n in nli_names for s in nli_rerank.SCORINGS]
+    pairs += [("B2", f"B3-{n}-{r}") for n in nli_names for r in nli_rerank.run_names()]
     return {f"{key}: {y} vs {x}": {"/".join(p): paired_diff(runs[f"{key}/{x}"], runs[f"{key}/{y}"], p) for p in PATHS}
             for key in model_keys for x, y in pairs}
 
@@ -143,7 +145,8 @@ def main():
     ap.add_argument("--langs", nargs="+", default=["ru", "kz"])
     ap.add_argument("--rerankers", nargs="*", default=list(cross_encoder.RERANKERS))
     ap.add_argument("--alpha", type=float, default=0.01, help="B3-rule boost, to be tuned on dev")
-    ap.add_argument("--nli", nargs="*", default=[], help="fine-tuned NLI checkpoints for B3")
+    ap.add_argument("--nli", nargs="*", default=[], help="NLI models (checkpoint dirs or hub ids) for B3")
+    ap.add_argument("--tag", default="", help="extra name part of the result file")
     a = ap.parse_args()
 
     today = dt.date.today().isoformat()
@@ -159,7 +162,8 @@ def main():
         res["langs"][lang] = {"summary": {k: summary(v) for k, v in runs.items()},
                               "compare": comparisons(runs, a.models, a.rerankers, [Path(c).name for c in a.nli]), "per_query": runs}
 
-    path = ROOT / f"results/ablation_{a.queries}_{'+'.join(a.models)}_{'+'.join(a.langs)}_{today}.json"
+    tag = f"{a.tag}_" if a.tag else ""
+    path = ROOT / f"results/ablation_{a.queries}_{tag}{'+'.join(a.models)}_{'+'.join(a.langs)}_{today}.json"
     path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"\n{'run':34s} {'lang':4s} {'gen R@5':>8s} {'neg R@5':>8s} {'gap':>6s} {'TaG':>5s} {'MRR':>5s}")
