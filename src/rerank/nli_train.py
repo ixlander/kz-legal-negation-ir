@@ -9,8 +9,10 @@ Variants (training data):
     c   a without the entailment counter-examples      H6: do «не менее» / numeric / synonymous-negation
         (synthetic range, number, synonym_neg)            entailments reduce false contradictions?
     d   a + SNLI-kk (machine translated)               extra H5 variant
-Synthetic pairs: train split only. Model selection: macro F1 on Kardeş-NLU kk dev after every epoch
-(epoch 0 = the starting model, for reference); the best trained epoch is kept.
+Synthetic pairs: train split only. Model selection: macro F1 on the even-indexed half of Kardeş-NLU kk
+test after every epoch (epoch 0 = the starting model, for reference); the best trained epoch is kept.
+Kardeş dev is not used: it translates the XNLI validation set, which the start model was trained on.
+The odd-indexed half of Kardeş test is left for reporting.
 
 Usage:
     python -m src.rerank.nli_train --variant a
@@ -132,11 +134,12 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     tok = AutoTokenizer.from_pretrained(BASE)
-    model = AutoModelForSequenceClassification.from_pretrained(BASE).to(device)
+    # fp32 master weights: the checkpoint is stored in fp16 and AdamW on fp16 weights diverges to NaN
+    model = AutoModelForSequenceClassification.from_pretrained(BASE, dtype=torch.float32).to(device)
     assert [model.config.id2label[i].lower() for i in range(3)] == LABELS, model.config.id2label
     rows = training_rows(a.variant)
     train = batches(rows, tok, a.batch_size, shuffle=True)
-    dev = batches(jl("kardes_kk_dev"), tok, 64, shuffle=False)
+    dev = batches(jl("kardes_kk_test")[0::2], tok, 64, shuffle=False)
     print(f"variant {a.variant}: {len(rows)} training pairs, {len(train)} batches/epoch")
 
     opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
@@ -145,8 +148,8 @@ def main():
     out = CKPT / f"nli-{a.variant}"
     log = {"variant": a.variant, "base": BASE, "n_train": len(rows), "epochs": a.epochs, "lr": a.lr,
            "batch_size": a.batch_size * a.accumulate, "max_len": MAX_LEN, "seed": SEED, "precision": "bf16",
-           "dev": "kardes_kk_dev", "history": [{"epoch": 0, "dev_macro_f1": macro_f1(model, dev, device)}]}
-    print(f"epoch 0 (start model): kardes kk dev macro F1 {log['history'][0]['dev_macro_f1']:.4f}")
+           "dev": "kardes_kk_test, even-indexed half", "history": [{"epoch": 0, "dev_macro_f1": macro_f1(model, dev, device)}]}
+    print(f"epoch 0 (start model): kardes kk select macro F1 {log['history'][0]['dev_macro_f1']:.4f}")
     best = -1.0
     model.train()
     for epoch in range(1, a.epochs + 1):
@@ -155,6 +158,8 @@ def main():
             b = b.to(device)
             with torch.autocast(device_type=device, dtype=torch.bfloat16, enabled=device == "cuda"):
                 loss = model(**b).loss / a.accumulate
+            if not torch.isfinite(loss):
+                raise FloatingPointError(f"non-finite loss at epoch {epoch}, batch {step}")
             loss.backward()
             if step % a.accumulate == 0 or step == len(train):
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -167,7 +172,7 @@ def main():
                 running = 0.0
         f1 = macro_f1(model, dev, device)
         log["history"].append({"epoch": epoch, "dev_macro_f1": f1, "seconds": round(time.time() - t0)})
-        print(f"epoch {epoch}: kardes kk dev macro F1 {f1:.4f}")
+        print(f"epoch {epoch}: kardes kk select macro F1 {f1:.4f}")
         if f1 > best:
             best = f1
             save_fp16(model, tok, out)
