@@ -53,8 +53,13 @@ def eval_sets():
         sets[f"synthetic-{lang}"] = jl(NLI / f"synthetic_{lang}.jsonl")
     manual = NLI / "val_manual.jsonl"
     if manual.exists():
-        sets["manual"] = [r for r in jl(manual) if r.get("status", "ok") == "ok"]
-    return sets
+        rows = jl(manual)
+        sets["manual"] = [r for r in rows if r.get("status") == "ok"]
+        for lang in ("ru", "kz"):
+            # unchecked drafts: indicative only, never reported as a result
+            sets[f"manual-draft-{lang}"] = [{**r, "kind": "range" if r["range"] else "other"}
+                                            for r in rows if r["lang"] == lang]
+    return {k: v for k, v in sets.items() if v}
 
 
 class Classifier:
