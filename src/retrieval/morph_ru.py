@@ -6,8 +6,7 @@
 * a fused negative prefix is split off: «неуплата» -> «не» + «уплата», only when the rest is
   a known word with the same part of speech (so «небо», «нефть», «невеста» stay whole).
 
-No external stop-word list: the NLTK Russian list contains «не», «нет», «ни», «без»
-(docs/research/2026-10-21_tools_models_data.md).
+No external stop-word list: the NLTK Russian list contains «не», «нет», «ни», «без».
 """
 import re
 from functools import lru_cache

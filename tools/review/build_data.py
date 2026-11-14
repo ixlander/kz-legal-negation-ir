@@ -1,7 +1,7 @@
 """Collect everything the owner has to review into one JSON for the review page.
 
 Usage:
-    python tools/review/build_data.py   -> tools/review/review_data.json
+    python tools/review/build_data.py
 """
 import csv
 import json

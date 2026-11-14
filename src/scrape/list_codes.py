@@ -6,7 +6,7 @@ we download both languages and report editions, article counts and Ru/Kz article
 Nothing is added to the corpus here.
 
 Usage:
-    python -m src.scrape.list_codes   -> data/corpus/codes_inventory.{json,md}
+    python -m src.scrape.list_codes
 """
 import json
 import urllib.request

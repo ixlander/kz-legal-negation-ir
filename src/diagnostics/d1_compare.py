@@ -1,9 +1,9 @@
-"""D1: paired Ru vs Kz comparison on the same norms (reads results/, computes nothing on models).
+"""D1: paired Ru vs Kz comparison on the same norms (reads saved results, runs no models).
 
 delta = margin_kz - margin_ru per parallel pair; paired bootstrap 95% CI.
 
 Usage:
-    python -m src.diagnostics.d1_compare --ru results/d1_margin_pilot_ru.json --kz results/d1_margin_prelim_kz.json
+    python -m src.diagnostics.d1_compare --ru <ru result> --kz <kz result>
 """
 import argparse
 import json

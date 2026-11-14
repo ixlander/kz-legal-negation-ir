@@ -1,6 +1,6 @@
-"""D1 Negation Margin on the whole embedding pool (src/models.py EMBEDDERS).
+"""D1 Negation Margin on the whole embedding pool.
 
-Same triples and definitions as d1_margin.py; all three sentences are encoded as documents.
+Same triples and definitions as the single-model D1; all three sentences are encoded as documents.
 Writes one JSON with per-model summaries (and per-triple margins) per language.
 
 Usage:
@@ -32,7 +32,7 @@ def main():
     previous = json.loads(path.read_text(encoding="utf-8"))["models"] if path.exists() else {}
     out = {"diagnostic": "D1_negation_margin_pool",
            "config": {"lang": args.lang, "n": len(triples), "include_unchecked": args.include_unchecked,
-                      "encoding": "documents (model-specific prefix/prompt, src/models.py)", "seed": SEED,
+                      "encoding": "documents (model-specific prefix/prompt)", "seed": SEED,
                       "bootstrap_resamples": 1000, "date": date.today().isoformat()},
            "models": {k: v for k, v in previous.items() if k not in args.models}}  # keep models not re-run
     for key in args.models:

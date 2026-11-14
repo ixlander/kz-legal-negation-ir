@@ -1,7 +1,7 @@
-"""Dense retrieval: normalized embeddings, brute-force cosine (no vector DB, CLAUDE.md §2).
+"""Dense retrieval: normalized embeddings, brute-force cosine (the corpus is small enough).
 
-Document embeddings are cached in data/index/{model}_{lang}.npy next to the id list they were
-computed for; a changed corpus invalidates the cache.
+Document embeddings are cached on disk together with the id list they were computed for;
+a changed corpus invalidates the cache.
 """
 import json
 

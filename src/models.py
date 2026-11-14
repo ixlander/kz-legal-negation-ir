@@ -1,4 +1,4 @@
-"""Model pool (CLAUDE.md §12, 21.10.2026) and how each model wants its inputs.
+"""Embedding models used in the project and how each model wants its inputs.
 
 Documents and queries are encoded differently per model: e5 uses "passage: "/"query: ",
 instruction-tuned models take an instruction on the query side only, Gemma/Qwen ship

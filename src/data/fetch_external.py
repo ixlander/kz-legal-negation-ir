@@ -1,4 +1,4 @@
-"""Download the external datasets approved on 21.10.2026 (CLAUDE.md §12) into data/external/.
+"""Download the external datasets (NLI, retrieval and negation benchmarks).
 
 Not versioned (gated / third-party licences). Re-run is idempotent.
 

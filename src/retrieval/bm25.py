@@ -2,10 +2,10 @@
 
 Analyzers:
     plain  — lowercase word tokens, nothing removed (B1: lexical match as such)
-    morph  — Ru: pymorphy3 lemmas, «не»/«ни» kept, fused «не-» split (morph_ru.tokenize);
-             Kz: kazsearch stems + NEG token for negative verb forms, емес/жоқ kept
-             (morph_kz.tokenize_bm25). This is B2.
-Tokenized corpora are cached in data/index/ (the morph analyzers take minutes on 30k chunks).
+    morph  — Ru: pymorphy3 lemmas, «не»/«ни» kept, fused «не-» split;
+             Kz: kazsearch stems + NEG token for negative verb forms, емес/жоқ kept.
+             This is B2.
+Tokenized corpora are cached on disk: the morph analyzers take minutes on 30k chunks.
 """
 import json
 import math

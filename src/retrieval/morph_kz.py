@@ -6,7 +6,7 @@ A verb form is split as stem + NEG affix (-ма/-ме/-ба/-бе/-па/-пе) +
     and consonant assimilation (vowel/р/й/у/л -> м, м/н/ң/з/ж -> б, voiceless -> п).
 Stand-alone question particles (ма/ме/ба/бе/па/пе as a separate word) are never touched.
 
-Precision must be checked on >=100 words together with the owner (CLAUDE.md, 4).
+Precision has to be checked by a native speaker on a sample of >=100 words.
 """
 import re
 

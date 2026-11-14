@@ -8,7 +8,7 @@ Controls (Russian):
   * separate particle «не» — share of «не» that is its own token;
   * fused prefix «не-» (неуплата) — share with a boundary right after «не».
 
-Input: data/diagnostics/d2_kz_neg_forms.tsv (form, stem, affix, ending, source, status)
+Input: a TSV of forms (form, stem, affix, ending, source, status).
 
 Usage:
     python -m src.diagnostics.d2_affix
@@ -60,7 +60,7 @@ def load_forms(path, include_unchecked):
     rows = [{k.strip(): (v or "").strip() for k, v in r.items()}
             for r in csv.DictReader(open(path, encoding="utf-8"), delimiter="\t")]
     if not include_unchecked:
-        # ok = owner, ok_auto = confirmed by kaznlp + apertium (src/diagnostics/d2_crosscheck.py)
+        # ok = checked by a native speaker, ok_auto = confirmed by both kaznlp and apertium
         rows = [r for r in rows if r["status"] in ("ok", "ok_auto")]
     return rows
 

@@ -1,4 +1,4 @@
-"""B0–B2 of the ablation ladder (CLAUDE.md §4) on the full 22-code corpus, per language.
+"""B0–B2 of the ablation ladder on the full 22-code corpus, per language.
 
     B0  dense only
     B1  dense + BM25 plain, RRF k=60
@@ -7,7 +7,7 @@ BM25-only runs are reported for context. Paired bootstrap for B1−B0, B2−B0, 
 
 Usage:
     python -m src.eval.run_ablation --queries draft            # agent drafts, smoke test only
-    python -m src.eval.run_ablation --queries final            # data/eval/queries.jsonl (test split)
+    python -m src.eval.run_ablation --queries final            # finalized set, test split
     python -m src.eval.run_ablation --models bge-m3 --langs kz
 """
 import argparse
