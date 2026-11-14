@@ -1,6 +1,6 @@
 """Evaluate an NLI classifier on the validation sets.
 
-    kardes-kk     Kardeş-NLU Kazakh XNLI test (human post-edited), 3 classes
+    kardes-kk     Kardeş-NLU Kazakh XNLI test (human post-edited), 3 classes, report half
     rcb-ru        Russian CommitmentBank val, 3 classes; also its negated-premise slice
     lidirus-neg   LiDiRus diagnostics with logic = Negation / Double negation; binary
                   (entailment vs not), a 3-class prediction counts as not-entailment unless it is entailment
@@ -40,7 +40,8 @@ def zipped_jsonl(archive, member):
 
 
 def eval_sets():
-    sets = {"kardes-kk": jl(NLI / "kardes_kk_test.jsonl")}
+    # odd-indexed half only: the even half selects epochs during fine-tuning
+    sets = {"kardes-kk-report": jl(NLI / "kardes_kk_test.jsonl")[1::2]}
     rcb = [{"premise": r["premise"], "hypothesis": r["hypothesis"], "label": LABELS[r["label"]],
             "kind": r["negation"]} for r in zipped_jsonl(EXT / "russian_super_glue/data/RCB.zip", "RCB/val.jsonl")]
     sets["rcb-ru"] = rcb
@@ -65,7 +66,7 @@ def eval_sets():
 class Classifier:
     def __init__(self, name):
         self.tok = AutoTokenizer.from_pretrained(name)
-        self.model = AutoModelForSequenceClassification.from_pretrained(name).eval()
+        self.model = AutoModelForSequenceClassification.from_pretrained(name, dtype=torch.float32).eval()
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.model.to(self.device)
         if self.device == "cuda":

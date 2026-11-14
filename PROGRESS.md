@@ -322,3 +322,14 @@ supports bf16). Epoch 0 (the start model) is evaluated on Kardeş dev for refere
   numerals do not inflect; compound numerals skipped). Distant "same article" neutrals at most ⅓.
 * Result: Ru 3 708 pairs (E 1200 / N 908 / C 1600), Kz 2 901 (E 597 / N 704 / C 1600); Kz entailment
   doubled (307 → 597) thanks to the numeric pairs.
+
+### mDeBERTa run 1 failed: NaN from the first step
+transformers 5 loads checkpoints in their stored dtype by default; this one is fp16, so AdamW updated fp16
+weights and the loss was NaN from batch 1 (the model then predicted one class: F1 0.168). Fix: load in
+fp32 explicitly (training and evaluation); training now stops on the first non-finite loss. A 30-step
+check after the fix: loss 0.1–1.2, peak GPU 5.75 GB of 6.1.
+
+### Kardeş dev is contaminated for this start model
+Model card: mDeBERTa-v3-base-xnli-multilingual-nli-2mil7 was trained on the XNLI validation set; Kardeş
+dev is its Kazakh translation (start model: 0.943 on Kardeş dev vs 0.791 on Kardeş test). Epoch selection
+now uses the even half of Kardeş test, reporting the odd half; Kardeş dev is not used.
