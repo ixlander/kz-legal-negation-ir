@@ -4,7 +4,7 @@
     rcb-ru        Russian CommitmentBank val, 3 classes; also its negated-premise slice
     lidirus-neg   LiDiRus diagnostics with logic = Negation / Double negation; binary
                   (entailment vs not), a 3-class prediction counts as not-entailment unless it is entailment
-    synthetic-*   our rule-based legal pairs, reported per rewrite kind
+    synthetic-*   held-out split of our rule-based legal pairs, reported per rewrite kind
 For every set: accuracy, macro F1, contradiction recall. Range-negation Error (H6) is the share of
 range pairs labelled entailment that the model calls contradiction.
 
@@ -50,7 +50,7 @@ def eval_sets():
                            for r in zipped_jsonl(EXT / "russian_super_glue/data/LiDiRus.zip", "LiDiRus/LiDiRus.jsonl")
                            if re.search(r"negation", r.get("logic", ""), re.I)]
     for lang in ("ru", "kz"):
-        sets[f"synthetic-{lang}"] = jl(NLI / f"synthetic_{lang}.jsonl")
+        sets[f"synthetic-{lang}-test"] = [r for r in jl(NLI / f"synthetic_{lang}.jsonl") if r.get("split") == "test"]
     manual = NLI / "val_manual.jsonl"
     if manual.exists():
         rows = jl(manual)
