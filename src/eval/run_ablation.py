@@ -5,6 +5,7 @@
     B2       dense + BM25 morph (negation kept), RRF k=60
     B3'      B2 top-30 reordered by an off-the-shelf cross-encoder (one run per reranker)
     B3-rule  B2 top-30 reordered by the polarity rule (score ± alpha)
+    B3       B2 top-30 reordered by a fine-tuned NLI model, scorings S1 and S2
 Below the top-30 every reranked run keeps the B2 order, so full-ranking metrics stay defined.
 BM25-only runs are reported for context. Each step is compared with paired bootstrap.
 
@@ -24,7 +25,7 @@ import torch
 
 from src.eval.bootstrap import paired_diff
 from src.eval.metrics import per_query, summary
-from src.rerank import cross_encoder, polarity_rule
+from src.rerank import cross_encoder, nli_rerank, polarity_rule
 from src.retrieval import bm25, corpus, dense
 from src.retrieval.fusion import rrf
 
@@ -67,7 +68,7 @@ def free_gpu():
         torch.cuda.empty_cache()
 
 
-def run_lang(lang, which, model_keys, reranker_keys, alpha):
+def run_lang(lang, which, model_keys, reranker_keys, alpha, nli_checkpoints=()):
     ids, texts = corpus.load(lang)
     pos = {c: i for i, c in enumerate(ids)}
     queries = load_queries(which, lang)
@@ -111,12 +112,26 @@ def run_lang(lang, which, model_keys, reranker_keys, alpha):
         del model
         free_gpu()
         print(f"[{lang}] reranker {rk} done")
+
+    for ckpt in nli_checkpoints:
+        clf = nli_rerank.load(ckpt)
+        for key in model_keys:
+            for scoring in nli_rerank.SCORINGS:
+                runs = []
+                for q, s in zip(qtext, b2[key]):
+                    top = top_k(s)
+                    runs.append(reorder_top(s, top, nli_rerank.scores(clf, q, [texts[i] for i in top], scoring)))
+                out[f"{key}/B3-{Path(ckpt).name}-{scoring}"] = evaluate(runs, queries, pos, ids)
+        del clf
+        free_gpu()
+        print(f"[{lang}] NLI reranker {ckpt} done")
     return out
 
 
-def comparisons(runs, model_keys, reranker_keys):
+def comparisons(runs, model_keys, reranker_keys, nli_names=()):
     pairs = [("B0", "B1"), ("B0", "B2"), ("B1", "B2"), ("B2", "B3-rule")]
     pairs += [("B2", f"B3'-{rk}") for rk in reranker_keys]
+    pairs += [("B2", f"B3-{n}-{s}") for n in nli_names for s in nli_rerank.SCORINGS]
     return {f"{key}: {y} vs {x}": {"/".join(p): paired_diff(runs[f"{key}/{x}"], runs[f"{key}/{y}"], p) for p in PATHS}
             for key in model_keys for x, y in pairs}
 
@@ -128,20 +143,21 @@ def main():
     ap.add_argument("--langs", nargs="+", default=["ru", "kz"])
     ap.add_argument("--rerankers", nargs="*", default=list(cross_encoder.RERANKERS))
     ap.add_argument("--alpha", type=float, default=0.01, help="B3-rule boost, to be tuned on dev")
+    ap.add_argument("--nli", nargs="*", default=[], help="fine-tuned NLI checkpoints for B3")
     a = ap.parse_args()
 
     today = dt.date.today().isoformat()
     res = {"config": {"queries": a.queries, "models": a.models, "rerankers": a.rerankers, "rerank_top_k": TOP_K,
-                      "rule_alpha": a.alpha, "rrf_k": 60, "bm25": {"k1": 1.5, "b": 0.75},
+                      "rule_alpha": a.alpha, "nli": a.nli, "rrf_k": 60, "bm25": {"k1": 1.5, "b": 0.75},
                       "bootstrap": {"n": 1000, "seed": 42}, "corpus": "all 22 codes per language, title + text",
                       "date": today},
            "langs": {}}
     if a.queries == "draft":
         res["config"]["warning"] = "agent draft questions, gold/twin not finalized: smoke test, not for the report"
     for lang in a.langs:
-        runs = run_lang(lang, a.queries, a.models, a.rerankers, a.alpha)
+        runs = run_lang(lang, a.queries, a.models, a.rerankers, a.alpha, a.nli)
         res["langs"][lang] = {"summary": {k: summary(v) for k, v in runs.items()},
-                              "compare": comparisons(runs, a.models, a.rerankers), "per_query": runs}
+                              "compare": comparisons(runs, a.models, a.rerankers, [Path(c).name for c in a.nli]), "per_query": runs}
 
     path = ROOT / f"results/ablation_{a.queries}_{'+'.join(a.models)}_{'+'.join(a.langs)}_{today}.json"
     path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
