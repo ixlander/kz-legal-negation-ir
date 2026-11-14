@@ -1,0 +1,24 @@
+{
+ "variant": "a",
+ "base": "FacebookAI/xlm-roberta-base",
+ "n_train": 107036,
+ "epochs": 2,
+ "lr": 2e-05,
+ "batch_size": 32,
+ "max_len": 128,
+ "seed": 42,
+ "dev": "kardes_kk_dev",
+ "history": [
+  {
+   "epoch": 1,
+   "dev_macro_f1": 0.6559778196665831,
+   "seconds": 1228
+  },
+  {
+   "epoch": 2,
+   "dev_macro_f1": 0.6841418669202516,
+   "seconds": 1211
+  }
+ ],
+ "best_dev_macro_f1": 0.6841418669202516
+}
