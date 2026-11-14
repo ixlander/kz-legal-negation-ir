@@ -58,11 +58,14 @@ def main():
             align.append({"key": "al-" + re.sub(r"[^A-Za-z0-9_.~:@+-]", "_", r["chunk_id"]),
                           "chunk_id": r["chunk_id"], "why": r["why"], "ru": r["ru_text"], "kz": r["kz_text"]})
 
-    labor_ru = corpus("labor", "ru")
+    ru_all = {**corpus("labor", "ru"), **corpus("tax", "ru")}
+    kz_q = {r["pair_id"]: r["question"] for r in map(json.loads, open(ROOT / "data/eval/queries_draft_kz.jsonl",
+                                                                      encoding="utf-8"))}
     qs = []
     for r in map(json.loads, open(ROOT / "data/eval/queries_draft_ru.jsonl", encoding="utf-8")):
-        chunk = lambda c: {"id": c, "title": labor_ru[c]["title"], "text": labor_ru[c]["text"][:1800]}
+        chunk = lambda c: {"id": c, "title": ru_all[c]["title"], "text": ru_all[c]["text"][:1800]}
         qs.append({"key": "q-" + r["qid"], "qid": r["qid"], "slice": r["slice"], "question": r["question"],
+                   "question_kz": kz_q[r["pair_id"]], "code": r["pair_id"][:3],
                    "gold": [chunk(c) for c in r["gold_ids"]], "twin": [chunk(c) for c in r["twin_ids"]],
                    "notes": r["notes"]})
 

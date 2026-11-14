@@ -152,10 +152,11 @@ const SECTIONS = [
       <div class="cols"><div>${row("Ru", "")}<div class="law">${esc(x.ru.replace(/ \/ /g, "\n"))}</div></div>
       <div>${row("Kz", "")}<div class="law">${esc(x.kz.replace(/ \/ /g, "\n"))}</div></div></div>` },
   { id: "questions", tab: "Вопросы", items: DATA.questions,
-    intro: "Черновики вопросов по Трудовому кодексу (написал Claude). <b>Gold</b> — пункт, который отвечает на вопрос. <b>Twin</b> — пункт на ту же тему, но с обратным смыслом («вправе» ↔ «не вправе»), который поиск легко перепутает с gold; бывает только у negation-вопросов, у general пусто. Id пункта: <code>labor:54:2</code> = Трудовой кодекс, статья 54, пункт 2 (<code>#1</code> — часть длинного пункта). Тексты пунктов — под «Тексты пунктов». Поправьте вопрос и id прямо в полях (несколько id — через пробел).",
+    intro: "Черновики вопросов по Трудовому и Налоговому кодексам (написал Claude), у каждого — русская и казахская версия. <b>Gold</b> — пункт, который отвечает на вопрос. <b>Twin</b> — пункт на ту же тему, но с обратным смыслом («вправе» ↔ «не вправе», «облагается» ↔ «не облагается»), который поиск легко перепутает с gold; бывает только у negation-вопросов, у general пусто. Id пункта: <code>labor:54:2</code> = Трудовой кодекс, статья 54, пункт 2; <code>tax:383:1</code> = Налоговый кодекс, статья 383, пункт 1 (<code>#1</code> — часть длинного пункта). Тексты пунктов — под «Тексты пунктов». Проверьте оба вопроса и id и поправьте прямо в полях (несколько id — через пробел). Казахская версия должна спрашивать ровно то же, что русская.",
     choices: [["ok", "Годится", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть", "bad"]],
-    body: x => `<div class="head"><span class="id">${esc(x.qid)}</span><span class="chip">${x.slice === "negation" ? "negation" : "general"}</span></div>
-      <div class="rows">${row("Вопрос", area(x.key, "question", x.question, 2))}
+    body: x => `<div class="head"><span class="id">${esc(x.qid)} · ${x.code === "tax" ? "Налоговый" : "Трудовой"}</span><span class="chip">${x.slice === "negation" ? "negation" : "general"}</span></div>
+      <div class="rows">${row("Вопрос (ru)", area(x.key, "question", x.question, 2))}
+      ${row("Вопрос (kz)", area(x.key, "question_kz", x.question_kz, 2))}
       ${row("Gold", area(x.key, "gold", x.gold.map(c => c.id).join(" "), 1))}
       ${row("Twin", area(x.key, "twin", x.twin.map(c => c.id).join(" "), 1))}
       ${x.notes ? row("Заметка Claude",esc(x.notes)) : ""}</div>
