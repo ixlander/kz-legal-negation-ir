@@ -161,6 +161,12 @@ const SECTIONS = [
       ${row("Twin", area(x.key, "twin", x.twin.map(c => c.id).join(" "), 1))}
       ${x.notes ? row("Заметка Claude",esc(x.notes)) : ""}</div>
       <details><summary>Тексты пунктов</summary><div class="rows" style="margin-top:8px">${x.gold.map(c => row("Gold", law(c))).join("")}${x.twin.map(c => row("Twin", law(c))).join("")}</div></details>` },
+  { id: "nli", tab: "NLI-валид", items: DATA.nli,
+    intro: "Пары «норма → утверждение». Норма взята из кодекса дословно. Утверждение написал Claude. Нужно решить, что следует из нормы <b>только по её тексту</b>, без знания других статей: <b>Следует</b> — утверждение верно, если верна норма; <b>Противоречит</b> — утверждение не может быть верным вместе с нормой; <b>Не связано</b> — норма об этом ничего не говорит. Метка одна на пару (ru и kz говорят одно и то же). Казахское утверждение проверьте на грамотность и смысл и исправьте прямо в поле, если нужно. Метка Claude показана для сверки, но решайте сами.",
+    choices: [["entailment", "Следует", "ok"], ["neutral", "Не связано", "ok"], ["contradiction", "Противоречит", "ok"], ["drop", "Выкинуть пару", "bad"]],
+    body: x => `<div class="head"><span class="id">${esc(x.pair_id)} · ${esc(x.chunk_id)}${x.range ? " · «не менее / не более…»" : ""}</span><span class="chip">Метка Claude: ${["следует", "не связано", "противоречит"][x.label]}</span></div>
+      <div class="cols"><div>${row("Норма (ru)", "")}<div class="law">${esc(x.premise_ru)}</div>${row("Утверждение (ru)", esc(x.hypothesis_ru))}</div>
+      <div>${row("Норма (kz)", "")}<div class="law">${esc(x.premise_kz)}</div>${row("Утверждение (kz)", area(x.key, "hypothesis_kz", x.hypothesis_kz, 3))}</div></div>` },
   { id: "d1ru", tab: "Тройки D1 (ru)", items: DATA.d1ru,
     intro: "Необязательно. Русские тройки для D1: норма из Трудового кодекса, перефраз, отрицание и замена синонимом. Если всё нормально, достаточно «Всё верно».",
     choices: [["ok", "Всё верно", "ok"], ["fixed", "Исправил(а)", "fix"], ["drop", "Выкинуть пример", "bad"]],
