@@ -281,3 +281,44 @@ set is too easy; the hand-written set is the discriminative one.
 1. Owner/annotator review (questions, D1 kz, D2 forms, alignment) → final `queries.jsonl` with dev/test split.
 2. NLI fine-tuning, variants a–d (training of `a` started), then B3 with S1/S2, scoring chosen on dev.
 3. Second annotation batch: manual NLI validation (Kz text + all labels).
+
+## 2026-11-15 — NLI reranker: XLM-R attempt, switch to mDeBERTa, synthetic redesign
+
+Decision log entries of 15.11.2026 in CLAUDE.md §12 (owner's "yes").
+
+### Attempt 1: XLM-R-base from scratch (variant a, as in the original plan)
+`FacebookAI/xlm-roberta-base` + 3-way head, XNLI ru 50k + XNLI tr 50k + synthetic ru/kz (107 036 pairs),
+2 epochs, lr 2e-5, batch 32, fp16 (`results/nli_train_a.json`, `results/nli_eval_nli-a_2026-11-15.json`).
+* First run was killed by the OS-memory guard while saving the checkpoint (fp32, 1.1 GB copy to RAM);
+  fixed by saving fp16 weights (547 MB) and freeing memory before saving; batches grouped by length
+  (epoch 28 → 20 min).
+* Kardeş kk dev macro F1: 0.656 (epoch 1) → 0.684 (epoch 2).
+
+| set | XLM-R variant a | zero-shot mDeBERTa-xnli |
+|---|---|---|
+| Kardeş kk test (acc) | 0.71 | **0.79** |
+| RCB ru | 0.36 | **0.55** |
+| LiDiRus negation | 0.60 | **0.84** |
+| manual drafts ru / kz | 0.40 / **0.26** | 0.66 / 0.62 |
+
+* On the hand-written pairs the model answers "neutral" almost always (47 of 50 Kz pairs). Cause: a
+  shortcut learned from our synthetic data — there every entailment/contradiction differs from its
+  premise by one word, and every neutral was a different sentence of the same article, so "few shared
+  words → neutral" was a perfect rule. Hand-written hypotheses are paraphrases and break it.
+* Evaluation bug: the synthetic pairs used for evaluation were also in training (0.999 was meaningless).
+* The XLM-R checkpoint was deleted after the switch; its numbers are kept in the result files above.
+
+### Switch: start from mDeBERTa-v3-base-xnli (already trained on 2.7M multilingual NLI pairs)
+Keeps its NLI head; continued fine-tuning on the same data mixes, variants a–d unchanged in meaning;
+lr 1e-5, effective batch 32 (16 × 2 accumulation), bf16 (DeBERTa is unstable in fp16; the RTX 4050
+supports bf16). Epoch 0 (the start model) is evaluated on Kardeş dev for reference.
+
+### Synthetic data redesign (`src/rerank/nli_data.py`)
+* Held-out test split by article (10% of articles); training uses only the train split, evaluation
+  only the test split.
+* Lexically close neutrals: a tighter numeric bound («не менее трех дней» → «не менее пяти дней»,
+  «отыз күннен аспайтын» → «бес күннен аспайтын»); a looser bound is an entailment («не менее трех» →
+  «не менее двух»). Numerals are swapped only where the grammar stays intact (Ru genitive forms, Kz
+  numerals do not inflect; compound numerals skipped). Distant "same article" neutrals at most ⅓.
+* Result: Ru 3 708 pairs (E 1200 / N 908 / C 1600), Kz 2 901 (E 597 / N 704 / C 1600); Kz entailment
+  doubled (307 → 597) thanks to the numeric pairs.
