@@ -76,7 +76,14 @@ def main():
                          "sentence": r["sentence"], "paraphrase": r["paraphrase"], "negation": r["negation"],
                          "min_paraphrase": r["min_paraphrase"], "neg_type": r["neg_type"]})
 
-    data = {"d2": d2, "d1kz": d1kz, "align": align, "questions": qs, "d1ru": d1ru}
+    pairs = {}
+    for r in map(json.loads, open(ROOT / "data/nli/val_manual.jsonl", encoding="utf-8")):
+        pairs.setdefault(r["pair_id"], {})[r["lang"]] = r
+    nli = [{"key": f"nli-{pid}", "pair_id": pid, "chunk_id": p["ru"]["chunk_id"], "label": p["ru"]["label"],
+            "range": p["ru"]["range"], "premise_ru": p["ru"]["premise"], "hypothesis_ru": p["ru"]["hypothesis"],
+            "premise_kz": p["kz"]["premise"], "hypothesis_kz": p["kz"]["hypothesis"]} for pid, p in pairs.items()]
+
+    data = {"d2": d2, "d1kz": d1kz, "align": align, "questions": qs, "d1ru": d1ru, "nli": nli}
     OUT.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     print({k: len(v) for k, v in data.items()}, f"{OUT.stat().st_size / 1024:.0f} KB")
 
