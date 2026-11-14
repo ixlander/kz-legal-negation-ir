@@ -361,3 +361,24 @@ topical relevance, not polarity: NLI does not score relevance, and a question is
 `src/rerank/nli_rerank.py`: for S1 and S2, three fusions with the B2 order of the top-30 — `pure`
 (reference), `rrf` (B2 rank + NLI rank, k=60), `lin-λ` (min-max normalized B2 score + λ·NLI,
 λ ∈ {0.25, 0.5, 1}). The final scoring / fusion / λ is picked on the dev split, never on test.
+
+### B3 with fusion (`results/ablation_draft_b3-fusion_bge-m3+e5-base_ru+kz_2026-11-15.json`, drafts)
+Recall@5 general / negation, Twin-above-Gold ("*" = CI of the difference to B2 excludes 0):
+
+| run | bge-m3 Ru | bge-m3 Kz | e5-base Ru | e5-base Kz |
+|---|---|---|---|---|
+| B2 | 0.88 / 0.76, 0.20 | 0.92 / 0.84, 0.10 | 0.86 / 0.64, 0.20 | 0.92 / 0.64, 0.15 |
+| B3 tuned, S1, pure | 0.64 / 0.56, 0.35 | 0.76 / 0.60*, 0.25 | 0.72 / 0.64, 0.30 | 0.82 / 0.56, 0.25 |
+| B3 tuned, S2, rrf | 0.90 / 0.80, 0.20 | 0.88 / 0.76, 0.20 | 0.86 / **0.80***, 0.20 | 0.88 / 0.64, 0.20 |
+| B3 tuned, S2, lin-0.25 | 0.92 / 0.76, 0.15 | 0.92 / 0.84, 0.10 | 0.86 / 0.72, 0.15 | 0.92 / 0.68, 0.20 |
+| B3 start model, S2, rrf | 0.90 / 0.88, 0.20 | 0.72 / 0.80, 0.15 | 0.94 / **0.80***, 0.20 | 0.72 / 0.60, 0.20 |
+| B3′ bge-reranker (for reference) | 1.00 / 0.84, 0.10 | 0.96 / 0.90, 0.05 | 1.00 / 0.88, 0.05 | 0.96 / 0.88, 0.10 |
+
+* Fusion removes the collapse: general recall is back at the B2 level (0.86–0.96).
+* S2 («decisiveness») is at least as good as S1 on the negation slice and keeps Twin-above-Gold at the B2
+  level; S1 raises it (Ru 0.30–0.40, several significant) — the risk noted in the plan: S1 pushes down a
+  correct «не допускается» article when the question is phrased positively.
+* The only significant negation gains over B2 are on the weaker retriever (e5-base Ru, S2 rrf: 0.64 → 0.80).
+  Fine-tuned vs start model: no consistent difference yet.
+* No B3 variant reaches the off-the-shelf cross-encoder B3′ on these drafts. Final choice of scoring /
+  fusion / λ waits for the dev split; picking the best row here would be selection on test.
