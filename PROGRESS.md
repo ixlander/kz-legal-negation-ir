@@ -333,3 +333,31 @@ check after the fix: loss 0.1–1.2, peak GPU 5.75 GB of 6.1.
 Model card: mDeBERTa-v3-base-xnli-multilingual-nli-2mil7 was trained on the XNLI validation set; Kardeş
 dev is its Kazakh translation (start model: 0.943 on Kardeş dev vs 0.791 on Kardeş test). Epoch selection
 now uses the even half of Kardeş test, reporting the odd half; Kardeş dev is not used.
+
+### mDeBERTa run 2 (fp32 weights, bf16 compute): variant a (`results/nli_train_a_mdeberta.json`)
+Kardeş select half macro F1: start 0.803 → epoch 1 **0.820** → epoch 2 0.814 (epoch 1 kept). ~50 min/epoch
+on the RTX 4050 (fp32 master weights are three times slower than the broken fp16 run).
+
+| set | tuned (a) | start model |
+|---|---|---|
+| Kardeş kk report half (acc) | **0.807** | 0.779 |
+| RCB ru | 0.53 | 0.55 |
+| LiDiRus negation | 0.83 | 0.84 |
+| synthetic held-out articles ru / kz | **0.97 / 0.99** | 0.68 / 0.74 |
+| manual drafts ru / kz (unchecked, n=50) | 0.60 / 0.54 | **0.66 / 0.62** |
+| Kz range-negation error on manual drafts | **0.00** | 0.38 |
+
+General NLI kept (RCB, LiDiRus unchanged), Kazakh +2.8 pp. Held-out synthetic is near perfect but shares
+templates with training. On the hand-written drafts the tuned model calls paraphrased contradictions
+"neutral" more often (Ru C→N 11 of 19); differences are within the ±0.13 noise of 50 unchecked pairs.
+
+### B3 as a pure reranker fails (`results/ablation_draft_b3-nli_bge-m3+e5-base_ru+kz_2026-11-15.json`)
+Replacing the B2 order of the top-30 by the NLI score, bge-m3, Recall@5 general / negation:
+Ru B2 0.88 / 0.76 → B3 0.64 / 0.56–0.60; Kz B2 0.92 / 0.84 → B3 0.72–0.76 / 0.60 (tuned) and
+0.56–0.64 / 0.56–0.58 (start model). General questions drop as much as negation ones, so what is lost is
+topical relevance, not polarity: NLI does not score relevance, and a question is not a proposition.
+
+### Change: NLI is fused with the retrieval order (within the plan: B3 scoring is chosen on dev, §4)
+`src/rerank/nli_rerank.py`: for S1 and S2, three fusions with the B2 order of the top-30 — `pure`
+(reference), `rrf` (B2 rank + NLI rank, k=60), `lin-λ` (min-max normalized B2 score + λ·NLI,
+λ ∈ {0.25, 0.5, 1}). The final scoring / fusion / λ is picked on the dev split, never on test.
