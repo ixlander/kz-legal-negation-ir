@@ -17,3 +17,6 @@ checkpoints/
 
 # third-party datasets (gated / licensed), downloaded by src/data/fetch_external.py
 data/external/
+
+# retrieval indexes (embeddings, tokenized corpora): rebuilt by src/retrieval/*
+data/index/

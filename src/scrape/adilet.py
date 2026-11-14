@@ -178,6 +178,15 @@ def build_chunks(code, arts_by_lang):
         else:
             units = [(None, "\n".join(t for _, t in ru["points"]), "\n".join(t for _, t in kz["points"]))]
             stats["whole_article"] += 1
+        # numbering restarts inside some articles (e.g. a note «1. Длящимся признается…» after
+        # point 2): the repeated number gets a ~2, ~3 suffix so chunk_ids stay unique
+        seen = {}
+        for i, (p, tr, tk) in enumerate(units):
+            if p is not None:
+                seen[p] = seen.get(p, 0) + 1
+                if seen[p] > 1:
+                    units[i] = (f"{p}~{seen[p]}", tr, tk)
+                    stats["renumbered"] = stats.get("renumbered", 0) + 1
         for para_no, tr, tk in units:
             base = f"{code}:{n}" + (f":{para_no}" if para_no else "")
             parts = _group_subpoints(tr, tk) if max(_words(tr), _words(tk)) > MAX_WORDS else [(tr, tk)]
