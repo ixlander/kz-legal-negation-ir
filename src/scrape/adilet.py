@@ -9,7 +9,7 @@ Ru and Kz, otherwise the whole article. A chunk still longer than MAX_WORDS (in 
 language) is split into groups of consecutive sub-points («1)», «2)» ...) when the
 sub-point numbering matches. All split decisions are taken for the Ru/Kz pair jointly,
 so `chunk_id`s stay aligned: code:article[:point][#group]. The article title is kept in
-`title` and prepended at indexing time (CLAUDE.md §12, 21.10.2026).
+`title` and prepended at indexing time.
 
 Usage:
     python -m src.scrape.adilet --code labor
@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data/raw/adilet"
 CORPUS = ROOT / "data/corpus"
 API = "https://adilet.zan.kz/api/documents/by-ngr/{ngr}?language={lang}"
-# Codes in force with the same Ru/Kz edition (data/corpus/codes_inventory.md); the Entrepreneurial
+# Codes in force with the same Ru/Kz edition; the Entrepreneurial
 # Code is left out: its Ru and Kz editions differ. Questions are asked only on labor and tax.
 CODES = {
     "labor": "K1500000414", "tax": "K2500000214",

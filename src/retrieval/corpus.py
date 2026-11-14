@@ -1,7 +1,7 @@
-"""The search corpus: every chunk of all 22 codes in one language (CLAUDE.md §12, 21.10.2026).
+"""The search corpus: every chunk of all 22 codes in one language.
 
 Labor and Tax carry the questions; the other 20 codes are distractors. The article title is
-prepended to the chunk text at indexing time (chunking decision, 21.10.2026).
+prepended to the chunk text at indexing time.
 """
 import json
 from pathlib import Path

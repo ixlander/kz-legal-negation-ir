@@ -1,4 +1,4 @@
-"""Per-query metrics (CLAUDE.md §6) from a full score vector over the corpus.
+"""Per-query retrieval metrics from a full score vector over the corpus.
 
 Recall@k is the share of gold chunks in the top k (most questions have one gold, so 0/1).
 Twin-above-Gold: the best-ranked twin is above the best-ranked gold; None without twins.

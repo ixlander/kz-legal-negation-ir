@@ -1,7 +1,7 @@
 """Owner review of Kazakh drafts.
 
-export: write data/diagnostics/review_d1_kz.tsv (one row per Kz triple, Ru original alongside).
-apply:  read review_d1_kz.tsv back. For every row the owner marked `ok` (or `fixed` after
+export: write a review TSV (one row per Kz triple, Ru original alongside).
+apply:  read the review TSV back. For every row the owner marked `ok` (or `fixed` after
         editing the paraphrase/negation/min_paraphrase cells) the triple gets status `ok`;
         `drop` removes it from the metrics (status `dropped`).
 
@@ -70,7 +70,7 @@ def apply():
 
 
 def apply_d2():
-    """data/diagnostics/d2_owner_check.tsv: decision = ok | not_neg | wrong_split -> status in the forms file."""
+    """Owner decisions on D2 forms (ok | not_neg | wrong_split) -> status in the forms file."""
     forms_path = ROOT / "data/diagnostics/d2_kz_neg_forms.tsv"
     dec = {r["form"]: r for r in csv.DictReader(open(ROOT / "data/diagnostics/d2_owner_check.tsv", encoding="utf-8"),
                                                 delimiter="\t")}

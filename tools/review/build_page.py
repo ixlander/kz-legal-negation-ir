@@ -1,4 +1,4 @@
-"""Inline review_data.json into the page template -> tools/review/review_page.html (published as an Artifact)."""
+"""Inline the review data into the page template, producing a self-contained HTML page."""
 from pathlib import Path
 
 HERE = Path(__file__).parent

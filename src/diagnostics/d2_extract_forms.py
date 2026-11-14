@@ -1,6 +1,6 @@
 """Collect Kazakh negative verb forms from the Kz corpus for D2.
 
-Every form is split by the regex splitter (src/retrieval/morph_kz.py) and gets
+Every form is split by the regex splitter and gets
 status NEEDS_KZ_CHECK; the owner sets status to `ok` / `wrong_split` / `not_neg`.
 Rows that are already checked in an existing file are kept as they are.
 

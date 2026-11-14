@@ -1,4 +1,4 @@
-"""Paired bootstrap (CLAUDE.md §6): 1000 resamples, seed 42, 95% percentile CI.
+"""Paired bootstrap: 1000 resamples, seed 42, 95% percentile CI.
 
 Queries are resampled with replacement within each slice (so every resample keeps the
 general/negation sizes), and the same resample is applied to both configurations.

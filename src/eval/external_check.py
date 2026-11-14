@@ -1,4 +1,4 @@
-"""External sanity checks (CLAUDE.md §12, 21.10.2026): can our retrievers search at all?
+"""External sanity checks: can our retrievers search at all?
 
     rulaw   RuLawRetrieval, split tk_hard (716 queries, Russian Labor Code of the RF), chunk
             protocol of the dataset card: an article gets the max score of its chunks,

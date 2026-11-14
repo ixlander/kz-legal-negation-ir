@@ -1,4 +1,4 @@
-"""Figures for the report page; reads results/ only.
+"""Figures for the report page; reads saved results only, runs no models.
 
 Usage:
     python tools/report/make_figures.py

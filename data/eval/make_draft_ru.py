@@ -1,11 +1,11 @@
 """DRAFT evaluation questions (Labor + Tax Code, Ru + Kz) proposed by the agent.
 
 gold/twin are CANDIDATES found by searching the corpus; the owner finalizes them
-by reading the code (CLAUDE.md 5.2). Twin must be a different chunk with the
+by reading the code. Twin must be a different chunk with the
 opposite polarity on the same topic; empty twin -> excluded from Twin-above-Gold.
 Split (dev/test) is assigned after finalization.
 
-Run:  python data/eval/make_draft_ru.py  -> data/eval/queries_draft_{ru,kz}.jsonl + queries_draft_ru.tsv
+Run:  python data/eval/make_draft_ru.py
 """
 import csv
 import json

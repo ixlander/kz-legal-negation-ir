@@ -1,6 +1,6 @@
-"""D2 Affix Isolation on many tokenizers (src/models.py TOKENIZERS).
+"""D2 Affix Isolation on many tokenizers.
 
-Forms: the verified ones (status ok / ok_auto) from data/diagnostics/d2_kz_neg_forms.tsv.
+Forms: only the verified ones (status ok / ok_auto).
 Besides isolation, reports how often a form contains an unknown token (vocabularies pruned
 to Russian may have lost the Kazakh letters ә ғ қ ң ө ұ ү і һ).
 

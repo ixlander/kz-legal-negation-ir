@@ -5,7 +5,7 @@ Each entry: tid of the parallel Ru triple, Kz source sentence, paraphrase,
 (old, new) edit for the negation, (old, new) edit for the minimal paraphrase,
 neg_type, neg_mechanism (affix | particle | lexical).
 
-Run:  python data/diagnostics/d1_kz_drafts.py   (appends/replaces kz rows in d1_triples.jsonl)
+Run:  python data/diagnostics/d1_kz_drafts.py   (replaces the kz rows of the triples file)
 """
 import json
 from pathlib import Path

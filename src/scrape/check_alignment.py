@@ -1,4 +1,4 @@
-"""Automatic Ru/Kz alignment check of ALL aligned chunks (replaces the manual 10-pair sample, CLAUDE.md 5.1).
+"""Automatic Ru/Kz alignment check of all aligned chunks.
 
 Per pair:
   markers  point / sub-point numbering («1.», «2)», «7-1)») must be the same sequence
