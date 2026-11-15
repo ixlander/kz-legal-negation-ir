@@ -426,3 +426,17 @@ jina-reranker-v2 0.652, a zero-shot NLI cross-encoder 0.302, bi-encoders mostly 
 * S1 (entail − contradict) is the polarity-sensitive score: ~0.57, far above the study's English NLI
   baseline. S2 ignores polarity by construction and falls to chance or below — consistent with B3 on our
   drafts, where S2 helped relevance but not polarity. The final B3 choice on dev should weigh this.
+
+## 2026-11-15 — finalization pipeline, tested end to end
+After the annotators finish: export the page's `reviews` collection to `data/review/answers/`, then
+`python -m src.eval.finalize --answers data/review/answers`. Steps: apply answers
+(`src/data/apply_review.py`) → D1 / D2 on checked items → ladder on dev and test (B3-rule α grid
+{0, .002, .005, .01, .02}, B3 = NLI variant a in every scoring / fusion) → dev selection → final table on
+test (`results/final_table.{json,md}`) with H1–H3 paired tests → NLI evaluation and H5 / H6.
+* Dev split: 5 question pairs per slice (negation dev pairs are taken among those with a twin).
+* Questions with unknown or empty gold ids are dropped with a warning; gold/twin chunks whose Ru/Kz
+  alignment the annotator rejected are reported; fewer than 35 pairs triggers the plan's fallback warning.
+* H3 = (Kz gain over B0) − (Ru gain over B0) per question pair, bootstrap over pairs.
+* Bug found and fixed on the way: D1 used to keep triples the annotator dropped.
+* Tested on 195 fake answers (accept drafts, a few edits, drops, a corrected D2 split, one rejected
+  alignment, a bad gold id): every step ran; all test outputs were then reverted, none are kept.
