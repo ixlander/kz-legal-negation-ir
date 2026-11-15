@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def load_triples(path, lang, include_unchecked=False):
     rows = [json.loads(l) for l in open(path, encoding="utf-8") if l.strip()]
     rows = [r for r in rows if r["lang"] == lang]
+    rows = [r for r in rows if r.get("status") != "dropped"]
     if not include_unchecked:
         rows = [r for r in rows if r.get("status") != "NEEDS_KZ_CHECK"]
     return rows

@@ -11,7 +11,8 @@ BM25-only runs are reported for context. Each step is compared with paired boots
 
 Usage:
     python -m src.eval.run_ablation --queries draft            # agent drafts, smoke test only
-    python -m src.eval.run_ablation --queries final            # finalized set, test split
+    python -m src.eval.run_ablation --queries final --split test
+    python -m src.eval.run_ablation --queries final --split dev --alphas 0 0.002 0.005 0.01
     python -m src.eval.run_ablation --models bge-m3 --langs kz --rerankers
 """
 import argparse
@@ -34,11 +35,11 @@ TOP_K = 30
 PATHS = [("general", "recall@5"), ("negation", "recall@5"), ("negation_gap",), ("twin_above_gold", "value")]
 
 
-def load_queries(which, lang):
+def load_queries(which, lang, split="test"):
     if which == "draft":
         return [json.loads(l) for l in open(ROOT / f"data/eval/queries_draft_{lang}.jsonl", encoding="utf-8")]
     rows = [json.loads(l) for l in open(ROOT / "data/eval/queries.jsonl", encoding="utf-8")]
-    return [r for r in rows if r["lang"] == lang and r["split"] == "test"]
+    return [r for r in rows if r["lang"] == lang and split in ("all", r["split"])]
 
 
 def evaluate(scores, queries, pos, ids):
@@ -68,10 +69,14 @@ def free_gpu():
         torch.cuda.empty_cache()
 
 
-def run_lang(lang, which, model_keys, reranker_keys, alpha, nli_checkpoints=()):
+def rule_name(alpha):
+    return f"B3-rule-{alpha:g}"
+
+
+def run_lang(lang, which, model_keys, reranker_keys, alphas, nli_checkpoints=(), split="test"):
     ids, texts = corpus.load(lang)
     pos = {c: i for i, c in enumerate(ids)}
-    queries = load_queries(which, lang)
+    queries = load_queries(which, lang, split)
     qtext = [q["question"] for q in queries]
     print(f"[{lang}] corpus {len(ids)} chunks, {len(queries)} queries")
 
@@ -94,11 +99,12 @@ def run_lang(lang, which, model_keys, reranker_keys, alpha, nli_checkpoints=()):
         out[f"{key}/B0"] = evaluate(dn, queries, pos, ids)
         out[f"{key}/B1"] = evaluate([rrf(d, s) for d, s in zip(dn, sparse["plain"])], queries, pos, ids)
         out[f"{key}/B2"] = evaluate(b2[key], queries, pos, ids)
-        rule = []
-        for q, s in zip(qtext, b2[key]):
-            top = top_k(s)
-            rule.append(reorder_top(s, top, polarity_rule.boost(q, [texts[i] for i in top], s[top], lang, alpha)))
-        out[f"{key}/B3-rule"] = evaluate(rule, queries, pos, ids)
+        for alpha in alphas:
+            rule = []
+            for q, s in zip(qtext, b2[key]):
+                top = top_k(s)
+                rule.append(reorder_top(s, top, polarity_rule.boost(q, [texts[i] for i in top], s[top], lang, alpha)))
+            out[f"{key}/{rule_name(alpha)}"] = evaluate(rule, queries, pos, ids)
         print(f"[{lang}] {key}: B0-B2, B3-rule done")
 
     for rk in reranker_keys:
@@ -130,8 +136,8 @@ def run_lang(lang, which, model_keys, reranker_keys, alpha, nli_checkpoints=()):
     return out
 
 
-def comparisons(runs, model_keys, reranker_keys, nli_names=()):
-    pairs = [("B0", "B1"), ("B0", "B2"), ("B1", "B2"), ("B2", "B3-rule")]
+def comparisons(runs, model_keys, reranker_keys, alphas, nli_names=()):
+    pairs = [("B0", "B1"), ("B0", "B2"), ("B1", "B2")] + [("B2", rule_name(a)) for a in alphas]
     pairs += [("B2", f"B3'-{rk}") for rk in reranker_keys]
     pairs += [("B2", f"B3-{n}-{r}") for n in nli_names for r in nli_rerank.run_names()]
     return {f"{key}: {y} vs {x}": {"/".join(p): paired_diff(runs[f"{key}/{x}"], runs[f"{key}/{y}"], p) for p in PATHS}
@@ -144,26 +150,32 @@ def main():
     ap.add_argument("--models", nargs="+", default=["bge-m3", "e5-base"])
     ap.add_argument("--langs", nargs="+", default=["ru", "kz"])
     ap.add_argument("--rerankers", nargs="*", default=list(cross_encoder.RERANKERS))
-    ap.add_argument("--alpha", type=float, default=0.01, help="B3-rule boost, to be tuned on dev")
+    ap.add_argument("--alphas", type=float, nargs="+", default=[0.01], help="B3-rule boosts, tuned on dev")
+    ap.add_argument("--split", choices=["dev", "test", "all"], default="test", help="final queries only")
     ap.add_argument("--nli", nargs="*", default=[], help="NLI models (checkpoint dirs or hub ids) for B3")
     ap.add_argument("--tag", default="", help="extra name part of the result file")
+    ap.add_argument("--out", default=None, help="result file; default: built from the run options")
     a = ap.parse_args()
 
     today = dt.date.today().isoformat()
-    res = {"config": {"queries": a.queries, "models": a.models, "rerankers": a.rerankers, "rerank_top_k": TOP_K,
-                      "rule_alpha": a.alpha, "nli": a.nli, "rrf_k": 60, "bm25": {"k1": 1.5, "b": 0.75},
-                      "bootstrap": {"n": 1000, "seed": 42}, "corpus": "all 22 codes per language, title + text",
-                      "date": today},
+    split = a.split if a.queries == "final" else None
+    res = {"config": {"queries": a.queries, "split": split, "models": a.models, "rerankers": a.rerankers,
+                      "rerank_top_k": TOP_K, "rule_alphas": a.alphas, "nli": a.nli, "rrf_k": 60,
+                      "bm25": {"k1": 1.5, "b": 0.75}, "bootstrap": {"n": 1000, "seed": 42},
+                      "corpus": "all 22 codes per language, title + text", "date": today},
            "langs": {}}
     if a.queries == "draft":
         res["config"]["warning"] = "agent draft questions, gold/twin not finalized: smoke test, not for the report"
+    nli_names = [Path(c).name for c in a.nli]
     for lang in a.langs:
-        runs = run_lang(lang, a.queries, a.models, a.rerankers, a.alpha, a.nli)
+        runs = run_lang(lang, a.queries, a.models, a.rerankers, a.alphas, a.nli, a.split)
         res["langs"][lang] = {"summary": {k: summary(v) for k, v in runs.items()},
-                              "compare": comparisons(runs, a.models, a.rerankers, [Path(c).name for c in a.nli]), "per_query": runs}
+                              "compare": comparisons(runs, a.models, a.rerankers, a.alphas, nli_names),
+                              "per_query": runs}
 
-    tag = f"{a.tag}_" if a.tag else ""
-    path = ROOT / f"results/ablation_{a.queries}_{tag}{'+'.join(a.models)}_{'+'.join(a.langs)}_{today}.json"
+    tag = "".join(f"{x}_" for x in (a.tag, split) if x)
+    path = Path(a.out) if a.out else \
+        ROOT / f"results/ablation_{a.queries}_{tag}{'+'.join(a.models)}_{'+'.join(a.langs)}_{today}.json"
     path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
 
     print(f"\n{'run':34s} {'lang':4s} {'gen R@5':>8s} {'neg R@5':>8s} {'gap':>6s} {'TaG':>5s} {'MRR':>5s}")
