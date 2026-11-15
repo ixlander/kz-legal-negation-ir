@@ -409,3 +409,20 @@ entailments 1.00 → 0.49 correct). The manual drafts agree in direction (Ru −
 start model already makes almost no range errors on Russian; training on polarity flips *without*
 counter-examples is what creates the «не → contradiction» shortcut. Caveats: synthetic test shares
 templates with training; manual set still unchecked.
+
+## 2026-11-15 — NevIR sanity check of the rerankers (`results/nevir_check_2026-11-15.json`)
+NevIR test (1383 items, English), pairwise accuracy (random 0.25). The NevIR reproduction study reports
+jina-reranker-v2 0.652, a zero-shot NLI cross-encoder 0.302, bi-encoders mostly 0.065–0.226.
+
+| model | pairwise acc. |
+|---|---|
+| bi-encoder bge-m3 / e5-base | 0.267 / 0.188 |
+| cross-encoder jina-reranker-v2 | **0.651** (study: 0.652) |
+| cross-encoder bge-reranker-v2-m3 | 0.433 |
+| NLI mDeBERTa-xnli start, S1 / S2 | 0.570 / 0.341 |
+| NLI tuned variant a, S1 / S2 | 0.563 / 0.196 |
+
+* jina matches the published number: the reranker setup (incl. the transformers-5 shim) is correct.
+* S1 (entail − contradict) is the polarity-sensitive score: ~0.57, far above the study's English NLI
+  baseline. S2 ignores polarity by construction and falls to chance or below — consistent with B3 on our
+  drafts, where S2 helped relevance but not polarity. The final B3 choice on dev should weigh this.

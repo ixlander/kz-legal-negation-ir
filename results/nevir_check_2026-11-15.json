@@ -1,0 +1,17 @@
+{
+ "dataset": "NevIR test",
+ "n": 1383,
+ "metric": "pairwise accuracy",
+ "random": 0.25,
+ "date": "2026-11-15",
+ "results": {
+  "bi-encoder bge-m3": 0.2668112798264642,
+  "bi-encoder e5-base": 0.18799710773680406,
+  "cross-encoder jina-v2": 0.6514822848879248,
+  "cross-encoder bge-reranker-v2-m3": 0.433116413593637,
+  "NLI mdeberta-xnli (start) s1": 0.5704989154013015,
+  "NLI mdeberta-xnli (start) s2": 0.3405639913232104,
+  "NLI nli-a (tuned) s1": 0.5632682574114244,
+  "NLI nli-a (tuned) s2": 0.19595083152566883
+ }
+}
