@@ -1,0 +1,141 @@
+{
+ "model": "checkpoints/nli-b",
+ "date": "2026-11-15",
+ "sets": {
+  "kardes-kk-report": {
+   "n": 1000,
+   "accuracy": 0.812,
+   "macro_f1": 0.8129075538926527,
+   "contradiction_recall": 0.850609756097561
+  },
+  "rcb-ru": {
+   "n": 220,
+   "accuracy": 0.5272727272727272,
+   "macro_f1": 0.4622575224004121,
+   "contradiction_recall": 0.2,
+   "by_kind": {
+    "negation": {
+     "n": 22,
+     "accuracy": 0.6818181818181818
+    },
+    "no_negation": {
+     "n": 198,
+     "accuracy": 0.51010101010101
+    }
+   }
+  },
+  "rcb-ru-negated": {
+   "n": 22,
+   "accuracy": 0.6818181818181818,
+   "macro_f1": 0.6475748194014448,
+   "contradiction_recall": 0.4,
+   "by_kind": {
+    "negation": {
+     "n": 22,
+     "accuracy": 0.6818181818181818
+    }
+   }
+  },
+  "lidirus-neg": {
+   "n": 108,
+   "accuracy": 0.8425925925925926,
+   "macro_f1": 0.8095238095238095,
+   "contradiction_recall": 0.8717948717948718
+  },
+  "synthetic-ru-test": {
+   "n": 351,
+   "accuracy": 0.9743589743589743,
+   "macro_f1": 0.9722918053926076,
+   "contradiction_recall": 1.0,
+   "by_kind": {
+    "flip": {
+     "n": 114,
+     "accuracy": 1.0
+    },
+    "modality": {
+     "n": 17,
+     "accuracy": 1.0
+    },
+    "number": {
+     "n": 94,
+     "accuracy": 0.9893617021276596
+    },
+    "range": {
+     "n": 74,
+     "accuracy": 0.9864864864864865
+    },
+    "same_article": {
+     "n": 40,
+     "accuracy": 0.825
+    },
+    "synonym_neg": {
+     "n": 12,
+     "accuracy": 1.0
+    }
+   },
+   "range_negation_error": 0.014925373134328358
+  },
+  "synthetic-kz-test": {
+   "n": 268,
+   "accuracy": 0.996268656716418,
+   "macro_f1": 0.996171893147503,
+   "contradiction_recall": 1.0,
+   "by_kind": {
+    "flip": {
+     "n": 139,
+     "accuracy": 1.0
+    },
+    "modality": {
+     "n": 4,
+     "accuracy": 1.0
+    },
+    "number": {
+     "n": 51,
+     "accuracy": 1.0
+    },
+    "same_article": {
+     "n": 38,
+     "accuracy": 0.9736842105263158
+    },
+    "synonym_neg": {
+     "n": 36,
+     "accuracy": 1.0
+    }
+   }
+  },
+  "manual-draft-ru": {
+   "n": 50,
+   "accuracy": 0.68,
+   "macro_f1": 0.6772669220945083,
+   "contradiction_recall": 0.47368421052631576,
+   "by_kind": {
+    "other": {
+     "n": 29,
+     "accuracy": 0.7931034482758621
+    },
+    "range": {
+     "n": 21,
+     "accuracy": 0.5238095238095238
+    }
+   },
+   "range_negation_error": 0.0
+  },
+  "manual-draft-kz": {
+   "n": 50,
+   "accuracy": 0.56,
+   "macro_f1": 0.5588860178007464,
+   "contradiction_recall": 0.47368421052631576,
+   "by_kind": {
+    "other": {
+     "n": 29,
+     "accuracy": 0.6551724137931034
+    },
+    "range": {
+     "n": 21,
+     "accuracy": 0.42857142857142855
+    }
+   },
+   "range_negation_error": 0.0
+  }
+ }
+}
