@@ -382,3 +382,30 @@ Recall@5 general / negation, Twin-above-Gold ("*" = CI of the difference to B2 e
   Fine-tuned vs start model: no consistent difference yet.
 * No B3 variant reaches the off-the-shelf cross-encoder B3′ on these drafts. Final choice of scoring /
   fusion / λ waits for the dev split; picking the best row here would be selection on test.
+
+### NLI variants a–d on mDeBERTa (`results/nli_train_{a,b,c,d}_mdeberta.json`, `results/nli_eval_nli-*-mdeberta_*.json`)
+Trained one after another overnight (b ~55 min, c ~1 h 45, d ~2 h 40). Kardeş select half, best epoch:
+a 0.820, b 0.819, c 0.827, d 0.818 (start model 0.803).
+
+| set (accuracy) | start | a | b (no tr) | c (no counter-ex.) | d (+SNLI-kk) |
+|---|---|---|---|---|---|
+| Kardeş kk report half | 0.779 | 0.807 | 0.812 | 0.797 | 0.801 |
+| RCB ru | 0.550 | 0.527 | 0.527 | 0.523 | 0.518 |
+| LiDiRus negation | 0.843 | 0.833 | 0.843 | 0.843 | 0.833 |
+| synthetic held-out ru / kz | 0.675 / 0.743 | 0.972 / 0.993 | 0.974 / 0.996 | 0.647 / 0.802 | 0.972 / 0.996 |
+| manual drafts ru / kz | 0.66 / 0.62 | 0.60 / 0.54 | 0.68 / 0.56 | 0.44 / 0.44 | 0.54 / 0.50 |
+
+Paired bootstrap over items (`src/rerank/nli_compare.py`, `results/nli_h5_h6_2026-11-15.json`):
+
+**H5 (Turkish helps Kazakh) — no difference detected.** b vs a on Kardeş kk report: +0.005
+[−0.010, +0.019]; Kazakh manual drafts +0.02 [−0.04, +0.08]. Adding machine-translated SNLI-kk (d vs a):
+−0.006 [−0.023, +0.010]. Removing Turkish even helps the Russian manual drafts (+0.08 [+0.02, +0.16]),
+on 50 unchecked pairs.
+
+**H6 (entailment counter-examples reduce false contradictions) — supported on held-out synthetic.**
+Without them (c vs a), Ru range-negation error 0.009 → 0.609 (+0.60 [+0.50, +0.69]) and Ru held-out
+accuracy −0.33; on Kazakh the same pairs are pushed to *neutral* rather than contradiction (Kz numeric
+entailments 1.00 → 0.49 correct). The manual drafts agree in direction (Ru −0.16 [−0.28, −0.06]). Note: the
+start model already makes almost no range errors on Russian; training on polarity flips *without*
+counter-examples is what creates the «не → contradiction» shortcut. Caveats: synthetic test shares
+templates with training; manual set still unchecked.
