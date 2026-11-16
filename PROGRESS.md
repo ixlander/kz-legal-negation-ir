@@ -571,3 +571,8 @@ design); blind second annotator with Cohen's κ; relevance judgments for the top
 **Question set v2, draft batch 1** (`data/eval/make_draft_v2.py` -> `data/eval/queries_v2_draft.jsonl`): 34 Labor Code
 pairs, cells neg-prohibit 17 / neg-permit 11 / neg-explicit 6, 13 with a twin. Agent drafts, Kazakh unchecked;
 not used in any metric. Still to draft: Tax Code batch, yes/no questions for the general slice.
+
+**Question set v2, draft batch 2**: + 15 Tax Code pairs; pairs with a permitting gold and no prohibiting norm
+nearby form a new cell gen-polar (general slice). Draft now 49 pairs: neg-prohibit 28, neg-permit 9,
+neg-explicit 9, gen-polar 3; 16 with a twin. With v1 that is 98 pairs; the permitting and gen-polar cells
+are still too small.
