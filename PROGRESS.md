@@ -440,3 +440,61 @@ test (`results/final_table.{json,md}`) with H1–H3 paired tests → NLI evaluat
 * Bug found and fixed on the way: D1 used to keep triples the annotator dropped.
 * Tested on 195 fake answers (accept drafts, a few edits, drops, a corrected D2 split, one rejected
   alignment, a bad gold id): every step ran; all test outputs were then reverted, none are kept.
+
+## 2026-11-16 — final run on the reviewed data
+Annotation finished (195 cards, `data/review/answers/`). Applied with `src/eval/finalize.py`
+(`results/review_applied.json`, no warnings):
+* Questions: 49 of 50 accepted (lab_006 dropped: its gold `labor:26:2` is misaligned, see below), no edits;
+  final set `data/eval/queries.jsonl` — dev 10 pairs (5 general + 5 negation), test 39 (20 + 19).
+* D1 Kz triples: 25 accepted, 5 rewritten (negation and synonym edit); D2: all 17 forms confirmed.
+* NLI manual set: all 50 pairs labelled; the annotator kept 94% of the draft labels.
+* Alignment: 7 of 18 flagged pairs rejected. Labor Code art. 26: points 1 and 2 are in reverse order in the
+  Kazakh edition (Ru 26:1 = Kz 26:2), a real corpus finding; 127-3:4, 191:5, Tax 354:1 split their
+  paragraphs differently; art. 178 is the same place with a wrong reference in the official text (52 vs 51)
+  and counts as aligned. None of these chunks is a gold or twin of a kept question.
+
+### Retrieval, test split (`results/final_table.md`, `results/final_table.json`)
+Dev selection: B3-rule weight α = 0 for both models (every α > 0 lowered dev recall, so the rule is
+switched off and equals B2); B3 = S1 + linear fusion λ = 0.25 (bge-m3), S2 + RRF (e5-base).
+Recall@5 general / negation (Twin-above-Gold):
+
+| run | bge-m3 Ru | bge-m3 Kz | e5-base Ru | e5-base Kz |
+|---|---|---|---|---|
+| B0 | 0.95 / 0.79 (0.14) | 0.95 / 0.97 (0.07) | 0.93 / 0.74 (0.29) | 0.78 / 0.47 (0.43) |
+| B2 | 0.85 / 0.74 (0.21) | 0.90 / 0.89 (0.07) | 0.82 / 0.68 (0.21) | 0.90 / 0.68 (0.14) |
+| B3′ jina | 0.93 / 0.84 (0.07) | 0.90 / 0.92 (0.07) | 0.97 / 0.84 (0.07) | 0.90 / 0.84 (0.14) |
+| B3′ bge-reranker | 1.00 / 0.84 (0.07) | 0.95 / 0.92 (0.00) | 1.00 / 0.89 (0.07) | 0.95 / 0.89 (0.07) |
+| B3 (NLI, dev-selected) | 0.90 / 0.74 (0.36) | 0.90 / 0.89 (0.07) | 0.88 / 0.79 (0.21) | 0.85 / 0.63 (0.21) |
+
+* **H1 refuted** (difference within CI): B2 vs B0 Negation Gap bge-m3 Ru −0.05 [−0.25, +0.16], Kz +0.03
+  [−0.12, +0.18]; e5-base Ru −0.05, Kz −0.09 [−0.37, +0.19]. B2 does raise negation recall of the weak
+  model on Kazakh: e5-base Kz 0.47 → 0.68 (+0.21 [+0.05, +0.42]).
+* **H2 refuted**: B3 is not better than B3′ anywhere and is worse on e5-base Kz (vs jina −0.21
+  [−0.42, −0.05], vs bge-reranker −0.26 [−0.47, −0.11]) and on Twin-above-Gold for bge-m3 Ru (vs
+  bge-reranker +0.29 [+0.07, +0.54]). B3-rule is off after dev tuning.
+* **H3 partly supported**: with e5-base the B2 gain on negation questions is larger for Kazakh than for
+  Russian (+0.26 [+0.11, +0.47], 19 pairs); with B3 +0.11 [0.00, +0.26] (n.s.); with bge-m3 no difference
+  (it already reaches 0.97 on Kazakh negation questions at B0).
+* bge-m3 is better on Kazakh than on Russian negation questions (0.97 vs 0.79 at B0).
+
+### D1 / D2 on reviewed data
+D1 Kazakh, e5-base: margin −0.013 [−0.020, −0.007], 80% of norms closer to their negation (prelim 77%);
+no model has a positive margin. D2: XLM-R isolates the affix in 21.1% of 171 forms (all forms now checked).
+
+### NLI on the checked manual set (`results/nli_eval_final-*_2026-11-16.json`, `results/nli_h5_h6_2026-11-16.json`)
+Accuracy Ru / Kz (50 pairs each); false contradictions on the 9 Kz range-negation entailments:
+
+| model | manual Ru | manual Kz | Kz range errors |
+|---|---|---|---|
+| start (mDeBERTa-xnli) | 0.62 | **0.56** | 4 of 9 |
+| a (ru + tr + synthetic) | 0.56 | 0.48 | 1 of 9 |
+| b (no tr) | **0.64** | 0.50 | 1 of 9 |
+| c (no counter-examples) | 0.40 | 0.40 | 0 of 9 |
+| d (+ SNLI-kk) | 0.50 | 0.44 | 1 of 9 |
+
+* **H5 not supported**: b vs a on Kazakh manual +0.02 [−0.04, +0.08], on Kardeş +0.005 [−0.010, +0.019].
+* **H6**: supported on the held-out synthetic pairs (range error 0.9% vs 60.9%); on the 9 manual Kazakh range
+  pairs the counts are too small to test (a 1/9, c 0/9 — without counter-examples the model calls them
+  neutral, not contradiction), but c loses 0.16 accuracy on the Russian manual set ([−0.28, −0.06]).
+* Fine-tuning cuts Kazakh range errors of the start model (4/9 → 1/9) but lowers overall accuracy on the
+  hand-written pairs; the off-the-shelf model is the best on the Kazakh manual set.

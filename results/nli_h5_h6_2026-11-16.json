@@ -1,0 +1,387 @@
+{
+ "date": "2026-11-16",
+ "bootstrap": {
+  "n": 1000,
+  "seed": 42
+ },
+ "comparisons": [
+  {
+   "hypothesis": "H5",
+   "a": 0.807,
+   "b": 0.812,
+   "set": "kardes-kk-report",
+   "metric": "accuracy",
+   "diff": 0.0050000000000000044,
+   "n": 1000,
+   "ci95": [
+    -0.009999999999999898,
+    0.019000000000000017
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.9715099715099715,
+   "b": 0.9743589743589743,
+   "set": "synthetic-ru-test",
+   "metric": "accuracy",
+   "diff": 0.002849002849002802,
+   "n": 351,
+   "ci95": [
+    0.0,
+    0.008547008547008628
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.00909090909090909,
+   "b": 0.00909090909090909,
+   "set": "synthetic-ru-test",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 110,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.9925373134328358,
+   "b": 0.996268656716418,
+   "set": "synthetic-kz-test",
+   "metric": "accuracy",
+   "diff": 0.003731343283582156,
+   "n": 268,
+   "ci95": [
+    0.0,
+    0.011194029850746356
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.0,
+   "b": 0.0,
+   "set": "synthetic-kz-test",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 26,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.56,
+   "b": 0.64,
+   "set": "manual-ru",
+   "metric": "accuracy",
+   "diff": 0.07999999999999996,
+   "n": 50,
+   "ci95": [
+    0.019999999999999907,
+    0.16000000000000003
+   ],
+   "excludes_0": true
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.0,
+   "b": 0.0,
+   "set": "manual-ru",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 9,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.48,
+   "b": 0.5,
+   "set": "manual-kz",
+   "metric": "accuracy",
+   "diff": 0.020000000000000018,
+   "n": 50,
+   "ci95": [
+    -0.040000000000000036,
+    0.08049999999999961
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.1111111111111111,
+   "b": 0.1111111111111111,
+   "set": "manual-kz",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 9,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.807,
+   "b": 0.801,
+   "set": "kardes-kk-report",
+   "metric": "accuracy",
+   "diff": -0.006000000000000005,
+   "n": 1000,
+   "ci95": [
+    -0.022999999999999913,
+    0.010000000000000009
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.9715099715099715,
+   "b": 0.9715099715099715,
+   "set": "synthetic-ru-test",
+   "metric": "accuracy",
+   "diff": 0.0,
+   "n": 351,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.00909090909090909,
+   "b": 0.00909090909090909,
+   "set": "synthetic-ru-test",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 110,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.9925373134328358,
+   "b": 0.996268656716418,
+   "set": "synthetic-kz-test",
+   "metric": "accuracy",
+   "diff": 0.003731343283582156,
+   "n": 268,
+   "ci95": [
+    0.0,
+    0.011194029850746356
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.0,
+   "b": 0.0,
+   "set": "synthetic-kz-test",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 26,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.56,
+   "b": 0.5,
+   "set": "manual-ru",
+   "metric": "accuracy",
+   "diff": -0.06000000000000005,
+   "n": 50,
+   "ci95": [
+    -0.16000000000000003,
+    0.040000000000000036
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.0,
+   "b": 0.0,
+   "set": "manual-ru",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 9,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.48,
+   "b": 0.44,
+   "set": "manual-kz",
+   "metric": "accuracy",
+   "diff": -0.03999999999999998,
+   "n": 50,
+   "ci95": [
+    -0.12,
+    0.03999999999999998
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H5",
+   "a": 0.1111111111111111,
+   "b": 0.1111111111111111,
+   "set": "manual-kz",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 9,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.807,
+   "b": 0.797,
+   "set": "kardes-kk-report",
+   "metric": "accuracy",
+   "diff": -0.010000000000000009,
+   "n": 1000,
+   "ci95": [
+    -0.023999999999999914,
+    0.0040000000000000036
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.9715099715099715,
+   "b": 0.6467236467236467,
+   "set": "synthetic-ru-test",
+   "metric": "accuracy",
+   "diff": -0.32478632478632485,
+   "n": 351,
+   "ci95": [
+    -0.37606837606837606,
+    -0.27635327635327633
+   ],
+   "excludes_0": true
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.00909090909090909,
+   "b": 0.6090909090909091,
+   "set": "synthetic-ru-test",
+   "metric": "range_negation_error",
+   "diff": 0.6000000000000001,
+   "n": 110,
+   "ci95": [
+    0.5,
+    0.6909090909090909
+   ],
+   "excludes_0": true
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.9925373134328358,
+   "b": 0.8022388059701493,
+   "set": "synthetic-kz-test",
+   "metric": "accuracy",
+   "diff": -0.1902985074626865,
+   "n": 268,
+   "ci95": [
+    -0.23880597014925375,
+    -0.14179104477611937
+   ],
+   "excludes_0": true
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.0,
+   "b": 0.0,
+   "set": "synthetic-kz-test",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 26,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.56,
+   "b": 0.4,
+   "set": "manual-ru",
+   "metric": "accuracy",
+   "diff": -0.16000000000000003,
+   "n": 50,
+   "ci95": [
+    -0.27999999999999997,
+    -0.06
+   ],
+   "excludes_0": true
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.0,
+   "b": 0.0,
+   "set": "manual-ru",
+   "metric": "range_negation_error",
+   "diff": 0.0,
+   "n": 9,
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.48,
+   "b": 0.4,
+   "set": "manual-kz",
+   "metric": "accuracy",
+   "diff": -0.07999999999999996,
+   "n": 50,
+   "ci95": [
+    -0.18,
+    0.019999999999999962
+   ],
+   "excludes_0": false
+  },
+  {
+   "hypothesis": "H6",
+   "a": 0.1111111111111111,
+   "b": 0.0,
+   "set": "manual-kz",
+   "metric": "range_negation_error",
+   "diff": -0.1111111111111111,
+   "n": 9,
+   "ci95": [
+    -0.3333333333333333,
+    0.0
+   ],
+   "excludes_0": false
+  }
+ ]
+}
