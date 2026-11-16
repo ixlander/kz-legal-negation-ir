@@ -1,0 +1,33 @@
+{
+ "cards_answered": 195,
+ "by_section": {
+  "al": 18,
+  "d1": 60,
+  "d2": 17,
+  "nli": 50,
+  "q": 50
+ },
+ "d2": {
+  "ok": 17
+ },
+ "d1": {
+  "ru:ok": 30,
+  "kz:ok": 30
+ },
+ "alignment": {
+  "no": 7,
+  "yes": 11
+ },
+ "questions": {
+  "test:negation": 19,
+  "dev:negation": 5,
+  "dev:general": 5,
+  "test:general": 20
+ },
+ "nli": {
+  "ru:ok": 50,
+  "kz:ok": 50,
+  "agreement_with_draft_label": 0.94
+ },
+ "warnings": []
+}

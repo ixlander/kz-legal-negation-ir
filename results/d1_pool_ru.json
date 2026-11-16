@@ -4,10 +4,10 @@
     "lang": "ru",
     "n": 30,
     "include_unchecked": false,
-    "encoding": "documents (model-specific prefix/prompt, src/models.py)",
+    "encoding": "documents (model-specific prefix/prompt)",
     "seed": 42,
     "bootstrap_resamples": 1000,
-    "date": "2026-10-21"
+    "date": "2026-11-16"
   },
   "models": {
     "e5-base": {

@@ -1,31 +1,31 @@
 {
   "diagnostic": "D2_affix_isolation_pool",
-  "n_forms": 154,
-  "date": "2026-10-21",
+  "n_forms": 171,
+  "date": "2026-11-16",
   "tokenizers": {
     "xlm-r (e5, bge-m3, gte, arctic, jina-v3)": {
       "repo": "FacebookAI/xlm-roberta-base",
       "vocab_size": 250002,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.2077922077922078,
-        "any_boundary_rate": 0.961038961038961,
-        "boundary_before_rate": 0.8311688311688312,
-        "boundary_after_rate": 0.33766233766233766,
-        "affix_single_token_rate": 0.2077922077922078,
+        "n": 171,
+        "isolation_rate": 0.21052631578947367,
+        "any_boundary_rate": 0.9590643274853801,
+        "boundary_before_rate": 0.8070175438596491,
+        "boundary_after_rate": 0.36257309941520466,
+        "affix_single_token_rate": 0.21052631578947367,
         "patterns": {
-          "isolated": 0.2077922077922078,
-          "starts_token": 0.6233766233766234,
-          "ends_token": 0.12987012987012986,
-          "buried": 0.03896103896103896
+          "isolated": 0.21052631578947367,
+          "starts_token": 0.5964912280701754,
+          "ends_token": 0.15204678362573099,
+          "buried": 0.04093567251461988
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.17827868852459017,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.24612736660929432,
         "patterns_freq_weighted": {
-          "isolated": 0.17827868852459017,
-          "starts_token": 0.6516393442622951,
-          "ends_token": 0.1290983606557377,
-          "buried": 0.040983606557377046
+          "isolated": 0.24612736660929432,
+          "starts_token": 0.5783132530120482,
+          "ends_token": 0.13941480206540446,
+          "buried": 0.03614457831325301
         }
       },
       "ru_control": {
@@ -37,6 +37,14 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "▁қос",
+            "па",
+            "ғанда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -124,15 +132,6 @@
             "спа",
             "уға"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "▁ұ",
-            "сын",
-            "ба",
-            "ған"
-          ]
         }
       ]
     },
@@ -140,25 +139,25 @@
       "repo": "sentence-transformers/LaBSE",
       "vocab_size": 501153,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.06493506493506493,
-        "any_boundary_rate": 0.6493506493506493,
-        "boundary_before_rate": 0.525974025974026,
-        "boundary_after_rate": 0.18831168831168832,
+        "n": 171,
+        "isolation_rate": 0.0935672514619883,
+        "any_boundary_rate": 0.6666666666666666,
+        "boundary_before_rate": 0.5380116959064327,
+        "boundary_after_rate": 0.2222222222222222,
         "affix_single_token_rate": 0.0,
         "patterns": {
-          "isolated": 0.06493506493506493,
-          "starts_token": 0.461038961038961,
-          "ends_token": 0.12337662337662338,
-          "buried": 0.35064935064935066
+          "isolated": 0.0935672514619883,
+          "starts_token": 0.4444444444444444,
+          "ends_token": 0.1286549707602339,
+          "buried": 0.3333333333333333
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.11065573770491803,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.12220309810671257,
         "patterns_freq_weighted": {
-          "isolated": 0.11065573770491803,
-          "starts_token": 0.3729508196721312,
-          "ends_token": 0.08401639344262295,
-          "buried": 0.4323770491803279
+          "isolated": 0.12220309810671257,
+          "starts_token": 0.3407917383820998,
+          "ends_token": 0.07917383820998279,
+          "buried": 0.4578313253012048
         }
       },
       "ru_control": {
@@ -170,6 +169,12 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "қоспағанда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -255,15 +260,6 @@
             "##па",
             "##уға"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ұ",
-            "##сын",
-            "##ба",
-            "##ған"
-          ]
         }
       ]
     },
@@ -271,25 +267,25 @@
       "repo": "Qwen/Qwen3-Embedding-0.6B",
       "vocab_size": 151669,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.2532467532467532,
-        "any_boundary_rate": 0.922077922077922,
-        "boundary_before_rate": 0.8571428571428571,
-        "boundary_after_rate": 0.3181818181818182,
+        "n": 171,
+        "isolation_rate": 0.2573099415204678,
+        "any_boundary_rate": 0.9298245614035088,
+        "boundary_before_rate": 0.8421052631578947,
+        "boundary_after_rate": 0.34502923976608185,
         "affix_single_token_rate": 0.0,
         "patterns": {
-          "isolated": 0.2532467532467532,
-          "starts_token": 0.6038961038961039,
-          "ends_token": 0.06493506493506493,
-          "buried": 0.07792207792207792
+          "isolated": 0.2573099415204678,
+          "starts_token": 0.5847953216374269,
+          "ends_token": 0.08771929824561403,
+          "buried": 0.07017543859649122
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.30327868852459017,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.3528399311531842,
         "patterns_freq_weighted": {
-          "isolated": 0.30327868852459017,
-          "starts_token": 0.5389344262295082,
-          "ends_token": 0.06967213114754098,
-          "buried": 0.08811475409836066
+          "isolated": 0.3528399311531842,
+          "starts_token": 0.48709122203098104,
+          "ends_token": 0.08605851979345955,
+          "buried": 0.07401032702237521
         }
       },
       "ru_control": {
@@ -301,6 +297,18 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "Ġ",
+            "ÒĽ",
+            "Ð¾Ñģ",
+            "Ð¿Ð°",
+            "Òĵ",
+            "Ð°Ð½",
+            "Ð´Ð°"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -425,18 +433,6 @@
             "Òĵ",
             "Ð°"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "Ġ",
-            "Ò±",
-            "ÑģÑĭ",
-            "Ð½",
-            "Ð±Ð°",
-            "Òĵ",
-            "Ð°Ð½"
-          ]
         }
       ]
     },
@@ -444,24 +440,24 @@
       "repo": "google/embeddinggemma-2",
       "vocab_size": 262144,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.44805194805194803,
+        "n": 171,
+        "isolation_rate": 0.4269005847953216,
         "any_boundary_rate": 1.0,
-        "boundary_before_rate": 0.7987012987012987,
-        "boundary_after_rate": 0.6493506493506493,
-        "affix_single_token_rate": 0.44805194805194803,
+        "boundary_before_rate": 0.7602339181286549,
+        "boundary_after_rate": 0.6666666666666666,
+        "affix_single_token_rate": 0.4269005847953216,
         "patterns": {
-          "isolated": 0.44805194805194803,
-          "starts_token": 0.35064935064935066,
-          "ends_token": 0.2012987012987013,
+          "isolated": 0.4269005847953216,
+          "starts_token": 0.3333333333333333,
+          "ends_token": 0.23976608187134502,
           "buried": 0.0
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.47950819672131145,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.4113597246127367,
         "patterns_freq_weighted": {
-          "isolated": 0.47950819672131145,
-          "starts_token": 0.35040983606557374,
-          "ends_token": 0.17008196721311475,
+          "isolated": 0.4113597246127367,
+          "starts_token": 0.31841652323580033,
+          "ends_token": 0.270223752151463,
           "buried": 0.0
         }
       },
@@ -474,6 +470,15 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "▁қо",
+            "спа",
+            "ған",
+            "да"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -575,15 +580,6 @@
             "у",
             "ға"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "▁ұ",
-            "сын",
-            "ба",
-            "ған"
-          ]
         }
       ]
     },
@@ -591,25 +587,25 @@
       "repo": "google-bert/bert-base-multilingual-cased",
       "vocab_size": 119547,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.474025974025974,
-        "any_boundary_rate": 0.9545454545454546,
-        "boundary_before_rate": 0.8896103896103896,
-        "boundary_after_rate": 0.538961038961039,
+        "n": 171,
+        "isolation_rate": 0.49707602339181284,
+        "any_boundary_rate": 0.9532163742690059,
+        "boundary_before_rate": 0.8947368421052632,
+        "boundary_after_rate": 0.5555555555555556,
         "affix_single_token_rate": 0.0,
         "patterns": {
-          "isolated": 0.474025974025974,
-          "starts_token": 0.4155844155844156,
-          "ends_token": 0.06493506493506493,
-          "buried": 0.045454545454545456
+          "isolated": 0.49707602339181284,
+          "starts_token": 0.39766081871345027,
+          "ends_token": 0.05847953216374269,
+          "buried": 0.04678362573099415
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.44672131147540983,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.5129087779690189,
         "patterns_freq_weighted": {
-          "isolated": 0.44672131147540983,
-          "starts_token": 0.46311475409836067,
-          "ends_token": 0.028688524590163935,
-          "buried": 0.06147540983606557
+          "isolated": 0.5129087779690189,
+          "starts_token": 0.4079173838209983,
+          "ends_token": 0.024096385542168676,
+          "buried": 0.055077452667814115
         }
       },
       "ru_control": {
@@ -621,6 +617,15 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "қ",
+            "##ос",
+            "##па",
+            "##ғанда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -720,15 +725,6 @@
             "##па",
             "##уға"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ұ",
-            "##сын",
-            "##ба",
-            "##ған"
-          ]
         }
       ]
     },
@@ -736,25 +732,25 @@
       "repo": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
       "vocab_size": 250102,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.1038961038961039,
-        "any_boundary_rate": 0.7597402597402597,
-        "boundary_before_rate": 0.5909090909090909,
-        "boundary_after_rate": 0.2727272727272727,
-        "affix_single_token_rate": 0.1038961038961039,
+        "n": 171,
+        "isolation_rate": 0.11695906432748537,
+        "any_boundary_rate": 0.7660818713450293,
+        "boundary_before_rate": 0.5730994152046783,
+        "boundary_after_rate": 0.30994152046783624,
+        "affix_single_token_rate": 0.11695906432748537,
         "patterns": {
-          "isolated": 0.1038961038961039,
-          "starts_token": 0.487012987012987,
-          "ends_token": 0.16883116883116883,
-          "buried": 0.24025974025974026
+          "isolated": 0.11695906432748537,
+          "starts_token": 0.45614035087719296,
+          "ends_token": 0.19298245614035087,
+          "buried": 0.23391812865497075
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.10040983606557377,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.19104991394148021,
         "patterns_freq_weighted": {
-          "isolated": 0.10040983606557377,
-          "starts_token": 0.5163934426229508,
-          "ends_token": 0.18237704918032788,
-          "buried": 0.20081967213114754
+          "isolated": 0.19104991394148021,
+          "starts_token": 0.4475043029259897,
+          "ends_token": 0.18588640275387264,
+          "buried": 0.17555938037865748
         }
       },
       "ru_control": {
@@ -766,6 +762,14 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "▁қос",
+            "па",
+            "ғанда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -849,14 +853,6 @@
             "▁аспа",
             "уға"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "▁ұсын",
-            "ба",
-            "ған"
-          ]
         }
       ]
     },
@@ -864,25 +860,25 @@
       "repo": "DeepPavlov/rubert-base-cased",
       "vocab_size": 119547,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.34415584415584416,
-        "any_boundary_rate": 0.8441558441558441,
-        "boundary_before_rate": 0.7727272727272727,
-        "boundary_after_rate": 0.4155844155844156,
+        "n": 171,
+        "isolation_rate": 0.36257309941520466,
+        "any_boundary_rate": 0.8421052631578947,
+        "boundary_before_rate": 0.7719298245614035,
+        "boundary_after_rate": 0.4327485380116959,
         "affix_single_token_rate": 0.0,
         "patterns": {
-          "isolated": 0.34415584415584416,
-          "starts_token": 0.42857142857142855,
-          "ends_token": 0.07142857142857142,
-          "buried": 0.15584415584415584
+          "isolated": 0.36257309941520466,
+          "starts_token": 0.4093567251461988,
+          "ends_token": 0.07017543859649122,
+          "buried": 0.15789473684210525
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.3360655737704918,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.3253012048192771,
         "patterns_freq_weighted": {
-          "isolated": 0.3360655737704918,
-          "starts_token": 0.430327868852459,
-          "ends_token": 0.05737704918032787,
-          "buried": 0.1762295081967213
+          "isolated": 0.3253012048192771,
+          "starts_token": 0.3803786574870912,
+          "ends_token": 0.13769363166953527,
+          "buried": 0.1566265060240964
         }
       },
       "ru_control": {
@@ -894,6 +890,16 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "қ",
+            "##осп",
+            "##а",
+            "##ғ",
+            "##анда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -1001,17 +1007,6 @@
             "##ғ",
             "##а"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ұ",
-            "##сы",
-            "##н",
-            "##ба",
-            "##ғ",
-            "##ан"
-          ]
         }
       ]
     },
@@ -1019,24 +1014,24 @@
       "repo": "deepvk/USER-bge-m3",
       "vocab_size": 46166,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.3116883116883117,
+        "n": 171,
+        "isolation_rate": 0.30409356725146197,
         "any_boundary_rate": 1.0,
-        "boundary_before_rate": 0.8636363636363636,
-        "boundary_after_rate": 0.44805194805194803,
-        "affix_single_token_rate": 0.3116883116883117,
+        "boundary_before_rate": 0.8362573099415205,
+        "boundary_after_rate": 0.4678362573099415,
+        "affix_single_token_rate": 0.30409356725146197,
         "patterns": {
-          "isolated": 0.3116883116883117,
-          "starts_token": 0.551948051948052,
-          "ends_token": 0.13636363636363635,
+          "isolated": 0.30409356725146197,
+          "starts_token": 0.5321637426900585,
+          "ends_token": 0.16374269005847952,
           "buried": 0.0
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.3319672131147541,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.2874354561101549,
         "patterns_freq_weighted": {
-          "isolated": 0.3319672131147541,
-          "starts_token": 0.5450819672131147,
-          "ends_token": 0.12295081967213115,
+          "isolated": 0.2874354561101549,
+          "starts_token": 0.48881239242685026,
+          "ends_token": 0.22375215146299485,
           "buried": 0.0
         }
       },
@@ -1046,9 +1041,21 @@
         "fused_prefix_boundary_rate": 0.5,
         "fused_n": 30
       },
-      "forms_with_unk": 49,
+      "forms_with_unk": 55,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "▁",
+            "<unk>",
+            "о",
+            "спа",
+            "ғ",
+            "а",
+            "нда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -1157,17 +1164,6 @@
             "ғ",
             "а"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "▁",
-            "<unk>",
-            "сын",
-            "ба",
-            "ғ",
-            "ан"
-          ]
         }
       ]
     },
@@ -1175,25 +1171,25 @@
       "repo": "kz-transformers/kaz-roberta-conversational",
       "vocab_size": 52000,
       "kz": {
-        "n": 154,
+        "n": 171,
         "isolation_rate": 0.0,
-        "any_boundary_rate": 0.3051948051948052,
-        "boundary_before_rate": 0.3051948051948052,
+        "any_boundary_rate": 0.30994152046783624,
+        "boundary_before_rate": 0.30994152046783624,
         "boundary_after_rate": 0.0,
         "affix_single_token_rate": 0.0,
         "patterns": {
           "isolated": 0.0,
-          "starts_token": 0.3051948051948052,
+          "starts_token": 0.30994152046783624,
           "ends_token": 0.0,
-          "buried": 0.6948051948051948
+          "buried": 0.6900584795321637
         },
-        "corpus_tokens": 488,
+        "corpus_tokens": 581,
         "isolation_rate_freq_weighted": 0.0,
         "patterns_freq_weighted": {
           "isolated": 0.0,
-          "starts_token": 0.24795081967213115,
+          "starts_token": 0.23752151462994836,
           "ends_token": 0.0,
-          "buried": 0.7520491803278688
+          "buried": 0.7624784853700516
         }
       },
       "ru_control": {
@@ -1205,6 +1201,12 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "ĠÒĽÐ¾ÑģÐ¿Ð°ÒĵÐ°Ð½Ð´Ð°"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -1273,13 +1275,6 @@
           "tokens": [
             "ĠÐ°ÑģÐ¿Ð°ÑĥÒĵÐ°"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ĠÒ±ÑģÑĭÐ½",
-            "Ð±Ð°ÒĵÐ°Ð½"
-          ]
         }
       ]
     },
@@ -1287,25 +1282,25 @@
       "repo": "Eraly-ml/KazBERT",
       "vocab_size": 32000,
       "kz": {
-        "n": 154,
-        "isolation_rate": 0.01948051948051948,
-        "any_boundary_rate": 0.5974025974025974,
-        "boundary_before_rate": 0.5714285714285714,
-        "boundary_after_rate": 0.045454545454545456,
+        "n": 171,
+        "isolation_rate": 0.04678362573099415,
+        "any_boundary_rate": 0.6257309941520468,
+        "boundary_before_rate": 0.6023391812865497,
+        "boundary_after_rate": 0.07017543859649122,
         "affix_single_token_rate": 0.0,
         "patterns": {
-          "isolated": 0.01948051948051948,
-          "starts_token": 0.551948051948052,
-          "ends_token": 0.025974025974025976,
-          "buried": 0.4025974025974026
+          "isolated": 0.04678362573099415,
+          "starts_token": 0.5555555555555556,
+          "ends_token": 0.023391812865497075,
+          "buried": 0.3742690058479532
         },
-        "corpus_tokens": 488,
-        "isolation_rate_freq_weighted": 0.018442622950819672,
+        "corpus_tokens": 581,
+        "isolation_rate_freq_weighted": 0.043029259896729774,
         "patterns_freq_weighted": {
-          "isolated": 0.018442622950819672,
-          "starts_token": 0.5020491803278688,
-          "ends_token": 0.014344262295081968,
-          "buried": 0.4651639344262295
+          "isolated": 0.043029259896729774,
+          "starts_token": 0.4612736660929432,
+          "ends_token": 0.012048192771084338,
+          "buried": 0.4836488812392427
         }
       },
       "ru_control": {
@@ -1317,6 +1312,12 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "қоспағанда"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -1393,13 +1394,6 @@
             "асп",
             "##ауға"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ұсын",
-            "##баған"
-          ]
         }
       ]
     },
@@ -1407,25 +1401,25 @@
       "repo": "HPLT/hplt_bert_base_kk",
       "vocab_size": 32770,
       "kz": {
-        "n": 154,
+        "n": 171,
         "isolation_rate": 0.0,
-        "any_boundary_rate": 0.43506493506493504,
-        "boundary_before_rate": 0.4025974025974026,
-        "boundary_after_rate": 0.032467532467532464,
+        "any_boundary_rate": 0.4327485380116959,
+        "boundary_before_rate": 0.40350877192982454,
+        "boundary_after_rate": 0.029239766081871343,
         "affix_single_token_rate": 0.0,
         "patterns": {
           "isolated": 0.0,
-          "starts_token": 0.4025974025974026,
-          "ends_token": 0.032467532467532464,
-          "buried": 0.564935064935065
+          "starts_token": 0.40350877192982454,
+          "ends_token": 0.029239766081871343,
+          "buried": 0.5672514619883041
         },
-        "corpus_tokens": 488,
+        "corpus_tokens": 581,
         "isolation_rate_freq_weighted": 0.0,
         "patterns_freq_weighted": {
           "isolated": 0.0,
-          "starts_token": 0.27049180327868855,
-          "ends_token": 0.010245901639344262,
-          "buried": 0.7192622950819673
+          "starts_token": 0.25989672977624784,
+          "ends_token": 0.008605851979345954,
+          "buried": 0.7314974182444062
         }
       },
       "ru_control": {
@@ -1437,6 +1431,12 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "âĸģÒĽÐ¾ÑģÐ¿Ð°ÒĵÐ°Ð½Ð´Ð°"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -1507,13 +1507,6 @@
             "âĸģÐ°ÑģÐ¿",
             "Ð°ÑĥÒĵÐ°"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "âĸģÒ±ÑģÑĭÐ½",
-            "Ð±Ð°ÒĵÐ°Ð½"
-          ]
         }
       ]
     },
@@ -1521,25 +1514,25 @@
       "repo": "Abzalbek89/kk-bert-small-bpe",
       "vocab_size": 32000,
       "kz": {
-        "n": 154,
+        "n": 171,
         "isolation_rate": 0.0,
-        "any_boundary_rate": 0.4155844155844156,
-        "boundary_before_rate": 0.4155844155844156,
+        "any_boundary_rate": 0.4152046783625731,
+        "boundary_before_rate": 0.4152046783625731,
         "boundary_after_rate": 0.0,
         "affix_single_token_rate": 0.0,
         "patterns": {
           "isolated": 0.0,
-          "starts_token": 0.4155844155844156,
+          "starts_token": 0.4152046783625731,
           "ends_token": 0.0,
-          "buried": 0.5844155844155844
+          "buried": 0.5847953216374269
         },
-        "corpus_tokens": 488,
+        "corpus_tokens": 581,
         "isolation_rate_freq_weighted": 0.0,
         "patterns_freq_weighted": {
           "isolated": 0.0,
-          "starts_token": 0.36885245901639346,
+          "starts_token": 0.342512908777969,
           "ends_token": 0.0,
-          "buried": 0.6311475409836066
+          "buried": 0.657487091222031
         }
       },
       "ru_control": {
@@ -1552,6 +1545,12 @@
       "kz_letters_known": "9/9",
       "examples": [
         {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "ĠÒĽÐ¾ÑģÐ¿Ð°ÒĵÐ°Ð½Ð´Ð°"
+          ]
+        },
+        {
           "split": "бол+ма+ған",
           "tokens": [
             "ĠÐ±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
@@ -1623,13 +1622,6 @@
             "ĠÐ°ÑģÐ¿",
             "Ð°ÑĥÒĵÐ°"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ĠÒ±ÑģÑĭÐ½",
-            "Ð±Ð°ÒĵÐ°Ð½"
-          ]
         }
       ]
     },
@@ -1637,25 +1629,25 @@
       "repo": "Abzalbek89/kk-bert-small-morph-bpe",
       "vocab_size": 32000,
       "kz": {
-        "n": 154,
+        "n": 171,
         "isolation_rate": 0.0,
-        "any_boundary_rate": 0.461038961038961,
-        "boundary_before_rate": 0.44805194805194803,
-        "boundary_after_rate": 0.012987012987012988,
+        "any_boundary_rate": 0.4678362573099415,
+        "boundary_before_rate": 0.45614035087719296,
+        "boundary_after_rate": 0.011695906432748537,
         "affix_single_token_rate": 0.0,
         "patterns": {
           "isolated": 0.0,
-          "starts_token": 0.44805194805194803,
-          "ends_token": 0.012987012987012988,
-          "buried": 0.538961038961039
+          "starts_token": 0.45614035087719296,
+          "ends_token": 0.011695906432748537,
+          "buried": 0.5321637426900585
         },
-        "corpus_tokens": 488,
+        "corpus_tokens": 581,
         "isolation_rate_freq_weighted": 0.0,
         "patterns_freq_weighted": {
           "isolated": 0.0,
-          "starts_token": 0.39549180327868855,
-          "ends_token": 0.004098360655737705,
-          "buried": 0.6004098360655737
+          "starts_token": 0.37005163511187605,
+          "ends_token": 0.0034423407917383822,
+          "buried": 0.6265060240963856
         }
       },
       "ru_control": {
@@ -1668,6 +1660,12 @@
       "kz_letters_known": "9/9",
       "examples": [
         {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "ĠÒĽÐ¾ÑģÐ¿Ð°ÒĵÐ°Ð½Ð´Ð°"
+          ]
+        },
+        {
           "split": "бол+ма+ған",
           "tokens": [
             "ĠÐ±Ð¾Ð»Ð¼Ð°ÒĵÐ°Ð½"
@@ -1739,13 +1737,6 @@
             "ĠÐ°ÑģÐ¿",
             "Ð°ÑĥÒĵÐ°"
           ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ĠÒ±ÑģÑĭÐ½",
-            "Ð±Ð°ÒĵÐ°Ð½"
-          ]
         }
       ]
     },
@@ -1753,25 +1744,25 @@
       "repo": "Abzalbek89/kk-bert-small-unigram",
       "vocab_size": 32000,
       "kz": {
-        "n": 154,
+        "n": 171,
         "isolation_rate": 0.0,
-        "any_boundary_rate": 0.5454545454545454,
-        "boundary_before_rate": 0.37012987012987014,
-        "boundary_after_rate": 0.17532467532467533,
+        "any_boundary_rate": 0.5497076023391813,
+        "boundary_before_rate": 0.38596491228070173,
+        "boundary_after_rate": 0.16374269005847952,
         "affix_single_token_rate": 0.0,
         "patterns": {
           "isolated": 0.0,
-          "starts_token": 0.37012987012987014,
-          "ends_token": 0.17532467532467533,
-          "buried": 0.45454545454545453
+          "starts_token": 0.38596491228070173,
+          "ends_token": 0.16374269005847952,
+          "buried": 0.4502923976608187
         },
-        "corpus_tokens": 488,
+        "corpus_tokens": 581,
         "isolation_rate_freq_weighted": 0.0,
         "patterns_freq_weighted": {
           "isolated": 0.0,
-          "starts_token": 0.32172131147540983,
-          "ends_token": 0.16393442622950818,
-          "buried": 0.514344262295082
+          "starts_token": 0.306368330464716,
+          "ends_token": 0.22719449225473323,
+          "buried": 0.4664371772805508
         }
       },
       "ru_control": {
@@ -1783,6 +1774,13 @@
       "forms_with_unk": 0,
       "kz_letters_known": "9/9",
       "examples": [
+        {
+          "split": "қос+па+ғанда",
+          "tokens": [
+            "ĠÒĽÐ¾ÑģÐ¿Ð°",
+            "ÒĵÐ°Ð½Ð´Ð°"
+          ]
+        },
         {
           "split": "бол+ма+ған",
           "tokens": [
@@ -1860,13 +1858,6 @@
           "tokens": [
             "ĠÐ°ÑģÐ¿Ð°",
             "ÑĥÒĵÐ°"
-          ]
-        },
-        {
-          "split": "ұсын+ба+ған",
-          "tokens": [
-            "ĠÒ±ÑģÑĭÐ½Ð±Ð°",
-            "ÒĵÐ°Ð½"
           ]
         }
       ]

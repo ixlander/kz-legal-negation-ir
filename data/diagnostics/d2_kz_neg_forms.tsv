@@ -1,5 +1,5 @@
 form	stem	affix	ending	freq	source	status	note
-қоспағанда	қос	па	ғанда	52	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+қоспағанда	қос	па	ғанда	52	corpus_labor	ok	lexicalized?
 болмаған	бол	ма	ған	38	corpus_labor	ok_auto	
 аспайтын	ас	па	йтын	20	corpus_labor	ok_auto	
 берілмейді	беріл	ме	йді	20	corpus_labor	ok_auto	
@@ -11,17 +11,17 @@ form	stem	affix	ending	freq	source	status	note
 болғызбау	болғыз	ба	у	14	corpus_labor	ok_auto	
 болмайтын	бол	ма	йтын	13	corpus_labor	ok_auto	
 аспауға	ас	па	уға	13	corpus_labor	ok_auto	
-келіспеушіліктер	келіс	пе	ушіліктер	9	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+келіспеушіліктер	келіс	пе	ушіліктер	9	corpus_labor	ok	lexicalized?
 ұсынбаған	ұсын	ба	ған	9	corpus_labor	ok_auto	
 қолданылмайды	қолданыл	ма	йды	9	corpus_labor	ok_auto	
-болғызбайтын	болғыз	ба	йтын	7	corpus_labor	NEEDS_KZ_CHECK	
+болғызбайтын	болғыз	ба	йтын	7	corpus_labor	ok	
 орындамауы	орында	ма	уы	7	corpus_labor	ok_auto	
 пайдаланылмаған	пайдаланыл	ма	ған	7	corpus_labor	ok_auto	
 орындамаған	орында	ма	ған	6	corpus_labor	ok_auto	
 болмайды	бол	ма	йды	5	corpus_labor	ok_auto	
 жеткізілмеген	жеткізіл	ме	ген	5	corpus_labor	ok_auto	
 жатпайды	жат	па	йды	5	corpus_labor	ok_auto	
-сиретпей	сирет	пе	й	5	corpus_labor	NEEDS_KZ_CHECK	
+сиретпей	сирет	пе	й	5	corpus_labor	ok	
 болмауға	бол	ма	уға	5	corpus_labor	ok_auto	
 бермеуге	бер	ме	уге	5	corpus_labor	ok_auto	
 келіспеген	келіс	пе	ген	4	corpus_labor	ok_auto	
@@ -52,18 +52,18 @@ form	stem	affix	ending	freq	source	status	note
 жатпайтын	жат	па	йтын	3	corpus_labor	ok_auto	
 жіберілмейді	жіберіл	ме	йді	3	corpus_labor	ok_auto	
 болмаса	бол	ма	са	3	corpus_labor	ok_auto	
-келіспеушіліктерді	келіс	пе	ушіліктерді	3	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+келіспеушіліктерді	келіс	пе	ушіліктерді	3	corpus_labor	ok	lexicalized?
 орындалмаған	орындал	ма	ған	3	corpus_labor	ok_auto	
 тұрмайтын	тұр	ма	йтын	2	corpus_labor	ok_auto	
 етпеуге	ет	пе	уге	2	corpus_labor	ok_auto	
 етпегені	ет	пе	гені	2	corpus_labor	ok_auto	
 болмағанда	бол	ма	ғанда	2	corpus_labor	ok_auto	
 толмағандардың	тол	ма	ғандардың	2	corpus_labor	ok_auto	
-қолсұғылмаушылыққа	қолсұғыл	ма	ушылыққа	2	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+қолсұғылмаушылыққа	қолсұғыл	ма	ушылыққа	2	corpus_labor	ok	lexicalized?
 келтірмейтін	келтір	ме	йтін	2	corpus_labor	ok_auto	
 бұзбайтын	бұз	ба	йтын	2	corpus_labor	ok_auto	
 көзделмеген	көздел	ме	ген	2	corpus_labor	ok_auto	
-ресімделмеген	ресімдел	ме	ген	2	corpus_labor	NEEDS_KZ_CHECK	
+ресімделмеген	ресімдел	ме	ген	2	corpus_labor	ok	
 сақталмай	сақтал	ма	й	2	corpus_labor	ok_auto	
 соқпайтын	соқ	па	йтын	2	corpus_labor	ok_auto	
 етпеген	ет	пе	ген	2	corpus_labor	ok_auto	
@@ -76,16 +76,16 @@ form	stem	affix	ending	freq	source	status	note
 белгіленбейді	белгілен	бе	йді	2	corpus_labor	ok_auto	
 болдырмау	болдыр	ма	у	2	corpus_labor	ok_auto	
 келмей	кел	ме	й	2	corpus_labor	ok_auto	
-күттірмейтін	күттір	ме	йтін	2	corpus_labor	NEEDS_KZ_CHECK	
+күттірмейтін	күттір	ме	йтін	2	corpus_labor	ok	
 қосылмайды	қосыл	ма	йды	2	corpus_labor	ok_auto	
 етілмеген	етіл	ме	ген	2	corpus_labor	ok_auto	
-алмаса	ал	ма	са	2	corpus_labor	NEEDS_KZ_CHECK	
+алмаса	ал	ма	са	2	corpus_labor	ok	
 етпеуі	ет	пе	уі	2	corpus_labor	ok_auto	
 кірмейтін	кір	ме	йтін	2	corpus_labor	ok_auto	
 төленбеуіне	төлен	бе	уіне	2	corpus_labor	ok_auto	
 төндірмесе	төндір	ме	се	2	corpus_labor	ok_auto	
 енгізілмейді	енгізіл	ме	йді	2	corpus_labor	ok_auto	
-келіспеушілік	келіс	пе	ушілік	2	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+келіспеушілік	келіс	пе	ушілік	2	corpus_labor	ok	lexicalized?
 етпейтін	ет	пе	йтін	1	corpus_labor	ok_auto	
 сақталмаған	сақтал	ма	ған	1	corpus_labor	ok_auto	
 бермеу	бер	ме	у	1	corpus_labor	ok_auto	
@@ -96,7 +96,7 @@ form	stem	affix	ending	freq	source	status	note
 өзгертілмейді	өзгертіл	ме	йді	1	corpus_labor	ok_auto	
 келіспейтіні	келіс	пе	йтіні	1	corpus_labor	ok_auto	
 қатыспаған	қатыс	па	ған	1	corpus_labor	ok_auto	
-сұғылмауына	сұғыл	ма	уына	1	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+сұғылмауына	сұғыл	ма	уына	1	corpus_labor	ok	lexicalized?
 толмағандық	тол	ма	ғандық	1	corpus_labor	ok_auto	
 шектемейді	шекте	ме	йді	1	corpus_labor	ok_auto	
 етілмейтін	етіл	ме	йтін	1	corpus_labor	ok_auto	
@@ -110,7 +110,7 @@ form	stem	affix	ending	freq	source	status	note
 келмеуі	кел	ме	уі	1	corpus_labor	ok_auto	
 болмағаны	бол	ма	ғаны	1	corpus_labor	ok_auto	
 орындамағаны	орында	ма	ғаны	1	corpus_labor	ok_auto	
-болғызбаса	болғыз	ба	са	1	corpus_labor	NEEDS_KZ_CHECK	
+болғызбаса	болғыз	ба	са	1	corpus_labor	ok	
 бермесе	бер	ме	се	1	corpus_labor	ok_auto	
 шығарылмайды	шығарыл	ма	йды	1	corpus_labor	ok_auto	
 келмейді	кел	ме	йді	1	corpus_labor	ok_auto	
@@ -127,7 +127,7 @@ form	stem	affix	ending	freq	source	status	note
 босатылмай	босатыл	ма	й	1	corpus_labor	ok_auto	
 төленбеуге	төлен	бе	уге	1	corpus_labor	ok_auto	
 төлемеген	төле	ме	ген	1	corpus_labor	ok_auto	
-нашарлатпайтын	нашарлат	па	йтын	1	corpus_labor	NEEDS_KZ_CHECK	
+нашарлатпайтын	нашарлат	па	йтын	1	corpus_labor	ok	
 бермеген	бер	ме	ген	1	corpus_labor	ok_auto	
 жұмсалмаған	жұмсал	ма	ған	1	corpus_labor	ok_auto	
 қайтарылмаған	қайтарыл	ма	ған	1	corpus_labor	ok_auto	
@@ -139,10 +139,10 @@ form	stem	affix	ending	freq	source	status	note
 орындалмаса	орындал	ма	са	1	corpus_labor	ok_auto	
 көрсетілмесе	көрсетіл	ме	се	1	corpus_labor	ok_auto	
 жүргізбейді	жүргіз	бе	йді	1	corpus_labor	ok_auto	
-сақтандырылмаған	сақтандырыл	ма	ған	1	corpus_labor	NEEDS_KZ_CHECK	
+сақтандырылмаған	сақтандырыл	ма	ған	1	corpus_labor	ok	
 жасаспай	жасас	па	й	1	corpus_labor	ok_auto	
 жасалмайды	жасал	ма	йды	1	corpus_labor	ok_auto	
-нашарлатпауға	нашарлат	па	уға	1	corpus_labor	NEEDS_KZ_CHECK	
+нашарлатпауға	нашарлат	па	уға	1	corpus_labor	ok	
 шектемей	шекте	ме	й	1	corpus_labor	ok_auto	
 орындалмауы	орындал	ма	уы	1	corpus_labor	ok_auto	
 жүгінбеу	жүгін	бе	у	1	corpus_labor	ok_auto	
@@ -155,9 +155,9 @@ form	stem	affix	ending	freq	source	status	note
 тартылмайды	тартыл	ма	йды	1	corpus_labor	ok_auto	
 ауыстырылмайды	ауыстырыл	ма	йды	1	corpus_labor	ok_auto	
 бұзылмайды	бұзыл	ма	йды	1	corpus_labor	ok_auto	
-келіспеушіліктерін	келіс	пе	ушіліктерін	1	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+келіспеушіліктерін	келіс	пе	ушіліктерін	1	corpus_labor	ok	lexicalized?
 жеткізілмесе	жеткізіл	ме	се	1	corpus_labor	ok_auto	
-келіспеушіліктерінің	келіс	пе	ушіліктерінің	1	corpus_labor	NEEDS_KZ_CHECK	lexicalized?
+келіспеушіліктерінің	келіс	пе	ушіліктерінің	1	corpus_labor	ok	lexicalized?
 қаралмайды	қарал	ма	йды	1	corpus_labor	ok_auto	
 сақталмаса	сақтал	ма	са	1	corpus_labor	ok_auto	
 етілмесе	етіл	ме	се	1	corpus_labor	ok_auto	

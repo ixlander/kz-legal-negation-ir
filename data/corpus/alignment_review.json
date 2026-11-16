@@ -1,0 +1,74 @@
+{
+ "labor:127-3:4": {
+  "decision": "no",
+  "comment": ""
+ },
+ "labor:178": {
+  "decision": "no",
+  "comment": ""
+ },
+ "labor:187-1": {
+  "decision": "yes",
+  "comment": ""
+ },
+ "labor:191:5": {
+  "decision": "no",
+  "comment": ""
+ },
+ "labor:26:1": {
+  "decision": "no",
+  "comment": ""
+ },
+ "labor:26:2": {
+  "decision": "no",
+  "comment": ""
+ },
+ "tax:173_2": {
+  "decision": "yes",
+  "comment": ""
+ },
+ "tax:354:1_1": {
+  "decision": "no",
+  "comment": ""
+ },
+ "tax:354:1_2": {
+  "decision": "no",
+  "comment": ""
+ },
+ "tax:370_3": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 399, только в Kz 339"
+ },
+ "tax:404:1_1": {
+  "decision": "yes",
+  "comment": ""
+ },
+ "tax:579:3": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 577"
+ },
+ "tax:583:9": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 3, только в Kz 4"
+ },
+ "tax:592:5": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 9, только в Kz 19"
+ },
+ "tax:757:13": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 9, только в Kz 19"
+ },
+ "tax:778:1": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 2, только в Kz —"
+ },
+ "tax:781:1_1": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru 0,01, только в Kz —"
+ },
+ "tax:781:1_2": {
+  "decision": "yes",
+  "comment": "разные числа: только в Ru —, только в Kz 0,01"
+ }
+}

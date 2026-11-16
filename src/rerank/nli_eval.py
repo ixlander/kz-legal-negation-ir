@@ -54,12 +54,15 @@ def eval_sets():
         sets[f"synthetic-{lang}-test"] = [r for r in jl(NLI / f"synthetic_{lang}.jsonl") if r.get("split") == "test"]
     manual = NLI / "val_manual.jsonl"
     if manual.exists():
-        rows = jl(manual)
-        sets["manual"] = [r for r in rows if r.get("status") == "ok"]
-        for lang in ("ru", "kz"):
-            # unchecked drafts: indicative only, never reported as a result
-            sets[f"manual-draft-{lang}"] = [{**r, "kind": "range" if r["range"] else "other"}
-                                            for r in rows if r["lang"] == lang]
+        rows = [{**r, "kind": "range" if r["range"] else "other"} for r in jl(manual)]
+        checked = [r for r in rows if r.get("status") == "ok"]
+        if checked:
+            for lang in ("ru", "kz"):
+                sets[f"manual-{lang}"] = [r for r in checked if r["lang"] == lang]
+        else:
+            for lang in ("ru", "kz"):
+                # unchecked drafts: indicative only, never reported as a result
+                sets[f"manual-draft-{lang}"] = [r for r in rows if r["lang"] == lang]
     return {k: v for k, v in sets.items() if v}
 
 
