@@ -580,3 +580,10 @@ are still too small.
 **Question set v2, draft batch 3**: + 20 yes/no questions with a permitting gold for the general slice
 (11 Labor, 9 Tax). Draft now 69 pairs: neg-prohibit 28, neg-permit 9, neg-explicit 9, gen-polar 23;
 with v1 that is 118 pairs.
+
+**Annotation round 2, pages** (`tools/review/build_v2.py`, `sections_v2_{main,blind}.js`):
+* main — https://claude.ai/artifact/TTKkthrKosAGkv94TcFwXV — 69 draft questions of v2 (ru/kz text, gold, twin).
+* blind (second annotator, no drafts or model labels shown) — https://claude.ai/artifact/5xor5gW1iNcUHDbqwBvi2G —
+  399 relevance cards (49 final questions x pooled chunks: top-3 of bge-m3 B0, e5-base B0, bge-m3 B2 and
+  bge-reranker in both languages + gold + twin, shuffled; 3-15 chunks per question) and the 50 NLI pairs.
+Answers go to the `reviews` collection of each page. Not yet shared; nothing applied to the data.
