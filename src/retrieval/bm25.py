@@ -5,6 +5,8 @@ Analyzers:
     morph  — Ru: pymorphy3 lemmas, «не»/«ни» kept, fused «не-» split;
              Kz: kazsearch stems + NEG token for negative verb forms, емес/жоқ kept.
              This is B2.
+    morph-noneg — morph with every negation token removed: the control that isolates what
+             keeping the negation adds.
 Tokenized corpora are cached on disk: the morph analyzers take minutes on 30k chunks.
 """
 import json
@@ -17,6 +19,7 @@ import numpy as np
 from src.retrieval import corpus
 
 WORD = re.compile(r"[а-яёәіңғүұқөһa-z0-9]+")
+NEGATION_TOKENS = {"ru": {"не", "ни", "нет", "без"}, "kz": {"NEG", "емес", "жоқ"}}
 
 
 def plain(text):
@@ -26,6 +29,9 @@ def plain(text):
 def analyzer(name, lang):
     if name == "plain":
         return plain
+    if name == "morph-noneg":
+        morph, drop = analyzer("morph", lang), NEGATION_TOKENS[lang]
+        return lambda text: [t for t in morph(text) if t not in drop]
     if lang == "ru":
         from src.retrieval.morph_ru import tokenize
         return tokenize
@@ -35,6 +41,9 @@ def analyzer(name, lang):
 
 def tokenized_corpus(name, lang, ids, texts, tag=""):
     """name: analyzer (plain|morph); tag: extra cache-file prefix for non-project corpora."""
+    if name == "morph-noneg":
+        drop = NEGATION_TOKENS[lang]
+        return [[t for t in d if t not in drop] for d in tokenized_corpus("morph", lang, ids, texts, tag)]
     path = corpus.INDEX / f"tokens_{tag}{name}_{lang}.jsonl"
     if path.exists():
         cached = [json.loads(l) for l in open(path, encoding="utf-8")]

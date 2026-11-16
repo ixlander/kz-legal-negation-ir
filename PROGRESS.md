@@ -498,3 +498,72 @@ Accuracy Ru / Kz (50 pairs each); false contradictions on the 9 Kz range-negatio
   neutral, not contradiction), but c loses 0.16 accuracy on the Russian manual set ([−0.28, −0.06]).
 * Fine-tuning cuts Kazakh range errors of the start model (4/9 → 1/9) but lowers overall accuracy on the
   hand-written pairs; the off-the-shelf model is the best on the Kazakh manual set.
+
+## 2026-11-16 — internal review before the paper; change of approach
+A review of the whole study (code, data, result files) found no bugs in the metrics, the bootstrap or the
+fusion, but several conclusions do not follow from the data. Owner's decision: fix all of it (decision log,
+16.11). What changes and why:
+
+**Conclusions restated (the numbers stay, the wording changes)**
+* **D1** was reported as "confirmed" from margin = cos(paraphrase) − cos(negation). The paraphrase differs
+  from the norm by ~21 tokens (Ru) / ~18 (Kz), the negation by ~1–3, so the negation is closer almost by
+  construction. With an edit of the same size (`min_paraphrase`, one-span synonym) the margin is positive:
+  e5-base Ru +0.018 [+0.013, +0.022] (7% negative), Kz +0.025 [+0.021, +0.030] (0% negative). So e5 does
+  separate a negation from a synonym edit, only less than from a full paraphrase. For the main model bge-m3
+  even the original margin is not different from 0 (Ru −0.008 [−0.036, +0.020]). D1 is now reported with the
+  size-matched control as the main number.
+* **H6** "supported on held-out synthetic pairs" is an artifact: the start model has a Range-negation Error
+  of 0.0 on the Russian synthetic test; only variant c has 60.9%, because c keeps the «не менее → менее =
+  contradiction» pairs and drops their entailment counterparts — the ablation creates the shortcut it then
+  measures. The synthetic test also shares its templates with training. On the hand-written Kazakh range
+  pairs: start 4/9, a 1/9, c 0/9. H6 is reported as not testable on 9 pairs.
+* **H5** cannot be tested with this base model: by its model card mDeBERTa-2mil7 was already trained on
+  machine-translated MNLI/ANLI/FEVER/WANLI/LingNLI in 26 languages including ru and tr (105k pairs each, no
+  kk), and variants a and b also differ in size (106k vs 56k pairs).
+* **H3** for e5-base: the larger Kazakh gain of B2 is also there on general questions (+0.23 [−0.03, +0.53]),
+  so it is a weak dense model rescued by lexical matching, not an effect of negation morphology.
+* Fine-tuning on our synthetic pairs lowers accuracy on the hand-written pairs (start 0.62 / 0.56, a 0.56 /
+  0.48) while reaching 0.97–0.99 on the synthetic test: the model learned the templates.
+
+**Limits of the question set v1 (49 pairs), to be fixed in v2**
+* every negation question is a yes/no question and every general question is a wh-question, so the Negation
+  Gap also measures the question type; 22 of 24 negation questions have a prohibiting gold;
+* only 2 of 24 negation questions contain a negation word, which makes the polarity rule useless (α = 0)
+  and leaves the negation tokens of BM25 nothing to match (see below);
+* 19–20 test questions per slice: one question = 0.05 Recall@5, only effects ≥ ~0.25 are detectable; about
+  50 intervals without a multiplicity correction; dev of 5 pairs per slice selects noise (different B3
+  variants for the two dense models); one gold per question, other relevant chunks are not judged;
+* one annotator who saw the model's drafts and labels (hence 94% agreement); Kazakh questions overlap with
+  the gold text more than Russian ones (query-token coverage 0.70–0.74 vs 0.54–0.64);
+* bge-m3 is at 0.95–0.97 Recall@5 at B0 — no headroom.
+
+**Control runs on v1** (`results/controls_{dev,test}.json`; shared runs reproduce `final_ablation_test.json`)
+Recall@5 general / negation (Twin-above-Gold), test:
+
+| run | bge-m3 Ru | bge-m3 Kz | e5-base Ru | e5-base Kz |
+|---|---|---|---|---|
+| B0 | 0.95 / 0.79 (0.14) | 0.95 / 0.97 (0.07) | 0.93 / 0.74 (0.29) | 0.78 / 0.47 (0.43) |
+| B2-noneg (negation tokens removed) | 0.85 / 0.74 (0.21) | 0.90 / 0.89 (0.07) | 0.88 / 0.74 (0.21) | 0.90 / 0.68 (0.14) |
+| B2 | 0.85 / 0.74 (0.21) | 0.90 / 0.89 (0.07) | 0.82 / 0.68 (0.21) | 0.90 / 0.68 (0.14) |
+| B2, BM25 weight 0.25 | 1.00 / 0.79 (0.14) | 0.95 / 0.97 (0.00) | 0.93 / 0.74 (0.29) | 0.90 / 0.58 (0.43) |
+| B2, BM25 weight 0.5 | 1.00 / 0.74 (0.21) | 0.90 / 0.89 (0.07) | 0.93 / 0.74 (0.29) | 0.95 / 0.63 (0.36) |
+| B2, BM25 weight 2 | 0.80 / 0.68 (0.29) | 0.90 / 0.84 (0.07) | 0.82 / 0.68 (0.29) | 0.85 / 0.68 (0.07) |
+
+* **Keeping the negation in BM25 changes nothing on v1**: B2 and B2-noneg are identical for bge-m3 and for
+  Kazakh, and BM25 alone is identical with and without the negation tokens (Ru 0.58, Kz 0.77 Recall@5). The
+  whole B1 → B2 gain is lemmatization / stemming. Expected once we saw that the questions carry no negation
+  words; v2 adds questions that do.
+* **Equal-weight RRF was the reason B2 fell below B0 for bge-m3**: with BM25 weight 0.25 (dev-selected) the
+  hybrid is not below B0 anywhere (Ru general +0.05 [0.00, +0.15], Kz Twin-above-Gold −0.07 [−0.23, 0.00]),
+  though not significantly above it either. For e5-base dev picks weight 2 (dev is 10 pairs; the grid is
+  reported as a sensitivity analysis, not as a tuned result).
+* **B3 with the off-the-shelf NLI model** equals B3 with the fine-tuned one: over the 10 scoring/fusion
+  variants mean Recall@5 0.80 vs 0.81 (bge-m3), 0.74 vs 0.76 (e5-base), Twin-above-Gold 0.21 vs 0.20 and
+  0.24 vs 0.24; B2 itself: 0.85 / 0.77 and 0.14 / 0.18. Fine-tuning adds nothing to the reranker, and NLI
+  reranking is on average below B2.
+* **Question → statement** (question particle removed by rule) does not help NLI reranking: mean Recall@5
+  0.70 vs 0.80 (start model, bge-m3), 0.73 vs 0.81 (nli-a); single variants vary a lot (Twin-above-Gold
+  0.07–0.68), which again shows how noisy 14 twin questions are.
+
+**Next**: NLI seeds 1 and 2 for variants a, b, c (running); question set v2 (150–200 pairs, balanced
+design); blind second annotator with Cohen's κ; relevance judgments for the top-5 of every system.

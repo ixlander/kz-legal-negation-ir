@@ -17,6 +17,7 @@ The odd-indexed half of Kardeş test is left for reporting.
 Usage:
     python -m src.rerank.nli_train --variant a
     python -m src.rerank.nli_train --variant b --epochs 2
+    python -m src.rerank.nli_train --variant a --seed 1      # extra seed, saved as nli-a-s1
 """
 import argparse
 import gc
@@ -86,7 +87,7 @@ class LengthGroupedBatches(Sampler):
         return (len(self.lengths) + self.batch_size - 1) // self.batch_size
 
 
-def batches(rows, tok, batch_size, shuffle):
+def batches(rows, tok, batch_size, shuffle, seed=SEED):
     def collate(b):
         enc = tok([r["premise"] for r in b], [r["hypothesis"] for r in b], truncation=True, max_length=MAX_LEN,
                   padding=True, return_tensors="pt")
@@ -94,7 +95,7 @@ def batches(rows, tok, batch_size, shuffle):
         return enc
     if shuffle:
         lengths = [len(r["premise"]) + len(r["hypothesis"]) for r in rows]
-        return DataLoader(rows, batch_sampler=LengthGroupedBatches(lengths, batch_size), collate_fn=collate)
+        return DataLoader(rows, batch_sampler=LengthGroupedBatches(lengths, batch_size, seed), collate_fn=collate)
     return DataLoader(rows, batch_size=batch_size, collate_fn=collate)
 
 
@@ -129,8 +130,10 @@ def main():
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--accumulate", type=int, default=2, help="gradient accumulation: effective batch 32")
     ap.add_argument("--lr", type=float, default=1e-5, help="low: the start model already does NLI")
+    ap.add_argument("--seed", type=int, default=SEED, help="training seed; the data files stay the same")
     a = ap.parse_args()
-    set_seed(SEED)
+    set_seed(a.seed)
+    name = f"nli-{a.variant}" if a.seed == SEED else f"nli-{a.variant}-s{a.seed}"
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     tok = AutoTokenizer.from_pretrained(BASE)
@@ -138,16 +141,16 @@ def main():
     model = AutoModelForSequenceClassification.from_pretrained(BASE, dtype=torch.float32).to(device)
     assert [model.config.id2label[i].lower() for i in range(3)] == LABELS, model.config.id2label
     rows = training_rows(a.variant)
-    train = batches(rows, tok, a.batch_size, shuffle=True)
+    train = batches(rows, tok, a.batch_size, shuffle=True, seed=a.seed)
     dev = batches(jl("kardes_kk_test")[0::2], tok, 64, shuffle=False)
     print(f"variant {a.variant}: {len(rows)} training pairs, {len(train)} batches/epoch")
 
     opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
     steps = len(train) * a.epochs // a.accumulate
     sched = get_linear_schedule_with_warmup(opt, int(0.06 * steps), steps)
-    out = CKPT / f"nli-{a.variant}"
+    out = CKPT / name
     log = {"variant": a.variant, "base": BASE, "n_train": len(rows), "epochs": a.epochs, "lr": a.lr,
-           "batch_size": a.batch_size * a.accumulate, "max_len": MAX_LEN, "seed": SEED, "precision": "bf16",
+           "batch_size": a.batch_size * a.accumulate, "max_len": MAX_LEN, "seed": a.seed, "precision": "bf16",
            "dev": "kardes_kk_test, even-indexed half", "history": [{"epoch": 0, "dev_macro_f1": macro_f1(model, dev, device)}]}
     print(f"epoch 0 (start model): kardes kk select macro F1 {log['history'][0]['dev_macro_f1']:.4f}")
     best = -1.0
@@ -178,7 +181,7 @@ def main():
             save_fp16(model, tok, out)
     log["best_dev_macro_f1"] = best
     (out / "train_log.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
-    (ROOT / f"results/nli_train_{a.variant}.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
+    (ROOT / f"results/nli_train_{name[4:]}.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
     print(f"best dev macro F1 {best:.4f} -> {out.relative_to(ROOT)}")
 
 

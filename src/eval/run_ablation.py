@@ -3,9 +3,12 @@
     B0       dense only
     B1       dense + BM25 plain, RRF k=60
     B2       dense + BM25 morph (negation kept), RRF k=60
+    B2-noneg B2 with the negation tokens removed from the BM25 index and query (what keeping them adds)
+    B2-wX    B2 with BM25 weight X in the fusion, each ranking cut at its top 1000 (fusion sensitivity)
     B3'      B2 top-30 reordered by an off-the-shelf cross-encoder (one run per reranker)
     B3-rule  B2 top-30 reordered by the polarity rule (score ± alpha)
-    B3       B2 top-30 reordered by an NLI model: scorings S1/S2, alone or fused with the B2 order
+    B3       B2 top-30 reordered by an NLI model: scorings S1/S2, alone or fused with the B2 order;
+             with --statements also with yes/no questions rewritten as statements (suffix -decl)
 Below the top-30 every reranked run keeps the B2 order, so full-ranking metrics stay defined.
 BM25-only runs are reported for context. Each step is compared with paired bootstrap.
 
@@ -32,6 +35,7 @@ from src.retrieval.fusion import rrf
 
 ROOT = Path(__file__).resolve().parents[2]
 TOP_K = 30
+FUSION_DEPTH = 1000
 PATHS = [("general", "recall@5"), ("negation", "recall@5"), ("negation_gap",), ("twin_above_gold", "value")]
 
 
@@ -73,7 +77,12 @@ def rule_name(alpha):
     return f"B3-rule-{alpha:g}"
 
 
-def run_lang(lang, which, model_keys, reranker_keys, alphas, nli_checkpoints=(), split="test"):
+def weighted_name(w):
+    return f"B2-w{w:g}"
+
+
+def run_lang(lang, which, model_keys, reranker_keys, alphas, nli_checkpoints=(), split="test",
+             bm25_weights=(), statements=False):
     ids, texts = corpus.load(lang)
     pos = {c: i for i, c in enumerate(ids)}
     queries = load_queries(which, lang, split)
@@ -81,12 +90,13 @@ def run_lang(lang, which, model_keys, reranker_keys, alphas, nli_checkpoints=(),
     print(f"[{lang}] corpus {len(ids)} chunks, {len(queries)} queries")
 
     sparse = {}
-    for name in ("plain", "morph"):
+    for name in ("plain", "morph", "morph-noneg"):
         index = bm25.BM25(bm25.tokenized_corpus(name, lang, ids, texts))
         tok = bm25.analyzer(name, lang)
         sparse[name] = [index.scores(tok(q)) for q in qtext]
     out = {"bm25-plain": evaluate(sparse["plain"], queries, pos, ids),
-           "bm25-morph": evaluate(sparse["morph"], queries, pos, ids)}
+           "bm25-morph": evaluate(sparse["morph"], queries, pos, ids),
+           "bm25-morph-noneg": evaluate(sparse["morph-noneg"], queries, pos, ids)}
 
     b2 = {}
     for key in model_keys:
@@ -99,6 +109,10 @@ def run_lang(lang, which, model_keys, reranker_keys, alphas, nli_checkpoints=(),
         out[f"{key}/B0"] = evaluate(dn, queries, pos, ids)
         out[f"{key}/B1"] = evaluate([rrf(d, s) for d, s in zip(dn, sparse["plain"])], queries, pos, ids)
         out[f"{key}/B2"] = evaluate(b2[key], queries, pos, ids)
+        out[f"{key}/B2-noneg"] = evaluate([rrf(d, s) for d, s in zip(dn, sparse["morph-noneg"])], queries, pos, ids)
+        for w in bm25_weights:
+            fused = [rrf(d, s, weights=(1.0, w), depth=FUSION_DEPTH) for d, s in zip(dn, sparse["morph"])]
+            out[f"{key}/{weighted_name(w)}"] = evaluate(fused, queries, pos, ids)
         for alpha in alphas:
             rule = []
             for q, s in zip(qtext, b2[key]):
@@ -121,23 +135,28 @@ def run_lang(lang, which, model_keys, reranker_keys, alphas, nli_checkpoints=(),
 
     for ckpt in nli_checkpoints:
         clf = nli_rerank.load(ckpt)
+        forms = {"": qtext}
+        if statements:
+            forms["-decl"] = [nli_rerank.as_statement(q, lang) for q in qtext]
         for key in model_keys:
-            runs = {name: [] for name in nli_rerank.run_names()}
-            for q, s in zip(qtext, b2[key]):
-                top = top_k(s)
-                for scoring, nli in nli_rerank.nli_scores(clf, q, [texts[i] for i in top]).items():
-                    for fusion, new in nli_rerank.fusions(s[top], nli).items():
-                        runs[f"{scoring}-{fusion}"].append(reorder_top(s, top, new))
-            for name, r in runs.items():
-                out[f"{key}/B3-{Path(ckpt).name}-{name}"] = evaluate(r, queries, pos, ids)
+            for suffix, hypotheses in forms.items():
+                runs = {name: [] for name in nli_rerank.run_names()}
+                for h, s in zip(hypotheses, b2[key]):
+                    top = top_k(s)
+                    for scoring, nli in nli_rerank.nli_scores(clf, h, [texts[i] for i in top]).items():
+                        for fusion, new in nli_rerank.fusions(s[top], nli).items():
+                            runs[f"{scoring}-{fusion}"].append(reorder_top(s, top, new))
+                for name, r in runs.items():
+                    out[f"{key}/B3-{Path(ckpt).name}{suffix}-{name}"] = evaluate(r, queries, pos, ids)
         del clf
         free_gpu()
         print(f"[{lang}] NLI reranker {ckpt} done")
     return out
 
 
-def comparisons(runs, model_keys, reranker_keys, alphas, nli_names=()):
-    pairs = [("B0", "B1"), ("B0", "B2"), ("B1", "B2")] + [("B2", rule_name(a)) for a in alphas]
+def comparisons(runs, model_keys, reranker_keys, alphas, nli_names=(), bm25_weights=()):
+    pairs = [("B0", "B1"), ("B0", "B2"), ("B1", "B2"), ("B2-noneg", "B2")]
+    pairs += [("B0", weighted_name(w)) for w in bm25_weights] + [("B2", rule_name(a)) for a in alphas]
     pairs += [("B2", f"B3'-{rk}") for rk in reranker_keys]
     pairs += [("B2", f"B3-{n}-{r}") for n in nli_names for r in nli_rerank.run_names()]
     return {f"{key}: {y} vs {x}": {"/".join(p): paired_diff(runs[f"{key}/{x}"], runs[f"{key}/{y}"], p) for p in PATHS}
@@ -153,6 +172,8 @@ def main():
     ap.add_argument("--alphas", type=float, nargs="+", default=[0.01], help="B3-rule boosts, tuned on dev")
     ap.add_argument("--split", choices=["dev", "test", "all"], default="test", help="final queries only")
     ap.add_argument("--nli", nargs="*", default=[], help="NLI models (checkpoint dirs or hub ids) for B3")
+    ap.add_argument("--bm25-weights", type=float, nargs="*", default=[], help="BM25 weights for B2-wX")
+    ap.add_argument("--statements", action="store_true", help="B3 also with questions as statements")
     ap.add_argument("--tag", default="", help="extra name part of the result file")
     ap.add_argument("--out", default=None, help="result file; default: built from the run options")
     a = ap.parse_args()
@@ -161,20 +182,23 @@ def main():
     split = a.split if a.queries == "final" else None
     res = {"config": {"queries": a.queries, "split": split, "models": a.models, "rerankers": a.rerankers,
                       "rerank_top_k": TOP_K, "rule_alphas": a.alphas, "nli": a.nli, "rrf_k": 60,
+                      "bm25_weights": a.bm25_weights, "weighted_fusion_depth": FUSION_DEPTH,
+                      "nli_statements": a.statements,
                       "bm25": {"k1": 1.5, "b": 0.75}, "bootstrap": {"n": 1000, "seed": 42},
                       "corpus": "all 22 codes per language, title + text", "date": today},
            "langs": {}}
     if a.queries == "draft":
         res["config"]["warning"] = "agent draft questions, gold/twin not finalized: smoke test, not for the report"
-    nli_names = [Path(c).name for c in a.nli]
+    nli_names = [Path(c).name + sfx for c in a.nli for sfx in (("", "-decl") if a.statements else ("",))]
     for lang in a.langs:
-        runs = run_lang(lang, a.queries, a.models, a.rerankers, a.alphas, a.nli, a.split)
+        runs = run_lang(lang, a.queries, a.models, a.rerankers, a.alphas, a.nli, a.split,
+                        a.bm25_weights, a.statements)
         res["langs"][lang] = {"summary": {k: summary(v) for k, v in runs.items()},
-                              "compare": comparisons(runs, a.models, a.rerankers, a.alphas, nli_names),
+                              "compare": comparisons(runs, a.models, a.rerankers, a.alphas, nli_names, a.bm25_weights),
                               "per_query": runs}
 
     tag = "".join(f"{x}_" for x in (a.tag, split) if x)
-    path = Path(a.out) if a.out else \
+    path = Path(a.out).resolve() if a.out else \
         ROOT / f"results/ablation_{a.queries}_{tag}{'+'.join(a.models)}_{'+'.join(a.langs)}_{today}.json"
     path.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
 

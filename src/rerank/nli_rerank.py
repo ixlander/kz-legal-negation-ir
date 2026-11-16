@@ -9,7 +9,12 @@ reorders the top-30 badly. It is therefore fused with the retrieval order:
     rrf      reciprocal rank fusion of the B2 rank and the NLI rank, k=60
     lin-λ    min-max normalized B2 score + λ · NLI score
 Scoring, fusion and λ are chosen on the dev split.
+
+A yes/no question can be turned into its affirmative statement first (`as_statement`), which is
+closer to the hypotheses an NLI model was trained on.
 """
+import re
+
 import numpy as np
 
 from src.rerank.nli_eval import Classifier
@@ -17,6 +22,17 @@ from src.retrieval.fusion import K, ranks
 
 SCORINGS = ("s1", "s2")
 LAMBDAS = (0.25, 0.5, 1.0)
+
+
+RU_PARTICLE = re.compile(r"\s+ли(?=[\s,?])")
+KZ_PARTICLE = re.compile(r"\s+(?:ма|ме|ба|бе|па|пе)\s*\?\s*$")
+
+
+def as_statement(question, lang):
+    """Drop the question particle of a yes/no question: «Может ли X …?» -> «Может X ….»,
+    «… бола ма?» -> «… бола.». Other questions are returned unchanged."""
+    new, n = (RU_PARTICLE if lang == "ru" else KZ_PARTICLE).subn("", question, count=1)
+    return new.rstrip().rstrip("?").rstrip() + "." if n else question
 
 
 def load(path):
