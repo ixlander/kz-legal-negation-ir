@@ -576,3 +576,7 @@ not used in any metric. Still to draft: Tax Code batch, yes/no questions for the
 nearby form a new cell gen-polar (general slice). Draft now 49 pairs: neg-prohibit 28, neg-permit 9,
 neg-explicit 9, gen-polar 3; 16 with a twin. With v1 that is 98 pairs; the permitting and gen-polar cells
 are still too small.
+
+**Question set v2, draft batch 3**: + 20 yes/no questions with a permitting gold for the general slice
+(11 Labor, 9 Tax). Draft now 69 pairs: neg-prohibit 28, neg-permit 9, neg-explicit 9, gen-polar 23;
+with v1 that is 118 pairs.
