@@ -567,3 +567,7 @@ Recall@5 general / negation (Twin-above-Gold), test:
 
 **Next**: NLI seeds 1 and 2 for variants a, b, c (running); question set v2 (150–200 pairs, balanced
 design); blind second annotator with Cohen's κ; relevance judgments for the top-5 of every system.
+
+**Question set v2, draft batch 1** (`data/eval/make_draft_v2.py` -> `data/eval/queries_v2_draft.jsonl`): 34 Labor Code
+pairs, cells neg-prohibit 17 / neg-permit 11 / neg-explicit 6, 13 with a twin. Agent drafts, Kazakh unchecked;
+not used in any metric. Still to draft: Tax Code batch, yes/no questions for the general slice.
