@@ -587,3 +587,8 @@ with v1 that is 118 pairs.
   399 relevance cards (49 final questions x pooled chunks: top-3 of bge-m3 B0, e5-base B0, bge-m3 B2 and
   bge-reranker in both languages + gold + twin, shuffled; 3-15 chunks per question) and the 50 NLI pairs.
 Answers go to the `reviews` collection of each page. Not yet shared; nothing applied to the data.
+
+**NLI seeds stopped** (owner cannot keep the laptop running for ~12 h). The chain was killed during epoch 2 of
+variant a, seed 1; nothing from it is used. New runner `src/rerank/nli_seeds.py`: one job = one variant x one
+seed (train + eval), finished jobs are skipped, a job starts only if it fits `--hours`. Default jobs: a and c,
+seeds 1 and 2 (b dropped: H5 is not testable with this base model). ~2.6 h per job, 4 jobs.
