@@ -7,7 +7,7 @@
     "encoding": "documents (model-specific prefix/prompt)",
     "seed": 42,
     "bootstrap_resamples": 1000,
-    "date": "2026-11-16"
+    "date": "2026-11-22"
   },
   "models": {
     "e5-base": {
@@ -32,6 +32,7 @@
         "median": 0.01757875084877014,
         "frac_negative": 0.06666666666666667
       },
+      "control_n": 30,
       "dist_mean": {
         "synonym": 0.005131705664098263,
         "negation": 0.02302950620651245,
@@ -183,6 +184,7 @@
         "median": 0.026123046875,
         "frac_negative": 0.03333333333333333
       },
+      "control_n": 30,
       "dist_mean": {
         "synonym": 0.0030918121337890625,
         "negation": 0.0311126708984375,
@@ -334,6 +336,7 @@
         "median": 0.07906177639961243,
         "frac_negative": 0.03333333333333333
       },
+      "control_n": 30,
       "dist_mean": {
         "synonym": 0.013141656294465065,
         "negation": 0.11249671131372452,
@@ -485,6 +488,7 @@
         "median": 0.02879074215888977,
         "frac_negative": 0.0
       },
+      "control_n": 30,
       "dist_mean": {
         "synonym": 0.006188380531966686,
         "negation": 0.03931209072470665,
@@ -636,6 +640,7 @@
         "median": 0.021804064512252808,
         "frac_negative": 0.06666666666666667
       },
+      "control_n": 30,
       "dist_mean": {
         "synonym": 0.010746083222329617,
         "negation": 0.04080015793442726,
@@ -787,6 +792,7 @@
         "median": 0.004979431629180908,
         "frac_negative": 0.36666666666666664
       },
+      "control_n": 30,
       "dist_mean": {
         "synonym": 0.013272366486489773,
         "negation": 0.018321864306926727,

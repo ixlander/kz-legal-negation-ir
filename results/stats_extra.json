@@ -1,0 +1,1399 @@
+{
+ "family_size": 40,
+ "tests": [
+  {
+   "test": "H1 bge-m3 ru B2 vs B0 negation hit@5",
+   "up": 0,
+   "down": 1,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 bge-m3 ru B2 vs B0 general hit@5",
+   "up": 1,
+   "down": 3,
+   "n": 20,
+   "p": 0.625,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 ru B3 vs B3'-jina-v2 negation hit@5",
+   "up": 1,
+   "down": 3,
+   "n": 19,
+   "p": 0.625,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 ru B3 vs B3'-jina-v2 twin-above-gold",
+   "up": 5,
+   "down": 1,
+   "n": 14,
+   "p": 0.21875,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 ru B3 vs B3'-bge-reranker-v2-m3 negation hit@5",
+   "up": 0,
+   "down": 2,
+   "n": 19,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 ru B3 vs B3'-bge-reranker-v2-m3 twin-above-gold",
+   "up": 4,
+   "down": 0,
+   "n": 14,
+   "p": 0.125,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 ru B3 vs B2 negation hit@5",
+   "up": 0,
+   "down": 0,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 ru B3 vs B2 twin-above-gold",
+   "up": 2,
+   "down": 0,
+   "n": 14,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 bge-m3 kz B2 vs B0 negation hit@5",
+   "up": 0,
+   "down": 2,
+   "n": 19,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 bge-m3 kz B2 vs B0 general hit@5",
+   "up": 0,
+   "down": 1,
+   "n": 20,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 kz B3 vs B3'-jina-v2 negation hit@5",
+   "up": 1,
+   "down": 2,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 kz B3 vs B3'-jina-v2 twin-above-gold",
+   "up": 1,
+   "down": 1,
+   "n": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 kz B3 vs B3'-bge-reranker-v2-m3 negation hit@5",
+   "up": 0,
+   "down": 1,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 kz B3 vs B3'-bge-reranker-v2-m3 twin-above-gold",
+   "up": 1,
+   "down": 0,
+   "n": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 kz B3 vs B2 negation hit@5",
+   "up": 0,
+   "down": 0,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 bge-m3 kz B3 vs B2 twin-above-gold",
+   "up": 0,
+   "down": 0,
+   "n": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 bge-m3 B2 kz-ru gain negation",
+   "up": 1,
+   "down": 2,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 bge-m3 B2 kz-ru gain general",
+   "up": 3,
+   "down": 2,
+   "n": 20,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 bge-m3 B3 kz-ru gain negation",
+   "up": 1,
+   "down": 2,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 bge-m3 B3 kz-ru gain general",
+   "up": 2,
+   "down": 2,
+   "n": 20,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 e5-base ru B2 vs B0 negation hit@5",
+   "up": 0,
+   "down": 1,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 e5-base ru B2 vs B0 general hit@5",
+   "up": 0,
+   "down": 2,
+   "n": 20,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base ru B3 vs B3'-jina-v2 negation hit@5",
+   "up": 1,
+   "down": 2,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base ru B3 vs B3'-jina-v2 twin-above-gold",
+   "up": 2,
+   "down": 0,
+   "n": 14,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base ru B3 vs B3'-bge-reranker-v2-m3 negation hit@5",
+   "up": 0,
+   "down": 2,
+   "n": 19,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base ru B3 vs B3'-bge-reranker-v2-m3 twin-above-gold",
+   "up": 3,
+   "down": 1,
+   "n": 14,
+   "p": 0.625,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base ru B3 vs B2 negation hit@5",
+   "up": 2,
+   "down": 0,
+   "n": 19,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base ru B3 vs B2 twin-above-gold",
+   "up": 1,
+   "down": 1,
+   "n": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 e5-base kz B2 vs B0 negation hit@5",
+   "up": 4,
+   "down": 0,
+   "n": 19,
+   "p": 0.125,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H1 e5-base kz B2 vs B0 general hit@5",
+   "up": 4,
+   "down": 2,
+   "n": 20,
+   "p": 0.6875,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base kz B3 vs B3'-jina-v2 negation hit@5",
+   "up": 0,
+   "down": 4,
+   "n": 19,
+   "p": 0.125,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base kz B3 vs B3'-jina-v2 twin-above-gold",
+   "up": 2,
+   "down": 1,
+   "n": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base kz B3 vs B3'-bge-reranker-v2-m3 negation hit@5",
+   "up": 0,
+   "down": 5,
+   "n": 19,
+   "p": 0.0625,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base kz B3 vs B3'-bge-reranker-v2-m3 twin-above-gold",
+   "up": 2,
+   "down": 0,
+   "n": 14,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base kz B3 vs B2 negation hit@5",
+   "up": 1,
+   "down": 2,
+   "n": 19,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H2 e5-base kz B3 vs B2 twin-above-gold",
+   "up": 2,
+   "down": 1,
+   "n": 14,
+   "p": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 e5-base B2 kz-ru gain negation",
+   "up": 5,
+   "down": 0,
+   "n": 19,
+   "p": 0.0625,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 e5-base B2 kz-ru gain general",
+   "up": 5,
+   "down": 2,
+   "n": 20,
+   "p": 0.453125,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 e5-base B3 kz-ru gain negation",
+   "up": 2,
+   "down": 0,
+   "n": 19,
+   "p": 0.5,
+   "p_holm": 1.0
+  },
+  {
+   "test": "H3 e5-base B3 kz-ru gain general",
+   "up": 3,
+   "down": 2,
+   "n": 20,
+   "p": 1.0,
+   "p_holm": 1.0
+  }
+ ],
+ "cells": {
+  "bge-m3 | ru | B0": {
+   "general_hit5": {
+    "k": 19,
+    "n": 20,
+    "rate": 0.95,
+    "wilson": [
+     0.764,
+     0.991
+    ]
+   },
+   "negation_hit5": {
+    "k": 15,
+    "n": 19,
+    "rate": 0.7894736842105263,
+    "wilson": [
+     0.567,
+     0.915
+    ]
+   },
+   "twin_above_gold": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 1,
+    "n": 14
+   }
+  },
+  "bge-m3 | kz | B0": {
+   "general_hit5": {
+    "k": 19,
+    "n": 20,
+    "rate": 0.95,
+    "wilson": [
+     0.764,
+     0.991
+    ]
+   },
+   "negation_hit5": {
+    "k": 19,
+    "n": 19,
+    "rate": 1.0,
+    "wilson": [
+     0.832,
+     1.0
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "bge-m3 | ru | B2": {
+   "general_hit5": {
+    "k": 17,
+    "n": 20,
+    "rate": 0.85,
+    "wilson": [
+     0.64,
+     0.948
+    ]
+   },
+   "negation_hit5": {
+    "k": 14,
+    "n": 19,
+    "rate": 0.7368421052631579,
+    "wilson": [
+     0.512,
+     0.882
+    ]
+   },
+   "twin_above_gold": {
+    "k": 3,
+    "n": 14,
+    "wilson": [
+     0.076,
+     0.476
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 3,
+    "n": 14,
+    "wilson": [
+     0.076,
+     0.476
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 2,
+    "n": 14
+   }
+  },
+  "bge-m3 | kz | B2": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 17,
+    "n": 19,
+    "rate": 0.8947368421052632,
+    "wilson": [
+     0.686,
+     0.971
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 1,
+    "n": 14
+   }
+  },
+  "bge-m3 | ru | B3'-jina-v2": {
+   "general_hit5": {
+    "k": 19,
+    "n": 20,
+    "rate": 0.95,
+    "wilson": [
+     0.764,
+     0.991
+    ]
+   },
+   "negation_hit5": {
+    "k": 16,
+    "n": 19,
+    "rate": 0.8421052631578947,
+    "wilson": [
+     0.624,
+     0.945
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 1,
+    "n": 14
+   }
+  },
+  "bge-m3 | kz | B3'-jina-v2": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 18,
+    "n": 19,
+    "rate": 0.9473684210526315,
+    "wilson": [
+     0.754,
+     0.991
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "bge-m3 | ru | B3'-bge-reranker-v2-m3": {
+   "general_hit5": {
+    "k": 20,
+    "n": 20,
+    "rate": 1.0,
+    "wilson": [
+     0.839,
+     1.0
+    ]
+   },
+   "negation_hit5": {
+    "k": 16,
+    "n": 19,
+    "rate": 0.8421052631578947,
+    "wilson": [
+     0.624,
+     0.945
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 1,
+    "n": 14
+   }
+  },
+  "bge-m3 | kz | B3'-bge-reranker-v2-m3": {
+   "general_hit5": {
+    "k": 19,
+    "n": 20,
+    "rate": 0.95,
+    "wilson": [
+     0.764,
+     0.991
+    ]
+   },
+   "negation_hit5": {
+    "k": 18,
+    "n": 19,
+    "rate": 0.9473684210526315,
+    "wilson": [
+     0.754,
+     0.991
+    ]
+   },
+   "twin_above_gold": {
+    "k": 0,
+    "n": 14,
+    "wilson": [
+     0.0,
+     0.215
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 0,
+    "n": 14,
+    "wilson": [
+     0.0,
+     0.215
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "bge-m3 | ru | B3-nli-a-s1-lin-0.25": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 14,
+    "n": 19,
+    "rate": 0.7368421052631579,
+    "wilson": [
+     0.512,
+     0.882
+    ]
+   },
+   "twin_above_gold": {
+    "k": 5,
+    "n": 14,
+    "wilson": [
+     0.163,
+     0.612
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 5,
+    "n": 14,
+    "wilson": [
+     0.163,
+     0.612
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 2,
+    "n": 14
+   }
+  },
+  "bge-m3 | kz | B3-nli-a-s1-lin-0.25": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 17,
+    "n": 19,
+    "rate": 0.8947368421052632,
+    "wilson": [
+     0.686,
+     0.971
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 0,
+    "n": 14,
+    "wilson": [
+     0.0,
+     0.215
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | ru | B0": {
+   "general_hit5": {
+    "k": 19,
+    "n": 20,
+    "rate": 0.95,
+    "wilson": [
+     0.764,
+     0.991
+    ]
+   },
+   "negation_hit5": {
+    "k": 14,
+    "n": 19,
+    "rate": 0.7368421052631579,
+    "wilson": [
+     0.512,
+     0.882
+    ]
+   },
+   "twin_above_gold": {
+    "k": 4,
+    "n": 14,
+    "wilson": [
+     0.117,
+     0.546
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | kz | B0": {
+   "general_hit5": {
+    "k": 16,
+    "n": 20,
+    "rate": 0.8,
+    "wilson": [
+     0.584,
+     0.919
+    ]
+   },
+   "negation_hit5": {
+    "k": 9,
+    "n": 19,
+    "rate": 0.47368421052631576,
+    "wilson": [
+     0.273,
+     0.683
+    ]
+   },
+   "twin_above_gold": {
+    "k": 6,
+    "n": 14,
+    "wilson": [
+     0.214,
+     0.674
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | ru | B2": {
+   "general_hit5": {
+    "k": 17,
+    "n": 20,
+    "rate": 0.85,
+    "wilson": [
+     0.64,
+     0.948
+    ]
+   },
+   "negation_hit5": {
+    "k": 13,
+    "n": 19,
+    "rate": 0.6842105263157895,
+    "wilson": [
+     0.46,
+     0.846
+    ]
+   },
+   "twin_above_gold": {
+    "k": 3,
+    "n": 14,
+    "wilson": [
+     0.076,
+     0.476
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 1,
+    "n": 14
+   }
+  },
+  "e5-base | kz | B2": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 13,
+    "n": 19,
+    "rate": 0.6842105263157895,
+    "wilson": [
+     0.46,
+     0.846
+    ]
+   },
+   "twin_above_gold": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 0,
+    "n": 14,
+    "wilson": [
+     0.0,
+     0.215
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | ru | B3'-jina-v2": {
+   "general_hit5": {
+    "k": 20,
+    "n": 20,
+    "rate": 1.0,
+    "wilson": [
+     0.839,
+     1.0
+    ]
+   },
+   "negation_hit5": {
+    "k": 16,
+    "n": 19,
+    "rate": 0.8421052631578947,
+    "wilson": [
+     0.624,
+     0.945
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 0,
+    "n": 14,
+    "wilson": [
+     0.0,
+     0.215
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | kz | B3'-jina-v2": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 16,
+    "n": 19,
+    "rate": 0.8421052631578947,
+    "wilson": [
+     0.624,
+     0.945
+    ]
+   },
+   "twin_above_gold": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | ru | B3'-bge-reranker-v2-m3": {
+   "general_hit5": {
+    "k": 20,
+    "n": 20,
+    "rate": 1.0,
+    "wilson": [
+     0.839,
+     1.0
+    ]
+   },
+   "negation_hit5": {
+    "k": 17,
+    "n": 19,
+    "rate": 0.8947368421052632,
+    "wilson": [
+     0.686,
+     0.971
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | kz | B3'-bge-reranker-v2-m3": {
+   "general_hit5": {
+    "k": 19,
+    "n": 20,
+    "rate": 0.95,
+    "wilson": [
+     0.764,
+     0.991
+    ]
+   },
+   "negation_hit5": {
+    "k": 17,
+    "n": 19,
+    "rate": 0.8947368421052632,
+    "wilson": [
+     0.686,
+     0.971
+    ]
+   },
+   "twin_above_gold": {
+    "k": 1,
+    "n": 14,
+    "wilson": [
+     0.013,
+     0.315
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 0,
+    "n": 14,
+    "wilson": [
+     0.0,
+     0.215
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 0,
+    "n": 14
+   }
+  },
+  "e5-base | ru | B3-nli-a-s2-rrf": {
+   "general_hit5": {
+    "k": 18,
+    "n": 20,
+    "rate": 0.9,
+    "wilson": [
+     0.699,
+     0.972
+    ]
+   },
+   "negation_hit5": {
+    "k": 15,
+    "n": 19,
+    "rate": 0.7894736842105263,
+    "wilson": [
+     0.567,
+     0.915
+    ]
+   },
+   "twin_above_gold": {
+    "k": 3,
+    "n": 14,
+    "wilson": [
+     0.076,
+     0.476
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 1,
+    "n": 14
+   }
+  },
+  "e5-base | kz | B3-nli-a-s2-rrf": {
+   "general_hit5": {
+    "k": 17,
+    "n": 20,
+    "rate": 0.85,
+    "wilson": [
+     0.64,
+     0.948
+    ]
+   },
+   "negation_hit5": {
+    "k": 12,
+    "n": 19,
+    "rate": 0.631578947368421,
+    "wilson": [
+     0.41,
+     0.809
+    ]
+   },
+   "twin_above_gold": {
+    "k": 3,
+    "n": 14,
+    "wilson": [
+     0.076,
+     0.476
+    ]
+   },
+   "twin_above_gold@5": {
+    "k": 2,
+    "n": 14,
+    "wilson": [
+     0.04,
+     0.399
+    ]
+   },
+   "polarity_miss@5": {
+    "k": 2,
+    "n": 14
+   }
+  }
+ },
+ "breakdown": {
+  "bge-m3 | B0 | ru | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "bge-m3 | B0 | ru | tax, Ru abbreviated": {
+   "k": 7,
+   "n": 11,
+   "rate": 0.636
+  },
+  "bge-m3 | B0 | ru | tax, other": {
+   "k": 9,
+   "n": 10,
+   "rate": 0.9
+  },
+  "bge-m3 | B0 | kz | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "bge-m3 | B0 | kz | tax, Ru abbreviated": {
+   "k": 10,
+   "n": 11,
+   "rate": 0.909
+  },
+  "bge-m3 | B0 | kz | tax, other": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "bge-m3 | B2 | ru | labor": {
+   "k": 17,
+   "n": 18,
+   "rate": 0.944
+  },
+  "bge-m3 | B2 | ru | tax, Ru abbreviated": {
+   "k": 6,
+   "n": 11,
+   "rate": 0.545
+  },
+  "bge-m3 | B2 | ru | tax, other": {
+   "k": 8,
+   "n": 10,
+   "rate": 0.8
+  },
+  "bge-m3 | B2 | kz | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "bge-m3 | B2 | kz | tax, Ru abbreviated": {
+   "k": 8,
+   "n": 11,
+   "rate": 0.727
+  },
+  "bge-m3 | B2 | kz | tax, other": {
+   "k": 9,
+   "n": 10,
+   "rate": 0.9
+  },
+  "bge-m3 | B3'-jina-v2 | ru | labor": {
+   "k": 16,
+   "n": 18,
+   "rate": 0.889
+  },
+  "bge-m3 | B3'-jina-v2 | ru | tax, Ru abbreviated": {
+   "k": 10,
+   "n": 11,
+   "rate": 0.909
+  },
+  "bge-m3 | B3'-jina-v2 | ru | tax, other": {
+   "k": 9,
+   "n": 10,
+   "rate": 0.9
+  },
+  "bge-m3 | B3'-jina-v2 | kz | labor": {
+   "k": 17,
+   "n": 18,
+   "rate": 0.944
+  },
+  "bge-m3 | B3'-jina-v2 | kz | tax, Ru abbreviated": {
+   "k": 10,
+   "n": 11,
+   "rate": 0.909
+  },
+  "bge-m3 | B3'-jina-v2 | kz | tax, other": {
+   "k": 9,
+   "n": 10,
+   "rate": 0.9
+  },
+  "bge-m3 | B3'-bge-reranker-v2-m3 | ru | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "bge-m3 | B3'-bge-reranker-v2-m3 | ru | tax, Ru abbreviated": {
+   "k": 8,
+   "n": 11,
+   "rate": 0.727
+  },
+  "bge-m3 | B3'-bge-reranker-v2-m3 | ru | tax, other": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "bge-m3 | B3'-bge-reranker-v2-m3 | kz | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "bge-m3 | B3'-bge-reranker-v2-m3 | kz | tax, Ru abbreviated": {
+   "k": 9,
+   "n": 11,
+   "rate": 0.818
+  },
+  "bge-m3 | B3'-bge-reranker-v2-m3 | kz | tax, other": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "e5-base | B0 | ru | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "e5-base | B0 | ru | tax, Ru abbreviated": {
+   "k": 8,
+   "n": 11,
+   "rate": 0.727
+  },
+  "e5-base | B0 | ru | tax, other": {
+   "k": 7,
+   "n": 10,
+   "rate": 0.7
+  },
+  "e5-base | B0 | kz | labor": {
+   "k": 15,
+   "n": 18,
+   "rate": 0.833
+  },
+  "e5-base | B0 | kz | tax, Ru abbreviated": {
+   "k": 5,
+   "n": 11,
+   "rate": 0.455
+  },
+  "e5-base | B0 | kz | tax, other": {
+   "k": 5,
+   "n": 10,
+   "rate": 0.5
+  },
+  "e5-base | B2 | ru | labor": {
+   "k": 17,
+   "n": 18,
+   "rate": 0.944
+  },
+  "e5-base | B2 | ru | tax, Ru abbreviated": {
+   "k": 6,
+   "n": 11,
+   "rate": 0.545
+  },
+  "e5-base | B2 | ru | tax, other": {
+   "k": 7,
+   "n": 10,
+   "rate": 0.7
+  },
+  "e5-base | B2 | kz | labor": {
+   "k": 15,
+   "n": 18,
+   "rate": 0.833
+  },
+  "e5-base | B2 | kz | tax, Ru abbreviated": {
+   "k": 8,
+   "n": 11,
+   "rate": 0.727
+  },
+  "e5-base | B2 | kz | tax, other": {
+   "k": 8,
+   "n": 10,
+   "rate": 0.8
+  },
+  "e5-base | B3'-jina-v2 | ru | labor": {
+   "k": 17,
+   "n": 18,
+   "rate": 0.944
+  },
+  "e5-base | B3'-jina-v2 | ru | tax, Ru abbreviated": {
+   "k": 10,
+   "n": 11,
+   "rate": 0.909
+  },
+  "e5-base | B3'-jina-v2 | ru | tax, other": {
+   "k": 9,
+   "n": 10,
+   "rate": 0.9
+  },
+  "e5-base | B3'-jina-v2 | kz | labor": {
+   "k": 17,
+   "n": 18,
+   "rate": 0.944
+  },
+  "e5-base | B3'-jina-v2 | kz | tax, Ru abbreviated": {
+   "k": 8,
+   "n": 11,
+   "rate": 0.727
+  },
+  "e5-base | B3'-jina-v2 | kz | tax, other": {
+   "k": 9,
+   "n": 10,
+   "rate": 0.9
+  },
+  "e5-base | B3'-bge-reranker-v2-m3 | ru | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "e5-base | B3'-bge-reranker-v2-m3 | ru | tax, Ru abbreviated": {
+   "k": 9,
+   "n": 11,
+   "rate": 0.818
+  },
+  "e5-base | B3'-bge-reranker-v2-m3 | ru | tax, other": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "e5-base | B3'-bge-reranker-v2-m3 | kz | labor": {
+   "k": 18,
+   "n": 18,
+   "rate": 1.0
+  },
+  "e5-base | B3'-bge-reranker-v2-m3 | kz | tax, Ru abbreviated": {
+   "k": 8,
+   "n": 11,
+   "rate": 0.727
+  },
+  "e5-base | B3'-bge-reranker-v2-m3 | kz | tax, other": {
+   "k": 10,
+   "n": 10,
+   "rate": 1.0
+  },
+  "bm25-morph | ru | labor": {
+   "k": 14,
+   "n": 18,
+   "rate": 0.778
+  },
+  "bm25-morph | ru | tax, Ru abbreviated": {
+   "k": 5,
+   "n": 11,
+   "rate": 0.455
+  },
+  "bm25-morph | ru | tax, other": {
+   "k": 4,
+   "n": 10,
+   "rate": 0.4
+  },
+  "bm25-morph | kz | labor": {
+   "k": 17,
+   "n": 18,
+   "rate": 0.944
+  },
+  "bm25-morph | kz | tax, Ru abbreviated": {
+   "k": 6,
+   "n": 11,
+   "rate": 0.545
+  },
+  "bm25-morph | kz | tax, other": {
+   "k": 7,
+   "n": 10,
+   "rate": 0.7
+  }
+ }
+}

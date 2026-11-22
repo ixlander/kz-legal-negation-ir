@@ -110,8 +110,10 @@ def analyse_kz(tok, rows):
 def analyse_ru(tok):
     sep = []
     for ph in RU_PARTICLE_PHRASES:
-        pieces = tok.convert_ids_to_tokens(tok(ph, add_special_tokens=False)["input_ids"])
-        sep.append({"phrase": ph, "tokens": pieces, "ne_own_token": pieces[0] == "▁не"})
+        ids = tok(ph, add_special_tokens=False)["input_ids"]
+        pieces = tok.convert_ids_to_tokens(ids)
+        # decoding the first token works for SentencePiece, WordPiece and byte-level BPE alike
+        sep.append({"phrase": ph, "tokens": pieces, "ne_own_token": tok.decode(ids[:1]).strip() == "не"})
     fused = []
     for w in RU_FUSED:
         bnd, pieces = boundaries(tok, w)

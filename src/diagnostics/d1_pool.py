@@ -1,6 +1,8 @@
 """D1 Negation Margin on the whole embedding pool.
 
 Same triples and definitions as the single-model D1; all three sentences are encoded as documents.
+The control margin skips triples whose one-word edit is identical to the norm (an edit that changes
+nothing is no control); the number of triples it uses is stored as control_n.
 Writes one JSON with per-model summaries (and per-triple margins) per language.
 
 Usage:
@@ -46,13 +48,14 @@ def main():
         S, P, N, M = enc("sentence"), enc("paraphrase"), enc("negation"), enc("min_paraphrase")
         cp, cn, cm = (S * P).sum(1), (S * N).sum(1), (S * M).sum(1)
         margin, margin_min = cp - cn, cm - cn
+        ctrl = np.array([t["min_paraphrase"].strip() != t["sentence"].strip() for t in triples])
         out["models"][key] = {
             "id": EMBEDDERS[key]["id"],
-            "margin": summarize(margin), "margin_min": summarize(margin_min),
+            "margin": summarize(margin), "margin_min": summarize(margin_min[ctrl]), "control_n": int(ctrl.sum()),
             "dist_mean": {"synonym": float((1 - cm).mean()), "negation": float((1 - cn).mean()),
                           "paraphrase": float((1 - cp).mean())},
             # scale-free version: where does the negation sit between synonym and paraphrase distance
-            "negation_position": float(np.median(((1 - cn) - (1 - cm)) / np.maximum((1 - cp) - (1 - cm), 1e-9))),
+            "negation_position": float(np.median((((1 - cn) - (1 - cm)) / np.maximum((1 - cp) - (1 - cm), 1e-9))[ctrl])),
             "per_triple": {t["tid"]: [float(a), float(b)] for t, a, b in zip(triples, margin, margin_min)},
         }
         s = out["models"][key]
