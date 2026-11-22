@@ -649,3 +649,25 @@ questions with НДС/ИПН/КПН (ИПН in 0 chunks; bge-m3 B0 Ru 0.64 vs 0.
 token in 45%/43% of chunks, rerankers run over the B2 top 30 (not B0), H6 denominators 110 vs 67, "2 of 24" = 1 or 4
 depending on the definition, α = 0.002 ties α = 0 on dev. Extra bug found while checking: `nli_compare.py` writes the
 metric means into the keys "a"/"b" and so overwrites the variant names in `results/nli_h5_h6_*.json`.
+
+## 2026-11-22 — fixes after the independent review
+Code: `src/eval/stats_extra.py` (exact sign tests with Holm over the 40 pre-registered H1–H3 comparisons, Wilson
+intervals, TaG@5 and polarity miss@5, hit@5 by code and abbreviation; `results/stats_extra.{json,md}`);
+`src/eval/extra_runs.py` (rerankers over the B0 top 30; Russian questions with НДС/ИПН/КПН written out;
+`results/extra_runs_test.json`); `nli_compare.py` now keeps the variant names, adds the base model and the manual
+sets without v019/v030/v035 (`results/nli_h5_h6_2026-11-22.json`); D1 control skips triples whose edit equals the
+norm (Kz n = 26); D2 Russian control fixed for non-SentencePiece tokenizers (now 1.0 for all 14).
+Findings:
+* 0 of 40 pre-registered comparisons below p = 0.05 after Holm; smallest raw p 0.062. The five bootstrap "found"
+  differences rest on 4–5 questions each (p 0.06–0.13).
+* Twin above gold inside the top 5 is rare: bge-m3 B0 polarity miss@5 1/14 Ru, 0/14 Kz; e5-base Kz B0 full-ranking
+  TaG 6/14 but TaG@5 1/14 and polarity miss 0/14.
+* bge-reranker over the B0 top 30: bge-m3 Ru negation 0.79 → 0.92 (+0.13 [0.00, 0.29]), Kz 0.97 → 0.92; for
+  e5-base Kz the dense top 30 misses golds (0.63 vs 0.89 over B2, −0.26 [−0.47, −0.05]).
+* Writing out abbreviations moves cells by 1–3 questions, no difference found.
+* H6 corrected: on the 110 synthetic range/number entailments the base model errs in 35.5%, a 0.9%, c 60.9%
+  (both vs base CI excludes 0); the earlier "base 0%" used the 67 range items only. On 8 clean Kz manual pairs
+  base 3/8, a and c 0/8.
+* Base vs a on manual sets: −0.06 [−0.20, 0.06] Ru, −0.08 [−0.22, 0.04] Kz (no difference found; clean sets alike).
+Paper (8 pages) and deck (23 slides, v6: new slides "protocol" and "exact") restated accordingly; teacher report v9
+fixed for H6 and the exact tests.

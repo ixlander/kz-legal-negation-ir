@@ -8,6 +8,6 @@
 <p>B3′ bge-reranker-v2-m3</p><p class="best">0.07</p><p class="best">0.00</p><p class="best">0.07</p><p class="best">0.07</p>
 <p class="ours">B3 NLI reranker (ours)</p><p class="ours">0.36</p><p class="ours">0.07</p><p class="ours">0.21</p><p class="ours">0.21</p>
 </div>
-<div class="foot"><p>14 negation questions with a twin per language · one question = 0.07</p><p class="pn"></p></div>
+<div class="foot"><p>14 questions with a twin per language · Wilson 95% for 2/14: [0.04, 0.40]</p><p class="pn"></p></div>
 <aside>Twin-above-Gold counts how often the wrong twin paragraph ranks above the correct one. Lower is better, and the best value in each column is in bold. With the strong model, bge-m3, this happens in 2 of 14 Russian questions and 1 of 14 Kazakh ones. The ready-made rerankers bring it down to one question or none. Our two components, shown in the accent color, do not improve on dense search for bge-m3; the NLI reranker even raises the Russian number to 0.36. Keep in mind that one question moves this number by 0.07.</aside>
 </section>

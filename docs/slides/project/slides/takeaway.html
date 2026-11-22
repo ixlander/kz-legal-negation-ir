@@ -1,6 +1,6 @@
 <section id="takeaway" class="fill" style="justify-content:center">
 <p class="eyebrow">What to take away</p>
-<h1 style="width:1600px">Put a cross-encoder over the dense top 30 before building anything negation-specific.</h1>
-<p style="width:1400px">On this benchmark a strong retriever confuses polarity in 1 or 2 of 14 questions, and an off-the-shelf reranker removes most of the rest at no training cost.</p>
-<aside>If you remember one thing, make it this. For legal search in Russian and Kazakh, a strong dense model already gets polarity wrong only in one or two of fourteen questions. A ready-made cross-encoder reranker, applied to the top 30 results, fixes most of what is left and needs no training. So before building anything special for negation, add that reranker. Also note the Kazakh surprise: the tokenizer result did not carry over to search, and the help keyword search gave the weak Kazakh model came from word forms, not negation.</aside>
+<h1 style="width:1600px">Try an off-the-shelf cross-encoder reranker before building anything negation-specific.</h1>
+<p style="width:1400px">A strong retriever put the opposite norm above the correct one in 1 or 2 of 14 questions. The failure is real but rare here, and with 14 questions its rate is uncertain.</p>
+<aside>If you remember one thing, make it this. For legal search in Russian and Kazakh, a strong dense model got polarity wrong in one or two of fourteen questions. Ready-made cross-encoder rerankers did as well as or better than everything we built, at no training cost, so try them first. Be careful with the size of these claims: fourteen questions cannot pin down a rate, and no difference in this study survives an exact test. For the weaker model the reranker helped only when it reordered the hybrid's candidates, because dense search alone missed many correct paragraphs.</aside>
 </section>

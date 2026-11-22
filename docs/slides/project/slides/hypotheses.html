@@ -1,15 +1,15 @@
 <section id="hypotheses">
-<div class="head"><p class="eyebrow">Hypotheses</p><h2>Both diagnostics held; H1, H2 and H5 failed; H3 held in part; H6 was not testable</h2></div>
-<div class="tg small" style="grid-template-columns:90px 760px 1fr">
+<div class="head"><p class="eyebrow">Hypotheses</p><h2>H1 and H2 failed; H3 held in part; H5 and H6 could not be tested on human data</h2></div>
+<div class="tg small" style="grid-template-columns:90px 700px 1fr">
 <p class="th">ID</p><p class="th">Claim</p><p class="th">Result</p>
-<p class="mono">D1</p><p>Encoders put a norm closer to its negation than to a paraphrase</p><p>Held for all 6; against a one-word edit 5 of 6 separate them</p>
-<p class="mono">D2</p><p>XLM-R rarely isolates the Kazakh negative affix</p><p>Held: 21% of 171 forms</p>
+<p class="mono">D1</p><p>Encoders put a norm closer to its negation than to a paraphrase</p><p>Yes vs. a paraphrase; vs. a one-word edit the encoders separate negation</p>
+<p class="mono">D2</p><p>XLM-R rarely isolates the Kazakh negative affix</p><p>Yes: 21% of 171 forms; no sign it hurts retrieval</p>
 <p class="mono">H1</p><p>Morphological BM25 shrinks the Negation Gap</p><p class="ac">Failed: all changes within the 95% CI</p>
-<p class="mono">H2</p><p>NLI reranker beats a plain reranker and a rule</p><p class="ac">Failed: never better, worse for e5-base on Kazakh</p>
+<p class="mono">H2</p><p>NLI reranker beats a plain reranker and a rule</p><p class="ac">Failed: never better than the rerankers</p>
 <p class="mono">H3</p><p>Gains are larger for Kazakh</p><p>In part: only for e5-base, and also on general questions</p>
-<p class="mono">H5</p><p>Turkish NLI data helps Kazakh</p><p class="ac">Failed: no difference; weak test</p>
-<p class="mono">H6</p><p>Counter-examples cut false contradictions</p><p>Not testable on human-written pairs</p>
+<p class="mono">H5</p><p>Turkish NLI data helps Kazakh</p><p>Not testable: the base model was trained on Turkish NLI</p>
+<p class="mono">H6</p><p>Counter-examples cut false contradictions</p><p>On synthetic pairs only; too few human pairs</p>
 </div>
-<div class="foot"><p>Paired bootstrap, 1,000 resamples; a difference counts only if the 95% CI excludes 0</p><p class="pn"></p></div>
-<aside>Here is the scorecard. The two diagnostics held: models put negations close, and the tokenizer rarely isolates the Kazakh suffix, though the first one needs the fairer comparison we showed. Our main hypotheses about the fixes failed: keyword search did not shrink the gap between negation and general questions, and the NLI reranker never beat the ready-made rerankers. Kazakh gained more than Russian only for the weaker model, and on all questions, not just negation ones. We call a difference real only when its 95 percent interval excludes zero.</aside>
+<div class="foot"><p>Retrieval comparisons: exact sign test with Holm; none below p = 0.05</p><p class="pn"></p></div>
+<aside>Here is the scorecard. D1 holds against a full paraphrase, but against a fair one-word edit the models do separate negation, so we report it as a weak signal rather than a failure. D2 holds as a description. Our two fixes failed: keyword search did not shrink the gap, and the NLI reranker never beat the ready-made rerankers. Kazakh gained more than Russian only for the weaker model, and on all questions. H5 cannot be tested because the base model already saw Turkish NLI data. For H6, the counter-examples cut false contradictions on synthetic pairs from 36 percent to 1 percent, but we had too few hand-written pairs to confirm it.</aside>
 </section>

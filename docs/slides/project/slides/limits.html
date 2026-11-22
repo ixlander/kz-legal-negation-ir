@@ -3,17 +3,17 @@
 <div class="cols heroblock" style="gap:0">
 <div class="panel light">
 <p class="lab">Limitations</p>
-<p class="soft">19 or 20 test questions per slice: only differences of about 0.2 are detectable</p>
-<p class="soft">Negation questions are all yes/no, general ones all wh-questions</p>
-<p class="soft">One annotator, who saw the drafts; one gold per question; one seed</p>
+<p class="soft">19 or 20 test questions per slice; no comparison survives an exact test with Holm</p>
+<p class="soft">Negation questions are all yes/no; Russian tax questions use abbreviations</p>
+<p class="soft">One annotator who saw the drafts; one gold per question; one seed</p>
 </div>
 <div class="panel darkp">
 <p class="lab">Next steps</p>
-<p style="color:#EFEEE9">150 or more questions with permitting golds and explicit negation</p>
+<p style="color:#EFEEE9">150 or more balanced questions, frozen before any method change</p>
 <p style="color:#EFEEE9">A blind second annotator and relevance judgments for every top 5</p>
-<p style="color:#EFEEE9">Abbreviation-aware query expansion</p>
+<p style="color:#EFEEE9">Contrastive question pairs, one per polarity</p>
 </div>
 </div>
 <div class="foot"><p>Corpus, questions, code and results: [repository link]</p><p class="pn"></p></div>
-<aside>Be honest about the limits. With about twenty test questions per group, only large differences, around 0.2, can be detected. All our negation questions are yes or no questions and all general ones are what or how questions, so part of the gap we measure is just question type. One teammate checked everything, after seeing the drafts, and each question has one marked answer. Each NLI variant was trained once. Next we would add 150 or more balanced questions, a second annotator working blind, judgments for every system's top results, and handling of abbreviations. We already drafted 69 such questions but had no time to annotate them, so they are not in any number shown.</aside>
+<aside>Be honest about the limits. With about twenty test questions per group, only large differences can be detected, and none of our comparisons survives an exact test. All negation questions are yes or no questions, and many Russian tax questions use abbreviations that the law does not. One teammate checked everything after seeing the drafts. Next we would build 150 or more balanced questions and freeze the method before looking at them, add a second annotator working blind, judge every system's top results, and write question pairs that ask the same thing with opposite polarity. We drafted 69 balanced questions but had no time to annotate them, so they are not in any number shown.</aside>
 </section>

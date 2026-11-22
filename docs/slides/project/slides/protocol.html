@@ -1,0 +1,11 @@
+<section id="protocol">
+<div class="head"><p class="eyebrow">How the data was checked</p><h2>The test questions are the LLM drafts, accepted without edits</h2></div>
+<div class="rows">
+<div class="hl"><p class="lab" style="width:300px">Questions</p><p style="flex:1">49 of 50 pairs accepted with no edit to wording, gold or twin; median 17 s between cards</p></div>
+<div class="hl"><p class="lab" style="width:300px">Labels</p><p style="flex:1">The annotator saw the draft labels; the 3 NLI labels she changed go against the guideline</p></div>
+<div class="hl"><p class="lab" style="width:300px">Method design</p><p style="flex:1">The NLI fusion and tuning grids were designed on the same draft questions before the split</p></div>
+<div class="hl end"><p class="lab" style="width:300px">Wording</p><p style="flex:1">14 of 25 Russian tax questions use НДС, ИПН, КПН; the Kazakh ones spell the terms out</p></div>
+</div>
+<div class="foot"><p>Save times of the review page · data/review/answers</p><p class="pn"></p></div>
+<aside>We want to be open about how the evaluation data was checked, because it limits what our numbers mean. An LLM drafted the questions, and our teammate reviewed them while seeing the drafts. All accepted questions went through without a single edit, and the save times suggest about seventeen seconds per question. Three of the NLI labels she changed look wrong on re-reading, so we also report results without them. We designed parts of the NLI reranker on these same questions before splitting off a test set. Finally, the Russian tax questions often use abbreviations that the law never uses, while the Kazakh versions spell the terms out, which makes the language comparison less clean.</aside>
+</section>

@@ -1,10 +1,13 @@
 <section id="negtoken">
 <div class="head"><p class="eyebrow">Control run · negation token</p><h2>Removing the negation token from BM25 changed nothing in 3 of 4 cells</h2></div>
 <div class="cols heroblock" style="align-items:flex-end">
-<p class="hero">2 of 24</p>
-<p class="soft" style="width:700px">questions contain a negation word, so the token has nothing to match</p>
+<p class="hero">45%</p>
+<p class="soft" style="width:760px">of Russian chunks contain «не» (Kazakh NEG: 43%), so the token barely separates documents</p>
 </div>
-<div class="rows"><div class="hl end"><p class="lab" style="width:300px">Where BM25 helped</p><p style="flex:1">The BM25 gain for e5-base on Kazakh comes from lemmatization.</p></div></div>
-<div class="foot"><p>BM25 run with and without the negation tokens</p><p class="pn"></p></div>
-<aside>To check what the negation token in keyword search actually does, we ran it again with all negation tokens removed. In three of four model and language combinations the results did not change at all. The reason is in the questions: only 2 of 24 negation questions contain a negation word. People ask "may the employer...", and the answer is a prohibition. So the token has nothing to match. Where keyword search did help, for e5-base on Kazakh, the help came from reducing words to their base forms, not from negation.</aside>
+<div class="rows">
+<div class="hl"><p class="lab" style="width:300px">Questions</p><p style="flex:1">Only 1 of 24 Russian negation questions contains «не»</p></div>
+<div class="hl end"><p class="lab" style="width:300px">Where BM25 helped</p><p style="flex:1">The BM25 gain for e5-base on Kazakh comes from lemmatization</p></div>
+</div>
+<div class="foot"><p>BM25 run with and without the negation tokens · IDF of «не» 0.80</p><p class="pn"></p></div>
+<aside>To check what the negation token in keyword search actually does, we ran it again with all negation tokens removed. In three of four model and language combinations the results did not change. Two reasons. First, the token is everywhere: almost half of all paragraphs contain «не», so keyword search gives it almost no weight and it cannot tell "taxable" from "not taxable". Second, the questions rarely contain negation: people ask "may the employer..." and the answer is a prohibition. Where keyword search did help, for e5-base on Kazakh, the help came from reducing words to their base forms.</aside>
 </section>
