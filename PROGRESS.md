@@ -592,3 +592,10 @@ Answers go to the `reviews` collection of each page. Not yet shared; nothing app
 variant a, seed 1; nothing from it is used. New runner `src/rerank/nli_seeds.py`: one job = one variant x one
 seed (train + eval), finished jobs are skipped, a job starts only if it fits `--hours`. Default jobs: a and c,
 seeds 1 and 2 (b dropped: H5 is not testable with this base model). ~2.6 h per job, 4 jobs.
+
+## 2026-11-22 — scope closed
+Annotation round 2 cancelled by the owner: no v2 question set, no blind second annotator, no pooled relevance
+judgments; extra NLI seeds dropped. The v2 drafts and both round-2 pages stay in the repo unused (their stores
+are empty). Final numbers stay on v1 (49 pairs). These go to the limitations: one annotator who saw the drafts,
+one gold per question, 19–20 test questions per slice, one training seed. Remaining: error analysis,
+`notebooks/analysis.ipynb`, the report for the teacher, final report and slides.
