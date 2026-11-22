@@ -1,0 +1,10 @@
+<section id="question" class="alt">
+<p class="eyebrow">Research question</p>
+<h2 style="width:1600px;font-size:52px">Do a morphological BM25 and an NLI reranker retrieve the article with the right polarity, and do they help Kazakh more than Russian?</h2>
+<div class="row cards">
+<div class="card"><h3>Benchmark</h3><p class="body">Parallel Russian and Kazakh text of 22 codes. 49 question pairs on the Labor and Tax Codes, each with a gold paragraph and, if one exists, an opposite-polarity twin.</p></div>
+<div class="card c2"><h3>Metrics</h3><p class="body">Two encoder diagnostics: Negation Margin and Affix Isolation Rate. Two retrieval metrics: Negation Gap and Twin-above-Gold.</p></div>
+<div class="card c3"><h3>Two cheap fixes</h3><p class="body">BM25 that keeps negation as a token, and a fine-tuned NLI reranker. Controls: two off-the-shelf rerankers and a polarity rule.</p></div>
+</div>
+<aside>Twin-above-Gold is the share of polarity-sensitive questions where the best twin ranks above the best gold paragraph in the full ranking. The hypotheses were fixed before the evaluation set was finished.</aside>
+</section>

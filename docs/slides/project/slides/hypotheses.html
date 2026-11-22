@@ -1,0 +1,15 @@
+<section id="hypotheses">
+<p class="eyebrow">Hypotheses</p>
+<h2>Outcome of each hypothesis</h2>
+<table style="font-size:26px">
+<tr><th style="width:8%">ID</th><th style="width:44%">Claim</th><th style="width:48%">Result</th></tr>
+<tr><td>D1</td><td>Encoders put a norm closer to its negation than to a paraphrase</td><td>Yes for all 6, but against a one-word edit 5 of 6 separate them</td></tr>
+<tr><td>D2</td><td>XLM-R rarely isolates the Kazakh negative affix</td><td>Yes: 21% of 171 forms</td></tr>
+<tr><td>H1</td><td>Morphological BM25 shrinks the Negation Gap</td><td>No: all changes within the 95% CI</td></tr>
+<tr><td>H2</td><td>NLI reranker beats a plain reranker and a rule</td><td>No: never better, worse for e5-base on Kazakh</td></tr>
+<tr><td>H3</td><td>Gains are larger for Kazakh</td><td>Only for e5-base, and also on general questions</td></tr>
+<tr><td>H5</td><td>Turkish NLI data helps Kazakh</td><td>No difference; weak test</td></tr>
+<tr><td>H6</td><td>Counter-examples cut false contradictions</td><td>Not testable on human-written pairs</td></tr>
+</table>
+<aside>Each difference was tested with a paired bootstrap over questions, 1,000 resamples, and counted only if the 95 percent interval excludes zero.</aside>
+</section>

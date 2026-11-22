@@ -1,0 +1,14 @@
+<section id="nli">
+<p class="eyebrow">NLI models</p>
+<h2>Fine-tuning learned the templates of the generator</h2>
+<table>
+<tr><th style="width:36%">Model</th><th style="width:16%">Kardeş kk</th><th style="width:16%">manual ru</th><th style="width:16%">manual kz</th><th style="width:16%">synthetic ru</th></tr>
+<tr><td>base mDeBERTa-xnli</td><td>0.779</td><td>0.62</td><td>0.56</td><td>0.675</td></tr>
+<tr><td>a: XNLI ru + tr + synthetic</td><td>0.807</td><td>0.56</td><td>0.48</td><td>0.972</td></tr>
+<tr><td>b: a without Turkish</td><td>0.812</td><td>0.64</td><td>0.50</td><td>0.974</td></tr>
+<tr><td>c: a without counter-examples</td><td>0.797</td><td>0.40</td><td>0.40</td><td>0.647</td></tr>
+<tr><td>d: a + SNLI-kk</td><td>0.801</td><td>0.50</td><td>0.44</td><td>0.972</td></tr>
+</table>
+<p class="muted">Accuracy. Kardeş-NLU Kazakh test, 1,000 pairs; manual: 50 real norms per language with hand-written hypotheses; synthetic: 351 held-out rule-made pairs.</p>
+<aside>H5, Turkish data: a and b do not differ, +0.005 [-0.010, 0.019] on Kardeş. The base model was already trained on translated NLI in Russian and Turkish, so this test is weak. H6, counter-examples: without them the model calls 61 percent of range entailments contradictions on synthetic data, but the base model makes this error 0 percent of the time, so the ablation creates the error. On 9 hand-written Kazakh range pairs: base 4 errors, a 1, c 0. Too few to conclude.</aside>
+</section>

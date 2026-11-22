@@ -628,3 +628,9 @@ annotation results, bar chart instead of the dot plot, controls and error analys
 7 pages with the limitations section). English. Every number is taken from `results/`; citations only from
 the PDFs in `docs/papers/`. Prose checked against Wikipedia:Signs_of_AI_writing (owner's request). Author names
 are placeholders.
+
+## 2026-11-22 — defense deck
+14 slides, English, black background: https://claude.ai/artifact/3SQd8gkmYdkzAspVeUftq7 (source copy in
+`docs/slides/project/`). Problem example, research question, data, sanity checks, D1/D2, retrieval ladder,
+Twin-above-Gold, controls, NLI, error analysis, hypothesis outcomes, takeaway, limitations. Speaker notes on
+every slide. Same numbers as the paper; text checked against Wikipedia:Signs_of_AI_writing.

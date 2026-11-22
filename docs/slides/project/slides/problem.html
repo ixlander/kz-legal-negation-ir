@@ -1,0 +1,11 @@
+<section id="problem">
+<p class="eyebrow">The problem</p>
+<h2>The retriever finds the right topic with the opposite meaning</h2>
+<div class="ex">
+<div class="exrow first"><p class="exlab">Question</p><p class="extext">Do I pay personal income tax when I sell an apartment I have owned for more than two years?</p><p class="exrank"></p></div>
+<div class="exrow"><p class="exlab">Opposite norm</p><p class="extext">Tax Code, art. 383(1): income <b>arises</b> when housing owned for <b>less than two years</b> is sold</p><p class="exrank bad">5th</p></div>
+<div class="exrow"><p class="exlab">Correct norm</p><p class="extext">Tax Code, art. 382(5): <b>no income arises</b> when housing owned for <b>two years or more</b> is sold</p><p class="exrank ok">99th</p></div>
+</div>
+<p class="muted">Rank in the bge-m3 dense ranking over all 22 codes, Russian version of a test question. A generator that reads the top 5 sees only the wrong norm.</p>
+<aside>A retrieval-augmented legal assistant answers from what the retriever returns. Here the norm with the opposite polarity is 5th and the correct one is 99th. In Kazakh the problem may be harder: negation is a verb affix, төлейді vs төлемейді, and the subword tokenizer may split it.</aside>
+</section>

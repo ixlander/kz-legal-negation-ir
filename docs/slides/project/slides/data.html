@@ -1,0 +1,14 @@
+<section id="data">
+<p class="eyebrow">Data</p>
+<h2>What we built and who checked it</h2>
+<table>
+<tr><th style="width:24%">Set</th><th style="width:22%">Size</th><th style="width:54%">Source and check</th></tr>
+<tr><td>Corpus</td><td>30,766 chunks per language</td><td>22 codes, same Ru/Kz revision, split into paragraphs</td></tr>
+<tr><td>Questions</td><td>49 pairs</td><td>LLM drafts checked by a native speaker; test 39 pairs</td></tr>
+<tr><td>Diagnostics</td><td>30 triples, 171 forms</td><td>D1 sentence triples, D2 Kazakh negative verbs</td></tr>
+<tr><td>NLI training</td><td>106k pairs</td><td>XNLI ru and tr plus rule-made legal pairs</td></tr>
+<tr><td>NLI validation</td><td>50 + 50 pairs</td><td>Real norms with hand-written hypotheses</td></tr>
+</table>
+<p class="muted">Paragraph numbering of Ru and Kz agrees in 99.7% of pairs. Annotation found one source error: in article 26 of the Kazakh Labor Code, points 1 and 2 are in reverse order.</p>
+<aside>Everything the LLM drafted went into the metrics only after the annotator checked it: 49 of 50 questions accepted, 5 of 30 Kazakh triples rewritten, 6 percent of the NLI labels changed, 7 of 18 flagged alignments rejected. The rule-made NLI pairs come from the 20 distractor codes, so no Labor or Tax text enters training.</aside>
+</section>

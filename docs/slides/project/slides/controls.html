@@ -1,0 +1,10 @@
+<section id="controls" class="alt">
+<p class="eyebrow">Control runs</p>
+<h2>Why the two fixes did not work</h2>
+<div class="row cards">
+<div class="card"><h3>Negation token: no effect</h3><p class="body">BM25 with and without the negation tokens gives the same results in 3 of 4 cells. Only 2 of 24 questions contain a negation word, so the token has nothing to match. The BM25 gain for e5-base on Kazakh comes from lemmatization.</p></div>
+<div class="card c2"><h3>Equal-weight fusion hurts</h3><p class="body">With equal weights the hybrid is below bge-m3 alone. With BM25 weight 0.25 it is never below B0, and not significantly above it.</p></div>
+<div class="card c3"><h3>Fine-tuning adds nothing</h3><p class="body">The NLI model without our fine-tuning gives the same reranking: mean Recall@5 0.80 vs 0.81. Both are below B2 (0.85). Rewriting questions as statements lowers it to 0.70.</p></div>
+</div>
+<aside>The NLI reranker judges whether a statement follows from a premise. A yes or no question about a topic is not such a statement, so its scores reorder relevant chunks by something other than relevance.</aside>
+</section>
