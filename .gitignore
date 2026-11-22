@@ -25,3 +25,11 @@ data/index/
 data/nli/xnli_*.jsonl
 data/nli/snli_kk.jsonl
 data/nli/kardes_kk_*.jsonl
+docs/paper/*.aux
+docs/paper/*.log
+docs/paper/*.fls
+docs/paper/*.fdb_latexmk
+docs/paper/*.xdv
+docs/paper/*.bbl
+docs/paper/*.blg
+docs/paper/*.out

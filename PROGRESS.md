@@ -622,3 +622,9 @@ D2 pool, NLI validation / H5 / H6, external checks, error analysis. Figures in `
 https://claude.ai/artifact/PJ77EKfvFQLfBFU4EUmbwb (version 8): final test numbers, restated hypothesis statuses
 (D1 with the size-matched control, H1/H2 refuted, H3 partly, H5 not supported, H6 not testable on human pairs),
 annotation results, bar chart instead of the dot plot, controls and error analysis section.
+
+## 2026-11-22 — paper draft
+`docs/paper/paper.tex` + `references.bib` (ACL style, preprint mode; build with `latexmk -xelatex paper.tex`,
+7 pages with the limitations section). English. Every number is taken from `results/`; citations only from
+the PDFs in `docs/papers/`. Prose checked against Wikipedia:Signs_of_AI_writing (owner's request). Author names
+are placeholders.

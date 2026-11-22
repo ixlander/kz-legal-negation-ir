@@ -1,0 +1,407 @@
+\documentclass[11pt]{article}
+\usepackage[preprint]{acl}
+% compile with xelatex: the Kazakh letters need a Unicode font
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setmonofont{Consolas}[Scale=0.9]
+\usepackage{latexsym}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\graphicspath{{../../results/figures/}}
+
+\newcommand{\ru}[1]{#1}
+
+\title{Do Retrievers Confuse ``May'' and ``May Not''?\\
+A Parallel Russian--Kazakh Benchmark for Negation in Legal Retrieval}
+
+\author{Author One \and Author Two \\
+  Affiliation \\
+  \texttt{email@example.org}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A retrieval-augmented legal assistant answers from the articles its retriever returns. If the retriever
+returns a norm with the opposite polarity (``the employer may'' instead of ``the employer may not''), the
+answer contradicts the law. We study this failure for Russian and Kazakh, where Kazakh marks negation with a
+verbal affix. We build a parallel corpus of 22 codes of the Republic of Kazakhstan (30,766 aligned chunks per
+language) and 49 parallel question pairs on the Labor and Tax Codes, each with a gold paragraph and, for
+polarity-sensitive questions, an opposite-polarity ``twin''. We test two inexpensive fixes against controls:
+BM25 that keeps negation as a token, fused with a dense retriever, and a fine-tuned NLI reranker. Neither
+helps. With bge-m3 the dense retriever alone puts a twin above the gold for 14\% (Russian) and 7\% (Kazakh)
+of the questions, and off-the-shelf cross-encoder rerankers bring this to 0--7\%. The NLI reranker is never
+better than these rerankers. BM25 helps a weaker retriever (multilingual-e5-base) on Kazakh, from 0.47 to 0.68
+Recall@5 on polarity-sensitive questions, but removing the negation tokens from BM25 leaves the result
+unchanged: the gain comes from lemmatization. Fine-tuning the NLI model on rule-generated legal pairs raises
+its accuracy on held-out synthetic pairs to 97--99\% and lowers it on hand-written pairs. We release the
+corpus, questions, diagnostics and code.
+\end{abstract}
+
+\section{Introduction}
+
+Legal question answering systems increasingly retrieve statutes and generate an answer from them.
+Retrieval does not remove errors: commercial legal research tools built this way gave hallucinated answers in
+17\% to 33\% of the queries in a preregistered evaluation \citep{magesh2024hallucination}. One source of such
+errors is negation. A norm and its negation differ by one word, and embedding models place them close
+together. On the NevIR benchmark most bi-encoders score between 6.5\% and 22.6\% pairwise accuracy, below
+the 25\% of random ranking, while a multilingual cross-encoder reranker (jina-reranker-v2) reaches 65.2\%
+\citep{vandenelsen2025nevir}.
+
+We ask whether this failure appears in statutory retrieval for Russian and Kazakh, and whether two cheap
+components fix it. Kazakh is of interest because it marks negation inside the verb (\ru{төлейді} ``pays'',
+\ru{төлемейді} ``does not pay''), and a subword tokenizer may not keep the negative affix as a unit, as
+reported for the Turkish negative suffix by \citet{toraman2023tokenization}. There is no legal retrieval
+benchmark for Kazakh that we know of.
+
+Our research question is: do a morphology-aware BM25 and an NLI reranker retrieve the article with the right
+polarity, and do they help Kazakh more than Russian? The contributions are:
+
+\begin{enumerate}
+\item A parallel Russian--Kazakh corpus of 22 codes of Kazakhstan, split into paragraphs and aligned, and 49
+question pairs with gold and twin paragraphs, checked by a native speaker of Kazakh.
+\item Two diagnostics of encoders before retrieval (Negation Margin, Affix Isolation Rate) and two
+retrieval metrics for polarity errors (Negation Gap, Twin-above-Gold).
+\item An ablation from dense retrieval to hybrid retrieval to reranking, with an off-the-shelf reranker and a
+polarity rule as controls, paired bootstrap intervals, control runs and an error analysis.
+\end{enumerate}
+
+The hypotheses were fixed before the evaluation set was finished and are reported with their outcome, most
+of which are negative.
+
+\section{Related work}
+
+\paragraph{Negation in retrieval.} \citet{vandenelsen2025nevir} reproduce NevIR, where each query pair has
+two documents that differ by negation, and extend it to LLM-based rerankers. Cross-encoders do much better
+than bi-encoders, and fine-tuning on NevIR raises a cross-encoder to about 75\% but can lower results on
+MS~MARCO. They also find that only cross-encoders transfer between NevIR and ExcluIR. NevIR is English and
+general-domain; our twins are real norms from the same code, not constructed edits.
+
+\paragraph{Legal retrieval and entailment.} The COLIEE competition pairs statute retrieval with statute
+entailment. \citet{kim2024coliee} fine-tune DeBERTa trained on SNLI and MultiNLI for the entailment task.
+We use an NLI model as a reranker over retrieval candidates. \citet{chi2026legalai} survey LLM roles in legal
+classification, retrieval and generation, and \citet{ren2026legal} combine synthetic legal data with
+retrieval-augmented generation. All of these study English or Chinese.
+
+\paragraph{Morphology of Turkic languages.} \citet{toraman2023tokenization} compare tokenizers for Turkish
+and find a morphological tokenizer competitive with BPE and WordPiece. \citet{tukeyev2026kazakh} report gains
+from morphology-aware normalization for Kazakh question answering in programming education. We measure how
+often multilingual tokenizers isolate the Kazakh negative affix and whether a morphological BM25 changes
+retrieval.
+
+\section{Data}
+
+\subsection{Corpus}
+We downloaded all codes in force from adilet.zan.kz, the official legal database of Kazakhstan, whose Russian
+and Kazakh versions have the same revision date: 22 codes (the Entrepreneurial Code was excluded because its
+two versions differ). Articles are split into paragraphs; long paragraphs without numbered points are split
+into groups of sub-points. The article title is prepended to each chunk. This gives 30,766 chunks per
+language. Questions are asked only about the Labor and Tax Codes; the other 20 codes are distractors.
+
+Russian and Kazakh chunks share an id (code, article, paragraph). We checked alignment automatically for all
+pairs: paragraph numbering agrees in 99.7\% and the numbers in the text in 99.4\%. A native speaker reviewed
+18 flagged pairs and rejected 7. One rejection is a finding about the source: in Article 26 of the Kazakh
+Labor Code, points 1 and 2 appear in the reverse order.
+
+\subsection{Questions}
+Questions were drafted in Russian with an LLM assistant, translated into Kazakh, and checked by a native
+speaker of Kazakh together with their gold and twin ids. 49 of 50 pairs were accepted (one was dropped
+because its gold paragraph is one of the misaligned ones). A question is in the \emph{negation} slice if a
+retriever that confuses polarity would lead to the wrong answer (``May an employer dismiss a pregnant
+employee due to staff reduction?''), and in the \emph{general} slice otherwise (``What is the standard VAT
+rate?''). For negation questions the annotator marked a twin: a paragraph on the same topic with the
+opposite polarity, if the code has one. Each language has 25 general and 24 negation questions; 5 pairs per
+slice form a dev split used for tuning, the remaining 20 general and 19 negation pairs form the test split.
+14 of the 19 test negation questions have a twin.
+
+\subsection{NLI data}
+For the NLI reranker we sampled 50,000 pairs each from the Russian and Turkish training sets of XNLI and
+from a machine-translated Kazakh SNLI. We also generated synthetic pairs from the 20 distractor codes, so
+that no Labor or Tax Code text enters training: polarity flips and modality swaps as contradictions
+(\ru{вправе} $\rightarrow$ \ru{не вправе}), negated ranges and synonymous negatives as entailments
+(\ru{не менее} $\rightarrow$ \ru{не меньше}), and tighter or looser numeric bounds as neutral or entailment
+pairs. This gives 3,708 Russian and 2,901 Kazakh pairs; 10\% of the articles are held out as a synthetic test
+set. For validation we use the Kazakh XNLI of Karde\c{s}-NLU (post-edited by native speakers), the Russian
+RCB and LiDiRus sets, and a hand-written set of 50 Russian and 50 Kazakh pairs whose premises are verbatim
+Labor or Tax Code norms and whose hypotheses were written without the templates of the generator. 21 pairs per
+language contain ``not less than'', ``not more than'' or ``not later than''. The annotator changed 6\% of the
+draft labels.
+
+\section{Metrics}
+
+\paragraph{Negation Margin (D1).} For a legal sentence $s$, a paraphrase $p$ and its negation $n$:
+$\cos(s,p) - \cos(s,n)$. A negative value means the negation is closer than the paraphrase. As a control we
+replace the paraphrase with a one-word synonym edit $m$, so that both alternatives differ from $s$ by about
+one word: $\cos(s,m) - \cos(s,n)$. 30 sentence triples per language.
+
+\paragraph{Affix Isolation Rate (D2).} The share of Kazakh negative verb forms in which the tokenizer puts a
+token boundary both before and after the negative affix (\ru{-ма/-ме/-ба/-бе/-па/-пе}). 171 forms from the
+Labor Code; 154 were confirmed by two morphological analyzers (kaznlp and apertium-kaz) and 17 by the
+annotator.
+
+\paragraph{Retrieval.} Recall@5 over the full 22-code corpus; \emph{Negation Gap} = Recall@5(general) $-$
+Recall@5(negation); \emph{Twin-above-Gold} (TaG) = the share of negation questions with a twin where the best
+twin ranks above the best gold in the full ranking. One question changes Recall@5 by 0.05 and TaG by 0.07.
+Differences are tested with a paired bootstrap over questions (1,000 resamples, seed 42, 95\% percentile
+interval). We call a difference found only if the interval excludes zero.
+
+\section{Systems}
+
+\begin{description}
+\item[B0] Dense retrieval. Main model bge-m3; multilingual-e5-base (with \texttt{query:}/\texttt{passage:}
+prefixes) for comparison. Cosine similarity over all chunks.
+\item[B1] B0 fused with BM25 over lowercased word tokens, reciprocal rank fusion (RRF, $k=60$).
+\item[B2] B0 fused with a morphological BM25. Russian: pymorphy3 lemmas, function words removed except
+\ru{не, ни, нет, без}, a fused negative prefix split off (\ru{неуплата} $\rightarrow$ \ru{не уплата}).
+Kazakh: kazsearch stems, negative verb forms split into stem plus a \texttt{NEG} token by a regular
+expression that checks vowel harmony and consonant assimilation, \ru{емес} and \ru{жоқ} kept.
+\item[B3$'$] The top 30 of B2 reordered by an off-the-shelf cross-encoder: jina-reranker-v2-base-multilingual
+or bge-reranker-v2-m3.
+\item[B3-rule] The top 30 of B2 with $\pm\alpha$ added to the score when the polarity of the chunk sentence
+with the largest word overlap does (or does not) match the polarity of the question.
+\item[B3] The top 30 of B2 reordered by an NLI model with the chunk as premise and the question as hypothesis.
+Scores $S1 = P(e) - P(c)$ or $S2 = P(e) + P(c)$, used alone, fused with the B2 order by RRF, or added to the
+normalized B2 score with weight $\lambda \in \{0.25, 0.5, 1\}$.
+\end{description}
+
+The NLI model is mDeBERTa-v3-base-xnli-multilingual-nli-2mil7, fine-tuned for two epochs (learning rate
+$10^{-5}$, batch 32, bf16) in four variants: (a) XNLI ru + tr + synthetic, 105,986 pairs; (b) a without
+Turkish; (c) a without the synthetic entailment counter-examples; (d) a plus SNLI-kk. We first trained
+XLM-R-base from scratch on variant a; it was worse than the off-the-shelf mDeBERTa model on every validation
+set (Karde\c{s} 0.71 vs.\ 0.79) and almost always predicted neutral on the hand-written pairs, so we switched
+the base model. The epoch is chosen on the even half of the Karde\c{s} test set and results are reported on the
+odd half; the Karde\c{s} dev set is not used because it translates the XNLI validation set on which the base
+model was trained. $\alpha$ for B3-rule and the scoring and fusion of B3 are chosen on dev by mean Recall@5
+over both slices and both languages.
+
+\section{Results}
+
+\subsection{The setup reproduces published numbers}
+On RuLawRetrieval (split tk\_hard, 716 queries) our pipeline gives nDCG@10 of 0.839 for bge-m3, 0.762 for
+multilingual-e5-base and 0.501 for our Russian BM25; the dataset card reports 0.820 for e5-large, 0.710 for
+e5-small and 0.480 for BM25. On NevIR our jina-reranker-v2 gives 0.651 pairwise accuracy against the
+published 0.652. On a 52,660-passage subsample of KazQAD (1,929 test questions) our Kazakh analyzer raises
+BM25 from 0.348 to 0.465 nDCG@10; bge-m3 reaches 0.606 and e5-base 0.493.
+
+\subsection{Diagnostics}
+
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+& \multicolumn{2}{c}{vs.\ paraphrase} & \multicolumn{2}{c}{vs.\ one-word edit} \\
+Model & ru & kz & ru & kz \\
+\midrule
+e5-base & $-$.018 & $-$.013 & .018 & .025 \\
+e5-large-instruct & $-$.004 & $-$.019 & .028 & .014 \\
+bge-m3 & $-$.008 & $-$.013 & .099 & .097 \\
+LaBSE & $-$.073 & $-$.072 & .033 & .044 \\
+Qwen3-Emb-0.6B & $-$.122 & $-$.169 & .030 & .026 \\
+EmbeddingGemma & $-$.065 & $-$.088 & .005 & $-$.003 \\
+\bottomrule
+\end{tabular}
+\caption{Mean Negation Margin over 30 triples per language. Left: margin against a full paraphrase.
+Right: the control, margin against a one-word synonym edit. Negative: the negation is closer.}
+\label{tab:d1}
+\end{table}
+
+\paragraph{D1.} Against a full paraphrase the margin is negative for all six encoders in both languages
+(Table~\ref{tab:d1}); for e5-base the negation is closer than the paraphrase for 90\% of the Russian and
+80\% of the Kazakh norms. For bge-m3 the interval includes zero (Russian $-0.008$ [$-0.036$, $0.020$]). The
+paraphrase changes about 20 words and the negation about one, so this comparison mixes negation with edit
+size. Against a one-word synonym edit the margin is positive for five of the six encoders in both languages,
+with intervals above zero (e5-base Russian $0.018$ [$0.013$, $0.022$]); EmbeddingGemma is the exception. The
+encoders do separate a negation from a synonym, by 0.01 to 0.10 cosine.
+
+\paragraph{D2.} The XLM-R tokenizer, shared by e5 and bge-m3, isolates the negative affix in 21.1\% of the
+171 forms and puts at least one boundary at the affix in 95.9\%. Across 14 tokenizers the rate ranges from
+0\% (five Kazakh monolingual tokenizers) to 49.7\% (mBERT). The low isolation rate does not translate into
+worse Kazakh retrieval: bge-m3 with this tokenizer has Recall@5 0.97 on Kazakh negation questions and 0.79 on
+Russian ones.
+
+\subsection{Retrieval}
+
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrr}
+\toprule
+& & \multicolumn{3}{c}{Russian} & \multicolumn{3}{c}{Kazakh} \\
+Model & Run & gen R@5 & neg R@5 & TaG $\downarrow$ & gen R@5 & neg R@5 & TaG $\downarrow$ \\
+\midrule
+\multirow{6}{*}{bge-m3}
+& B0 dense & .95 & .79 & .14 & .95 & .97 & .07 \\
+& B1 + BM25 & .80 & .58 & .36 & .80 & .74 & .14 \\
+& B2 + morph.\ BM25 & .85 & .74 & .21 & .90 & .89 & .07 \\
+& B3$'$ jina-v2 & .93 & .84 & .07 & .90 & .92 & .07 \\
+& B3$'$ bge-reranker & 1.00 & .84 & .07 & .95 & .92 & .00 \\
+& B3 NLI ($S1$, lin.\ 0.25) & .90 & .74 & .36 & .90 & .89 & .07 \\
+\midrule
+\multirow{6}{*}{e5-base}
+& B0 dense & .93 & .74 & .29 & .78 & .47 & .43 \\
+& B1 + BM25 & .72 & .68 & .36 & .85 & .58 & .36 \\
+& B2 + morph.\ BM25 & .82 & .68 & .21 & .90 & .68 & .14 \\
+& B3$'$ jina-v2 & .97 & .84 & .07 & .90 & .84 & .14 \\
+& B3$'$ bge-reranker & 1.00 & .89 & .07 & .95 & .89 & .07 \\
+& B3 NLI ($S2$, RRF) & .88 & .79 & .21 & .85 & .63 & .21 \\
+\bottomrule
+\end{tabular}
+\caption{Test split: 20 general and 19 negation questions per language, Twin-above-Gold over the 14 negation
+questions with a twin. B3-rule is omitted: dev selected $\alpha=0$ for both models, which makes it identical
+to B2. B3 scoring was selected on dev separately for each dense model. Recall@5 can be fractional because two
+questions have two gold paragraphs.}
+\label{tab:main}
+\end{table*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.82\textwidth]{ladder_negation_r5.png}
+\caption{Recall@5 on negation questions on the test split, by configuration, language and dense model
+(19 questions per language). Twin-above-Gold for the same runs is in Table~\ref{tab:main}.}
+\label{fig:ladder}
+\end{figure*}
+
+Table~\ref{tab:main} and Figure~\ref{fig:ladder} show the test results. Only five of the tested differences
+have an interval that excludes zero.
+
+\paragraph{H1: the morphological BM25 does not reduce the Negation Gap.} For both models and both languages
+the change of the gap from B0 to B2 is within the interval (bge-m3 Russian $-0.05$ [$-0.25$, $0.16$], e5-base
+Kazakh $-0.09$ [$-0.37$, $0.19$]). For e5-base on Kazakh, B2 raises Recall@5 on negation questions from 0.47 to
+0.68 ($+0.21$ [$0.05$, $0.42$]); general questions also rise, from 0.78 to 0.90, within the interval. For
+bge-m3, B2 has lower Recall@5 than B0 in all four cells, without a found difference.
+
+\paragraph{H2: the NLI reranker is not better than the controls.} B3 is never above an off-the-shelf
+reranker. With e5-base on Kazakh it is below both on negation Recall@5 (vs.\ jina $-0.21$ [$-0.42$,
+$-0.05$], vs.\ bge-reranker $-0.26$ [$-0.47$, $-0.11$]), and with bge-m3 on Russian its TaG is higher than
+that of bge-reranker ($+0.29$ [$0.07$, $0.54$]). The polarity rule could not be tested as intended: on dev
+every $\alpha > 0$ lowered recall, because only 2 of the 24 Russian negation questions contain a negation word
+while 22 of their 24 gold paragraphs contain one, so the rule pushes gold paragraphs down.
+
+\paragraph{H3: a larger Kazakh gain only for the weaker model.} For e5-base, the B2 gain on negation questions
+is larger for Kazakh than for Russian by $0.26$ [$0.11$, $0.47$] (19 pairs). The gain on general questions is
+of similar size ($0.23$ [$-0.03$, $0.53$]), so we read this as lexical matching helping a weaker Kazakh dense
+model, not as an effect specific to negation. For bge-m3 we find no difference.
+
+\subsection{Control runs}
+\paragraph{Negation tokens in BM25.} Removing the negation tokens (\ru{не, ни, нет, без}; \texttt{NEG},
+\ru{емес}, \ru{жоқ}) from the index and the queries leaves BM25 alone unchanged (Recall@5 0.58 Russian, 0.77
+Kazakh) and leaves B2 unchanged for bge-m3 in both languages and for e5-base on Kazakh. For e5-base on Russian
+the version without negation tokens is slightly better (general $0.88$ vs.\ $0.82$). The gain of B2 over B1
+comes from lemmatization and stemming. This is consistent with the question set: few questions contain a
+negation word, so there is little for the negation token to match.
+
+\paragraph{Fusion weight.} With equal weights, B2 is below B0 for bge-m3. With the BM25 weight set to 0.25 and
+each ranking cut at its top 1,000, the hybrid is not below B0 in any cell (Russian general 1.00 vs.\ 0.95,
+Kazakh TaG 0.00 vs.\ 0.07), and not significantly above it. For e5-base dev selects a BM25 weight of 2; with 10
+dev pairs we report the weights as a sensitivity analysis.
+
+\paragraph{NLI without fine-tuning and questions as statements.} Using the base mDeBERTa model in B3 gives the
+same results as the fine-tuned model: mean Recall@5 over the ten scoring and fusion variants 0.80 vs.\ 0.81
+(bge-m3) and 0.74 vs.\ 0.76 (e5-base), mean TaG 0.21 vs.\ 0.20 and 0.24 vs.\ 0.24. Both are below B2 on average
+(0.85 and 0.77). Turning yes/no questions into statements by removing the question particle lowers mean
+Recall@5 to 0.70 (base model, bge-m3).
+
+\subsection{NLI models}
+
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Kard.\ kk & man.\ ru & man.\ kz & syn.\ ru \\
+\midrule
+base & .779 & .62 & .56 & .675 \\
+a: ru+tr+synth & .807 & .56 & .48 & .972 \\
+b: a $-$ tr & .812 & .64 & .50 & .974 \\
+c: a $-$ counter-ex. & .797 & .40 & .40 & .647 \\
+d: a + SNLI-kk & .801 & .50 & .44 & .972 \\
+\bottomrule
+\end{tabular}
+\caption{NLI accuracy: Karde\c{s}-NLU Kazakh test (odd half, 1,000 pairs), manual hand-written legal pairs (50 per
+language), held-out synthetic Russian pairs (351).}
+\label{tab:nli}
+\end{table}
+
+Fine-tuning raises accuracy on Karde\c{s} by 0.02 to 0.03 and on the held-out synthetic pairs from 0.68 to
+0.97, and lowers it on the hand-written legal pairs (Table~\ref{tab:nli}). The synthetic test shares its
+rewrite templates with training, so we read the 0.97 as template learning.
+
+\paragraph{H5: Turkish data.} Variants a and b do not differ on Karde\c{s} ($+0.005$ [$-0.010$, $0.019$]) or
+on the Kazakh hand-written pairs ($+0.02$ [$-0.04$, $0.08$]). The comparison is weak for two reasons: the base
+model was already trained on machine-translated NLI data in 26 languages that include Russian and Turkish but
+not Kazakh (105,000 pairs per language, according to its model card), and variant b has about half the
+training data of a.
+
+\paragraph{H6: entailment counter-examples.} On the synthetic test, variant c (without counter-examples)
+calls 60.9\% of the 110 range and numeric-bound entailments contradictions, against 0.9\% for a. The base model, without any
+fine-tuning, makes this error in 0\% of the cases, so the error is produced by training on the
+``\ru{не менее} $\rightarrow$ \ru{менее}'' contradictions without their entailment counterparts. On the 9
+Kazakh hand-written range entailments the base model makes 4 such errors, variant a 1 and variant c 0 (c
+labels them neutral). We consider H6 untested on human-written data.
+
+\subsection{Error analysis}
+We took the 20 test questions with the most Recall@5 misses over five runs (bge-m3 B0, B2, B3$'$ with
+bge-reranker; e5-base B0, B2) and assigned each a cause by reading the top-ranked chunks. Seven are e5-base
+failures on Kazakh where bge-m3 finds the gold (one gold paragraph is ranked 2,073rd). Four are polarity
+errors: the opposite norm ranks above the gold. For the question about income tax on selling an apartment owned
+for more than two years, the paragraph saying that income arises when housing is sold within two years ranks
+5th and the paragraph saying that no income arises ranks 99th. In one of the four cases the opposite norm
+(``fines are deductible'') had not been marked as a twin. Three are topical neighbours. Two are abbreviations:
+the questions use the abbreviations for VAT and personal income tax and the law uses the full names; bge-m3
+alone ranks the gold first, BM25 ranks it 82nd (VAT) and 70th (income tax), and the fusion moves it to 6th
+and 9th. This is one
+concrete reason why B2 is below B0 for bge-m3. Two answers are an item inside a long enumeration (alimony is
+item 13 of a 283-word chunk), one question is answered by a transitional provision that repeats the topic, and
+one has a plausible second answer that is not annotated.
+
+\section{Discussion}
+
+On this benchmark, polarity errors are a smaller problem than we expected for a strong dense retriever.
+bge-m3 puts a twin above the gold for 2 of 14 Russian and 1 of 14 Kazakh questions, and off-the-shelf
+cross-encoders reduce this further at no training cost. The two components we proposed do not address the
+errors we found. The negation token in BM25 has no effect because questions rarely contain negation; users ask
+``may the employer...'' and the answer is a prohibition. The NLI reranker is trained to judge whether a
+statement follows from a premise, and a yes/no question about a topic is not such a statement; its scores
+reorder relevant chunks by a criterion unrelated to relevance.
+
+The Kazakh results do not follow the tokenizer diagnostic. XLM-R rarely isolates the negative affix, yet bge-m3
+retrieves Kazakh negation questions better than Russian ones. Two factors may contribute: the Kazakh questions
+were translated from Russian and share more words with the code text (on average 70--74\% of the question
+lemmas appear in the gold paragraph, against 54--64\% for Russian), and Kazakh legal text uses a small set of
+fixed negative constructions. We did not test these explanations.
+
+For practitioners the results suggest a cross-encoder reranker over the dense top 30 before any
+negation-specific component, and caution with equal-weight hybrid fusion when questions use abbreviations
+that the law spells out.
+
+\section*{Limitations}
+
+The test split has 19 or 20 questions per slice and language. One question moves Recall@5 by 0.05 and TaG by
+0.07, so only differences of about 0.2 or more can be found. We report about 50 intervals without a correction
+for multiple comparisons; the five differences we call found should be read with this in mind. The dev split
+has 5 pairs per slice, which is too small for reliable tuning; the two dense models received different B3
+variants.
+
+All negation questions are yes/no questions and all general questions are wh-questions, so the Negation Gap
+also measures question type. In 22 of 24 negation questions the gold is a prohibition. Each question has one
+annotated gold (two questions have two), and other relevant paragraphs are not judged; the error analysis found
+at least one such case.
+
+Questions, twins, D1 triples and NLI hypotheses were drafted with an LLM assistant and checked by one annotator,
+a native speaker of Kazakh and member of the project, who saw the drafts and their proposed labels. We have no
+second annotator and no agreement statistic. The Kazakh synthetic NLI pairs were generated by rules and not
+checked by a human.
+
+Each NLI variant was trained with one seed. The NLI base model was already trained on Russian and Turkish NLI
+data, which limits what H5 can show. The corpus is the revision in force in October and November 2026 and will
+drift as the codes are amended.
+
+\section*{Ethics statement}
+
+The corpus is public legislation from the official database of Kazakhstan. The questions contain no personal
+data. A retriever evaluated here should not be used to give legal advice without review by a lawyer; our error
+analysis shows that the opposite norm can rank above the correct one.
+
+\bibliography{references}
+
+\end{document}
