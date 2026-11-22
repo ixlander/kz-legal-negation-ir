@@ -1,14 +1,13 @@
-<section id="setup" class="alt">
-<p class="eyebrow">Sanity check</p>
-<h2>Our pipeline reproduces published numbers</h2>
-<table>
-<tr><th style="width:34%">Benchmark</th><th style="width:30%">System</th><th style="width:16%">Ours</th><th style="width:20%">Published</th></tr>
-<tr><td>NevIR, pairwise acc.</td><td>jina-reranker-v2</td><td>0.651</td><td>0.652</td></tr>
-<tr><td>RuLawRetrieval, nDCG@10</td><td>bge-m3</td><td>0.839</td><td>e5-large 0.820</td></tr>
-<tr><td>RuLawRetrieval, nDCG@10</td><td>multilingual-e5-base</td><td>0.762</td><td>e5-small 0.710</td></tr>
-<tr><td>RuLawRetrieval, nDCG@10</td><td>our Russian BM25</td><td>0.501</td><td>BM25 0.480</td></tr>
-<tr><td>KazQAD subsample, nDCG@10</td><td>BM25, plain vs our analyzer</td><td>0.348 / 0.465</td><td>none for this subsample</td></tr>
-</table>
-<p class="muted">RuLawRetrieval split tk_hard, 716 queries; NevIR test, 1,383 pairs; KazQAD 1,929 questions over 52,660 passages.</p>
-<aside>Before trusting our numbers we ran the same code on open benchmarks. The published column for RuLawRetrieval is the dataset card, for comparison only: different model sizes.</aside>
+<section id="setup">
+<div class="head"><p class="eyebrow">Sanity check</p><h2>On open benchmarks our pipeline matches published numbers</h2></div>
+<div class="tg" style="grid-template-columns:520px 470px 280px 1fr">
+<p class="th">Benchmark</p><p class="th">System</p><p class="th">Ours ↑</p><p class="th">Published</p>
+<p>NevIR, pairwise acc.</p><p>jina-reranker-v2</p><p class="ours">0.651</p><p>0.652</p>
+<p>RuLawRetrieval, nDCG@10</p><p>bge-m3</p><p class="ours">0.839</p><p>e5-large 0.820</p>
+<p>RuLawRetrieval, nDCG@10</p><p>multilingual-e5-base</p><p class="ours">0.762</p><p>e5-small 0.710</p>
+<p>RuLawRetrieval, nDCG@10</p><p>our Russian BM25</p><p class="ours">0.501</p><p>BM25 0.480</p>
+<p>KazQAD subsample, nDCG@10</p><p>BM25 plain / our analyzer</p><p class="ours">0.348 / 0.465</p><p>none</p>
+</div>
+<div class="foot"><p>RuLaw tk_hard 716 queries · NevIR 1,383 pairs · KazQAD 1,929 questions</p><p class="pn"></p></div>
+<aside>Before trusting our own numbers, we ran the same code on public benchmarks. On NevIR, the English negation benchmark, our reranker scores 0.651 where the published number is 0.652. On RuLawRetrieval, a Russian labor-law benchmark, our numbers land in the published range; note that the published column comes from the dataset card and uses other model sizes, so it is for comparison only. For Kazakh there is no published number on our subsample of KazQAD, so we only show that our Kazakh analyzer improves keyword search from 0.348 to 0.465.</aside>
 </section>

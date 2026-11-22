@@ -1,26 +1,18 @@
-<section id="errors" class="alt">
-<p class="eyebrow">Error analysis</p>
-<h2>20 test misses, read one by one</h2>
-<div class="row" style="gap:64px">
-<table style="width:780px;font-size:28px">
-<tr><th style="width:80%">Cause</th><th style="width:20%">Questions</th></tr>
-<tr><td>Weak dense model on Kazakh (e5-base)</td><td>7</td></tr>
-<tr><td>Opposite norm above the gold</td><td>4</td></tr>
-<tr><td>Neighbouring article on the same topic</td><td>3</td></tr>
-<tr><td>Abbreviation in the question</td><td>2</td></tr>
-<tr><td>Answer is one item in a long list</td><td>2</td></tr>
-<tr><td>Transitional provision repeats the topic</td><td>1</td></tr>
-<tr><td>Second correct answer not annotated</td><td>1</td></tr>
-</table>
-<div class="col">
-<h3>Abbreviations break the hybrid</h3>
-<p style="font-size:28px;color:#C3CAD4">The question says "VAT", the law says "value added tax".</p>
-<div class="row" style="gap:48px">
-<div class="col" style="gap:4px"><p class="big ok" style="font-size:96px">1st</p><p class="muted">bge-m3 alone</p></div>
-<div class="col" style="gap:4px"><p class="big bad" style="font-size:96px">82nd</p><p class="muted">BM25</p></div>
-<div class="col" style="gap:4px"><p class="big" style="font-size:96px">6th</p><p class="muted">after fusion</p></div>
+<section id="errors">
+<div class="head"><p class="eyebrow">Error analysis</p><h2>Of 20 test misses, 7 came from a weak Kazakh model and 4 from polarity</h2></div>
+<div class="cols">
+<div class="rows col">
+<div class="hl"><p class="num56" style="width:90px">7</p><p style="flex:1">Weak dense model on Kazakh (e5-base)</p></div>
+<div class="hl"><p class="num56 ac" style="width:90px">4</p><p class="ac" style="flex:1">Opposite norm above the gold</p></div>
+<div class="hl"><p class="num56" style="width:90px">3</p><p style="flex:1">Neighbouring article on the same topic</p></div>
+<div class="hl end"><p class="num56" style="width:90px">2</p><p style="flex:1">Abbreviation in the question</p></div>
+</div>
+<div class="rows col">
+<div class="hl"><p class="num56" style="width:90px">2</p><p style="flex:1">Answer is one item in a long list</p></div>
+<div class="hl"><p class="num56" style="width:90px">1</p><p style="flex:1">Transitional provision repeats the topic</p></div>
+<div class="hl end"><p class="num56" style="width:90px">1</p><p style="flex:1">Second correct answer not annotated</p></div>
 </div>
 </div>
-</div>
-<aside>The same happens with the personal income tax abbreviation: 1st, 70th, 9th. This is one concrete reason the equal-weight hybrid is below the dense model. In one of the four polarity cases the opposite norm, fines are deductible, had not been marked as a twin.</aside>
+<div class="foot"><p>20 test questions with the most Recall@5 misses, read one by one</p><p class="pn"></p></div>
+<aside>We took the twenty test questions that the systems missed most often and read the results by hand. The largest group, seven, is simply a weak model on Kazakh: e5-base fails where bge-m3 succeeds. Only four are the polarity errors this project is about, where the opposite rule ranks above the correct one; in one of those four, the opposite rule, that fines are deductible, had not been marked as a twin by us. The rest are ordinary search problems: neighbouring articles, abbreviations, an answer hidden inside a long list, and one question with a second correct answer we did not mark.</aside>
 </section>

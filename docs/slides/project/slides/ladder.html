@@ -1,24 +1,24 @@
-<section id="ladder" class="alt">
-<p class="eyebrow">Retrieval, test split</p>
-<h2>Rerankers help; our hybrid and NLI do not</h2>
-<div class="legend"><div class="key"><div class="sw ru"></div><p style="font-size:26px">Russian</p></div><div class="key"><div class="sw kz"></div><p style="font-size:26px">Kazakh</p></div><p style="font-size:26px">Recall@5 on 19 negation questions per language</p></div>
-<div class="row" style="gap:64px">
-<div class="bars">
-<h3>bge-m3</h3>
-<div class="barrow"><p class="barlab">B0 dense</p><div class="track"><div class="bar ru" style="width:79%"></div><div class="bar kz" style="width:97%"></div></div><p class="barval">.79 / .97</p></div>
-<div class="barrow"><p class="barlab">B2 + BM25</p><div class="track"><div class="bar ru" style="width:74%"></div><div class="bar kz" style="width:89%"></div></div><p class="barval">.74 / .89</p></div>
-<div class="barrow"><p class="barlab">B3′ jina</p><div class="track"><div class="bar ru" style="width:84%"></div><div class="bar kz" style="width:92%"></div></div><p class="barval">.84 / .92</p></div>
-<div class="barrow"><p class="barlab">B3′ bge-rr</p><div class="track"><div class="bar ru" style="width:84%"></div><div class="bar kz" style="width:92%"></div></div><p class="barval">.84 / .92</p></div>
-<div class="barrow"><p class="barlab">B3 NLI</p><div class="track"><div class="bar ru" style="width:74%"></div><div class="bar kz" style="width:89%"></div></div><p class="barval">.74 / .89</p></div>
+<section id="ladder" class="dark">
+<div class="head"><p class="eyebrow">Result · test split</p><h2>Off-the-shelf rerankers lifted negation recall the most; our hybrid and NLI reranker gained less or lost</h2></div>
+<div style="display:flex;gap:40px;align-items:center"><div class="sw ru"></div><p class="lab">Russian</p><div class="sw kz"></div><p class="lab">Kazakh</p><p class="lab">· Recall@5 ↑ on 19 negation questions per language</p></div>
+<div class="cols">
+<div class="chart">
+<p class="lab" style="color:#EFEEE9">bge-m3</p>
+<div class="brow"><p class="blab">B0 dense</p><div class="btrack"><div class="bar ru" style="width:79%"></div><div class="bar kz" style="width:97%"></div></div><p class="bval">ru .79 kz .97</p></div>
+<div class="brow"><p class="blab">B2 hybrid</p><div class="btrack"><div class="bar ru" style="width:74%"></div><div class="bar kz" style="width:89%"></div></div><p class="bval">ru .74 kz .89</p></div>
+<div class="brow"><p class="blab">B3′ jina</p><div class="btrack"><div class="bar ru" style="width:84%"></div><div class="bar kz" style="width:92%"></div></div><p class="bval">ru .84 kz .92</p></div>
+<div class="brow"><p class="blab ac">B3′ bge-rr</p><div class="btrack"><div class="bar ru" style="width:84%"></div><div class="bar kz" style="width:92%"></div></div><p class="bval">ru .84 kz .92</p></div>
+<div class="brow"><p class="blab">B3 NLI</p><div class="btrack"><div class="bar ru" style="width:74%"></div><div class="bar kz" style="width:89%"></div></div><p class="bval">ru .74 kz .89</p></div>
 </div>
-<div class="bars">
-<h3>multilingual-e5-base</h3>
-<div class="barrow"><p class="barlab">B0 dense</p><div class="track"><div class="bar ru" style="width:74%"></div><div class="bar kz" style="width:47%"></div></div><p class="barval">.74 / .47</p></div>
-<div class="barrow"><p class="barlab">B2 + BM25</p><div class="track"><div class="bar ru" style="width:68%"></div><div class="bar kz" style="width:68%"></div></div><p class="barval">.68 / .68</p></div>
-<div class="barrow"><p class="barlab">B3′ jina</p><div class="track"><div class="bar ru" style="width:84%"></div><div class="bar kz" style="width:84%"></div></div><p class="barval">.84 / .84</p></div>
-<div class="barrow"><p class="barlab">B3′ bge-rr</p><div class="track"><div class="bar ru" style="width:89%"></div><div class="bar kz" style="width:89%"></div></div><p class="barval">.89 / .89</p></div>
-<div class="barrow"><p class="barlab">B3 NLI</p><div class="track"><div class="bar ru" style="width:79%"></div><div class="bar kz" style="width:63%"></div></div><p class="barval">.79 / .63</p></div>
+<div class="chart">
+<p class="lab" style="color:#EFEEE9">multilingual-e5-base</p>
+<div class="brow"><p class="blab">B0 dense</p><div class="btrack"><div class="bar ru" style="width:74%"></div><div class="bar kz" style="width:47%"></div></div><p class="bval">ru .74 kz .47</p></div>
+<div class="brow"><p class="blab">B2 hybrid</p><div class="btrack"><div class="bar ru" style="width:68%"></div><div class="bar kz" style="width:68%"></div></div><p class="bval">ru .68 kz .68</p></div>
+<div class="brow"><p class="blab">B3′ jina</p><div class="btrack"><div class="bar ru" style="width:84%"></div><div class="bar kz" style="width:84%"></div></div><p class="bval">ru .84 kz .84</p></div>
+<div class="brow"><p class="blab ac">B3′ bge-rr</p><div class="btrack"><div class="bar ru" style="width:89%"></div><div class="bar kz" style="width:89%"></div></div><p class="bval">ru .89 kz .89</p></div>
+<div class="brow"><p class="blab">B3 NLI</p><div class="btrack"><div class="bar ru" style="width:79%"></div><div class="bar kz" style="width:63%"></div></div><p class="bval">ru .79 kz .63</p></div>
 </div>
 </div>
-<aside>B2 fuses dense retrieval with a morphological BM25 by reciprocal rank fusion. B3' reranks the top 30 of B2 with an off-the-shelf cross-encoder. B3 reranks with our NLI model; its scoring was chosen on dev. The polarity rule chose alpha 0 on dev, so it equals B2. Only one retrieval gain has an interval above zero: e5-base Kazakh, B0 to B2, +0.21 [0.05, 0.42].</aside>
+<div class="foot"><p>B3-rule chose α = 0 on dev and equals B2</p><p class="pn"></p></div>
+<aside>This is the main result. Each bar is the share of negation questions where the correct paragraph made the top 5. Look at the off-the-shelf rerankers, B3 prime: they give the best or near-best numbers almost everywhere, for example e5-base on Kazakh goes from 0.47 to 0.89. Our hybrid B2 helps only the weak model on Kazakh, from 0.47 to 0.68, the one gain with an interval above zero. Our NLI reranker is never better than the ready-made rerankers. The polarity rule switched itself off during tuning, so it is the same as B2.</aside>
 </section>

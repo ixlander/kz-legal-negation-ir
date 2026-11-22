@@ -1,0 +1,14 @@
+<section id="abbrev">
+<div class="head"><p class="eyebrow">Error case · abbreviation</p><h2>An abbreviation moved the correct article from 1st to 6th after fusion</h2></div>
+<div class="rows">
+<div class="hl"><p class="lab" style="width:260px">Question says</p><p class="mono" style="font-size:32px">"VAT"</p></div>
+<div class="hl end"><p class="lab" style="width:260px">Law says</p><p class="mono" style="font-size:32px">"value added tax"</p></div>
+</div>
+<div class="cols heroblock" style="gap:0">
+<div style="width:420px;display:flex;flex-direction:column;gap:12px"><p class="hero">1st</p><p class="lab">bge-m3 alone</p></div>
+<div style="width:560px;display:flex;flex-direction:column;gap:12px"><p class="hero">82nd</p><p class="lab">BM25</p></div>
+<div style="width:420px;display:flex;flex-direction:column;gap:12px"><p class="hero ac">6th</p><p class="lab ac">after fusion</p></div>
+</div>
+<div class="foot"><p>Rank of the gold paragraph, Russian test question</p><p class="pn"></p></div>
+<aside>Here is one concrete way the hybrid hurts. The question uses the abbreviation VAT; the law always writes value added tax in full. The dense model understands the abbreviation and puts the right article first. Keyword search sees no matching word and puts it 82nd. When we merge the two lists with equal weight, the article drops to 6th, just outside the top 5. The same happens with the abbreviation for personal income tax: 1st, 70th, then 9th. This is one reason the equal-weight hybrid is below the dense model.</aside>
+</section>

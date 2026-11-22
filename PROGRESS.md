@@ -634,3 +634,8 @@ are placeholders.
 `docs/slides/project/`). Problem example, research question, data, sanity checks, D1/D2, retrieval ladder,
 Twin-above-Gold, controls, NLI, error analysis, hypothesis outcomes, takeaway, limitations. Speaker notes on
 every slide. Same numbers as the paper; text checked against Wikipedia:Signs_of_AI_writing.
+
+## 2026-11-22 — deck redesigned (editorial style, owner prompt)
+Same link, version 5: 21 slides, light background with dark slides at the cover, method and main result, one
+accent-filled takeaway slide; PT Serif / PT Sans / PT Mono; finding titles; 60-120-word speaker notes. Authors:
+Maxim Abakarov, Balym Sekenova (also in the paper).

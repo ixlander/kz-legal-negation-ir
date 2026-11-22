@@ -1,0 +1,10 @@
+<section id="parts">
+<div class="head"><p class="eyebrow">What we built</p><h2>We built a benchmark, four metrics and two fixes with controls</h2></div>
+<div class="cols" style="gap:40px">
+<div class="card"><p class="num96 ac">1</p><h3>Benchmark</h3><p class="soft">Parallel Russian and Kazakh text of 22 codes. 49 question pairs, each with a gold paragraph and, if one exists, an opposite-polarity twin.</p></div>
+<div class="card"><p class="num96 ac">2</p><h3>Metrics</h3><p class="soft">Two encoder diagnostics: Negation Margin and Affix Isolation Rate. Two retrieval metrics: Negation Gap and Twin-above-Gold.</p></div>
+<div class="card"><p class="num96 ac">3</p><h3>Two cheap fixes</h3><p class="soft">BM25 that keeps negation as a token, and a fine-tuned NLI reranker. Controls: two off-the-shelf rerankers and a polarity rule.</p></div>
+</div>
+<div class="foot"><p>Questions on the Labor and Tax Codes of Kazakhstan</p><p class="pn"></p></div>
+<aside>The project has three parts. First, a benchmark: the same 22 codes in Russian and Kazakh, and 49 questions asked in both languages. For each question we marked the correct paragraph, the gold, and where possible a twin: a paragraph on the same topic that says the opposite. Second, metrics. Twin-above-Gold is the key one: how often the wrong twin ranks above the correct paragraph. Third, two cheap fixes, compared against controls that need no training: ready-made rerankers and a simple rule that boosts paragraphs whose polarity matches the question.</aside>
+</section>

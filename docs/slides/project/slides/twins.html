@@ -1,17 +1,13 @@
 <section id="twins">
-<p class="eyebrow">Polarity errors, test split</p>
-<h2>How often the twin outranks the gold</h2>
-<table style="font-size:28px">
-<tr><th style="width:34%">Twin-above-Gold, lower is better</th><th style="width:16%">bge-m3 ru</th><th style="width:16%">bge-m3 kz</th><th style="width:17%">e5-base ru</th><th style="width:17%">e5-base kz</th></tr>
-<tr><td>B0 dense</td><td>0.14</td><td>0.07</td><td>0.29</td><td>0.43</td></tr>
-<tr><td>B2 + morphological BM25</td><td>0.21</td><td>0.07</td><td>0.21</td><td>0.14</td></tr>
-<tr><td>B3′ jina-reranker-v2</td><td>0.07</td><td>0.07</td><td>0.07</td><td>0.14</td></tr>
-<tr><td>B3′ bge-reranker-v2-m3</td><td>0.07</td><td>0.00</td><td>0.07</td><td>0.07</td></tr>
-<tr><td>B3 NLI reranker</td><td>0.36</td><td>0.07</td><td>0.21</td><td>0.21</td></tr>
-</table>
-<div class="row" style="gap:48px">
-<div class="col" style="gap:8px"><p class="big">2 of 14</p><p class="muted">Russian questions where bge-m3 alone puts the twin above the gold</p></div>
-<div class="col" style="gap:8px"><p class="big">+0.29</p><p class="muted">Twin-above-Gold of the NLI reranker over bge-reranker, bge-m3 Russian, 95% CI [0.07, 0.54]</p></div>
+<div class="head"><p class="eyebrow">Polarity errors · test split</p><h2>bge-m3 put the twin above the gold in 2 of 14 Russian questions; rerankers cut this to 0–1</h2></div>
+<div class="tg" style="grid-template-columns:560px 1fr 1fr 1fr 1fr">
+<p class="th">Twin-above-Gold ↓</p><p class="th">bge-m3 ru</p><p class="th">bge-m3 kz</p><p class="th">e5-base ru</p><p class="th">e5-base kz</p>
+<p>B0 dense</p><p>0.14</p><p>0.07</p><p>0.29</p><p>0.43</p>
+<p class="ours">B2 morphological BM25 (ours)</p><p class="ours">0.21</p><p class="ours">0.07</p><p class="ours">0.21</p><p class="ours">0.14</p>
+<p>B3′ jina-reranker-v2</p><p class="best">0.07</p><p>0.07</p><p class="best">0.07</p><p>0.14</p>
+<p>B3′ bge-reranker-v2-m3</p><p class="best">0.07</p><p class="best">0.00</p><p class="best">0.07</p><p class="best">0.07</p>
+<p class="ours">B3 NLI reranker (ours)</p><p class="ours">0.36</p><p class="ours">0.07</p><p class="ours">0.21</p><p class="ours">0.21</p>
 </div>
-<aside>14 of the 19 test negation questions per language have a twin, so one question is 0.07. For the strong model the problem exists but is small, and the off-the-shelf cross-encoders bring it to 0 to 7 percent. Our NLI reranker makes it worse for bge-m3 on Russian.</aside>
+<div class="foot"><p>14 negation questions with a twin per language · one question = 0.07</p><p class="pn"></p></div>
+<aside>Twin-above-Gold counts how often the wrong twin paragraph ranks above the correct one. Lower is better, and the best value in each column is in bold. With the strong model, bge-m3, this happens in 2 of 14 Russian questions and 1 of 14 Kazakh ones. The ready-made rerankers bring it down to one question or none. Our two components, shown in the accent color, do not improve on dense search for bge-m3; the NLI reranker even raises the Russian number to 0.36. Keep in mind that one question moves this number by 0.07.</aside>
 </section>

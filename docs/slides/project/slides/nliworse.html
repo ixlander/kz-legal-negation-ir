@@ -1,0 +1,10 @@
+<section id="nliworse">
+<div class="head"><p class="eyebrow">Result</p><h2>Our NLI reranker put more twins above the gold than an off-the-shelf reranker</h2></div>
+<div class="heroblock" style="display:flex;flex-direction:column;gap:24px">
+<p class="hero ac">+0.29</p>
+<p class="soft" style="width:1300px">Twin-above-Gold of the NLI reranker over bge-reranker, bge-m3, Russian</p>
+<p class="mono">95% CI [0.07, 0.54]</p>
+</div>
+<div class="foot"><p>Paired bootstrap over questions, 1,000 resamples</p><p class="pn"></p></div>
+<aside>This is one of the few differences that is statistically clear. With bge-m3 on Russian, our NLI reranker puts the wrong twin above the correct paragraph more often than the ready-made bge reranker, by 0.29. The 95 percent interval runs from 0.07 to 0.54, so it does not include zero. We count a difference as real only when the interval excludes zero. In plain words: on this setting our proposed component made polarity errors worse, not better.</aside>
+</section>

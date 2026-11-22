@@ -1,0 +1,16 @@
+<section id="pipeline" class="dark">
+<div class="head"><p class="eyebrow">Method</p><h2>Each configuration adds one component to dense search</h2></div>
+<div class="cols" style="gap:32px;align-items:center">
+<div class="box" style="width:300px"><p class="lab ac">B0</p><p>Dense search</p><p class="mono soft">bge-m3 or multilingual-e5-base</p></div>
+<x-shape kind="arrow-right" style="width:64px;height:32px;background:#7E858D"></x-shape>
+<div class="box" style="width:330px"><p class="lab ac">B2</p><p>+ morphological BM25</p><p class="mono soft">fused by RRF</p></div>
+<x-shape kind="arrow-right" style="width:64px;height:32px;background:#7E858D"></x-shape>
+<div class="col" style="gap:20px">
+<div class="box"><p class="lab">B3′ · control</p><p>Off-the-shelf cross-encoder</p></div>
+<div class="box"><p class="lab">B3-rule · control</p><p>Polarity rule</p></div>
+<div class="box ours"><p class="lab ac">B3 · ours</p><p>NLI reranker</p></div>
+</div>
+</div>
+<div class="foot"><p>Rerankers reorder the top 30 of B2 · RRF k = 60</p><p class="pn"></p></div>
+<aside>This is the ladder of systems. B0 is plain dense search: the question and every paragraph become vectors, and the closest paragraphs win. B2 adds keyword search with word forms and the negation token, and merges the two lists with reciprocal rank fusion. Then the top 30 of B2 is reordered in one of three ways. Two are controls: a ready-made cross-encoder reranker, which reads question and paragraph together, and a simple polarity rule. The third is ours, the NLI reranker. There is also B1, keyword search without word forms, which we use to separate the effect of morphology.</aside>
+</section>

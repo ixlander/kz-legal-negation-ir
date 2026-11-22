@@ -1,0 +1,9 @@
+<section id="d2">
+<div class="head"><p class="eyebrow">Diagnostic D2 · Affix Isolation</p><h2>The tokenizer rarely isolates the Kazakh negative affix, yet Kazakh retrieval is not worse</h2></div>
+<div class="cols heroblock">
+<div class="col"><p class="hero">21%</p><p class="soft">of 171 Kazakh negative forms get the affix as its own token in XLM-R</p></div>
+<div class="col" style="border-left:2px solid #C9CCC6;padding-left:64px"><p class="hero ac">0.97</p><p class="soft">bge-m3 Recall@5 on Kazakh negation questions, with that tokenizer (Russian: 0.79)</p></div>
+</div>
+<div class="foot"><p>XLM-R tokenizer is shared by e5 and bge-m3</p><p class="pn"></p></div>
+<aside>D2 asks whether the tokenizer keeps the Kazakh negative suffix as a separate piece. For example, in төлемейді the part "ме" marks negation. In only 21 percent of 171 real forms does the XLM-R tokenizer cut the word exactly around that suffix. We expected this to hurt Kazakh search. It did not: bge-m3, which uses this same tokenizer, finds the right paragraph for 97 percent of Kazakh negation questions, compared with 79 percent for Russian. So the tokenizer statistic does not predict retrieval quality here.</aside>
+</section>

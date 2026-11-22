@@ -1,0 +1,13 @@
+<section id="d1">
+<div class="head"><p class="eyebrow">Diagnostic D1 · Negation Margin</p><h2>Against a one-word edit, 5 of 6 encoders keep the negation further away</h2></div>
+<p style="font-family:'PT Serif',Georgia,serif;font-style:italic">margin = cos(norm, alternative) − cos(norm, negation)</p>
+<div class="tg" style="grid-template-columns:420px 420px 1fr">
+<p class="th">Model</p><p class="th">vs. paraphrase</p><p class="th ac">vs. one-word edit</p>
+<p>e5-base ru</p><p>−0.018</p><p class="ours">+0.018</p>
+<p>e5-base kz</p><p>−0.013</p><p class="ours">+0.025</p>
+<p>bge-m3 ru</p><p>−0.008</p><p class="ours">+0.099</p>
+<p>bge-m3 kz</p><p>−0.013</p><p class="ours">+0.097</p>
+</div>
+<div class="foot"><p>30 triples per language · below 0: the negation is closer</p><p class="pn"></p></div>
+<aside>D1 checks the embedding models before any search. We take a legal sentence and measure how close it is to an alternative and to its negation. Against a full paraphrase, every model puts the negation closer, which looks like a failure. But a paraphrase changes about 20 words and a negation changes one, so that comparison is unfair. The fair test is the right column: an alternative that also changes one word, a synonym. There the margin is positive for five of six models. So the models do notice negation, only weakly: the gap is a few hundredths of cosine similarity.</aside>
+</section>

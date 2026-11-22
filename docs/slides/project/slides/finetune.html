@@ -1,0 +1,11 @@
+<section id="finetune">
+<div class="head"><p class="eyebrow">Control run · NLI fine-tuning</p><h2>Without our fine-tuning the NLI reranker scored the same; both stayed below B2</h2></div>
+<div class="rows">
+<div class="hl"><p class="lab" style="width:420px">B2 hybrid</p><div style="flex:1"><div class="hbar" style="width:85%"></div></div><p class="num56" style="width:140px">0.85</p></div>
+<div class="hl"><p class="lab ac" style="width:420px">NLI, fine-tuned (ours)</p><div style="flex:1"><div class="hbar key" style="width:81%"></div></div><p class="num56 ac" style="width:140px">0.81</p></div>
+<div class="hl"><p class="lab" style="width:420px">NLI, base model</p><div style="flex:1"><div class="hbar" style="width:80%"></div></div><p class="num56" style="width:140px">0.80</p></div>
+<div class="hl end"><p class="lab" style="width:420px">NLI, questions as statements</p><div style="flex:1"><div class="hbar" style="width:70%"></div></div><p class="num56" style="width:140px">0.70</p></div>
+</div>
+<div class="foot"><p>Mean Recall@5 ↑, bge-m3, over the NLI scoring variants</p><p class="pn"></p></div>
+<aside>Here we asked whether our fine-tuning mattered. The NLI model before our fine-tuning reranks just as well as after: 0.80 against 0.81 average Recall@5. Both are below the hybrid they rerank, 0.85. We also tried turning each yes or no question into a statement, since NLI models are trained on statements; that made things worse, 0.70. The likely reason: an NLI model judges whether a statement follows from a text, and a question about a topic is not a statement, so its scores reorder good candidates by something other than relevance.</aside>
+</section>

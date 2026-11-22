@@ -1,11 +1,10 @@
 <section id="problem">
-<p class="eyebrow">The problem</p>
-<h2>The retriever finds the right topic with the opposite meaning</h2>
-<div class="ex">
-<div class="exrow first"><p class="exlab">Question</p><p class="extext">Do I pay personal income tax when I sell an apartment I have owned for more than two years?</p><p class="exrank"></p></div>
-<div class="exrow"><p class="exlab">Opposite norm</p><p class="extext">Tax Code, art. 383(1): income <b>arises</b> when housing owned for <b>less than two years</b> is sold</p><p class="exrank bad">5th</p></div>
-<div class="exrow"><p class="exlab">Correct norm</p><p class="extext">Tax Code, art. 382(5): <b>no income arises</b> when housing owned for <b>two years or more</b> is sold</p><p class="exrank ok">99th</p></div>
+<div class="head"><p class="eyebrow">The problem</p><h2>Dense search ranked the opposite norm 5th and the correct norm 99th</h2></div>
+<div class="rows">
+<div class="hl"><p class="lab" style="width:300px">Question</p><p class="mono" style="font-size:32px;flex:1">Do I pay personal income tax when I sell an apartment I have owned for more than two years?</p><p class="num56" style="width:160px;text-align:right"></p></div>
+<div class="hl"><p class="lab" style="width:300px">Opposite norm art. 383(1)</p><p style="flex:1">Income <b>arises</b> when housing owned for <b>less than two years</b> is sold</p><p class="num56" style="width:160px;text-align:right">5th</p></div>
+<div class="hl end"><p class="lab" style="width:300px">Correct norm art. 382(5)</p><p style="flex:1">No income arises when housing owned for <b>two years or more</b> is sold</p><p class="num56 ac" style="width:160px;text-align:right">99th</p></div>
 </div>
-<p class="muted">Rank in the bge-m3 dense ranking over all 22 codes, Russian version of a test question. A generator that reads the top 5 sees only the wrong norm.</p>
-<aside>A retrieval-augmented legal assistant answers from what the retriever returns. Here the norm with the opposite polarity is 5th and the correct one is 99th. In Kazakh the problem may be harder: negation is a verb affix, төлейді vs төлемейді, and the subword tokenizer may split it.</aside>
+<div class="foot"><p>bge-m3 dense ranking over all 22 codes · Russian test question</p><p class="pn"></p></div>
+<aside>Here is the failure we care about. A person asks whether they pay income tax after selling an apartment they owned for more than two years. The correct answer is in article 382: no income arises, so no tax. But the dense search model puts a different paragraph 5th: the one saying income does arise if you sold within two years. The correct paragraph is 99th. Stress those two numbers. A chatbot that reads only the top 5 results sees just the wrong rule and will answer that tax is due. In Kazakh the same problem may be worse, because negation is a verb suffix: төлейді means pays, төлемейді means does not pay.</aside>
 </section>

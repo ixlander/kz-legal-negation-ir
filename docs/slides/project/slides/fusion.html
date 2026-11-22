@@ -1,0 +1,9 @@
+<section id="fusion">
+<div class="head"><p class="eyebrow">Control run · fusion weight</p><h2>With equal weights the hybrid fell below bge-m3 alone; with BM25 weight 0.25 it did not</h2></div>
+<div class="cols heroblock" style="gap:0">
+<div class="panel light"><p class="lab">Equal weights · B2</p><p class="num96">Below B0</p><p class="soft">Negation Recall@5 for bge-m3: 0.74 vs 0.79 in Russian, 0.89 vs 0.97 in Kazakh</p></div>
+<div class="panel darkp"><p class="lab">BM25 weight 0.25</p><p class="num96 ac">Never below B0</p><p style="color:#B9BDC3">And not significantly above it</p></div>
+</div>
+<div class="foot"><p>Weights chosen on 10 dev pairs; reported as a sensitivity check</p><p class="pn"></p></div>
+<aside>Our hybrid merges dense search and keyword search with equal weight. For the strong model this pulled results down: on negation questions bge-m3 alone gets 0.79 in Russian and 0.97 in Kazakh, the hybrid 0.74 and 0.89. When we gave keyword search a quarter of the weight, the hybrid was never below dense search, but also not clearly above it. Because the weight was tuned on only ten development question pairs, we present this as a sensitivity check, not as a new result.</aside>
+</section>
