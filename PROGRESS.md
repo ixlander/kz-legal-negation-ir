@@ -639,3 +639,13 @@ every slide. Same numbers as the paper; text checked against Wikipedia:Signs_of_
 Same link, version 5: 21 slides, light background with dark slides at the cover, method and main result, one
 accent-filled takeaway slide; PT Serif / PT Sans / PT Mono; finding titles; 60-120-word speaker notes. Authors:
 Maxim Abakarov, Balym Sekenova (also in the paper).
+
+## 2026-11-22 — independent review
+`docs/review/independent_review_2026-11-22.md` (separate reviewer agent, read-only). Verdict: bachelor defense 4/5,
+student workshop 3/5 borderline. Checked by re-running the counts: confirmed the sign-test p-values of the five
+"found" differences (0.06–0.125), 98/98 test queries identical to the drafts, 0 edits on question cards (median 17 s
+per card), the three NLI label changes v019/v030/v035 (all look wrong), 4 degenerate D1 Kz controls, 14/25 Ru tax
+questions with НДС/ИПН/КПН (ИПН in 0 chunks; bge-m3 B0 Ru 0.64 vs 0.96 on abbreviated vs other pairs), negation
+token in 45%/43% of chunks, rerankers run over the B2 top 30 (not B0), H6 denominators 110 vs 67, "2 of 24" = 1 or 4
+depending on the definition, α = 0.002 ties α = 0 on dev. Extra bug found while checking: `nli_compare.py` writes the
+metric means into the keys "a"/"b" and so overwrites the variant names in `results/nli_h5_h6_*.json`.
