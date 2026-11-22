@@ -685,3 +685,7 @@ fixed for H6 and the exact tests.
   snapshots.
 * New `README.md` (findings, data, layout, setup, full reproduction, licenses, citation) and `results/README.md`
   (which file holds which number, final vs. earlier runs).
+
+## 2026-11-22 — licenses and affiliation
+Code MIT (`LICENSE`), our data CC BY 4.0 (`data/LICENSE.md`); affiliation Kazakh-British Technical University in the
+paper, README and the deck cover (deck v8). Third-party paper PDFs removed from the whole git history before the push.

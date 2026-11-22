@@ -2,7 +2,7 @@
 
 **Do retrievers confuse "may" and "may not"? A parallel Russian–Kazakh benchmark for negation in legal retrieval.**
 
-Maxim Abakarov, Balym Sekenova · paper draft: [`docs/paper/paper.pdf`](docs/paper/paper.pdf)
+Maxim Abakarov, Balym Sekenova (Kazakh-British Technical University) · paper draft: [`docs/paper/paper.pdf`](docs/paper/paper.pdf)
 
 A retrieval-augmented legal assistant answers from the articles its retriever returns. If the retriever returns a
 norm with the opposite polarity ("the employer may" instead of "the employer may not"), the answer contradicts
@@ -127,6 +127,10 @@ Paper: `cd docs/paper && latexmk -xelatex paper.tex` (XeLaTeX, for the Kazakh le
 
 All random seeds are 42. Embeddings and tokenized corpora are cached in `data/index/` and NLI checkpoints in
 `checkpoints/`; neither is versioned.
+
+## License
+
+Code: MIT (`LICENSE`). Data we created: CC BY 4.0; the legal texts come from adilet.zan.kz (`data/LICENSE.md`).
 
 ## Licenses of what we use
 
