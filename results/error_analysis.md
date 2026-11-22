@@ -1,0 +1,48 @@
+# Error analysis (test split)
+
+20 questions with the most Recall@5 misses over 5 runs (bge-m3/B0, bge-m3/B2, bge-m3/B3'-bge-reranker-v2-m3, e5-base/B0, e5-base/B2).
+
+## Categories (manual)
+
+| category | n |
+|---|---|
+| weak_model_kz | 7 |
+| polarity | 4 |
+| topic_neighbour | 3 |
+| buried_in_list | 2 |
+| abbreviation | 2 |
+| alternative_answer | 1 |
+| transitional | 1 |
+
+## Structural tags (automatic, on the shown run)
+
+| tag | n |
+|---|---|
+| same_code | 12 |
+| other_code | 5 |
+| twin_on_top | 3 |
+
+## Cases
+
+| qid | slice | missed by | gold rank | twin rank | top-1 | tag | category | note |
+|---|---|---|---|---|---|---|---|---|
+| ru_tax_001 | negation | 5 | 99 | 5 | tax:597:2#1 | twin_on_top | polarity | Twin 383:1 («доход возникает при продаже жилья менее двух лет») на 5-м месте, gold «доход не образуется» на 99-м; при этом top-1..3 — другие льготы по жилью |
+| ru_tax_004 | negation | 5 | 27 | – | family:142 | other_code | buried_in_list | Алименты — подпункт 13 в списке из 283 слов (400:1#2); top-3 — статьи Семейного кодекса об алиментах (отвлекающий кодекс) |
+| ru_tax_009 | negation | 5 | 8 | 92 | tax:449:1 | same_code | topic_neighbour | Top-1/2 — определения облагаемого и необлагаемого оборота (449, 450): та же лексика, но не ответ; gold на 8-м |
+| kz_tax_009 | negation | 4 | 11 | 4 | tax:490:2 | twin_on_top | polarity | Twin 480:1 (НДС, относимый в зачёт) на 4-м месте выше gold 482:2 (не относимый в зачёт) |
+| kz_tax_025 | general | 4 | 22 | – | tax:441 | same_code | topic_neighbour | Вопрос «какие доходы облагаются»; top-3 — статьи о расчёте ИПН с доходов работника (441, 406, 412), gold на 22-м |
+| ru_tax_006 | negation | 4 | 14 | 226 | tax:258:3 | same_code | polarity | Top-1 — 258:3 «вычету подлежат неустойки (штрафы)» с обратным смыслом; это близнец, не отмеченный в разметке (размечен 257:1) |
+| kz_tax_004 | negation | 3 | 27 | – | family:141:1 | other_code | buried_in_list | То же, что ru_tax_004: алименты в длинном перечне; top-1 — Семейный кодекс |
+| ru_tax_014 | general | 3 | 6 | – | tax:394:5 | same_code | alternative_answer | Top-1..3 — статья 394 о доходе частной практики; ответ требует связать её со ставками в 363. Вероятно, частично релевантна, но не размечена |
+| kz_lab_001 | negation | 2 | 1096 | 32 | labor:44 | same_code | weak_model_kz | e5-base B0, gold на 1096-м: совпадение только по «жүкті әйел» (top-1 — перевод беременных, ст. 44); bge-m3 находит |
+| kz_lab_002 | negation | 2 | 70 | 48 | labor:43:1 | same_code | weak_model_kz | e5-base B0, gold 70-й, twin 48-й; top — соседние статьи о болезни и прекращении договора |
+| kz_lab_009 | negation | 2 | 2073 | 498 | labor:65:4 | same_code | weak_model_kz | e5-base B0, gold на 2073-м, хотя норма короткая и почти дословно совпадает с вопросом |
+| kz_tax_007 | negation | 2 | 42 | 21 | tax:725:10 | same_code | weak_model_kz | e5-base B0, gold 42-й, twin 21-й; top-1 — нерелевантная статья о праве требования |
+| kz_tax_023 | general | 2 | 9 | – | tax:679:1#7 | same_code | topic_neighbour | Начальная стоимость наследства: top — то же понятие в других контекстах (нерезиденты, ценные бумаги), gold на 9-м |
+| ru_lab_001 | negation | 2 | 12 | 5 | labor:44 | twin_on_top | polarity | Twin 52:1#1 (основания увольнения по инициативе работодателя) на 5-м, gold «не допускается с беременными» на 12-м |
+| ru_tax_007 | negation | 2 | 7 | 321 | tax:847:12 | same_code | transitional | Top-1 и top-3 — переходные положения (847:12, 847:13) о зачёте, дублирующие тему основной статьи; gold на 7-м |
+| ru_tax_013 | general | 2 | 6 | – | tax:140:1 | same_code | abbreviation | «НДС» в вопросе, в норме «налог на добавленную стоимость»: bge-m3 B0 ставит gold 1-м, BM25 — 82-м, после слияния (B2) gold падает на 6-е |
+| ru_tax_018 | general | 2 | 9 | – | customs:81 | other_code | abbreviation | «ИПН» в вопросе, в норме полное название: bge-m3 B0 — 1-е место, BM25 — 70-е (top-1 — плательщики таможенных пошлин), B2 — 9-е |
+| kz_tax_001 | negation | 1 | 17 | 1772 | tax:391:3 | same_code | weak_model_kz | e5-base B0, gold 17-й, в top-3 нерелевантная статья о продаже табака |
+| kz_tax_003 | negation | 1 | 9 | 12 | labor:138:4 | other_code | weak_model_kz | e5-base B0, gold 9-й, twin 12-й; top-1 — статья Трудового кодекса о дистанционной работе |
+| kz_tax_006 | negation | 1 | 103 | 6970 | admin_offences:283-1:6 | other_code | weak_model_kz | e5-base B0, gold 103-й; top-3 — статьи КоАП, Таможенного и Уголовного кодексов о штрафах и пошлинах (отвлекающие кодексы) |

@@ -599,3 +599,15 @@ judgments; extra NLI seeds dropped. The v2 drafts and both round-2 pages stay in
 are empty). Final numbers stay on v1 (49 pairs). These go to the limitations: one annotator who saw the drafts,
 one gold per question, 19–20 test questions per slice, one training seed. Remaining: error analysis,
 `notebooks/analysis.ipynb`, the report for the teacher, final report and slides.
+
+## 2026-11-22 — error analysis (`src/eval/error_analysis.py`, `results/error_analysis.{json,md}`)
+20 test questions with the most Recall@5 misses over bge-m3 B0 / B2 / B3′-bge-reranker and e5-base B0 / B2;
+categories are the agent's manual reading (`data/eval/error_notes.tsv`), structural tags are automatic.
+* weak dense model on Kazakh 7 (e5-base B0; gold at ranks 17–2073 where bge-m3 finds it);
+* polarity 4: the opposite norm above the gold (ru_tax_001, kz_tax_009, ru_lab_001) and once an opposite norm
+  that was not annotated as twin (ru_tax_006: «вычету подлежат неустойки (штрафы)»);
+* topical neighbour 3, answer buried in a long list 2 (alimony, item 13 of a 283-word chunk; the Family Code
+  outranks it), alternative answer not annotated 1, transitional provisions duplicating the topic 1;
+* abbreviations 2: «НДС» / «ИПН» in the question, full names in the law — bge-m3 alone ranks the gold 1st,
+  BM25 70th–82nd, and the fusion (B2) pushes it to 6th / 9th. One concrete mechanism behind B2 < B0 for bge-m3.
+12 of 20 top-1 errors come from the gold's own code, 5 from distractor codes.
