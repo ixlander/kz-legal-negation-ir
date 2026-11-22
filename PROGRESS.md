@@ -671,3 +671,17 @@ Findings:
 * Base vs a on manual sets: −0.06 [−0.20, 0.06] Ru, −0.08 [−0.22, 0.04] Kz (no difference found; clean sets alike).
 Paper (8 pages) and deck (23 slides, v6: new slides "protocol" and "exact") restated accordingly; teacher report v9
 fixed for H6 and the exact tests.
+
+## 2026-11-22 — repository cleanup and citations
+* Paper: 26 references. Every dataset, model and tool used is now cited; each entry was checked against its official
+  page (ACL Anthology, arXiv, publisher, Hugging Face or GitHub card), the RRF paper against its PDF. Added NevIR
+  (original) and BSARD to related work. Repository URL in the abstract and on the last slide.
+* Code: pyflakes clean (two closure warnings and one unused import fixed), all modules compile; CPU scripts
+  (`stats_extra`, `error_analysis`) re-run with identical output.
+* `requirements.txt` pinned to the versions the results were produced with; unused `rank_bm25` and `tqdm`
+  removed, missing `scipy`, `scikit-learn`, `huggingface_hub`, `nbformat`, `nbconvert`, `ipykernel` added.
+* No longer versioned (kept locally, listed in `.gitignore`): third-party paper PDFs in `docs/papers/` (list with
+  references in `docs/papers/README.md`), generated review pages and their data in `tools/review/`, annotation
+  snapshots.
+* New `README.md` (findings, data, layout, setup, full reproduction, licenses, citation) and `results/README.md`
+  (which file holds which number, final vs. earlier runs).

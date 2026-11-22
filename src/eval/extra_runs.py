@@ -12,7 +12,6 @@ Usage:
 import datetime as dt
 import json
 import re
-from pathlib import Path
 
 from src.eval.bootstrap import paired_diff
 from src.eval.metrics import summary

@@ -55,7 +55,7 @@ def main():
 
     for key in cross_encoder.RERANKERS:
         m = cross_encoder.load(key)
-        sc = lambda qs, ds: np.asarray(m.predict(list(zip(qs, ds)), batch_size=16, show_progress_bar=False))
+        sc = lambda qs, ds, m=m: np.asarray(m.predict(list(zip(qs, ds)), batch_size=16, show_progress_bar=False))
         res[f"cross-encoder {key}"] = pairwise(sc(q1, d1), sc(q1, d2), sc(q2, d1), sc(q2, d2))
         del m
         free()

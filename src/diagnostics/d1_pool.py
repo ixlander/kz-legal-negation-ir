@@ -44,7 +44,7 @@ def main():
             out["models"][key] = {"error": f"{type(e).__name__}: {e}"[:300]}
             print(f"{key:<20} LOAD FAILED {type(e).__name__}: {str(e)[:120]}")
             continue
-        enc = lambda field: encode_docs(m, key, [t[field] for t in triples])
+        enc = lambda field, m=m: encode_docs(m, key, [t[field] for t in triples])
         S, P, N, M = enc("sentence"), enc("paraphrase"), enc("negation"), enc("min_paraphrase")
         cp, cn, cm = (S * P).sum(1), (S * N).sum(1), (S * M).sum(1)
         margin, margin_min = cp - cn, cm - cn

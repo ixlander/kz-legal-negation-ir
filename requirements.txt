@@ -1,19 +1,25 @@
-# torch: install separately with CUDA wheels, e.g.
-#   pip install torch --index-url https://download.pytorch.org/whl/cu128
-transformers
-sentence-transformers
-sentencepiece
-pymorphy3
-pymorphy3-dicts-ru
-rank_bm25
-playwright
-beautifulsoup4
-lxml
-pandas
-numpy
-matplotlib
-tqdm
-pyhfst  # only for src/diagnostics/d2_crosscheck.py (apertium-kaz lookup)
-# kazsearch-py: pip install ../nlp_tools/kazsearch-py (local clone of github.com/iDynbek/kazsearch-py, LGPL-3.0)
-pyarrow
-einops  # jina-reranker-v2 remote code
+# Versions the results were produced with (Python 3.12, Windows 11, CUDA 12.8).
+# torch: install separately with the CUDA wheel first, e.g.
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+transformers==5.20.2
+sentence-transformers==6.1.0
+sentencepiece==0.2.2
+einops==0.8.2                  # remote code of jina-reranker-v2
+huggingface_hub==1.33.0
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.0.6
+pyarrow==26.0.1
+matplotlib==3.11.2
+pymorphy3==2.0.6
+pymorphy3-dicts-ru==2.4.417150.4580142
+beautifulsoup4==4.15.0
+lxml==6.1.3
+playwright==1.64.0             # corpus scraping only
+nbformat==5.11.1               # analysis notebook
+nbconvert==7.17.2
+ipykernel==7.4.0
+# Kazakh tools, installed from local clones (not on PyPI), see README:
+#   kazsearch-py  https://github.com/iDynbek/kazsearch-py   (LGPL-3.0)  Kazakh BM25 analyzer
+#   pyhfst 1.4.0  + apertium-kaz (GPL-3.0)                   D2 cross-check only
