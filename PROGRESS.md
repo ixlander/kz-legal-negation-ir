@@ -617,3 +617,8 @@ categories are the agent's manual reading (`data/eval/error_notes.tsv`), structu
 ladder table, hypothesis tests with CIs, controls, NLI variants in the reranker, D1 with the size-matched control,
 D2 pool, NLI validation / H5 / H6, external checks, error analysis. Figures in `results/figures/`:
 `ladder_negation_r5.png`, `ladder_twin_above_gold.png`, `d1_margin_with_control.png`, `error_categories.png`.
+
+## 2026-11-22 — teacher report updated
+https://claude.ai/artifact/PJ77EKfvFQLfBFU4EUmbwb (version 8): final test numbers, restated hypothesis statuses
+(D1 with the size-matched control, H1/H2 refuted, H3 partly, H5 not supported, H6 not testable on human pairs),
+annotation results, bar chart instead of the dot plot, controls and error analysis section.
