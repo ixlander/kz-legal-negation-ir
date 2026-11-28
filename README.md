@@ -100,6 +100,34 @@ Kazakh tools, cloned next to the repository (`../nlp_tools/`):
 * Only for the D2 cross-check: [kaznlp](https://github.com/nlacslab/kaznlp) and
   [apertium-kaz](https://github.com/apertium/apertium-kaz) (GPL-3.0) with `pyhfst`.
 
+## Rebuilding a full working copy from scratch
+
+Everything that is not versioned (checkpoints, caches, third-party data) can be rebuilt from the repository. In order:
+
+```
+git clone https://github.com/ixlander/kz-legal-negation-ir.git nlp
+cd nlp
+python -m venv .venv
+.venv\Scripts\pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+.venv\Scripts\pip install -r requirements.txt
+git clone https://github.com/iDynbek/kazsearch-py ../nlp_tools/kazsearch-py
+.venv\Scripts\pip install ../nlp_tools/kazsearch-py
+
+python -m src.data.fetch_external                      # data/external/ (log in to Hugging Face for KazQAD)
+python -m src.rerank.nli_data --per-lang 50000 --synthetic 4000
+python -m src.rerank.nli_train --variant a             # checkpoints/nli-a (needed by the demo and B3)
+python -m src.rerank.nli_train --variant b             # also c, d: H5/H6 variants
+python -m src.rerank.nli_train --variant a --seed 1    # checkpoints/nli-a-s1
+python -m src.rerank.nli_train --variant a --tag curves --curve-every 200   # checkpoints/nli-a-curves
+python -m src.eval.finalize --answers data/review/answers
+python -m app.demo
+```
+
+The corpus, questions, diagnostics data, NLI pairs and all result files are in git. Dense embeddings and tokenized
+BM25 corpora (`data/index/`) are computed and cached on the first run that needs them (a few minutes on the GPU).
+Training takes 1–2 h per variant on a 6 GB laptop GPU. The D2 cross-check alone also needs kaznlp and apertium-kaz
+(see Setup).
+
 ## Reproducing the results
 
 Corpus (optional: the corpus is versioned):
