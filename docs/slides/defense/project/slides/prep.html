@@ -1,0 +1,17 @@
+<section id="prep">
+<div class="head"><p class="eyebrow">2 · Preprocessing and tokenization</p><h2>Two text paths: subwords for the neural models, lemmas with a negation token for BM25</h2></div>
+<div class="cols" style="gap:48px">
+<div class="col">
+<p class="lab">Neural path · bge-m3, rerankers, NLI</p>
+<p style="font-size:28px">SentencePiece subwords: XLM-R vocabulary 250,002 (bge-m3), mDeBERTa 250,102. Article title prepended to each paragraph. Dynamic padding per batch, attention mask, truncation at 512 (retrieval), 128 (NLI training), 256 (NLI scoring).</p>
+<p class="code">төлемейді → ▁төл · е · мейді<br>болмайды → ▁болмайды (one token)<br>XLM-R isolates the affix in 21% of 171 forms</p>
+</div>
+<div class="col">
+<p class="lab">Lexical path · BM25</p>
+<p style="font-size:28px">Ru: lowercase, pymorphy3 lemmas, stop words removed except не, ни, нет, без; не- prefix split off. Kz: kazsearch stems, negative verb → stem + NEG, емес and жоқ kept.</p>
+<p class="code">неуплата налога → не уплата налог<br>бұза алмайды → бұза ал NEG</p>
+</div>
+</div>
+<div class="foot"><p>Paragraph = chunk; long paragraphs split by sub-points · no other normalization</p><p class="pn"></p></div>
+<aside>The text takes two paths. For the neural models we keep the text as is and let the SentencePiece tokenizer split it into subwords; batches are padded dynamically with an attention mask, and long paragraphs are truncated. For BM25 we normalize: Russian words become lemmas, Kazakh words become stems, and we keep negation explicit. Russian stop words are removed except the negation words, and in Kazakh a negative verb becomes its stem plus a NEG token. Our tokenizer diagnostic showed that XLM-R separates the Kazakh negative affix in only twenty-one percent of forms, which motivated the NEG token.</aside>
+</section>

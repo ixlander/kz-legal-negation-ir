@@ -1,0 +1,22 @@
+<section id="trainconf">
+<div class="head"><p class="eyebrow">4 · Training configuration</p><h2>Fine-tuning: 2 epochs at a low learning rate, checkpoint chosen on a held-out half</h2></div>
+<div class="cols" style="gap:56px">
+<div class="kv" style="flex:1">
+<p class="k">Optimizer</p><p>AdamW, weight decay 0.01, grad clip 1.0</p>
+<p class="k">Learning rate</p><p>1e-5, linear warm-up 6%, linear decay</p>
+<p class="k">Batch</p><p>16 × 2 accumulation = 32</p>
+<p class="k">Epochs · steps</p><p>2 · 6,625 optimizer steps</p>
+<p class="k">Regularization</p><p>dropout 0.1, weight decay; no early stop</p>
+<p class="k">Precision · seed</p><p>bf16 autocast, fp32 weights · seed 42</p>
+</div>
+<div class="kv" style="flex:1">
+<p class="k">Classes (train)</p><p>34,945 / 34,790 / 36,251 (e / n / c): balanced</p>
+<p class="k">Selection</p><p>best macro F1 on Kardeş kk even half after each epoch</p>
+<p class="k">Variants</p><p>a: ru+tr+synthetic · b: −tr · c: −counter-examples · d: +SNLI-kk</p>
+<p class="k">Hardware</p><p>RTX 4050 Laptop, 6 GB · PyTorch 2.11</p>
+<p class="k">Time</p><p>87 min (repeat run), 118 min (original) · peak 6.4 GB allocated</p>
+</div>
+</div>
+<div class="foot"><p>src/rerank/nli_train.py · checkpoints/nli-a · results/nli_train_a_mdeberta.json</p><p class="pn"></p></div>
+<aside>The training setup. AdamW with a low learning rate of ten to the minus five, because the start model already does NLI and we only want to adapt it; linear warm-up over six percent of steps, then linear decay. Effective batch thirty-two through gradient accumulation, which is what fits in six gigabytes. Two epochs; after each we measure macro F1 on one half of the Kazakh NLI test and keep the best epoch, and we report on the other half, so the reported numbers never influenced selection. Classes are balanced, so we report macro F1 and accuracy. We trained four data variants to test two hypotheses.</aside>
+</section>

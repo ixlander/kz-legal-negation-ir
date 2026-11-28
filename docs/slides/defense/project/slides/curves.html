@@ -1,0 +1,10 @@
+<section id="curves">
+<div class="head"><p class="eyebrow">4 · Learning curves</p><h2>Validation loss is lowest at the end of epoch 1, then rises: the second epoch overfits</h2></div>
+<div class="figure" style="height:470px"><img src="/_blob/5b0bd0ed119bdba1da3d0076f835e818" alt="Training and validation loss and validation macro F1 over 6,626 optimizer steps; validation loss falls from 0.61 to 0.47 in epoch 1 and rises to 0.53 in epoch 2 while training loss falls to about 0.40" style="width:1290px;height:470px;object-fit:contain"></div>
+<div class="cols" style="gap:48px">
+<p style="font-size:28px;flex:1"><b>Epoch 1:</b> val loss 0.61 → 0.47, macro F1 0.803 → 0.820 (kept)</p>
+<p style="font-size:28px;flex:1"><b>Epoch 2:</b> train loss ≈ 0.40, val loss → 0.53, F1 0.811</p>
+</div>
+<div class="foot"><p>Validation = Kardeş kk selection half · results/nli_curves_a-curves.json · repeat of variant a, same config</p><p class="pn"></p></div>
+<aside>These are the learning curves, logged every fifty steps for training and every two hundred for validation. In the first epoch both losses fall and validation macro F1 rises from 0.803 to about 0.82. In the second epoch the training loss keeps falling, to about 0.40, while validation loss climbs back to 0.53 and F1 drops: classic overfitting. Our selection rule keeps the best epoch, epoch one, with 0.8195; the original training run selected the same epoch with the same score. This is also why we did not train longer: the start model already knows NLI, so two epochs are enough.</aside>
+</section>

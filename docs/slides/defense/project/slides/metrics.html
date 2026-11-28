@@ -1,0 +1,13 @@
+<section id="metrics">
+<div class="head"><p class="eyebrow">5 · Metrics and protocol</p><h2>Every metric is computed on the held-out test split; dev only chose α, scoring and fusion</h2></div>
+<div class="tg small" style="grid-template-columns:330px 1fr">
+<p class="th">Metric</p><p class="th">Definition</p>
+<p>Recall@5</p><p>share of a question’s gold paragraphs in the top 5, averaged over questions (full 22-code corpus)</p>
+<p>Negation Gap</p><p>Recall@5(general) − Recall@5(negation), same language and system</p>
+<p>Twin-above-Gold</p><p>share of negation questions with a twin where the best twin ranks above the best gold (lower is better)</p>
+<p>NLI accuracy, macro F1</p><p>3 classes, unweighted mean of per-class F1; classes are balanced</p>
+<p>Statistics</p><p>paired bootstrap (1,000 resamples, 95% CI), exact sign test, Holm over 40 pre-registered comparisons</p>
+</div>
+<div class="foot"><p>Not measured: answer correctness; other relevant paragraphs (one gold per question) · src/eval/metrics.py</p><p class="pn"></p></div>
+<aside>All retrieval metrics are computed on the test split over the full corpus. Recall at five fits the use case, because an assistant reads the top few paragraphs. Negation Gap compares the two kinds of questions, and Twin-above-Gold counts exactly the error we care about. For NLI we report accuracy and macro F1, since the classes are balanced. What these metrics do not measure: whether an answer would be correct, and other relevant paragraphs, since only one gold is annotated. With about twenty questions per cell, one question moves Recall at five by 0.05, so we test every difference with bootstrap intervals and an exact sign test.</aside>
+</section>

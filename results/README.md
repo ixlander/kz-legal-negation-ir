@@ -46,3 +46,13 @@ in the files marked **final**.
 
 `figures/` holds the figures of the paper; they are made by `notebooks/analysis.ipynb`. The other `.png` files
 are from the diagnostics scripts and `tools/report/make_figures.py`.
+
+## Course defense additions (2026-11-28)
+
+| File | What | Script |
+|---|---|---|
+| `nli_curves_a-curves.json`, `figures/nli_learning_curves.png` | Learning curves of a repeat of variant a (train loss every 50 steps, validation loss and macro F1 every 200) | `src/rerank/nli_train.py --tag curves --curve-every 200`, `src/eval/plot_curves.py` |
+| `nli_train_a-curves.json` | Per-epoch log of that repeat (selects epoch 1, 0.8195, as the original) | `src/rerank/nli_train.py` |
+| `efficiency.json`, `figures/nli_confusion.png` | Parameter counts, per-stage latency, peak GPU memory, NLI confusion matrices with per-class P/R/F1 | `src/eval/efficiency.py` |
+
+The reported NLI model is `checkpoints/nli-a`; its training log is `nli_train_a_mdeberta.json`.

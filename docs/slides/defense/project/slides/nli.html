@@ -1,0 +1,16 @@
+<section id="nli">
+<div class="head"><p class="eyebrow">5 · NLI evaluation · held-out sets</p><h2>Fine-tuning helps on Kazakh XNLI but turns legal contradictions into “neutral”</h2></div>
+<div class="cols" style="gap:48px;align-items:flex-start">
+<div class="figure" style="width:870px;height:544px;flex:none"><img src="/_blob/0104e4300e54b7d11034f5f08630bd16" alt="Confusion matrices of the fine-tuned and the start model on Kardeş Kazakh XNLI and on the hand-written Russian and Kazakh legal pairs" style="width:870px;height:544px;object-fit:contain"></div>
+<div class="tg small" style="grid-template-columns:1fr 130px 130px;flex:1">
+<p class="th">accuracy</p><p class="th">start</p><p class="th">nli-a</p>
+<p>Kardeş kk (1,000)</p><p>.779</p><p class="best">.807</p>
+<p>legal ru (50)</p><p class="best">.62</p><p>.56</p>
+<p>legal kz (50)</p><p class="best">.56</p><p>.48</p>
+<p>synthetic ru (351)</p><p>.675</p><p class="best">.972</p>
+<p>contradiction recall, legal ru / kz</p><p>.47 / .53</p><p>.29 / .35</p>
+</div>
+</div>
+<div class="foot"><p>Rows = gold, columns = predicted · results/efficiency.json · legal-pair differences within the 95% CI</p><p class="pn"></p></div>
+<aside>Here is the trained model on held-out data. On the Kazakh XNLI half we did not use for selection, accuracy rises from 0.78 to 0.81. On our own synthetic test it jumps to 0.97, but that set shares templates with training, so it shows template learning. On the hand-written legal pairs, which matter most, it gets worse, though within the confidence interval. The confusion matrices show why: real legal contradictions are mostly predicted as neutral, so contradiction recall drops to about a third. That explains why the NLI reranker cannot separate a norm from its opposite in retrieval.</aside>
+</section>

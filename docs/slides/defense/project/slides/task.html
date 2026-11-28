@@ -1,0 +1,20 @@
+<section id="task">
+<div class="head"><p class="eyebrow">1 · Problem and NLP task</p><h2>Task: rank the paragraph of law that answers a question, with the right polarity</h2></div>
+<div class="cols" style="gap:56px">
+<div class="kv" style="flex:1.25">
+<p class="k">Task type</p><p>Passage retrieval (ranking), Russian and Kazakh</p>
+<p class="k">Input</p><p>A legal question: “May an employer dismiss a pregnant employee due to staff reduction?”</p>
+<p class="k">Output</p><p>Ranking of 30,766 paragraphs of 22 codes, with scores</p>
+<p class="k">Target</p><p>Annotated gold paragraph; for polarity questions also a twin with the opposite rule</p>
+<p class="k">Success</p><p>Gold in the top 5; twin never above gold</p>
+</div>
+<div class="panel darkp" style="flex:0.75">
+<p class="lab">Why it matters · bge-m3, test question</p>
+<p>“Is income from selling an apartment owned for more than two years taxed?”</p>
+<p class="num56 ac">twin #5</p><p class="soft" style="color:#B9BDC3">“income arises if sold within two years”</p>
+<p class="num56">gold #99</p><p class="soft" style="color:#B9BDC3">“no income arises”</p>
+</div>
+</div>
+<div class="foot"><p>Users: builders of legal RAG assistants; the top 5 becomes the LLM’s context</p><p class="pn"></p></div>
+<aside>Our task is retrieval. The input is a question in Russian or Kazakh; the output is a ranking of all thirty thousand paragraphs of twenty-two codes. Each question has an annotated gold paragraph, and questions whose answer depends on polarity also have a twin: a paragraph on the same topic with the opposite rule. Success means the gold is in the top five and the twin is not above it. On the right is a real test case: dense search put the opposite rule fifth and the correct one ninety-ninth, so an assistant reading the top five would answer wrongly.</aside>
+</section>

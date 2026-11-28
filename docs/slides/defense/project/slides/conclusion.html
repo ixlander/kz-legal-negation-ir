@@ -1,0 +1,10 @@
+<section id="conclusion" class="fill">
+<div class="head"><p class="eyebrow">6 · Conclusion</p><h2>Polarity errors exist but are rare for a strong retriever; use an off-the-shelf reranker first</h2></div>
+<div class="cols" style="gap:48px">
+<div class="col"><h3>Main result</h3><p style="font-size:28px">bge-m3 ranks the twin above the gold for 2 of 14 Ru and 1 of 14 Kz questions; a cross-encoder brings this to 0–1. Our two components do not beat it.</p></div>
+<div class="col"><h3>Limitations</h3><p style="font-size:28px">19–20 test questions per cell; one annotator; one seed per NLI variant; negation questions are all yes/no.</p></div>
+<div class="col"><h3>Next steps</h3><p style="font-size:28px">150–200 balanced questions with a second annotator; a negation signal bound to its predicate; real user questions.</p></div>
+</div>
+<div class="foot" style="justify-content:flex-start;gap:48px"><p style="color:#17191C">Report, code, data, results: github.com/ixlander/kz-legal-negation-ir</p><p class="pn" style="color:#17191C"></p></div>
+<aside>To sum up. We built a parallel Russian–Kazakh benchmark on real codes and measured the polarity error directly. For a strong dense model it happens, but rarely: two of fourteen Russian and one of fourteen Kazakh questions. An off-the-shelf cross-encoder reranker reduces it further, and our two components, the negation token in BM25 and the fine-tuned NLI reranker, do not beat that baseline. The main limitation is size: about twenty test questions per cell. Next we would grow the set with balanced questions and a second annotator. Thank you; we are ready for questions.</aside>
+</section>

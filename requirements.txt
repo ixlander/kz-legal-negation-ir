@@ -20,6 +20,7 @@ playwright==1.64.0             # corpus scraping only
 nbformat==5.11.1               # analysis notebook
 nbconvert==7.17.2
 ipykernel==7.4.0
+gradio==6.32.0                 # demo app only
 # Kazakh tools, installed from local clones (not on PyPI), see README:
 #   kazsearch-py  https://github.com/iDynbek/kazsearch-py   (LGPL-3.0)  Kazakh BM25 analyzer
 #   pyhfst 1.4.0  + apertium-kaz (GPL-3.0)                   D2 cross-check only

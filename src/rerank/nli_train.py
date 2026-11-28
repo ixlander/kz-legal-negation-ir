@@ -18,6 +18,9 @@ Usage:
     python -m src.rerank.nli_train --variant a
     python -m src.rerank.nli_train --variant b --epochs 2
     python -m src.rerank.nli_train --variant a --seed 1      # extra seed, saved as nli-a-s1
+    python -m src.rerank.nli_train --variant a --tag curves --curve-every 200
+        # same training, saved as nli-a-curves, with train loss every 50 optimizer steps and
+        # validation loss / macro F1 every 200 steps in results/nli_curves_a-curves.json
 """
 import argparse
 import gc
@@ -88,15 +91,17 @@ class LengthGroupedBatches(Sampler):
 
 
 def batches(rows, tok, batch_size, shuffle, seed=SEED):
+    # tokenized once up front; each batch is only padded to its longest pair
+    enc = tok([r["premise"] for r in rows], [r["hypothesis"] for r in rows], truncation=True, max_length=MAX_LEN)
+    items = [{**{k: enc[k][i] for k in enc.keys()}, "labels": r["label"]} for i, r in enumerate(rows)]
+
     def collate(b):
-        enc = tok([r["premise"] for r in b], [r["hypothesis"] for r in b], truncation=True, max_length=MAX_LEN,
-                  padding=True, return_tensors="pt")
-        enc["labels"] = torch.tensor([r["label"] for r in b])
-        return enc
+        return tok.pad(b, return_tensors="pt")
     if shuffle:
         lengths = [len(r["premise"]) + len(r["hypothesis"]) for r in rows]
-        return DataLoader(rows, batch_sampler=LengthGroupedBatches(lengths, batch_size, seed), collate_fn=collate)
-    return DataLoader(rows, batch_size=batch_size, collate_fn=collate)
+        return DataLoader(items, batch_sampler=LengthGroupedBatches(lengths, batch_size, seed), collate_fn=collate,
+                          pin_memory=True)
+    return DataLoader(items, batch_size=batch_size, collate_fn=collate, pin_memory=True)
 
 
 def save_fp16(model, tok, out):
@@ -111,16 +116,24 @@ def save_fp16(model, tok, out):
 
 
 @torch.no_grad()
-def macro_f1(model, loader, device):
+def evaluate(model, loader, device):
+    """Mean cross-entropy and macro F1 on a labelled set."""
     model.eval()
-    pred, gold = [], []
+    pred, gold, loss, n = [], [], 0.0, 0
     for b in loader:
-        b = b.to(device)
+        b = b.to(device, non_blocking=True)
         with torch.autocast(device_type=device, dtype=torch.bfloat16, enabled=device == "cuda"):
-            pred.append(model(**{k: v for k, v in b.items() if k != "labels"}).logits.argmax(-1).cpu())
+            out = model(**b)
+        loss += out.loss.item() * len(b["labels"])
+        n += len(b["labels"])
+        pred.append(out.logits.argmax(-1).cpu())
         gold.append(b["labels"].cpu())
     model.train()
-    return float(f1_score(torch.cat(gold), torch.cat(pred), average="macro"))
+    return loss / n, float(f1_score(torch.cat(gold), torch.cat(pred), average="macro"))
+
+
+def macro_f1(model, loader, device):
+    return evaluate(model, loader, device)[1]
 
 
 def main():
@@ -131,9 +144,14 @@ def main():
     ap.add_argument("--accumulate", type=int, default=2, help="gradient accumulation: effective batch 32")
     ap.add_argument("--lr", type=float, default=1e-5, help="low: the start model already does NLI")
     ap.add_argument("--seed", type=int, default=SEED, help="training seed; the data files stay the same")
+    ap.add_argument("--tag", default="", help="suffix of the checkpoint name, keeps earlier checkpoints intact")
+    ap.add_argument("--curve-every", type=int, default=0,
+                    help="optimizer steps between validation points of the learning curves (0: off)")
     a = ap.parse_args()
     set_seed(a.seed)
     name = f"nli-{a.variant}" if a.seed == SEED else f"nli-{a.variant}-s{a.seed}"
+    if a.tag:
+        name += f"-{a.tag}"
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     tok = AutoTokenizer.from_pretrained(BASE)
@@ -145,7 +163,7 @@ def main():
     dev = batches(jl("kardes_kk_test")[0::2], tok, 64, shuffle=False)
     print(f"variant {a.variant}: {len(rows)} training pairs, {len(train)} batches/epoch")
 
-    opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01)
+    opt = torch.optim.AdamW(model.parameters(), lr=a.lr, weight_decay=0.01, fused=device == "cuda")
     steps = len(train) * a.epochs // a.accumulate
     sched = get_linear_schedule_with_warmup(opt, int(0.06 * steps), steps)
     out = CKPT / name
@@ -153,12 +171,20 @@ def main():
            "batch_size": a.batch_size * a.accumulate, "max_len": MAX_LEN, "seed": a.seed, "precision": "bf16",
            "dev": "kardes_kk_test, even-indexed half", "history": [{"epoch": 0, "dev_macro_f1": macro_f1(model, dev, device)}]}
     print(f"epoch 0 (start model): kardes kk select macro F1 {log['history'][0]['dev_macro_f1']:.4f}")
+    curves = None
+    if a.curve_every:
+        v_loss, v_f1 = evaluate(model, dev, device)
+        curves = {"checkpoint": name, "config": {k: log[k] for k in ("variant", "base", "n_train", "epochs", "lr",
+                  "batch_size", "max_len", "seed", "precision", "dev")}, "steps_total": steps,
+                  "train": [], "val": [{"step": 0, "epoch": 0.0, "loss": v_loss, "macro_f1": v_f1}]}
+        curve_path = ROOT / f"results/nli_curves_{name[4:]}.json"
     best = -1.0
+    opt_step, window, t_start = 0, [], time.time()
     model.train()
     for epoch in range(1, a.epochs + 1):
         t0, running = time.time(), 0.0
         for step, b in enumerate(train, 1):
-            b = b.to(device)
+            b = b.to(device, non_blocking=True)
             with torch.autocast(device_type=device, dtype=torch.bfloat16, enabled=device == "cuda"):
                 loss = model(**b).loss / a.accumulate
             if not torch.isfinite(loss):
@@ -169,17 +195,40 @@ def main():
                 opt.step()
                 opt.zero_grad(set_to_none=True)
                 sched.step()
+                opt_step += 1
+                if curves is not None and opt_step % 50 == 0:
+                    curves["train"].append({"step": opt_step, "epoch": round(opt_step / steps * a.epochs, 4),
+                                            "loss": float(np.mean(window)), "lr": sched.get_last_lr()[0],
+                                            "seconds": round(time.time() - t_start)})
+                    window = []
+                if curves is not None and opt_step % a.curve_every == 0:
+                    v_loss, v_f1 = evaluate(model, dev, device)
+                    curves["val"].append({"step": opt_step, "epoch": round(opt_step / steps * a.epochs, 4),
+                                          "loss": v_loss, "macro_f1": v_f1, "seconds": round(time.time() - t_start)})
+                    curve_path.write_text(json.dumps(curves, indent=1), encoding="utf-8")
+                    print(f"step {opt_step}/{steps}: val loss {v_loss:.4f}, macro F1 {v_f1:.4f}", flush=True)
+            if curves is not None:
+                window.append(loss.item() * a.accumulate)
             running += loss.item() * a.accumulate
             if step % 1000 == 0:
                 print(f"epoch {epoch} batch {step}/{len(train)} loss {running / 1000:.4f} ({time.time() - t0:.0f}s)")
                 running = 0.0
-        f1 = macro_f1(model, dev, device)
+        v_loss, f1 = evaluate(model, dev, device)
         log["history"].append({"epoch": epoch, "dev_macro_f1": f1, "seconds": round(time.time() - t0)})
+        if curves is not None:
+            curves["val"].append({"step": opt_step, "epoch": float(epoch), "loss": v_loss, "macro_f1": f1,
+                                  "seconds": round(time.time() - t_start), "epoch_end": True})
+            curve_path.write_text(json.dumps(curves, indent=1), encoding="utf-8")
         print(f"epoch {epoch}: kardes kk select macro F1 {f1:.4f}")
         if f1 > best:
             best = f1
             save_fp16(model, tok, out)
     log["best_dev_macro_f1"] = best
+    if curves is not None:
+        curves["best_dev_macro_f1"], curves["train_seconds"] = best, round(time.time() - t_start)
+        curves["gpu"] = torch.cuda.get_device_name(0) if device == "cuda" else "cpu"
+        curves["peak_gpu_mem_gb"] = round(torch.cuda.max_memory_allocated() / 2**30, 2) if device == "cuda" else None
+        curve_path.write_text(json.dumps(curves, indent=1), encoding="utf-8")
     (out / "train_log.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
     (ROOT / f"results/nli_train_{name[4:]}.json").write_text(json.dumps(log, indent=1), encoding="utf-8")
     print(f"best dev macro F1 {best:.4f} -> {out.relative_to(ROOT)}")

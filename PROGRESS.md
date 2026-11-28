@@ -689,3 +689,21 @@ fixed for H6 and the exact tests.
 ## 2026-11-22 — licenses and affiliation
 Code MIT (`LICENSE`), our data CC BY 4.0 (`data/LICENSE.md`); affiliation Kazakh-British Technical University in the
 paper, README and the deck cover (deck v8). Third-party paper PDFs removed from the whole git history before the push.
+
+## 2026-11-28 — course defense requirements (learning curves, measurements, demo, documentation)
+The course defense guidelines ask for training/validation loss curves, a confusion matrix, latency and model size,
+a live demo, technical documentation and a 10-minute deck in a fixed structure. What changed:
+* `src/rerank/nli_train.py`: `--tag` (separate checkpoint name) and `--curve-every N` (train loss every 50
+  optimizer steps, validation loss and macro F1 on the Kardeş selection half every N steps →
+  `results/nli_curves_<name>.json`); evaluation returns loss and macro F1; data tokenized once up front, fused AdamW,
+  pinned memory. Same data, batch, schedule and seed as before. The original script kept only per-epoch dev F1
+  (`results/nli_train_a_mdeberta.json`; also `checkpoints/nli-a/train_log.json`), so variant a was trained again as `checkpoints/nli-a-curves` only to record the
+  curves; every reported result still uses `checkpoints/nli-a`.
+* `src/eval/plot_curves.py` → `results/figures/nli_learning_curves.png`.
+* `src/eval/efficiency.py` → `results/efficiency.json`, `results/figures/nli_confusion.png`: parameter counts,
+  per-stage latency over the test questions, peak GPU memory, 3×3 confusion matrices with per-class P/R/F1
+  (start model and nli-a; Kardeş report half and hand-written pairs).
+* `app/demo.py`: Gradio demo of the full pipeline (tokens, B0/B2/B3 top 5, NLI probabilities, latency; gold and
+  twin marked for evaluation questions). `gradio==6.32.0` added to requirements.
+* `docs/TECHNICAL.md`: pipeline diagram, dataset card, model card, training configuration, checkpoint loading.
+* Defense deck (14 slides, English, guideline structure): https://claude.ai/artifact/1ZNvNwX2YCWghfqe3UJ29D.

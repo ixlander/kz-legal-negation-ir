@@ -1,0 +1,19 @@
+<section id="arch" class="dark">
+<div class="head"><p class="eyebrow">3 · Architecture</p><h2>A retrieve-then-rerank pipeline: each configuration adds one component</h2></div>
+<div class="cols" style="gap:28px;align-items:center">
+<div class="col" style="gap:20px;flex:none;width:330px">
+<div class="box"><p class="lab ac">B0 · dense</p><p style="font-size:28px">bge-m3 bi-encoder, cosine over 30,766 vectors (1024-d)</p></div>
+<div class="box"><p class="lab">BM25 · lexical</p><p style="font-size:28px">lemmas / stems + NEG, k1 1.5, b 0.75</p></div>
+</div>
+<x-shape kind="arrow-right" style="width:56px;height:28px;background:#7E858D"></x-shape>
+<div class="box" style="width:300px;flex:none"><p class="lab ac">B2 · hybrid</p><p style="font-size:28px">reciprocal rank fusion, k = 60</p><p class="mono soft">B1 = same with plain BM25</p></div>
+<x-shape kind="arrow-right" style="width:56px;height:28px;background:#7E858D"></x-shape>
+<div class="col" style="gap:16px">
+<div class="box"><p class="lab">B3′ · baseline reranker</p><p style="font-size:28px">bge-reranker-v2-m3 or jina-v2 cross-encoder</p></div>
+<div class="box"><p class="lab">B3-rule · baseline</p><p style="font-size:28px">±α if question and paragraph polarity match</p></div>
+<div class="box ours"><p class="lab ac">B3 · ours</p><p style="font-size:28px">fine-tuned NLI cross-encoder</p></div>
+</div>
+</div>
+<div class="foot"><p>Rerankers reorder the top 30 of B2 · no generation step · e5-base repeated as a weaker dense model</p><p class="pn"></p></div>
+<aside>The architecture is a standard retrieve-then-rerank pipeline. B0 encodes the question and every paragraph with bge-m3 and ranks by cosine similarity. BM25 does the same lexically on lemmas with the negation token. B2 fuses the two rankings with reciprocal rank fusion. Then the top thirty are reordered in one of three ways: an off-the-shelf cross-encoder, which is our main baseline; a simple polarity rule; or our fine-tuned NLI model. Why not something simpler: BM25 alone and dense alone are both in the table as baselines. Why not a larger model: the point is to fix the evidence cheaply, before generation.</aside>
+</section>

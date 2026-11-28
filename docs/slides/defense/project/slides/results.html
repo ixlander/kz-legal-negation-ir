@@ -1,0 +1,13 @@
+<section id="results">
+<div class="head"><p class="eyebrow">5 · Results · test split</p><h2>The off-the-shelf reranker is the best system; our NLI reranker does not beat it</h2></div>
+<div class="tg" style="grid-template-columns:420px repeat(6, 1fr)">
+<p class="th">bge-m3 · system</p><p class="th">Ru gen</p><p class="th">Ru neg</p><p class="th">Ru TaG↓</p><p class="th">Kz gen</p><p class="th">Kz neg</p><p class="th">Kz TaG↓</p>
+<p>B0 dense (baseline)</p><p>.95</p><p>.79</p><p>.14</p><p>.95</p><p class="best">.97</p><p>.07</p>
+<p>B1 + plain BM25</p><p>.80</p><p>.58</p><p>.36</p><p>.80</p><p>.74</p><p>.14</p>
+<p>B2 + morph. BM25 (ours)</p><p class="ours">.85</p><p class="ours">.74</p><p class="ours">.21</p><p class="ours">.90</p><p class="ours">.89</p><p class="ours">.07</p>
+<p>B3′ bge-reranker (baseline)</p><p class="best">1.00</p><p class="best">.84</p><p class="best">.07</p><p class="best">.95</p><p>.92</p><p class="best">.00</p>
+<p>B3 NLI reranker (ours)</p><p class="ours">.90</p><p class="ours">.74</p><p class="ours">.36</p><p class="ours">.90</p><p class="ours">.89</p><p class="ours">.07</p>
+</div>
+<div class="foot"><p>Recall@5 · 20 general, 19 negation questions per language · 0 of 40 comparisons significant after Holm</p><p class="pn"></p></div>
+<aside>Here is the main table for bge-m3 on the test split, our baselines and our components on the same questions. Dense search alone is already strong. Our hybrid with the morphological BM25 lowers recall slightly, and our NLI reranker is never better than the off-the-shelf cross-encoder, which is the best row almost everywhere. With the weaker e5-base model the hybrid does help on Kazakh, from 0.47 to 0.68 on negation questions. But none of the forty planned comparisons survives the multiple-testing correction, so we present these as pilot results, not as proven differences.</aside>
+</section>

@@ -27,7 +27,19 @@ comparison survives an exact sign test with a Holm correction (`results/stats_ex
   detectable gain on hand-written pairs.
 
 Details, intervals and limitations: the paper and [`PROGRESS.md`](PROGRESS.md) (full lab notebook, including an
-internal review and an independent review in [`docs/review/`](docs/review/)).
+internal review and an independent review in [`docs/review/`](docs/review/)). Pipeline diagram, dataset card, model
+card, training configuration and checkpoint loading: [`docs/TECHNICAL.md`](docs/TECHNICAL.md).
+
+## Demo
+
+```
+python -m app.demo          # http://127.0.0.1:7860, needs the cached embeddings and checkpoints/nli-a
+```
+
+Type a question in Russian or Kazakh. The page shows the subword tokens and ids, the BM25 tokens (with `NEG`), the top 5
+of dense search (B0), the hybrid (B2) and the reranked list (B3, bge-reranker-v2-m3 or the NLI reranker) with scores
+and the polarity of each paragraph, the NLI probabilities for the final top 5, and the latency of each stage. For a
+question from the evaluation set the gold and twin paragraphs are marked.
 
 ## Data
 
@@ -64,6 +76,7 @@ src/
 data/            corpus, evaluation set, diagnostics data, NLI data, annotation answers
 results/         every number reported (see results/README.md)
 notebooks/       analysis.ipynb (reads results/ only) and the script that generates it
+app/             Gradio demo of the full pipeline
 tools/review/    builders of the annotation pages
 docs/            paper (LaTeX), defense deck source, annotation brief, reviews, list of papers read
 CLAUDE.md        project plan, hypotheses, metric definitions and decision log (in Russian)
@@ -100,7 +113,10 @@ External data and NLI training:
 ```
 python -m src.data.fetch_external
 python -m src.rerank.nli_data --per-lang 50000 --synthetic 4000
-python -m src.rerank.nli_train --variant a        # also b, c, d; ~2.5 h each on the laptop GPU
+python -m src.rerank.nli_train --variant a        # also b, c, d; 1–2 h each on the laptop GPU
+python -m src.rerank.nli_train --variant a --tag curves --curve-every 200   # repeat with learning curves
+python -m src.eval.plot_curves --run a-curves      # results/figures/nli_learning_curves.png
+python -m src.eval.efficiency                      # model sizes, latency, NLI confusion matrices
 ```
 
 Everything from the annotation answers to the final table, diagnostics and NLI evaluation in one run:

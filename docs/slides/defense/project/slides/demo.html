@@ -1,0 +1,25 @@
+<section id="demo" class="dark">
+<div class="head"><p class="eyebrow">6 · Live demo</p><h2>Any question, Russian or Kazakh, through the full pipeline in under a second</h2></div>
+<div class="cols" style="gap:56px">
+<div class="col" style="gap:24px">
+<p class="code">python -m app.demo   → http://127.0.0.1:7860</p>
+<div class="rows">
+<div class="hl"><p class="lab" style="width:60px">1</p><p style="flex:1;font-size:28px">Subword tokens and ids, BM25 tokens with NEG, query polarity</p></div>
+<div class="hl"><p class="lab" style="width:60px">2</p><p style="flex:1;font-size:28px">Top 5 of B0, B2 and B3 with scores and paragraph polarity</p></div>
+<div class="hl"><p class="lab" style="width:60px">3</p><p style="flex:1;font-size:28px">NLI probabilities for the final top 5 as a confidence readout</p></div>
+<div class="hl end"><p class="lab" style="width:60px">4</p><p style="flex:1;font-size:28px">Gold and twin marked for questions from the test split</p></div>
+</div>
+</div>
+<div class="panel darkp" style="flex:0.8;border:2px solid #3A3E44">
+<p class="lab">Median latency per query · ru–kz · RTX 4050</p>
+<div class="kv" style="grid-template-columns:1fr 160px">
+<p class="k" style="color:#B9BDC3">dense encode + search</p><p>38–43 ms</p>
+<p class="k" style="color:#B9BDC3">BM25 + fusion</p><p>5–8 ms</p>
+<p class="k" style="color:#B9BDC3">rerank top 30 (bge)</p><p>330–343 ms</p>
+<p class="k" style="color:#B9BDC3">rerank top 30 (NLI)</p><p>194–197 ms</p>
+</div>
+</div>
+</div>
+<div class="foot"><p>app/demo.py · same code paths as the evaluation (src/retrieval, src/rerank)</p><p class="pn"></p></div>
+<aside>Now the live demo. We type a question, ideally one you give us, in Russian or Kazakh. The page shows the preprocessing first: the subword tokens and ids the model sees, and the BM25 tokens with the negation token. Then the top five of dense search, of the hybrid, and after reranking, each with its score and the polarity the rule assigns. For the final five it shows the NLI model’s three probabilities. If the question comes from our test split, the gold and twin are marked, so you can see where each system put them. The demo calls the same functions as the evaluation scripts.</aside>
+</section>

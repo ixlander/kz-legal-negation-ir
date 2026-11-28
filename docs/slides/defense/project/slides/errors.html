@@ -1,0 +1,25 @@
+<section id="errors">
+<div class="head"><p class="eyebrow">5 · Error analysis</p><h2>Of 20 frequently missed test questions, only 4 are polarity errors</h2></div>
+<div class="cols" style="gap:56px">
+<div class="rows col">
+<div class="hl"><p class="num56" style="width:80px">7</p><p style="flex:1">weak dense model on Kazakh (e5-base)</p></div>
+<div class="hl"><p class="num56 ac" style="width:80px">4</p><p class="ac" style="flex:1">opposite norm above the gold</p></div>
+<div class="hl"><p class="num56" style="width:80px">3</p><p style="flex:1">neighbouring article, same topic</p></div>
+<div class="hl"><p class="num56" style="width:80px">2</p><p style="flex:1">abbreviation (НДС, ИПН) vs full term</p></div>
+<div class="hl end"><p class="num56" style="width:80px">4</p><p style="flex:1">long list, transitional rule, unlabelled 2nd answer</p></div>
+</div>
+<div class="panel light" style="flex:1.05">
+<p class="lab">Example · “May an employer dismiss a pregnant employee due to staff reduction?” (ru)</p>
+<div class="tg small" style="grid-template-columns:1fr 150px 150px">
+<p class="th">bge-m3 system</p><p class="th">gold</p><p class="th">twin</p>
+<p>B0 dense</p><p class="best">#1</p><p>#18</p>
+<p>B2 hybrid</p><p>#12</p><p class="ours">#5</p>
+<p>B3′ bge-reranker</p><p class="best">#2</p><p>#5</p>
+<p>B3 NLI</p><p>#12</p><p>#5</p>
+</div>
+<p style="font-size:24px">BM25 lifts the “employer may dismiss” article; the cross-encoder recovers the gold, the NLI score does not.</p>
+</div>
+</div>
+<div class="foot"><p>results/error_analysis.md · categories assigned by us, not checked by a second annotator</p><p class="pn"></p></div>
+<aside>We read the twenty test questions that our systems missed most often. Only four are the polarity errors the project is about; the largest group is simply a weak model on Kazakh, and the rest are ordinary retrieval problems such as abbreviations. On the right is one question traced through the systems. Dense search gets it right. The hybrid pulls up the article that lists when an employer may dismiss, and the correct prohibition drops to twelfth. The off-the-shelf reranker brings it back to second; our NLI reranker leaves it at twelfth. To investigate a failure like this we look at the NLI probabilities for both paragraphs, which the demo shows.</aside>
+</section>

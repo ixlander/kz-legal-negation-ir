@@ -44,3 +44,14 @@ tools/review/review_v2_*.html
 
 # local snapshots of the annotation store
 data/review/snapshot_*/
+
+# training logs and report build files
+logs/
+docs/report/*.aux
+docs/report/*.log
+docs/report/*.fls
+docs/report/*.fdb_latexmk
+docs/report/*.xdv
+docs/report/*.bbl
+docs/report/*.blg
+docs/report/*.out
